@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rnc4JBeZQUaYlLvvaQc7xdBfAiu7jYZLzuBVnLp0n7MS+GF1195/3Pi5w61G5wYkOw8EGTS0/PG3Tr+oKl4lwg==",
+  "dgSpecHash": "hb7+QkEv7qmphdS16eL1k9dBuPpC/fzE6WAHtsiA6L3oumVhZJo4ypRzbZp5LGgWkIe86fIWz6vGwxMipyq7gQ==",
   "success": true,
-  "projectFilePath": "D:\\Đồ án\\Login\\WpfApp1\\App.csproj",
+  "projectFilePath": "D:\\software-technology-project\\WpfApp1\\App.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

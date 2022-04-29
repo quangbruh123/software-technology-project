@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Đồ án\\Login\\WpfApp1\\App.csproj": {}
+    "D:\\software-technology-project\\WpfApp1\\App.csproj": {}
   },
   "projects": {
-    "D:\\Đồ án\\Login\\WpfApp1\\App.csproj": {
+    "D:\\software-technology-project\\WpfApp1\\App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Đồ án\\Login\\WpfApp1\\App.csproj",
+        "projectUniqueName": "D:\\software-technology-project\\WpfApp1\\App.csproj",
         "projectName": "App",
-        "projectPath": "D:\\Đồ án\\Login\\WpfApp1\\App.csproj",
+        "projectPath": "D:\\software-technology-project\\WpfApp1\\App.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Đồ án\\Login\\WpfApp1\\obj\\",
+        "outputPath": "D:\\software-technology-project\\WpfApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
