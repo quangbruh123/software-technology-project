@@ -1,0 +1,12 @@
+D:\ĐỒÁN\ĐỒÁN\ĐỒÁN\bin\Debug\ĐỒÁN.exe.config
+D:\ĐỒÁN\ĐỒÁN\ĐỒÁN\bin\Debug\ĐỒÁN.exe
+D:\ĐỒÁN\ĐỒÁN\ĐỒÁN\bin\Debug\ĐỒÁN.pdb
+D:\ĐỒÁN\ĐỒÁN\ĐỒÁN\obj\Debug\ĐỒÁN.csproj.SuggestedBindingRedirects.cache
+D:\ĐỒÁN\ĐỒÁN\ĐỒÁN\obj\Debug\ĐỒÁN.Form1.resources
+D:\ĐỒÁN\ĐỒÁN\ĐỒÁN\obj\Debug\ĐỒÁN.Properties.Resources.resources
+D:\ĐỒÁN\ĐỒÁN\ĐỒÁN\obj\Debug\ĐỒÁN.csproj.GenerateResource.cache
+D:\ĐỒÁN\ĐỒÁN\ĐỒÁN\obj\Debug\ĐỒÁN.csproj.CoreCompileInputs.cache
+D:\ĐỒÁN\ĐỒÁN\ĐỒÁN\obj\Debug\ĐỒÁN.exe
+D:\ĐỒÁN\ĐỒÁN\ĐỒÁN\obj\Debug\ĐỒÁN.pdb
+D:\ĐỒÁN\ĐỒÁN\ĐỒÁN\obj\Debug\ĐỒÁN.usercontrol.LapphieusuachuaUserControl.resources
+D:\ĐỒÁN\ĐỒÁN\ĐỒÁN\obj\Debug\ĐỒÁN.csproj.AssemblyReference.cache
