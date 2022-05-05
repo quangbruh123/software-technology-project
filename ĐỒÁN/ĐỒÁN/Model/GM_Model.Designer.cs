@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\Study\Year 2\Introduction to Software Technology\Project\software-technology-project\ĐỒÁN\ĐỒÁN\Model\GM_Model.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\software-technology-project\ĐỒÁN\ĐỒÁN\Model\GM_Model.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

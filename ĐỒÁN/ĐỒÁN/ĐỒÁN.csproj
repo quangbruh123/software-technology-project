@@ -135,6 +135,12 @@
     <Compile Include="usercontrol\LapphieusuachuaUserControl.Designer.cs">
       <DependentUpon>LapphieusuachuaUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="usercontrol\LapphieuthutienUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\LapphieuthutienUserControl.Designer.cs">
+      <DependentUpon>LapphieuthutienUserControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,9 +152,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="usercontrol\LapphieusuachuaUserControl.resx">
       <DependentUpon>LapphieusuachuaUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\LapphieuthutienUserControl.resx">
+      <DependentUpon>LapphieuthutienUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\GM_Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -182,6 +192,17 @@
       <DependentUpon>GM_Model.edmx</DependentUpon>
       <LastGenOutput>GM_Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Business Report_32px.png" />
+    <None Include="Resources\cash_in_hand_32px.png" />
+    <None Include="Resources\wrench_50px.png" />
+    <None Include="Resources\edit_32px.png" />
+    <None Include="Resources\align_left_32px.png" />
+    <None Include="Resources\administrator_male_32px.png" />
+    <None Include="Resources\help_32px.png" />
+    <None Include="Resources\external_32px.png" />
+    <None Include="Resources\administrator_male_26px.png" />
+    <None Include="Resources\car-maintenance-606ab2f8ab000.jpg" />
+    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

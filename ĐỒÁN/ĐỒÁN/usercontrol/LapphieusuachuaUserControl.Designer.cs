@@ -57,13 +57,13 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(56, 84);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(754, 434);
+            this.dataGridView1.Size = new System.Drawing.Size(755, 428);
             this.dataGridView1.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(0, 560);
+            this.button1.Location = new System.Drawing.Point(0, 554);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(72, 52);
             this.button1.TabIndex = 2;
@@ -73,7 +73,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.Location = new System.Drawing.Point(78, 560);
+            this.button2.Location = new System.Drawing.Point(78, 554);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 52);
             this.button2.TabIndex = 3;
@@ -83,7 +83,7 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(753, 560);
+            this.button3.Location = new System.Drawing.Point(754, 554);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 52);
             this.button3.TabIndex = 4;
@@ -101,7 +101,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "LapphieusuachuaUserControl";
-            this.Size = new System.Drawing.Size(828, 612);
+            this.Size = new System.Drawing.Size(829, 606);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
