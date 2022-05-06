@@ -8,11 +8,20 @@ namespace GarageManager.Classes
 {
     public class DataProvider
     {
-        private DataProvider instance;
-        public DataProvider Instance
+        private static DataProvider instance;
+        public static DataProvider Instance
         {
-            get { return instance; }
+            get
+            {
+                if (instance == null) instance = new DataProvider();
+                return instance;
+            }
             set { instance = value; }
+        }
+        public Model.GarageManagementEntities DB { get; set; }
+        private DataProvider()
+        {
+            DB = new Model.GarageManagementEntities();
         }
     }
 }
