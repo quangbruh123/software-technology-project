@@ -12,7 +12,7 @@ namespace GarageManager
 {
     public partial class Form1 : Form
     {
-        bool isLoggedIn = false;
+        public static bool isLoggedIn = false;
 
         public Form1()
         {

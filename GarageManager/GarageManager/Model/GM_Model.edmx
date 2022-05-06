@@ -469,11 +469,9 @@
         </EntityType>
         <EntityType Name="TAIKHOAN">
           <Key>
-            <PropertyRef Name="MaTaiKhoan" />
+            <PropertyRef Name="TenDangNhap" />
           </Key>
-          <Property Name="MaTaiKhoan" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="HoTen" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="TenDangNhap" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TenDangNhap" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MatKhau" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
           <Property Name="Quyen" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
         </EntityType>
@@ -824,8 +822,6 @@
           <EntitySetMapping Name="TAIKHOANs">
             <EntityTypeMapping TypeName="GarageManagementModel.TAIKHOAN">
               <MappingFragment StoreEntitySet="TAIKHOAN">
-                <ScalarProperty Name="MaTaiKhoan" ColumnName="MaTaiKhoan" />
-                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
                 <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
                 <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
                 <ScalarProperty Name="Quyen" ColumnName="Quyen" />

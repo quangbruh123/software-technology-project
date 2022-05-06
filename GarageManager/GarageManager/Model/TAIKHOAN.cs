@@ -14,8 +14,6 @@ namespace GarageManager.Model
     
     public partial class TAIKHOAN
     {
-        public string MaTaiKhoan { get; set; }
-        public string HoTen { get; set; }
         public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
         public string Quyen { get; set; }
