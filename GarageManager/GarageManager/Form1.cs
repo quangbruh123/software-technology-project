@@ -12,13 +12,14 @@ namespace GarageManager
 {
     public partial class Form1 : Form
     {
+        bool isLoggedIn = false;
+
         public Form1()
         {
             InitializeComponent();
             panel1.Visible =true;
             mainpanel.Visible = true;
-            lapphieuthutienUserControl.Visible = false;
-
+            lapphieuthutienUserControl.Visible = false;           
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -39,6 +40,12 @@ namespace GarageManager
             panel1.Visible = false;
             mainpanel.Visible = false;
             lapphieuthutienUserControl.Visible = true;
+        }
+
+        private void LogIn(string username, string password)
+        {
+            var userCount = Classes.DataProvider.Instance.DB.TAIKHOANs.Where(x => x.TenDangNhap == username && x.MatKhau == password).Count();
+            if (userCount == 0) isLoggedIn = true;
         }
     }
 }
