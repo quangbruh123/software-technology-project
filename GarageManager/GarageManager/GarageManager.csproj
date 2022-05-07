@@ -158,6 +158,12 @@
     <Compile Include="usercontrol\LapphieuthutienUserControl.Designer.cs">
       <DependentUpon>LapphieuthutienUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="usercontrol\TracuuUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\TracuuUserControl.Designer.cs">
+      <DependentUpon>TracuuUserControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrol\LapphieuthutienUserControl.resx">
       <DependentUpon>LapphieuthutienUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\TracuuUserControl.resx">
+      <DependentUpon>TracuuUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\GM_Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -209,6 +218,8 @@
       <DependentUpon>GM_Model.edmx</DependentUpon>
       <LastGenOutput>GM_Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\search_30px.png" />
+    <None Include="Resources\search_50px.png" />
     <None Include="Resources\Business Report_32px.png" />
     <None Include="Resources\cash_in_hand_32px.png" />
     <None Include="Resources\wrench_50px.png" />

@@ -123,8 +123,6 @@
     <EntitySetMapping Name="TAIKHOANs">
       <EntityTypeMapping TypeName="GarageManagementModel.TAIKHOAN">
         <MappingFragment StoreEntitySet="TAIKHOAN">
-          <ScalarProperty Name="MaTaiKhoan" ColumnName="MaTaiKhoan" />
-          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
           <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
           <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
           <ScalarProperty Name="Quyen" ColumnName="Quyen" />
