@@ -13,12 +13,17 @@ namespace GarageManager
 {
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// Logged in status
+        /// </summary>
         public static bool isLoggedIn = false;
+        //Nút nhảy usercontrol
+        private LapphieuthutienUserControl uc1;
+        private tracuuUserControl1 uc2;
 
         public Form1()
         {
-            InitializeComponent();
-           
+            InitializeComponent();           
         }  
         //Nút exit zoom mini
         private void button4_Click(object sender, EventArgs e)
@@ -29,9 +34,6 @@ namespace GarageManager
                 this.WindowState = FormWindowState.Normal;
         }
 
-        //Nút nhảy usercontrol
-        LapphieuthutienUserControl uc1;
-        tracuuUserControl1 uc2;
         private void Form1_Load(object sender, EventArgs e)
         {
             panel1.Visible = true;
