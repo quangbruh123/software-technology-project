@@ -42,6 +42,11 @@ namespace GarageManager
             lapphieuthutienUserControl.Visible = true;
         }
 
+        /// <summary>
+        /// User log in check, set isLoggedIn to true if the user's account existed, false if it doesn't
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
         private void LogIn(string username, string password)
         {
             var userCount = Classes.DataProvider.Instance.DB.TAIKHOANs.Where(x => x.TenDangNhap == username && x.MatKhau == password).Count();
