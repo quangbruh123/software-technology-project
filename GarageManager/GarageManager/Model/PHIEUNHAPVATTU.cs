@@ -20,8 +20,8 @@ namespace GarageManager.Model
             this.CT_PNVT = new HashSet<CT_PNVT>();
         }
     
-        public string MaPhieuNhap { get; set; }
-        public string MaVatTu { get; set; }
+        public int MaPhieuNhap { get; set; }
+        public Nullable<int> MaVatTu { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<decimal> DonGiaNhap { get; set; }
         public Nullable<decimal> DonGiaBan { get; set; }

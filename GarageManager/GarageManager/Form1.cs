@@ -14,7 +14,7 @@ namespace GarageManager
     public partial class Form1 : Form
     {
         /// <summary>
-        /// Logged in status
+        /// Log in status
         /// </summary>
         public static bool isLoggedIn = false;
         //Nút nhảy usercontrol
@@ -67,7 +67,7 @@ namespace GarageManager
         /// <param name="password"></param>
         private void LogIn(string username, string password)
         {
-            var userCount = Classes.DataProvider.Instance.DB.TAIKHOANs.Where(x => x.TenDangNhap == username && x.MatKhau == password).Count();
+            var userCount = Classes.DataProvider.Instance.DB.TAIKHOANs.Where(x => x.TenTaiKhoan == username && x.MatKhau == password).Count();
             if (userCount == 0) isLoggedIn = true;
         }
     }

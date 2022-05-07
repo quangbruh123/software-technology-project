@@ -14,7 +14,7 @@ namespace GarageManager.Model
     
     public partial class PHIEUTHUTIEN
     {
-        public string MaPTT { get; set; }
+        public int MaPTT { get; set; }
         public string BienSo { get; set; }
         public Nullable<decimal> SoTienThu { get; set; }
     

@@ -14,8 +14,8 @@ namespace GarageManager.Model
     
     public partial class BAOCAOTON
     {
-        public string MaBCT { get; set; }
-        public string MaVatTu { get; set; }
+        public int MaBCT { get; set; }
+        public Nullable<int> MaVatTu { get; set; }
         public Nullable<int> Thang { get; set; }
         public Nullable<int> Nam { get; set; }
         public Nullable<int> TonDau { get; set; }

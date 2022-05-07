@@ -14,18 +14,18 @@ namespace GarageManager.Classes
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns>
-        /// true if successfully added, otherwise false
+        /// True if successfully added, otherwise false
         /// </returns>
         public bool AddStaffAccount(string username, string password)
         {
-            var userCount = DataProvider.Instance.DB.TAIKHOANs.Where(x => x.TenDangNhap == username && x.MatKhau == password).Count();
+            var userCount = DataProvider.Instance.DB.TAIKHOANs.Where(x => x.TenTaiKhoan == username && x.MatKhau == password).Count();
             if (userCount == 0)
             {
                 Model.TAIKHOAN newaccount = new Model.TAIKHOAN
                 {
-                    TenDangNhap = username,
+                    TenTaiKhoan = username,
                     MatKhau = password,
-                    Quyen = "staff"
+                    QuyenHan = 0
                 };
                 DataProvider.Instance.DB.TAIKHOANs.Add(newaccount);
                 DataProvider.Instance.DB.SaveChanges();
@@ -40,18 +40,18 @@ namespace GarageManager.Classes
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns>
-        /// true if successfully added, otherwise false
+        /// True if successfully added, otherwise false
         /// </returns>
         public bool AddAdminAccount(string username, string password)
         {
-            var userCount = DataProvider.Instance.DB.TAIKHOANs.Where(x => x.TenDangNhap == username && x.MatKhau == password).Count();
+            var userCount = DataProvider.Instance.DB.TAIKHOANs.Where(x => x.TenTaiKhoan == username && x.MatKhau == password).Count();
             if (userCount == 0)
             {
                 Model.TAIKHOAN newaccount = new Model.TAIKHOAN
                 {
-                    TenDangNhap = username,
+                    TenTaiKhoan = username,
                     MatKhau = password,
-                    Quyen = "admin"
+                    QuyenHan = 1
                 };
                 DataProvider.Instance.DB.TAIKHOANs.Add(newaccount);
                 DataProvider.Instance.DB.SaveChanges();
@@ -66,7 +66,7 @@ namespace GarageManager.Classes
         /// <param name="username"></param>
         public void DeleteAccount(string username)
         {
-            Model.TAIKHOAN unwantedAccount = DataProvider.Instance.DB.TAIKHOANs.Where(x => x.TenDangNhap == username).First();
+            Model.TAIKHOAN unwantedAccount = DataProvider.Instance.DB.TAIKHOANs.Where(x => x.TenTaiKhoan == username).First();
             DataProvider.Instance.DB.TAIKHOANs.Remove(unwantedAccount);
             DataProvider.Instance.DB.SaveChanges();
         }

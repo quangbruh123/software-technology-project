@@ -12,21 +12,18 @@ namespace GarageManager.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class PHIEUSUACHUA
+    public partial class VAITRO
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PHIEUSUACHUA()
+        public VAITRO()
         {
-            this.CT_PSC = new HashSet<CT_PSC>();
+            this.TAIKHOANs = new HashSet<TAIKHOAN>();
         }
     
-        public int MaPhieuSC { get; set; }
-        public string BienSo { get; set; }
-        public Nullable<System.DateTime> NgaySuaChua { get; set; }
-        public Nullable<decimal> TongTien { get; set; }
+        public int MaVaiTro { get; set; }
+        public string TenVaiTro { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CT_PSC> CT_PSC { get; set; }
-        public virtual XE XE { get; set; }
+        public virtual ICollection<TAIKHOAN> TAIKHOANs { get; set; }
     }
 }

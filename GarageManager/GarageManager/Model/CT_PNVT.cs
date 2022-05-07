@@ -14,8 +14,8 @@ namespace GarageManager.Model
     
     public partial class CT_PNVT
     {
-        public string MaPhieuNhap { get; set; }
-        public string MaVatTu { get; set; }
+        public int MaPhieuNhap { get; set; }
+        public int MaVatTu { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<decimal> DonGiaNhap { get; set; }
         public Nullable<decimal> DonGiaBan { get; set; }

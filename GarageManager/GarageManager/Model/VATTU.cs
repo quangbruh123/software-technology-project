@@ -22,7 +22,7 @@ namespace GarageManager.Model
             this.CT_SUDUNGVATTU = new HashSet<CT_SUDUNGVATTU>();
         }
     
-        public string MaVatTu { get; set; }
+        public int MaVatTu { get; set; }
         public string TenVatTu { get; set; }
         public Nullable<decimal> DonGiaHienTai { get; set; }
         public Nullable<int> SoLuongTon { get; set; }

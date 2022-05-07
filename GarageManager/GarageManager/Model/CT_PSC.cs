@@ -14,11 +14,11 @@ namespace GarageManager.Model
     
     public partial class CT_PSC
     {
-        public string MaCTPSC { get; set; }
-        public string MaPhieuSC { get; set; }
+        public int MaCTPSC { get; set; }
+        public Nullable<int> MaPhieuSC { get; set; }
         public string NoiDung { get; set; }
         public Nullable<int> SoLan { get; set; }
-        public string MaTienCong { get; set; }
+        public Nullable<int> MaTienCong { get; set; }
         public Nullable<decimal> ThanhTien { get; set; }
     
         public virtual PHIEUSUACHUA PHIEUSUACHUA { get; set; }

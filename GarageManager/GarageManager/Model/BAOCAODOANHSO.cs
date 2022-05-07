@@ -20,7 +20,7 @@ namespace GarageManager.Model
             this.CT_BCDS = new HashSet<CT_BCDS>();
         }
     
-        public string MaBCDS { get; set; }
+        public int MaBCDS { get; set; }
         public Nullable<int> Thang { get; set; }
         public Nullable<int> Nam { get; set; }
         public Nullable<decimal> TongDoanhThu { get; set; }

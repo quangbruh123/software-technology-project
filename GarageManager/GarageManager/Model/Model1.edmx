@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="MaBCDS" />
           </Key>
-          <Property Name="MaBCDS" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="MaBCDS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Thang" Type="int" />
           <Property Name="Nam" Type="int" />
           <Property Name="TongDoanhThu" Type="money" />
@@ -18,12 +18,12 @@
           <Key>
             <PropertyRef Name="MaBCT" />
           </Key>
-          <Property Name="MaBCT" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="MaVatTu" Type="varchar" MaxLength="1" />
+          <Property Name="MaBCT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaVatTu" Type="int" />
           <Property Name="Thang" Type="int" />
           <Property Name="Nam" Type="int" />
           <Property Name="TonDau" Type="int" />
-          <Property Name="PhatSin" Type="int" />
+          <Property Name="PhatSinh" Type="int" />
           <Property Name="TonCuoi" Type="int" />
         </EntityType>
         <EntityType Name="CT_BCDS">
@@ -31,8 +31,8 @@
             <PropertyRef Name="MaBCDS" />
             <PropertyRef Name="MaHieuXe" />
           </Key>
-          <Property Name="MaBCDS" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="MaHieuXe" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="MaBCDS" Type="int" Nullable="false" />
+          <Property Name="MaHieuXe" Type="int" Nullable="false" />
           <Property Name="SoLuotSua" Type="int" />
           <Property Name="ThanhTien" Type="money" />
           <Property Name="TiLe" Type="varchar" MaxLength="1" />
@@ -42,8 +42,8 @@
             <PropertyRef Name="MaPhieuNhap" />
             <PropertyRef Name="MaVatTu" />
           </Key>
-          <Property Name="MaPhieuNhap" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="MaVatTu" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="MaPhieuNhap" Type="int" Nullable="false" />
+          <Property Name="MaVatTu" Type="int" Nullable="false" />
           <Property Name="SoLuong" Type="int" />
           <Property Name="DonGiaNhap" Type="money" />
           <Property Name="DonGiaBan" Type="money" />
@@ -53,19 +53,19 @@
           <Key>
             <PropertyRef Name="MaCTPSC" />
           </Key>
-          <Property Name="MaCTPSC" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="MaPhieuSC" Type="varchar" MaxLength="1" />
-          <Property Name="NoiDung" Type="varchar" MaxLength="1" />
+          <Property Name="MaCTPSC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaPhieuSC" Type="int" />
+          <Property Name="NoiDung" Type="nvarchar(max)" />
           <Property Name="SoLan" Type="int" />
-          <Property Name="MaTienCong" Type="varchar" MaxLength="1" />
+          <Property Name="MaTienCong" Type="int" />
           <Property Name="ThanhTien" Type="money" />
         </EntityType>
         <EntityType Name="CT_SUDUNGVATTU">
           <Key>
             <PropertyRef Name="Ma_CTPSC" />
           </Key>
-          <Property Name="Ma_CTPSC" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="MaVatTu" Type="varchar" MaxLength="1" />
+          <Property Name="Ma_CTPSC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaVatTu" Type="int" />
           <Property Name="SoLuong" Type="int" />
           <Property Name="DonGia" Type="money" />
           <Property Name="ThanhTien" Type="money" />
@@ -74,15 +74,15 @@
           <Key>
             <PropertyRef Name="MaHieuXe" />
           </Key>
-          <Property Name="MaHieuXe" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="MaHieuXe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenHieuXe" Type="varchar" MaxLength="1" />
         </EntityType>
         <EntityType Name="PHIEUNHAPVATTU">
           <Key>
             <PropertyRef Name="MaPhieuNhap" />
           </Key>
-          <Property Name="MaPhieuNhap" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="MaVatTu" Type="varchar" MaxLength="1" />
+          <Property Name="MaPhieuNhap" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaVatTu" Type="int" />
           <Property Name="SoLuong" Type="int" />
           <Property Name="DonGiaNhap" Type="money" />
           <Property Name="DonGiaBan" Type="money" />
@@ -92,8 +92,8 @@
           <Key>
             <PropertyRef Name="MaPhieuSC" />
           </Key>
-          <Property Name="MaPhieuSC" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="BienSo" Type="varchar" MaxLength="1" />
+          <Property Name="MaPhieuSC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BienSo" Type="nvarchar" MaxLength="20" />
           <Property Name="NgaySuaChua" Type="smalldatetime" />
           <Property Name="TongTien" Type="money" />
         </EntityType>
@@ -101,50 +101,47 @@
           <Key>
             <PropertyRef Name="MaPTT" />
           </Key>
-          <Property Name="MaPTT" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="BienSo" Type="varchar" MaxLength="1" />
+          <Property Name="MaPTT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BienSo" Type="nvarchar" MaxLength="20" />
           <Property Name="SoTienThu" Type="money" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="TAIKHOAN">
           <Key>
             <PropertyRef Name="MaTaiKhoan" />
           </Key>
-          <Property Name="MaTaiKhoan" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="HoTen" Type="varchar" MaxLength="1" />
-          <Property Name="TenDangNhap" Type="varchar" MaxLength="1" />
-          <Property Name="MatKhau" Type="varchar" MaxLength="1" />
-          <Property Name="Quyen" Type="varchar" MaxLength="1" />
+          <Property Name="MaTaiKhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenTaiKhoan" Type="nvarchar(max)" />
+          <Property Name="MatKhau" Type="nvarchar(max)" />
+          <Property Name="QuyenHan" Type="int" />
         </EntityType>
         <EntityType Name="THAMSO">
           <Key>
             <PropertyRef Name="TenThamSo" />
           </Key>
-          <Property Name="TenThamSo" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="TenThamSo" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="GiaTri" Type="int" />
         </EntityType>
         <EntityType Name="TIENCONG">
           <Key>
             <PropertyRef Name="MaTienCong" />
           </Key>
-          <Property Name="MaTienCong" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="Tien" Type="money" />
+          <Property Name="MaTienCong" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenTienCong" Type="nvarchar(max)" />
+          <Property Name="GiaTienCong" Type="money" />
+        </EntityType>
+        <EntityType Name="VAITRO">
+          <Key>
+            <PropertyRef Name="MaVaiTro" />
+          </Key>
+          <Property Name="MaVaiTro" Type="int" Nullable="false" />
+          <Property Name="TenVaiTro" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="VATTU">
           <Key>
             <PropertyRef Name="MaVatTu" />
           </Key>
-          <Property Name="MaVatTu" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="TenVatTu" Type="varchar" MaxLength="1" />
+          <Property Name="MaVatTu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenVatTu" Type="nvarchar(max)" />
           <Property Name="DonGiaHienTai" Type="money" />
           <Property Name="SoLuongTon" Type="int" />
         </EntityType>
@@ -152,12 +149,12 @@
           <Key>
             <PropertyRef Name="BienSo" />
           </Key>
-          <Property Name="BienSo" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="TenChuXe" Type="varchar" MaxLength="1" />
-          <Property Name="DienThoai" Type="varchar" MaxLength="1" />
-          <Property Name="DiaChi" Type="varchar" MaxLength="1" />
-          <Property Name="Email" Type="varchar" MaxLength="1" />
-          <Property Name="NgayTiepNhan" Type="smalldatetime" />
+          <Property Name="BienSo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TenChuXe" Type="nvarchar(max)" />
+          <Property Name="DienThoai" Type="nvarchar" MaxLength="20" />
+          <Property Name="DiaChi" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="NgayTiepNhan" Type="datetime" />
           <Property Name="TienNo" Type="money" />
         </EntityType>
         <Association Name="FK_BCT_MaVatTu">
@@ -268,6 +265,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_QuyenHan">
+          <End Role="VAITRO" Type="Self.VAITRO" Multiplicity="0..1" />
+          <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VAITRO">
+              <PropertyRef Name="MaVaiTro" />
+            </Principal>
+            <Dependent Role="TAIKHOAN">
+              <PropertyRef Name="QuyenHan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_SDVT_MaVatTu">
           <End Role="VATTU" Type="Self.VATTU" Multiplicity="0..1" />
           <End Role="CT_SUDUNGVATTU" Type="Self.CT_SUDUNGVATTU" Multiplicity="*" />
@@ -291,10 +300,10 @@
           <EntitySet Name="PHIEUNHAPVATTU" EntityType="Self.PHIEUNHAPVATTU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PHIEUSUACHUA" EntityType="Self.PHIEUSUACHUA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PHIEUTHUTIEN" EntityType="Self.PHIEUTHUTIEN" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="THAMSO" EntityType="Self.THAMSO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TIENCONG" EntityType="Self.TIENCONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VAITRO" EntityType="Self.VAITRO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VATTU" EntityType="Self.VATTU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="XE" EntityType="Self.XE" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_BCT_MaVatTu" Association="Self.FK_BCT_MaVatTu">
@@ -333,6 +342,10 @@
             <End Role="XE" EntitySet="XE" />
             <End Role="PHIEUTHUTIEN" EntitySet="PHIEUTHUTIEN" />
           </AssociationSet>
+          <AssociationSet Name="FK_QuyenHan" Association="Self.FK_QuyenHan">
+            <End Role="VAITRO" EntitySet="VAITRO" />
+            <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
+          </AssociationSet>
           <AssociationSet Name="FK_SDVT_MaVatTu" Association="Self.FK_SDVT_MaVatTu">
             <End Role="VATTU" EntitySet="VATTU" />
             <End Role="CT_SUDUNGVATTU" EntitySet="CT_SUDUNGVATTU" />
@@ -347,7 +360,7 @@
           <Key>
             <PropertyRef Name="MaBCDS" />
           </Key>
-          <Property Name="MaBCDS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaBCDS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Thang" Type="Int32" />
           <Property Name="Nam" Type="Int32" />
           <Property Name="TongDoanhThu" Type="Decimal" Precision="19" Scale="4" />
@@ -357,8 +370,8 @@
           <Key>
             <PropertyRef Name="MaBCT" />
           </Key>
-          <Property Name="MaBCT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MaVatTu" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="MaBCT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaVatTu" Type="Int32" />
           <Property Name="Thang" Type="Int32" />
           <Property Name="Nam" Type="Int32" />
           <Property Name="TonDau" Type="Int32" />
@@ -371,8 +384,8 @@
             <PropertyRef Name="MaBCDS" />
             <PropertyRef Name="MaHieuXe" />
           </Key>
-          <Property Name="MaBCDS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MaHieuXe" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaBCDS" Type="Int32" Nullable="false" />
+          <Property Name="MaHieuXe" Type="Int32" Nullable="false" />
           <Property Name="SoLuotSua" Type="Int32" />
           <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="TiLe" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
@@ -384,8 +397,8 @@
             <PropertyRef Name="MaPhieuNhap" />
             <PropertyRef Name="MaVatTu" />
           </Key>
-          <Property Name="MaPhieuNhap" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MaVatTu" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaPhieuNhap" Type="Int32" Nullable="false" />
+          <Property Name="MaVatTu" Type="Int32" Nullable="false" />
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="DonGiaNhap" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="DonGiaBan" Type="Decimal" Precision="19" Scale="4" />
@@ -397,11 +410,11 @@
           <Key>
             <PropertyRef Name="MaCTPSC" />
           </Key>
-          <Property Name="MaCTPSC" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MaPhieuSC" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="NoiDung" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="MaCTPSC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaPhieuSC" Type="Int32" />
+          <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SoLan" Type="Int32" />
-          <Property Name="MaTienCong" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="MaTienCong" Type="Int32" />
           <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="PHIEUSUACHUA" Relationship="Self.FK_MaPhieuSC" FromRole="CT_PSC" ToRole="PHIEUSUACHUA" />
           <NavigationProperty Name="TIENCONG" Relationship="Self.FK_MaTienCong" FromRole="CT_PSC" ToRole="TIENCONG" />
@@ -410,8 +423,8 @@
           <Key>
             <PropertyRef Name="Ma_CTPSC" />
           </Key>
-          <Property Name="Ma_CTPSC" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MaVatTu" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Ma_CTPSC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaVatTu" Type="Int32" />
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
@@ -421,7 +434,7 @@
           <Key>
             <PropertyRef Name="MaHieuXe" />
           </Key>
-          <Property Name="MaHieuXe" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaHieuXe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenHieuXe" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CT_BCDS" Relationship="Self.FK_HieuXe" FromRole="HIEUXE" ToRole="CT_BCDS" />
         </EntityType>
@@ -429,8 +442,8 @@
           <Key>
             <PropertyRef Name="MaPhieuNhap" />
           </Key>
-          <Property Name="MaPhieuNhap" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MaVatTu" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="MaPhieuNhap" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaVatTu" Type="Int32" />
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="DonGiaNhap" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="DonGiaBan" Type="Decimal" Precision="19" Scale="4" />
@@ -441,8 +454,8 @@
           <Key>
             <PropertyRef Name="MaPhieuSC" />
           </Key>
-          <Property Name="MaPhieuSC" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BienSo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="MaPhieuSC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BienSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="NgaySuaChua" Type="DateTime" Precision="0" />
           <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="CT_PSC" Relationship="Self.FK_MaPhieuSC" FromRole="PHIEUSUACHUA" ToRole="CT_PSC" />
@@ -452,50 +465,51 @@
           <Key>
             <PropertyRef Name="MaPTT" />
           </Key>
-          <Property Name="MaPTT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BienSo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="MaPTT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BienSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="SoTienThu" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="XE" Relationship="Self.FK_PTT_BienSo" FromRole="PHIEUTHUTIEN" ToRole="XE" />
         </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="TAIKHOAN">
           <Key>
-            <PropertyRef Name="TenDangNhap" />
+            <PropertyRef Name="MaTaiKhoan" />
           </Key>
-          <Property Name="TenDangNhap" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MatKhau" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="Quyen" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QuyenHan" Type="Int32" />
+          <NavigationProperty Name="VAITRO" Relationship="Self.FK_QuyenHan" FromRole="TAIKHOAN" ToRole="VAITRO" />
         </EntityType>
         <EntityType Name="THAMSO">
           <Key>
             <PropertyRef Name="TenThamSo" />
           </Key>
-          <Property Name="TenThamSo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenThamSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="GiaTri" Type="Int32" />
         </EntityType>
         <EntityType Name="TIENCONG">
           <Key>
             <PropertyRef Name="MaTienCong" />
           </Key>
-          <Property Name="MaTienCong" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Tien" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MaTienCong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenTienCong" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GiaTienCong" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="CT_PSC" Relationship="Self.FK_MaTienCong" FromRole="TIENCONG" ToRole="CT_PSC" />
+        </EntityType>
+        <EntityType Name="VAITRO">
+          <Key>
+            <PropertyRef Name="MaVaiTro" />
+          </Key>
+          <Property Name="MaVaiTro" Type="Int32" Nullable="false" />
+          <Property Name="TenVaiTro" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TAIKHOANs" Relationship="Self.FK_QuyenHan" FromRole="VAITRO" ToRole="TAIKHOAN" />
         </EntityType>
         <EntityType Name="VATTU">
           <Key>
             <PropertyRef Name="MaVatTu" />
           </Key>
-          <Property Name="MaVatTu" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TenVatTu" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="MaVatTu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenVatTu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="DonGiaHienTai" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="SoLuongTon" Type="Int32" />
           <NavigationProperty Name="BAOCAOTONs" Relationship="Self.FK_BCT_MaVatTu" FromRole="VATTU" ToRole="BAOCAOTON" />
@@ -506,12 +520,12 @@
           <Key>
             <PropertyRef Name="BienSo" />
           </Key>
-          <Property Name="BienSo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TenChuXe" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="DienThoai" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="DiaChi" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="Email" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="NgayTiepNhan" Type="DateTime" Precision="0" />
+          <Property Name="BienSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenChuXe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DienThoai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NgayTiepNhan" Type="DateTime" Precision="3" />
           <Property Name="TienNo" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="PHIEUSUACHUAs" Relationship="Self.FK_PSC_BienSo" FromRole="XE" ToRole="PHIEUSUACHUA" />
           <NavigationProperty Name="PHIEUTHUTIENs" Relationship="Self.FK_PTT_BienSo" FromRole="XE" ToRole="PHIEUTHUTIEN" />
@@ -636,6 +650,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_QuyenHan">
+          <End Role="VAITRO" Type="Self.VAITRO" Multiplicity="0..1" />
+          <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VAITRO">
+              <PropertyRef Name="MaVaiTro" />
+            </Principal>
+            <Dependent Role="TAIKHOAN">
+              <PropertyRef Name="QuyenHan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="GarageManagementEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BAOCAODOANHSOes" EntityType="Self.BAOCAODOANHSO" />
           <EntitySet Name="BAOCAOTONs" EntityType="Self.BAOCAOTON" />
@@ -647,10 +673,10 @@
           <EntitySet Name="PHIEUNHAPVATTUs" EntityType="Self.PHIEUNHAPVATTU" />
           <EntitySet Name="PHIEUSUACHUAs" EntityType="Self.PHIEUSUACHUA" />
           <EntitySet Name="PHIEUTHUTIENs" EntityType="Self.PHIEUTHUTIEN" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TAIKHOANs" EntityType="Self.TAIKHOAN" />
           <EntitySet Name="THAMSOes" EntityType="Self.THAMSO" />
           <EntitySet Name="TIENCONGs" EntityType="Self.TIENCONG" />
+          <EntitySet Name="VAITROes" EntityType="Self.VAITRO" />
           <EntitySet Name="VATTUs" EntityType="Self.VATTU" />
           <EntitySet Name="XEs" EntityType="Self.XE" />
           <AssociationSet Name="FK_MaBCDS" Association="Self.FK_MaBCDS">
@@ -693,6 +719,10 @@
             <End Role="XE" EntitySet="XEs" />
             <End Role="PHIEUTHUTIEN" EntitySet="PHIEUTHUTIENs" />
           </AssociationSet>
+          <AssociationSet Name="FK_QuyenHan" Association="Self.FK_QuyenHan">
+            <End Role="VAITRO" EntitySet="VAITROes" />
+            <End Role="TAIKHOAN" EntitySet="TAIKHOANs" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -718,7 +748,7 @@
                 <ScalarProperty Name="Thang" ColumnName="Thang" />
                 <ScalarProperty Name="Nam" ColumnName="Nam" />
                 <ScalarProperty Name="TonDau" ColumnName="TonDau" />
-                <ScalarProperty Name="PhatSinh" ColumnName="PhatSin" />
+                <ScalarProperty Name="PhatSinh" ColumnName="PhatSinh" />
                 <ScalarProperty Name="TonCuoi" ColumnName="TonCuoi" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -808,23 +838,13 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="GarageManagementModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TAIKHOANs">
             <EntityTypeMapping TypeName="GarageManagementModel.TAIKHOAN">
               <MappingFragment StoreEntitySet="TAIKHOAN">
-                <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+                <ScalarProperty Name="MaTaiKhoan" ColumnName="MaTaiKhoan" />
+                <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
                 <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
-                <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+                <ScalarProperty Name="QuyenHan" ColumnName="QuyenHan" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -840,7 +860,16 @@
             <EntityTypeMapping TypeName="GarageManagementModel.TIENCONG">
               <MappingFragment StoreEntitySet="TIENCONG">
                 <ScalarProperty Name="MaTienCong" ColumnName="MaTienCong" />
-                <ScalarProperty Name="Tien" ColumnName="Tien" />
+                <ScalarProperty Name="TenTienCong" ColumnName="TenTienCong" />
+                <ScalarProperty Name="GiaTienCong" ColumnName="GiaTienCong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VAITROes">
+            <EntityTypeMapping TypeName="GarageManagementModel.VAITRO">
+              <MappingFragment StoreEntitySet="VAITRO">
+                <ScalarProperty Name="MaVaiTro" ColumnName="MaVaiTro" />
+                <ScalarProperty Name="TenVaiTro" ColumnName="TenVaiTro" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

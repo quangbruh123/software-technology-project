@@ -14,8 +14,8 @@ namespace GarageManager.Model
     
     public partial class CT_BCDS
     {
-        public string MaBCDS { get; set; }
-        public string MaHieuXe { get; set; }
+        public int MaBCDS { get; set; }
+        public int MaHieuXe { get; set; }
         public Nullable<int> SoLuotSua { get; set; }
         public Nullable<decimal> ThanhTien { get; set; }
         public string TiLe { get; set; }

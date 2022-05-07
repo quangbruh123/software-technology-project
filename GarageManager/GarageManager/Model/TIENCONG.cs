@@ -20,8 +20,9 @@ namespace GarageManager.Model
             this.CT_PSC = new HashSet<CT_PSC>();
         }
     
-        public string MaTienCong { get; set; }
-        public Nullable<decimal> Tien { get; set; }
+        public int MaTienCong { get; set; }
+        public string TenTienCong { get; set; }
+        public Nullable<decimal> GiaTienCong { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_PSC> CT_PSC { get; set; }

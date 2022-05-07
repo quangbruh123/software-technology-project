@@ -20,7 +20,7 @@ namespace GarageManager.Model
             this.CT_BCDS = new HashSet<CT_BCDS>();
         }
     
-        public string MaHieuXe { get; set; }
+        public int MaHieuXe { get; set; }
         public string TenHieuXe { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
