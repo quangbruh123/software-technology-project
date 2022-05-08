@@ -62,9 +62,9 @@
         </EntityType>
         <EntityType Name="CT_SUDUNGVATTU">
           <Key>
-            <PropertyRef Name="Ma_CTPSC" />
+            <PropertyRef Name="MaCTPSC" />
           </Key>
-          <Property Name="Ma_CTPSC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaCTPSC" Type="int" Nullable="false" />
           <Property Name="MaVatTu" Type="int" />
           <Property Name="SoLuong" Type="int" />
           <Property Name="DonGia" Type="money" />
@@ -193,6 +193,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_MaCTPSC">
+          <End Role="CT_PSC" Type="Self.CT_PSC" Multiplicity="1" />
+          <End Role="CT_SUDUNGVATTU" Type="Self.CT_SUDUNGVATTU" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CT_PSC">
+              <PropertyRef Name="MaCTPSC" />
+            </Principal>
+            <Dependent Role="CT_SUDUNGVATTU">
+              <PropertyRef Name="MaCTPSC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_MaPhieuNhap">
           <End Role="PHIEUNHAPVATTU" Type="Self.PHIEUNHAPVATTU" Multiplicity="1" />
           <End Role="CT_PNVT" Type="Self.CT_PNVT" Multiplicity="*" />
@@ -318,6 +330,10 @@
             <End Role="BAOCAODOANHSO" EntitySet="BAOCAODOANHSO" />
             <End Role="CT_BCDS" EntitySet="CT_BCDS" />
           </AssociationSet>
+          <AssociationSet Name="FK_MaCTPSC" Association="Self.FK_MaCTPSC">
+            <End Role="CT_PSC" EntitySet="CT_PSC" />
+            <End Role="CT_SUDUNGVATTU" EntitySet="CT_SUDUNGVATTU" />
+          </AssociationSet>
           <AssociationSet Name="FK_MaPhieuNhap" Association="Self.FK_MaPhieuNhap">
             <End Role="PHIEUNHAPVATTU" EntitySet="PHIEUNHAPVATTU" />
             <End Role="CT_PNVT" EntitySet="CT_PNVT" />
@@ -416,18 +432,20 @@
           <Property Name="SoLan" Type="Int32" />
           <Property Name="MaTienCong" Type="Int32" />
           <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="CT_SUDUNGVATTU" Relationship="Self.FK_MaCTPSC" FromRole="CT_PSC" ToRole="CT_SUDUNGVATTU" />
           <NavigationProperty Name="PHIEUSUACHUA" Relationship="Self.FK_MaPhieuSC" FromRole="CT_PSC" ToRole="PHIEUSUACHUA" />
           <NavigationProperty Name="TIENCONG" Relationship="Self.FK_MaTienCong" FromRole="CT_PSC" ToRole="TIENCONG" />
         </EntityType>
         <EntityType Name="CT_SUDUNGVATTU">
           <Key>
-            <PropertyRef Name="Ma_CTPSC" />
+            <PropertyRef Name="MaCTPSC" />
           </Key>
-          <Property Name="Ma_CTPSC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaCTPSC" Type="Int32" Nullable="false" />
           <Property Name="MaVatTu" Type="Int32" />
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="CT_PSC" Relationship="Self.FK_MaCTPSC" FromRole="CT_SUDUNGVATTU" ToRole="CT_PSC" />
           <NavigationProperty Name="VATTU" Relationship="Self.FK_SDVT_MaVatTu" FromRole="CT_SUDUNGVATTU" ToRole="VATTU" />
         </EntityType>
         <EntityType Name="HIEUXE">
@@ -590,6 +608,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_MaCTPSC">
+          <End Role="CT_PSC" Type="Self.CT_PSC" Multiplicity="1" />
+          <End Role="CT_SUDUNGVATTU" Type="Self.CT_SUDUNGVATTU" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CT_PSC">
+              <PropertyRef Name="MaCTPSC" />
+            </Principal>
+            <Dependent Role="CT_SUDUNGVATTU">
+              <PropertyRef Name="MaCTPSC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_MaPhieuSC">
           <End Role="PHIEUSUACHUA" Type="Self.PHIEUSUACHUA" Multiplicity="0..1" />
           <End Role="CT_PSC" Type="Self.CT_PSC" Multiplicity="*" />
@@ -699,6 +729,10 @@
             <End Role="VATTU" EntitySet="VATTUs" />
             <End Role="CT_PNVT" EntitySet="CT_PNVT" />
           </AssociationSet>
+          <AssociationSet Name="FK_MaCTPSC" Association="Self.FK_MaCTPSC">
+            <End Role="CT_PSC" EntitySet="CT_PSC" />
+            <End Role="CT_SUDUNGVATTU" EntitySet="CT_SUDUNGVATTU" />
+          </AssociationSet>
           <AssociationSet Name="FK_MaPhieuSC" Association="Self.FK_MaPhieuSC">
             <End Role="PHIEUSUACHUA" EntitySet="PHIEUSUACHUAs" />
             <End Role="CT_PSC" EntitySet="CT_PSC" />
@@ -791,7 +825,7 @@
           <EntitySetMapping Name="CT_SUDUNGVATTU">
             <EntityTypeMapping TypeName="GarageManagementModel.CT_SUDUNGVATTU">
               <MappingFragment StoreEntitySet="CT_SUDUNGVATTU">
-                <ScalarProperty Name="Ma_CTPSC" ColumnName="Ma_CTPSC" />
+                <ScalarProperty Name="MaCTPSC" ColumnName="MaCTPSC" />
                 <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
                 <ScalarProperty Name="DonGia" ColumnName="DonGia" />

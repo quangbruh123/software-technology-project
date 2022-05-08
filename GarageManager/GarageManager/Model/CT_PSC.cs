@@ -21,6 +21,7 @@ namespace GarageManager.Model
         public Nullable<int> MaTienCong { get; set; }
         public Nullable<decimal> ThanhTien { get; set; }
     
+        public virtual CT_SUDUNGVATTU CT_SUDUNGVATTU { get; set; }
         public virtual PHIEUSUACHUA PHIEUSUACHUA { get; set; }
         public virtual TIENCONG TIENCONG { get; set; }
     }
