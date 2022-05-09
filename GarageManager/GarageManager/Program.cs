@@ -16,7 +16,7 @@ namespace GarageManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormDăngNhập());
+            Application.Run(new LoginForm());
         }
     }
 }

@@ -34,6 +34,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(141, 238);
+            this.dataGridView1.Location = new System.Drawing.Point(299, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(521, 332);
             this.dataGridView1.TabIndex = 9;
@@ -66,16 +67,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 149);
+            this.textBox1.Location = new System.Drawing.Point(20, 158);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 20);
+            this.textBox1.Size = new System.Drawing.Size(137, 20);
             this.textBox1.TabIndex = 11;
             this.textBox1.Text = "Key word";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 99);
+            this.label1.Location = new System.Drawing.Point(27, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 12;
@@ -87,24 +88,34 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::GarageManager.Properties.Resources.search_30px;
-            this.button3.Location = new System.Drawing.Point(299, 140);
+            this.button3.Location = new System.Drawing.Point(172, 149);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(47, 37);
             this.button3.TabIndex = 10;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // TracuuUserControl
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(30, 529);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 46);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Reset";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // tracuuUserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Tracuuxelable);
-            this.Name = "TracuuUserControl";
+            this.Name = "tracuuUserControl1";
             this.Size = new System.Drawing.Size(829, 606);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -119,5 +130,6 @@
         private System.Windows.Forms.Label Tracuuxelable;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

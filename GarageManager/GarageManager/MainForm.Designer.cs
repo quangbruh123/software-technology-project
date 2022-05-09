@@ -48,6 +48,7 @@
             this.lapphieuthutienbutton = new System.Windows.Forms.Button();
             this.tiepnhanbaotrixebutton = new System.Windows.Forms.Button();
             this.lapphieuthutienUserControl = new GarageManager.usercontrol.LapphieuthutienUserControl();
+            this.lapphieusuachuaUserControl1 = new GarageManager.usercontrol.LapphieusuachuaUserControl();
             this.panel1.SuspendLayout();
             this.mainpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -156,6 +157,7 @@
             this.mainpanel.Controls.Add(this.lapphieuthutienbutton);
             this.mainpanel.Controls.Add(this.tiepnhanbaotrixebutton);
             this.mainpanel.Controls.Add(this.lapphieuthutienUserControl);
+            this.mainpanel.Controls.Add(this.lapphieusuachuaUserControl1);
             this.mainpanel.Location = new System.Drawing.Point(188, 0);
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(641, 612);
@@ -238,6 +240,7 @@
             this.lapphieusuachuabutton.Text = "Lập phiếu sửa chữa";
             this.lapphieusuachuabutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lapphieusuachuabutton.UseVisualStyleBackColor = false;
+            this.lapphieusuachuabutton.Click += new System.EventHandler(this.lapphieusuachuabutton_Click);
             // 
             // lapbaocaothangbutton
             // 
@@ -327,13 +330,22 @@
             // lapphieuthutienUserControl
             // 
             this.lapphieuthutienUserControl.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lapphieuthutienUserControl.Location = new System.Drawing.Point(-187, 0);
+            this.lapphieuthutienUserControl.Location = new System.Drawing.Point(-186, 3);
             this.lapphieuthutienUserControl.Name = "lapphieuthutienUserControl";
             this.lapphieuthutienUserControl.Size = new System.Drawing.Size(825, 612);
             this.lapphieuthutienUserControl.TabIndex = 6;
             this.lapphieuthutienUserControl.Visible = false;
             // 
-            // Form1
+            // lapphieusuachuaUserControl1
+            // 
+            this.lapphieusuachuaUserControl1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lapphieusuachuaUserControl1.Location = new System.Drawing.Point(-187, 2);
+            this.lapphieusuachuaUserControl1.Name = "lapphieusuachuaUserControl1";
+            this.lapphieusuachuaUserControl1.Size = new System.Drawing.Size(829, 606);
+            this.lapphieusuachuaUserControl1.TabIndex = 14;
+            this.lapphieusuachuaUserControl1.Visible = false;
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -342,7 +354,7 @@
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -375,6 +387,7 @@
         private usercontrol.LapphieuthutienUserControl lapphieuthutienUserControl;
         public System.Windows.Forms.Button lapphieuthutienbutton;
         private usercontrol.tracuuUserControl1 tracuuUserControl1;
+        private usercontrol.LapphieusuachuaUserControl lapphieusuachuaUserControl1;
     }
 }
 

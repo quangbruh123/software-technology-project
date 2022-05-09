@@ -20,11 +20,12 @@ namespace GarageManager
         //Nút nhảy usercontrol
         private LapphieuthutienUserControl uc1;
         private tracuuUserControl1 uc2;
+        private LapphieusuachuaUserControl uc3;
 
         public MainForm()
         {
-            InitializeComponent();           
-        }  
+            InitializeComponent();
+        }
         //Nút exit zoom mini
         private void button4_Click(object sender, EventArgs e)
         {
@@ -42,8 +43,11 @@ namespace GarageManager
             Controls.Add(uc1);
             uc2 = new tracuuUserControl1();
             Controls.Add(uc2);
+            uc3 = new LapphieusuachuaUserControl();
+            Controls.Add(uc3);
             uc1.Visible = false;
             uc2.Visible = false;
+            uc3.Visible = false;
         }
         private void tracuuxebutton_Click(object sender, EventArgs e)
         {
@@ -51,6 +55,7 @@ namespace GarageManager
             mainpanel.Visible = false;
             uc1.Visible = false;
             uc2.Visible = true;
+            uc3.Visible = false;
         }
         private void lapphieuthutienbutton_Click(object sender, EventArgs e)
         {
@@ -58,6 +63,17 @@ namespace GarageManager
             mainpanel.Visible = false;
             uc1.Visible = true;
             uc2.Visible = false;
-        }        
+            uc3.Visible = false;
+        }
+
+        private void lapphieusuachuabutton_Click(object sender, EventArgs e)
+        {
+
+            panel1.Visible = false;
+            mainpanel.Visible = false;
+            uc1.Visible = false;
+            uc2.Visible = false;
+            uc3.Visible = true;
+        }
     }
 }

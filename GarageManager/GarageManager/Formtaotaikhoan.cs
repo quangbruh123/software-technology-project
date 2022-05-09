@@ -20,7 +20,7 @@ namespace GarageManager
         private void pictureBoxexit_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormDăngNhập formDăngNhập = new FormDăngNhập();
+            LoginForm formDăngNhập = new LoginForm();
             formDăngNhập.ShowDialog();
         }
 
