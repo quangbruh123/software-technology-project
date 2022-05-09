@@ -76,6 +76,18 @@
     <Compile Include="Classes\Account.cs" />
     <Compile Include="Classes\DataProvider.cs" />
     <Compile Include="Classes\Vehicle.cs" />
+    <Compile Include="FormDăngNhập.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDăngNhập.Designer.cs">
+      <DependentUpon>FormDăngNhập.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formtaotaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formtaotaikhoan.Designer.cs">
+      <DependentUpon>Formtaotaikhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +177,12 @@
     <Compile Include="usercontrol\TracuuUserControl.Designer.cs">
       <DependentUpon>TracuuUserControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormDăngNhập.resx">
+      <DependentUpon>FormDăngNhập.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formtaotaikhoan.resx">
+      <DependentUpon>Formtaotaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +267,11 @@
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
       <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\gmail_40px.png" />
+    <None Include="Resources\garage_100px.png" />
+    <None Include="Resources\user_24px.png" />
+    <None Include="Resources\lock_24px.png" />
+    <None Include="Resources\Close_40px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
