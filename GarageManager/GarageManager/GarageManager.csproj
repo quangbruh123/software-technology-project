@@ -76,11 +76,11 @@
     <Compile Include="Classes\Account.cs" />
     <Compile Include="Classes\DataProvider.cs" />
     <Compile Include="Classes\Vehicle.cs" />
-    <Compile Include="FormDăngNhập.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDăngNhập.Designer.cs">
-      <DependentUpon>FormDăngNhập.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Formtaotaikhoan.cs">
       <SubType>Form</SubType>
@@ -177,8 +177,8 @@
     <Compile Include="usercontrol\TracuuUserControl.Designer.cs">
       <DependentUpon>TracuuUserControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormDăngNhập.resx">
-      <DependentUpon>FormDăngNhập.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formtaotaikhoan.resx">
       <DependentUpon>Formtaotaikhoan.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace GarageManager
 {
-    partial class FormDăngNhập
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GarageManager
 {
-    public partial class FormDăngNhập : Form
+    public partial class LoginForm : Form
     {
-        public FormDăngNhập()
+        public LoginForm()
         {
             InitializeComponent();
         }
