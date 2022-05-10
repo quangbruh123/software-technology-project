@@ -16,5 +16,27 @@ namespace GarageManager.usercontrol
         {
             InitializeComponent();
         }
+
+        // Only number in text box ( So luong )
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            double parsedValue;
+
+            if (!double.TryParse(textBox1.Text, out parsedValue))
+            {
+                textBox1.Text = "";
+            }
+        }
+
+        // Only number in text box ( Tien cong )
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            double parsedValue;
+
+            if (!double.TryParse(textBox1.Text, out parsedValue))
+            {
+                textBox1.Text = "";
+            }
+        }
     }
 }
