@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GarageManager.Classes
 {
+    /// <summary>
+    /// Handles the data. This is the pivotal class
+    /// </summary>
     public class DataProvider
     {
         private static DataProvider instance;

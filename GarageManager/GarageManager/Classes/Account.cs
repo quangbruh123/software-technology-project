@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace GarageManager.Classes
 {
+    /// <summary>
+    /// Handles accounts
+    /// </summary>
     public class Account
     {
         /// <summary>

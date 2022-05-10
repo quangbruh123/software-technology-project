@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="Classes\Account.cs" />
     <Compile Include="Classes\DataProvider.cs" />
+    <Compile Include="Classes\Finance.cs" />
     <Compile Include="Classes\Vehicle.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>

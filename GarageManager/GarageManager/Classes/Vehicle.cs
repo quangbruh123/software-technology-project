@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GarageManager.Classes
 {
+    /// <summary>
+    /// Handles all operations related to vehicles
+    /// </summary>
     public class Vehicle
     {
         /// <summary>
@@ -16,7 +19,7 @@ namespace GarageManager.Classes
         /// <param name="phonenum"></param>
         /// <param name="address"></param>
         /// <param name="email"></param>
-        public void AddVehicle(string plate, string owner, string phonenum, string address, string email, DateTime date, int owe)
+        public void AddVehicle(string plate, string owner, string phonenum, string address, string email, DateTime date)
         {
             Model.XE car = new Model.XE()
             {
@@ -26,7 +29,7 @@ namespace GarageManager.Classes
                 DiaChi = address,
                 Email = email,
                 NgayTiepNhan = date,
-                TienNo = owe
+                TienNo = 0
             };
             DataProvider.Instance.DB.XEs.Add(car);
             DataProvider.Instance.DB.SaveChanges();
@@ -39,16 +42,12 @@ namespace GarageManager.Classes
         /// <returns>The ID</returns>
         private int GetWageId (string wageName)
         {
-            Model.TIENCONG wage = new Model.TIENCONG();
-            wage = (Model.TIENCONG)DataProvider.Instance.DB.TIENCONGs.Where(x => x.TenTienCong == wageName);
-            return wage.MaTienCong;
+            return DataProvider.Instance.DB.TIENCONGs.Where(x => x.TenTienCong == wageName).FirstOrDefault().MaTienCong;
         }
 
         private decimal? GetWage (int wageID)
         {
-            Model.TIENCONG wage = new Model.TIENCONG();
-            wage = (Model.TIENCONG)DataProvider.Instance.DB.TIENCONGs.Where(x => x.MaTienCong == wageID);
-            return wage.GiaTienCong;
+            return DataProvider.Instance.DB.TIENCONGs.Where(x => x.MaTienCong == wageID).FirstOrDefault().GiaTienCong;
         }
 
         /// <summary>
@@ -58,9 +57,7 @@ namespace GarageManager.Classes
         /// <returns>The ID</returns>
         private int GetPartsID (string partsName)
         {
-            Model.VATTU parts = new Model.VATTU();
-            parts = (Model.VATTU)DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partsName);
-            return parts.MaVatTu;
+            return DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partsName).FirstOrDefault().MaVatTu;
         }
 
         /// <summary>
@@ -70,9 +67,7 @@ namespace GarageManager.Classes
         /// <returns>The price</returns>
         private decimal? GetPartsPrice (string partsName)
         {
-            Model.VATTU parts = new Model.VATTU();
-            parts = (Model.VATTU)DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partsName);
-            return parts.DonGiaHienTai;
+            return DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partsName).FirstOrDefault().DonGiaHienTai;
         }
 
         /// <summary>
@@ -134,6 +129,48 @@ namespace GarageManager.Classes
             }
             else
                 return false;
+        }
+
+        /// <summary>
+        /// Find all vehicles that has their plates containing the given key word
+        /// </summary>
+        /// <param name="plate"></param>
+        /// <returns>A list of vehicle satisfies the condition</returns>
+        public List<Model.XE> FindVehicleFromPlate(string plate)
+        {
+            return DataProvider.Instance.DB.XEs.Where(x => x.BienSo.Contains(plate)).ToList();
+        }
+
+        /// <summary>
+        /// Find all vehicles that has their owner's names containing the given key word
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns>A list of vehicle satisfies the condition</returns>
+        public List<Model.XE> FindVehicleFromNameOfOwner(string name)
+        {
+            return DataProvider.Instance.DB.XEs.Where(x => x.TenChuXe.Contains(name)).ToList();
+        }
+
+        /// <summary>
+        /// Get all maintenance information of a vehicle from its plate. The vehicle must already has a maintenance card
+        /// </summary>
+        /// <param name="plate"></param>
+        /// <returns>PHIEUSUACHUA, a list of CT_PSC and a list of CT_SUDUNGVATTU, or null if it doesn't have a maintenance card yet</returns>
+        public dynamic GetMaintenanceCard(string plate)
+        {
+            Model.PHIEUSUACHUA psc = DataProvider.Instance.DB.PHIEUSUACHUAs.Where(x => x.BienSo == plate).FirstOrDefault();
+            if (psc != null)
+            {
+                List<Model.CT_PSC> ct_psc = DataProvider.Instance.DB.CT_PSC.Where(x => x.MaPhieuSC == psc.MaPhieuSC).ToList();
+                List<Model.CT_SUDUNGVATTU> ct_sdvt = new List<Model.CT_SUDUNGVATTU>();
+                for (int i = 0; i < ct_psc.Count; i++)
+                {
+                    ct_sdvt.Add(DataProvider.Instance.DB.CT_SUDUNGVATTU.Where(x => x.MaCTPSC == ct_psc[i].MaCTPSC).FirstOrDefault());
+                }
+                return new { psc, ct_psc, ct_sdvt };
+            }
+            else
+                return null;
         }
     }
 }
