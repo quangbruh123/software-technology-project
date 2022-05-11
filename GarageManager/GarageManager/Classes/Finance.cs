@@ -25,6 +25,8 @@ namespace GarageManager.Classes
                     BienSo = plate,
                     SoTienThu = pay
                 };
+                DataProvider.Instance.DB.PHIEUTHUTIENs.Add(receipt);
+                DataProvider.Instance.DB.SaveChanges();
                 return true;
             }
             return false;
