@@ -20,7 +20,7 @@ namespace GarageManager.Classes
         /// <returns>
         /// True if successfully added, otherwise false
         /// </returns>
-        public bool AddStaffAccount(string username, string password)
+        public static bool AddStaffAccount(string username, string password)
         {
             if (!DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == username && x.MatKhau == password))
             {
@@ -45,7 +45,7 @@ namespace GarageManager.Classes
         /// <returns>
         /// True if successfully added, otherwise false
         /// </returns>
-        public bool AddAdminAccount(string username, string password)
+        public static bool AddAdminAccount(string username, string password)
         {
             if (!DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == username && x.MatKhau == password))
             {
@@ -78,7 +78,7 @@ namespace GarageManager.Classes
         /// </summary>
         /// <param name="username"></param>
         /// <param name="password"></param>
-        private void LogIn(string username, string password)
+        private static void LogIn(string username, string password)
         {
             SHA256 sha256hash = SHA256.Create();
             string passwordhash = GetHash(sha256hash, password);

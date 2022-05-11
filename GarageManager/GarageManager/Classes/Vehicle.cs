@@ -12,6 +12,16 @@ namespace GarageManager.Classes
     public class Vehicle
     {
         /// <summary>
+        /// Check if a vehicle's plate exists in the database
+        /// </summary>
+        /// <param name="plate"></param>
+        /// <returns>True if the vehicle is in the database, false if not</returns>
+        public static bool VerifyPlate(string plate)
+        {
+            return DataProvider.Instance.DB.XEs.Any(x => x.BienSo == plate);
+        }
+
+        /// <summary>
         /// Add a vehicle to the garage
         /// </summary>
         /// <param name="plate"></param>
@@ -19,7 +29,7 @@ namespace GarageManager.Classes
         /// <param name="phonenum"></param>
         /// <param name="address"></param>
         /// <param name="email"></param>
-        public void AddVehicle(string plate, string owner, string phonenum, string address, string email, DateTime date)
+        public static void AddVehicle(string plate, string owner, string phonenum, string address, string email, DateTime date)
         {
             Model.XE car = new Model.XE()
             {
@@ -40,12 +50,12 @@ namespace GarageManager.Classes
         /// </summary>
         /// <param name="wageName"></param>
         /// <returns>The ID</returns>
-        private int GetWageId (string wageName)
+        private static int GetWageId (string wageName)
         {
             return DataProvider.Instance.DB.TIENCONGs.Where(x => x.TenTienCong == wageName).FirstOrDefault().MaTienCong;
         }
 
-        private decimal? GetWage (int wageID)
+        private static decimal? GetWage (int wageID)
         {
             return DataProvider.Instance.DB.TIENCONGs.Where(x => x.MaTienCong == wageID).FirstOrDefault().GiaTienCong;
         }
@@ -55,7 +65,7 @@ namespace GarageManager.Classes
         /// </summary>
         /// <param name="partsName"></param>
         /// <returns>The ID</returns>
-        private int GetPartsID (string partsName)
+        private static int GetPartsID (string partsName)
         {
             return DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partsName).FirstOrDefault().MaVatTu;
         }
@@ -65,7 +75,7 @@ namespace GarageManager.Classes
         /// </summary>
         /// <param name="partsName"></param>
         /// <returns>The price</returns>
-        private decimal? GetPartsPrice (string partsName)
+        private static decimal? GetPartsPrice (string partsName)
         {
             return DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partsName).FirstOrDefault().DonGiaHienTai;
         }
@@ -77,9 +87,9 @@ namespace GarageManager.Classes
         /// <param name="date"></param>
         /// <param name="details"></param>
         /// <returns>True if successfully added, otherwise false</returns>
-        public bool AddMaintenanceInfo(string plate, DateTime date, string details, string wageName, string[] parts, int[] amount)
+        public static bool AddMaintenanceInfo(string plate, DateTime date, string details, string wageName, string[] parts, int[] amount)
         {
-            if (DataProvider.Instance.DB.XEs.Any(x => x.BienSo == plate))
+            if (VerifyPlate(plate))
             {              
                 Model.CT_SUDUNGVATTU[] ct_sdvt = new Model.CT_SUDUNGVATTU[parts.Length];
                 for (int i = 0; i < parts.Length; i++)
@@ -93,7 +103,7 @@ namespace GarageManager.Classes
                 for (int i = 0; i < parts.Length; i++)
                 {
                     ct_psc[i].NoiDung = details;
-                    ct_psc[i].SoLan = DataProvider.Instance.DB.PHIEUSUACHUAs.Where(x => x.BienSo == plate).Count();
+                    ct_psc[i].SoLan = DataProvider.Instance.DB.PHIEUSUACHUAs.Where(x => x.BienSo == plate).Count() + 1;
                     ct_psc[i].MaTienCong = GetWageId(wageName);
                     ct_psc[i].ThanhTien = ct_sdvt[i].SoLuong * ct_sdvt[i].DonGia + GetWage((int)ct_psc[i].MaTienCong);
                     ct_psc[i].CT_SUDUNGVATTU = ct_sdvt[i];
@@ -136,7 +146,7 @@ namespace GarageManager.Classes
         /// </summary>
         /// <param name="plate"></param>
         /// <returns>A list of vehicle satisfies the condition</returns>
-        public List<Model.XE> FindVehicleFromPlate(string plate)
+        public static List<Model.XE> FindVehicleFromPlate(string plate)
         {
             return DataProvider.Instance.DB.XEs.Where(x => x.BienSo.Contains(plate)).ToList();
         }
@@ -146,7 +156,7 @@ namespace GarageManager.Classes
         /// </summary>
         /// <param name="name"></param>
         /// <returns>A list of vehicle satisfies the condition</returns>
-        public List<Model.XE> FindVehicleFromNameOfOwner(string name)
+        public static List<Model.XE> FindVehicleFromNameOfOwner(string name)
         {
             return DataProvider.Instance.DB.XEs.Where(x => x.TenChuXe.Contains(name)).ToList();
         }
@@ -156,7 +166,7 @@ namespace GarageManager.Classes
         /// </summary>
         /// <param name="plate"></param>
         /// <returns>PHIEUSUACHUA, a list of CT_PSC and a list of CT_SUDUNGVATTU, or null if it doesn't have a maintenance card yet</returns>
-        public dynamic GetMaintenanceCard(string plate)
+        public static dynamic GetMaintenanceCard(string plate)
         {
             Model.PHIEUSUACHUA psc = DataProvider.Instance.DB.PHIEUSUACHUAs.Where(x => x.BienSo == plate).FirstOrDefault();
             if (psc != null)
@@ -171,6 +181,6 @@ namespace GarageManager.Classes
             }
             else
                 return null;
-        }
+        }     
     }
 }
