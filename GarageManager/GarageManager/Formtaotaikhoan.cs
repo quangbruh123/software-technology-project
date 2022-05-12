@@ -30,5 +30,12 @@ namespace GarageManager
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();  
         }
+
+        private void taotaikhoanbtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm formDăngNhập = new LoginForm();
+            formDăngNhập.ShowDialog();
+        }
     }
 }

@@ -113,6 +113,16 @@ namespace GarageManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Close_30px {
+            get {
+                object obj = ResourceManager.GetObject("Close_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close_40px {
             get {
                 object obj = ResourceManager.GetObject("Close_40px", resourceCulture);
@@ -183,6 +193,16 @@ namespace GarageManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap maximize_window_24px {
+            get {
+                object obj = ResourceManager.GetObject("maximize_window_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search_30px {
             get {
                 object obj = ResourceManager.GetObject("search_30px", resourceCulture);
@@ -196,6 +216,16 @@ namespace GarageManager.Properties {
         internal static System.Drawing.Bitmap search_50px {
             get {
                 object obj = ResourceManager.GetObject("search_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap subtract_30px {
+            get {
+                object obj = ResourceManager.GetObject("subtract_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
