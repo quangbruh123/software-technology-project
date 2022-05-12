@@ -77,6 +77,7 @@
     <Compile Include="Classes\DataProvider.cs" />
     <Compile Include="Classes\Finance.cs" />
     <Compile Include="Classes\Regulation.cs" />
+    <Compile Include="Classes\Storage.cs" />
     <Compile Include="Classes\Vehicle.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>

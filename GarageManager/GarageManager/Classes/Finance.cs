@@ -46,5 +46,41 @@ namespace GarageManager.Classes
             else
                 return null;
         }
+
+        /// <summary>
+        /// Add a new type of wage. The name of it must not have existed in the database
+        /// </summary>
+        /// <param name="newWageName"></param>
+        /// <param name="newWageAmount"></param>
+        /// <returns>True if successfully added, false if not</returns>
+        public static bool AddWageType(string newWageName, decimal newWageAmount)
+        {
+            if (!DataProvider.Instance.DB.TIENCONGs.Any(x => x.TenTienCong == newWageName))
+            {
+                Model.TIENCONG newWage = new Model.TIENCONG()
+                {
+                    TenTienCong = newWageName,
+                    GiaTienCong = newWageAmount
+                };
+                DataProvider.Instance.DB.TIENCONGs.Add(newWage);
+                DataProvider.Instance.DB.SaveChanges();
+                return true;
+            }
+            else
+                return false;
+        }
+
+        public static bool RemoveWageType(string wageName)
+        {           
+            if (DataProvider.Instance.DB.TIENCONGs.Any(x => x.TenTienCong == wageName))
+            {
+                Model.TIENCONG unwantedWage = DataProvider.Instance.DB.TIENCONGs.Where(x => x.TenTienCong == wageName).FirstOrDefault();
+                DataProvider.Instance.DB.TIENCONGs.Remove(unwantedWage);
+                DataProvider.Instance.DB.SaveChanges();
+                return true;
+            }
+            else
+                return false;
+        }
     }
 }

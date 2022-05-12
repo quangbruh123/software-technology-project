@@ -42,5 +42,7 @@ namespace GarageManager.Classes
             vehicleLimit.GiaTri = newLimit;
             DataProvider.Instance.DB.SaveChanges();
         }
+
+        
     }
 }
