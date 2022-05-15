@@ -180,6 +180,12 @@
     <Compile Include="usercontrol\TracuuUserControl.Designer.cs">
       <DependentUpon>TracuuUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="usercontrol\UserControldatagrid1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\UserControldatagrid1.Designer.cs">
+      <DependentUpon>UserControldatagrid1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrol\TracuuUserControl.resx">
       <DependentUpon>TracuuUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\UserControldatagrid1.resx">
+      <DependentUpon>UserControldatagrid1.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\GarageManagementModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -270,6 +279,9 @@
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
       <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\maximize_window_24px.png" />
+    <None Include="Resources\subtract_30px.png" />
+    <None Include="Resources\Close_30px.png" />
     <None Include="Resources\gmail_40px.png" />
     <None Include="Resources\garage_100px.png" />
     <None Include="Resources\user_24px.png" />

@@ -34,7 +34,6 @@ D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManag
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.exe
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.pdb
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.tracuuUserControl1.resources
-D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.FormDăngNhập.resources
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.MainForm.resources
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.Formtaotaikhoan.resources
 D:\School\CNPM\software-technology-project\GarageManager\GarageManager\bin\Debug\GarageManager.exe.config
@@ -58,3 +57,5 @@ D:\School\CNPM\software-technology-project\GarageManager\GarageManager\obj\Debug
 D:\School\CNPM\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.CopyComplete
 D:\School\CNPM\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.exe
 D:\School\CNPM\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.pdb
+D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.LoginForm.resources
+D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.UserControldatagrid1.resources

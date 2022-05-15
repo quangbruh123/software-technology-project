@@ -19,7 +19,7 @@ namespace GarageManager
 
         private void taotaikhoanbtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Hide();    
             Formtaotaikhoan formtaotaikhoan = new Formtaotaikhoan();
             formtaotaikhoan.ShowDialog();
         }
@@ -33,6 +33,11 @@ namespace GarageManager
                 mainForm.ShowDialog();
                 MainForm.isLoggedIn = true;
             }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
