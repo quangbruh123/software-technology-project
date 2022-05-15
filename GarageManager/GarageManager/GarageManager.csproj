@@ -270,6 +270,9 @@
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
       <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\maximize_window_24px.png" />
+    <None Include="Resources\subtract_30px.png" />
+    <None Include="Resources\Close_30px.png" />
     <None Include="Resources\gmail_40px.png" />
     <None Include="Resources\garage_100px.png" />
     <None Include="Resources\user_24px.png" />
