@@ -26,9 +26,13 @@ namespace GarageManager
 
         private void dangnhapbtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainForm mainForm = new MainForm(); 
-            mainForm.ShowDialog();  
+            if (Classes.Account.LogIn(usertxt.Text, passwordtxt.Text))
+            {
+                this.Hide();
+                MainForm mainForm = new MainForm();
+                mainForm.ShowDialog();
+                MainForm.isLoggedIn = true;
+            }
         }
     }
 }

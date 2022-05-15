@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Objects;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -78,12 +80,14 @@ namespace GarageManager.Classes
         /// </summary>
         /// <param name="username"></param>
         /// <param name="password"></param>
-        private static void LogIn(string username, string password)
+        public static bool LogIn(string username, string password)
         {
             SHA256 sha256hash = SHA256.Create();
             string passwordhash = GetHash(sha256hash, password);
-            if(Classes.DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == username && VerifyHash(sha256hash, x.MatKhau, passwordhash)))
-                MainForm.isLoggedIn = true;
+            if (Classes.DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == username && x.MatKhau == passwordhash))
+                return true;
+            else
+                return false;
         }
 
         private static string GetHash(HashAlgorithm hashAlgorithm, string input)
@@ -107,16 +111,16 @@ namespace GarageManager.Classes
         }
 
         // Verify a hash against a string.
-        private static bool VerifyHash(HashAlgorithm hashAlgorithm, string input, string hash)
-        {
-            // Hash the input.
-            var hashOfInput = GetHash(hashAlgorithm, input);
+        //private static bool VerifyHash(HashAlgorithm hashAlgorithm, string input, string hash)
+        //{
+        //    // Hash the input.
+        //    var hashOfInput = GetHash(hashAlgorithm, input);
 
-            // Create a StringComparer an compare the hashes.
-            StringComparer comparer = StringComparer.OrdinalIgnoreCase;
+        //    // Create a StringComparer an compare the hashes.
+        //    StringComparer comparer = StringComparer.OrdinalIgnoreCase;
 
-            return comparer.Compare(hashOfInput, hash) == 0;
-        }
+        //    return comparer.Compare(hashOfInput, hash) == 0;
+        //}
     }
 }
     
