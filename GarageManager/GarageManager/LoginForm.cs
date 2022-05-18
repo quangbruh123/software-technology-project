@@ -33,6 +33,8 @@ namespace GarageManager
                 mainForm.ShowDialog();
                 MainForm.isLoggedIn = true;
             }
+            else
+                MessageBox.Show("Sai mật khẩu hoặc tên tài khoản");
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
