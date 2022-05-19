@@ -11,7 +11,7 @@ namespace GarageManager.Classes
     /// </summary>
     public class Storage
     {
-        private int GetPartID(string partName)
+        private static int GetPartID(string partName)
         {
             return DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partName).FirstOrDefault().MaVatTu;
         }
@@ -27,8 +27,11 @@ namespace GarageManager.Classes
         {
             if (!DataProvider.Instance.DB.VATTUs.Any(x => x.TenVatTu == newPartName))
             {
-                /// not done yet
-
+                Model.CT_PNVT ct_pnvt = new Model.CT_PNVT();
+                ct_pnvt.MaVatTu = GetPartID(newPartName);
+                ct_pnvt.DonGiaNhap = newPartPrice;
+                ct_pnvt.SoLuong = newPartAmount;
+                /// to be continued
                 DataProvider.Instance.DB.SaveChanges();
                 return true;
             }
@@ -73,6 +76,12 @@ namespace GarageManager.Classes
                 return false;
         }
 
+        /// <summary>
+        /// Update the amount of a vehicle part. The part must have existed in the database
+        /// </summary>
+        /// <param name="partName"></param>
+        /// <param name="newAmount"></param>
+        /// <returns>True if successfully added, false if not</returns>
         public static bool UpdatePartAmount(string partName, int newAmount)
         {
             if (DataProvider.Instance.DB.VATTUs.Any(x => x.TenVatTu == partName))

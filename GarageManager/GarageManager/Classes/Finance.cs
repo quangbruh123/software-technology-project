@@ -70,6 +70,11 @@ namespace GarageManager.Classes
                 return false;
         }
 
+        /// <summary>
+        /// Remove a wage type. The wage type must have existed in the database
+        /// </summary>
+        /// <param name="wageName"></param>
+        /// <returns>True if successfully removed, false if not</returns>
         public static bool RemoveWageType(string wageName)
         {           
             if (DataProvider.Instance.DB.TIENCONGs.Any(x => x.TenTienCong == wageName))

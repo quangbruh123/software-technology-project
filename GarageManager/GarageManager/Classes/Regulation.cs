@@ -28,21 +28,23 @@ namespace GarageManager.Classes
         }
 
         /// <summary>
-        /// Get the number of vehicle brand in the database
+        /// Get the number of vehicle brands in the database
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The number of vehicle brands</returns>
         public static int GetBrandAmount()
         {
             return DataProvider.Instance.DB.HIEUXEs.Count();
         }
 
+        /// <summary>
+        /// Change the limit of the number of vehicles can be maintenanced in a day
+        /// </summary>
+        /// <param name="newLimit"></param>
         public static void ChangeVehicleLimitPerDay(int newLimit)
         {
             Model.THAMSO vehicleLimit = DataProvider.Instance.DB.THAMSOes.Where(x => x.TenThamSo == "VehicleLimitPerDay").FirstOrDefault();
             vehicleLimit.GiaTri = newLimit;
             DataProvider.Instance.DB.SaveChanges();
         }
-
-        
     }
 }
