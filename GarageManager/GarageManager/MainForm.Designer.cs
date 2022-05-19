@@ -31,17 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.mainpanel = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lapphieusuachuabutton = new System.Windows.Forms.Button();
             this.chinhsuaquydinhbutton = new System.Windows.Forms.Button();
             this.tracuuxebutton = new System.Windows.Forms.Button();
-            this.tracuuUserControl1 = new GarageManager.usercontrol.tracuuUserControl1();
-            this.lapphieuthutienUserControl = new GarageManager.usercontrol.LapphieuthutienUserControl();
             this.lapphieusuachuaUserControl1 = new GarageManager.usercontrol.LapphieusuachuaUserControl();
+            this.tracuuUserControl1 = new GarageManager.usercontrol.tracuuUserControl1();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.lapbaocaothangbutton = new System.Windows.Forms.Button();
             this.lapphieuthutienbutton = new System.Windows.Forms.Button();
             this.tiepnhanbaotrixebutton = new System.Windows.Forms.Button();
@@ -77,7 +76,6 @@
             this.mainpanel.Controls.Add(this.button11);
             this.mainpanel.Controls.Add(this.button4);
             this.mainpanel.Controls.Add(this.button2);
-            this.mainpanel.Controls.Add(this.tracuuUserControl1);
             this.mainpanel.Controls.Add(this.label1);
             this.mainpanel.Controls.Add(this.lapphieusuachuabutton);
             this.mainpanel.Controls.Add(this.lapbaocaothangbutton);
@@ -85,12 +83,105 @@
             this.mainpanel.Controls.Add(this.tracuuxebutton);
             this.mainpanel.Controls.Add(this.lapphieuthutienbutton);
             this.mainpanel.Controls.Add(this.tiepnhanbaotrixebutton);
-            this.mainpanel.Controls.Add(this.lapphieuthutienUserControl);
             this.mainpanel.Controls.Add(this.lapphieusuachuaUserControl1);
+            this.mainpanel.Controls.Add(this.tracuuUserControl1);
             this.mainpanel.Location = new System.Drawing.Point(188, 0);
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(641, 612);
             this.mainpanel.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label1.Location = new System.Drawing.Point(27, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(313, 33);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "QUẢN LÝ GARA Ô TÔ";
+            // 
+            // lapphieusuachuabutton
+            // 
+            this.lapphieusuachuabutton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lapphieusuachuabutton.BackColor = System.Drawing.Color.SeaGreen;
+            this.lapphieusuachuabutton.FlatAppearance.BorderSize = 0;
+            this.lapphieusuachuabutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lapphieusuachuabutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lapphieusuachuabutton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lapphieusuachuabutton.Image = global::GarageManager.Properties.Resources.drill_48px;
+            this.lapphieusuachuabutton.Location = new System.Drawing.Point(441, 56);
+            this.lapphieusuachuabutton.Name = "lapphieusuachuabutton";
+            this.lapphieusuachuabutton.Size = new System.Drawing.Size(129, 99);
+            this.lapphieusuachuabutton.TabIndex = 6;
+            this.lapphieusuachuabutton.Text = "Lập phiếu sửa chữa";
+            this.lapphieusuachuabutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lapphieusuachuabutton.UseVisualStyleBackColor = false;
+            this.lapphieusuachuabutton.Click += new System.EventHandler(this.lapphieusuachuabutton_Click);
+            // 
+            // chinhsuaquydinhbutton
+            // 
+            this.chinhsuaquydinhbutton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chinhsuaquydinhbutton.BackColor = System.Drawing.Color.SeaGreen;
+            this.chinhsuaquydinhbutton.FlatAppearance.BorderSize = 0;
+            this.chinhsuaquydinhbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chinhsuaquydinhbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chinhsuaquydinhbutton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.chinhsuaquydinhbutton.Image = global::GarageManager.Properties.Resources.under_construction_64px;
+            this.chinhsuaquydinhbutton.Location = new System.Drawing.Point(234, 171);
+            this.chinhsuaquydinhbutton.Name = "chinhsuaquydinhbutton";
+            this.chinhsuaquydinhbutton.Size = new System.Drawing.Size(129, 99);
+            this.chinhsuaquydinhbutton.TabIndex = 8;
+            this.chinhsuaquydinhbutton.Text = "Chỉnh sửa quy đinh";
+            this.chinhsuaquydinhbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.chinhsuaquydinhbutton.UseVisualStyleBackColor = false;
+            // 
+            // tracuuxebutton
+            // 
+            this.tracuuxebutton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tracuuxebutton.BackColor = System.Drawing.Color.SeaGreen;
+            this.tracuuxebutton.FlatAppearance.BorderSize = 0;
+            this.tracuuxebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tracuuxebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tracuuxebutton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tracuuxebutton.Image = global::GarageManager.Properties.Resources.garage_48px;
+            this.tracuuxebutton.Location = new System.Drawing.Point(441, 171);
+            this.tracuuxebutton.Name = "tracuuxebutton";
+            this.tracuuxebutton.Size = new System.Drawing.Size(129, 99);
+            this.tracuuxebutton.TabIndex = 8;
+            this.tracuuxebutton.Text = "Tra cứu xe";
+            this.tracuuxebutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tracuuxebutton.UseVisualStyleBackColor = false;
+            this.tracuuxebutton.Click += new System.EventHandler(this.tracuuxebutton_Click);
+            // 
+            // lapphieusuachuaUserControl1
+            // 
+            this.lapphieusuachuaUserControl1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lapphieusuachuaUserControl1.Location = new System.Drawing.Point(-187, 2);
+            this.lapphieusuachuaUserControl1.Name = "lapphieusuachuaUserControl1";
+            this.lapphieusuachuaUserControl1.Size = new System.Drawing.Size(829, 606);
+            this.lapphieusuachuaUserControl1.TabIndex = 14;
+            this.lapphieusuachuaUserControl1.Visible = false;
+            // 
+            // tracuuUserControl1
+            // 
+            this.tracuuUserControl1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tracuuUserControl1.Location = new System.Drawing.Point(-191, 0);
+            this.tracuuUserControl1.Name = "tracuuUserControl1";
+            this.tracuuUserControl1.Size = new System.Drawing.Size(829, 606);
+            this.tracuuUserControl1.TabIndex = 6;
+            this.tracuuUserControl1.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::GarageManager.Properties.Resources.car_maintenance_606ab2f8ab000;
+            this.pictureBox1.Location = new System.Drawing.Point(-96, 341);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(564, 245);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // button11
             // 
@@ -131,105 +222,6 @@
             this.button2.Size = new System.Drawing.Size(32, 25);
             this.button2.TabIndex = 12;
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label1.Location = new System.Drawing.Point(27, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(313, 33);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "QUẢN LÝ GARA Ô TÔ";
-            // 
-            // lapphieusuachuabutton
-            // 
-            this.lapphieusuachuabutton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lapphieusuachuabutton.BackColor = System.Drawing.Color.SeaGreen;
-            this.lapphieusuachuabutton.FlatAppearance.BorderSize = 0;
-            this.lapphieusuachuabutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lapphieusuachuabutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lapphieusuachuabutton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lapphieusuachuabutton.Location = new System.Drawing.Point(441, 56);
-            this.lapphieusuachuabutton.Name = "lapphieusuachuabutton";
-            this.lapphieusuachuabutton.Size = new System.Drawing.Size(129, 99);
-            this.lapphieusuachuabutton.TabIndex = 6;
-            this.lapphieusuachuabutton.Text = "Lập phiếu sửa chữa";
-            this.lapphieusuachuabutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lapphieusuachuabutton.UseVisualStyleBackColor = false;
-            this.lapphieusuachuabutton.Click += new System.EventHandler(this.lapphieusuachuabutton_Click);
-            // 
-            // chinhsuaquydinhbutton
-            // 
-            this.chinhsuaquydinhbutton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chinhsuaquydinhbutton.BackColor = System.Drawing.Color.SeaGreen;
-            this.chinhsuaquydinhbutton.FlatAppearance.BorderSize = 0;
-            this.chinhsuaquydinhbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chinhsuaquydinhbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chinhsuaquydinhbutton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.chinhsuaquydinhbutton.Location = new System.Drawing.Point(234, 171);
-            this.chinhsuaquydinhbutton.Name = "chinhsuaquydinhbutton";
-            this.chinhsuaquydinhbutton.Size = new System.Drawing.Size(129, 99);
-            this.chinhsuaquydinhbutton.TabIndex = 8;
-            this.chinhsuaquydinhbutton.Text = "Chỉnh sửa quy đinh";
-            this.chinhsuaquydinhbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.chinhsuaquydinhbutton.UseVisualStyleBackColor = false;
-            // 
-            // tracuuxebutton
-            // 
-            this.tracuuxebutton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tracuuxebutton.BackColor = System.Drawing.Color.SeaGreen;
-            this.tracuuxebutton.FlatAppearance.BorderSize = 0;
-            this.tracuuxebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tracuuxebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tracuuxebutton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tracuuxebutton.Location = new System.Drawing.Point(441, 171);
-            this.tracuuxebutton.Name = "tracuuxebutton";
-            this.tracuuxebutton.Size = new System.Drawing.Size(129, 99);
-            this.tracuuxebutton.TabIndex = 8;
-            this.tracuuxebutton.Text = "Tra cứu xe";
-            this.tracuuxebutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.tracuuxebutton.UseVisualStyleBackColor = false;
-            this.tracuuxebutton.Click += new System.EventHandler(this.tracuuxebutton_Click);
-            // 
-            // tracuuUserControl1
-            // 
-            this.tracuuUserControl1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tracuuUserControl1.Location = new System.Drawing.Point(-147, 276);
-            this.tracuuUserControl1.Name = "tracuuUserControl1";
-            this.tracuuUserControl1.Size = new System.Drawing.Size(829, 606);
-            this.tracuuUserControl1.TabIndex = 6;
-            this.tracuuUserControl1.Visible = false;
-            // 
-            // lapphieuthutienUserControl
-            // 
-            this.lapphieuthutienUserControl.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lapphieuthutienUserControl.Location = new System.Drawing.Point(-186, 3);
-            this.lapphieuthutienUserControl.Name = "lapphieuthutienUserControl";
-            this.lapphieuthutienUserControl.Size = new System.Drawing.Size(825, 612);
-            this.lapphieuthutienUserControl.TabIndex = 6;
-            this.lapphieuthutienUserControl.Visible = false;
-            // 
-            // lapphieusuachuaUserControl1
-            // 
-            this.lapphieusuachuaUserControl1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lapphieusuachuaUserControl1.Location = new System.Drawing.Point(-187, 2);
-            this.lapphieusuachuaUserControl1.Name = "lapphieusuachuaUserControl1";
-            this.lapphieusuachuaUserControl1.Size = new System.Drawing.Size(829, 606);
-            this.lapphieusuachuaUserControl1.TabIndex = 14;
-            this.lapphieusuachuaUserControl1.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::GarageManager.Properties.Resources.car_maintenance_606ab2f8ab000;
-            this.pictureBox1.Location = new System.Drawing.Point(-52, 311);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(564, 245);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
             // 
             // lapbaocaothangbutton
             // 
@@ -393,7 +385,6 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button chinhsuaquydinhbutton;
-        private usercontrol.LapphieuthutienUserControl lapphieuthutienUserControl;
         public System.Windows.Forms.Button lapphieuthutienbutton;
         private usercontrol.tracuuUserControl1 tracuuUserControl1;
         private usercontrol.LapphieusuachuaUserControl lapphieusuachuaUserControl1;
