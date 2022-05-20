@@ -134,7 +134,7 @@ namespace GarageManager.Classes
                     DataProvider.Instance.DB.CT_SUDUNGVATTU.Add(ct_sdvt[i]);
                 }
                 DataProvider.Instance.DB.SaveChanges();
-
+                
                 return true;
             }
             else

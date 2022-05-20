@@ -15,24 +15,75 @@ namespace GarageManager.Classes
         {
             return DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partName).FirstOrDefault().MaVatTu;
         }
-        
+
         /// <summary>
         /// Add a new vehicle part. The part must have not existed in the database
         /// </summary>
         /// <param name="newPartName"></param>
-        /// <param name="newPartPrice"></param>
-        /// <param name="newPartAmount"></param>
+        /// <param name="originalValue"></param>
+        /// <param name="priceTag"></param>
+        /// <param name="amount"></param>
         /// <returns>True if successfully added, false if not</returns>
-        public static bool AddNewPart(string newPartName, decimal newPartPrice, int newPartAmount)
+        public static bool AddNewPart(string newPartName, decimal originalValue, decimal priceTag, int amount)
         {
             if (!DataProvider.Instance.DB.VATTUs.Any(x => x.TenVatTu == newPartName))
             {
-                Model.CT_PNVT ct_pnvt = new Model.CT_PNVT();
-                ct_pnvt.MaVatTu = GetPartID(newPartName);
-                ct_pnvt.DonGiaNhap = newPartPrice;
-                ct_pnvt.SoLuong = newPartAmount;
-                /// to be continued
+                Model.CT_PNVT ct_pnvt = new Model.CT_PNVT
+                {
+                    MaVatTu = GetPartID(newPartName),
+                    DonGiaNhap = originalValue,
+                    DonGiaBan = priceTag,
+                    SoLuong = amount,
+                    ThanhTien = originalValue * amount
+                };                
+                DataProvider.Instance.DB.CT_PNVT.Add(ct_pnvt);
                 DataProvider.Instance.DB.SaveChanges();
+
+                Model.VATTU part = new Model.VATTU
+                {
+                    TenVatTu = newPartName,
+                    SoLuongTon = amount,
+                    DonGiaHienTai = priceTag
+                };
+                part.CT_PNVT.Add(ct_pnvt);
+                DataProvider.Instance.DB.VATTUs.Add(part);
+                DataProvider.Instance.DB.SaveChanges();
+
+                return true;
+            }
+            else
+                return false;
+        }
+
+        /// <summary>
+        /// Add to an existing vehicle part. The part must have existed in the database
+        /// </summary>
+        /// <param name="partName"></param>
+        /// <param name="originalValue"></param>
+        /// <param name="priceTag"></param>
+        /// <param name="amount"></param>
+        /// <returns>True if successfully added, false if not</returns>
+        public static bool AddExistingPart(string partName, decimal originalValue, decimal priceTag, int amount)
+        {
+            if (DataProvider.Instance.DB.VATTUs.Any(x => x.TenVatTu == partName))
+            {
+                Model.CT_PNVT ct_pnvt = new Model.CT_PNVT
+                {
+                    MaVatTu = GetPartID(partName),
+                    DonGiaNhap = originalValue,
+                    DonGiaBan = priceTag,
+                    SoLuong = amount,
+                    ThanhTien = originalValue * amount
+                };
+                DataProvider.Instance.DB.CT_PNVT.Add(ct_pnvt);
+                DataProvider.Instance.DB.SaveChanges();
+
+                Model.VATTU part = DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partName).FirstOrDefault();
+                part.SoLuongTon += amount;
+                part.CT_PNVT.Add(ct_pnvt);
+                part.DonGiaHienTai = priceTag;
+                DataProvider.Instance.DB.SaveChanges();
+
                 return true;
             }
             else
@@ -87,8 +138,7 @@ namespace GarageManager.Classes
             if (DataProvider.Instance.DB.VATTUs.Any(x => x.TenVatTu == partName))
             {
                 Model.VATTU part = DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partName).FirstOrDefault();
-
-
+                part.SoLuongTon = newAmount;
                 DataProvider.Instance.DB.SaveChanges();
                 return true;
             }
