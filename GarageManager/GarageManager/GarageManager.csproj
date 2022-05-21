@@ -269,6 +269,16 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\maximize_window_24px.png" />
+    <None Include="Resources\subtract_30px.png" />
+    <None Include="Resources\Close_30px.png" />
+    <None Include="Resources\gmail_40px.png" />
+    <None Include="Resources\garage_100px.png" />
+    <None Include="Resources\user_24px.png" />
+    <None Include="Resources\lock_24px.png" />
+    <None Include="Resources\Close_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Model\GarageManagementModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
@@ -279,14 +289,9 @@
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
       <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\maximize_window_24px.png" />
-    <None Include="Resources\subtract_30px.png" />
-    <None Include="Resources\Close_30px.png" />
-    <None Include="Resources\gmail_40px.png" />
-    <None Include="Resources\garage_100px.png" />
-    <None Include="Resources\user_24px.png" />
-    <None Include="Resources\lock_24px.png" />
-    <None Include="Resources\Close_40px.png" />
+    <None Include="Resources\garage_48px.png" />
+    <None Include="Resources\drill_48px.png" />
+    <None Include="Resources\under_construction_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

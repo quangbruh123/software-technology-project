@@ -16,6 +16,7 @@ namespace GarageManager
         /// <summary>
         /// Log in state
         /// </summary>
+        /// 
         public static bool isLoggedIn = false;
         //Nút nhảy usercontrol
         private LapphieuthutienUserControl uc1;
@@ -25,6 +26,7 @@ namespace GarageManager
         public MainForm()
         {
             InitializeComponent();
+         
         }
         //Nút exit zoom mini
         private void button4_Click(object sender, EventArgs e)
@@ -39,6 +41,7 @@ namespace GarageManager
         {
             panel1.Visible = true;
             mainpanel.Visible = true;
+            lapphieusuachuaUserControl1.Visible = false;
             uc1 = new LapphieuthutienUserControl();
             Controls.Add(uc1);
             uc2 = new tracuuUserControl1();
@@ -51,11 +54,12 @@ namespace GarageManager
         }
         private void tracuuxebutton_Click(object sender, EventArgs e)
         {
-            panel1.Visible = false;
+            panel1.Visible = true;
             mainpanel.Visible = false;
             uc1.Visible = false;
             uc2.Visible = true;
             uc3.Visible = false;
+            uc2.Dock = DockStyle.Right;
         }
         private void lapphieuthutienbutton_Click(object sender, EventArgs e)
         {
@@ -69,11 +73,29 @@ namespace GarageManager
         private void lapphieusuachuabutton_Click(object sender, EventArgs e)
         {
 
-            panel1.Visible = false;
+            panel1.Visible = true;
             mainpanel.Visible = false;
             uc1.Visible = false;
             uc2.Visible = false;
             uc3.Visible = true;
+            uc3.Dock = DockStyle.Right;
+        }
+
+        private void tiepnhanbaotrixebutton_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = true;
+            label2.Visible = true;
+        }
+
+        private void tiepnhanbaotrixebutton_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = false;
+            label2.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
