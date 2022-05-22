@@ -63,9 +63,22 @@ namespace GarageManager.usercontrol
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DataGridViewRow dgvDelRow = dataGridView1.Rows[i];
-            dataGridView1.Rows.Remove(dgvDelRow);
-            i--;
+            int count = dataGridView1.SelectedRows.Count;
+            if (dataGridView1.SelectedRows.Count > 1)
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                }
+            }
+            else if (dataGridView1.SelectedRows.Count == 1)
+            {
+                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Mời bạn chọn một hay nhiều cột để xóa");
+            }
         }
     }
 }
