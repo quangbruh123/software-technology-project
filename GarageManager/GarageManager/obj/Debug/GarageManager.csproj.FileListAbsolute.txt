@@ -57,6 +57,5 @@ D:\School\CNPM\software-technology-project\GarageManager\GarageManager\obj\Debug
 D:\School\CNPM\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.exe
 D:\School\CNPM\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.pdb
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.LoginForm.resources
-D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.UserControldatagrid1.resources
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.UserControl1.resources
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.AssemblyReference.cache

@@ -31,28 +31,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.paneltaskbar = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.functionbutton = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.Homebutton = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tracuuxebutton = new GarageManager.Classes.CircularButton1();
             this.lapphieusuachuabutton = new GarageManager.Classes.CircularButton1();
             this.circularButton13 = new GarageManager.Classes.CircularButton1();
             this.circularButton12 = new GarageManager.Classes.CircularButton1();
             this.lapphieuthutienbutton = new GarageManager.Classes.CircularButton1();
             this.Tiepnhanbaotrixebutton = new GarageManager.Classes.CircularButton1();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.mainpanel.SuspendLayout();
@@ -66,13 +65,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(80)))), ((int)(((byte)(60)))));
-            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.Homebutton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 564);
+            this.panel1.Location = new System.Drawing.Point(0, 582);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(828, 48);
+            this.panel1.Size = new System.Drawing.Size(828, 30);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -83,6 +81,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(834, 36);
             this.panel3.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(6, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Chức năng";
             // 
             // mainpanel
             // 
@@ -122,22 +131,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(52, 22);
+            this.textBox1.Location = new System.Drawing.Point(63, 19);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(631, 40);
             this.textBox1.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(6, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Chức năng";
             // 
             // functionbutton
             // 
@@ -166,9 +164,9 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Image = global::GarageManager.Properties.Resources.help_32px;
+            this.button5.Image = global::GarageManager.Properties.Resources.find_and_replace_30px;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(689, 22);
+            this.button5.Location = new System.Drawing.Point(700, 17);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(61, 40);
             this.button5.TabIndex = 1;
@@ -213,23 +211,6 @@
             this.button4.TabIndex = 12;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button6
-            // 
-            this.button6.AllowDrop = true;
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(80)))), ((int)(((byte)(60)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Image = global::GarageManager.Properties.Resources.back_40px;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(327, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(45, 42);
-            this.button6.TabIndex = 14;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // button3
             // 
             this.button3.AllowDrop = true;
@@ -241,9 +222,9 @@
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Image = global::GarageManager.Properties.Resources.help_32px;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(490, -1);
+            this.button3.Location = new System.Drawing.Point(783, 1);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(46, 45);
+            this.button3.Size = new System.Drawing.Size(46, 26);
             this.button3.TabIndex = 0;
             this.button3.UseVisualStyleBackColor = false;
             // 
@@ -258,12 +239,56 @@
             this.Homebutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Homebutton.Image = global::GarageManager.Properties.Resources.home_40px;
             this.Homebutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Homebutton.Location = new System.Drawing.Point(402, 3);
+            this.Homebutton.Location = new System.Drawing.Point(378, 3);
             this.Homebutton.Name = "Homebutton";
-            this.Homebutton.Size = new System.Drawing.Size(44, 45);
+            this.Homebutton.Size = new System.Drawing.Size(44, 26);
             this.Homebutton.TabIndex = 0;
             this.Homebutton.UseVisualStyleBackColor = false;
             this.Homebutton.Click += new System.EventHandler(this.homebutotn_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = global::GarageManager.Properties.Resources.car_maintenance_606ab2f8ab000;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 314);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(257, 181);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4.Image = global::GarageManager.Properties.Resources.car_maintenance_606ab2f8ab000;
+            this.pictureBox4.Location = new System.Drawing.Point(563, -5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(260, 185);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.Image = global::GarageManager.Properties.Resources.car_maintenance_606ab2f8ab000;
+            this.pictureBox3.Location = new System.Drawing.Point(281, -5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(281, 188);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::GarageManager.Properties.Resources.car_maintenance_606ab2f8ab000;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(281, 188);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // tracuuxebutton
             // 
@@ -340,50 +365,6 @@
             this.Tiepnhanbaotrixebutton.TabIndex = 14;
             this.Tiepnhanbaotrixebutton.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = global::GarageManager.Properties.Resources.car_maintenance_606ab2f8ab000;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 314);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(257, 181);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox4.Image = global::GarageManager.Properties.Resources.car_maintenance_606ab2f8ab000;
-            this.pictureBox4.Location = new System.Drawing.Point(563, -5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(260, 185);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.Image = global::GarageManager.Properties.Resources.car_maintenance_606ab2f8ab000;
-            this.pictureBox3.Location = new System.Drawing.Point(281, -5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(281, 188);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::GarageManager.Properties.Resources.car_maintenance_606ab2f8ab000;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(281, 188);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,7 +404,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button Homebutton;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button6;
         private Classes.CircularButton1 Tiepnhanbaotrixebutton;
         private Classes.CircularButton1 tracuuxebutton;
         private Classes.CircularButton1 lapphieusuachuabutton;

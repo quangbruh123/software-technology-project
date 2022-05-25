@@ -183,6 +183,16 @@ namespace GarageManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap find_and_replace_30px {
+            get {
+                object obj = ResourceManager.GetObject("find_and_replace_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap garage_100px {
             get {
                 object obj = ResourceManager.GetObject("garage_100px", resourceCulture);

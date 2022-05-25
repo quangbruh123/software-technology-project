@@ -61,6 +61,7 @@ namespace GarageManager
 
         private void lapphieusuachua_Click(object sender, EventArgs e)
         {
+            //panel1.Visible = false;
             mainpanel.Visible = false;
             uc1.Visible = false;
             uc2.Visible = false;
