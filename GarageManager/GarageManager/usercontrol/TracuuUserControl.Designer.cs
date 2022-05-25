@@ -52,16 +52,16 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(269, 31);
+            this.dataGridView1.Location = new System.Drawing.Point(349, 31);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(338, 513);
+            this.dataGridView1.Size = new System.Drawing.Size(432, 450);
             this.dataGridView1.TabIndex = 9;
             // 
             // Tracuuxelable
             // 
             this.Tracuuxelable.AutoSize = true;
             this.Tracuuxelable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tracuuxelable.Location = new System.Drawing.Point(352, 3);
+            this.Tracuuxelable.Location = new System.Drawing.Point(308, 3);
             this.Tracuuxelable.Name = "Tracuuxelable";
             this.Tracuuxelable.Size = new System.Drawing.Size(114, 25);
             this.Tracuuxelable.TabIndex = 6;
@@ -78,7 +78,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button2);
@@ -93,17 +93,17 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 31);
+            this.panel1.Location = new System.Drawing.Point(11, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(263, 513);
+            this.panel1.Size = new System.Drawing.Size(288, 457);
             this.panel1.TabIndex = 14;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.SeaGreen;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(80)))), ((int)(((byte)(60)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(-1, 450);
+            this.button4.Location = new System.Drawing.Point(17, 402);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(252, 47);
             this.button4.TabIndex = 19;
@@ -112,10 +112,10 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.SeaGreen;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(80)))), ((int)(((byte)(60)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(0, 383);
+            this.button2.Location = new System.Drawing.Point(17, 349);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(251, 47);
             this.button2.TabIndex = 19;
@@ -218,7 +218,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Tracuuxelable);
             this.Name = "tracuuUserControl1";
-            this.Size = new System.Drawing.Size(640, 581);
+            this.Size = new System.Drawing.Size(824, 499);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

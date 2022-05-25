@@ -71,14 +71,11 @@ namespace GarageManager.usercontrol
                     dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
                 }
             }
-            else if (dataGridView1.SelectedRows.Count == 1)
+            if (dataGridView1.SelectedRows.Count == 1)
             {
                 dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
             }
-            else
-            {
-                MessageBox.Show("Mời bạn chọn một hay nhiều cột để xóa");
-            }
+         
         }
     }
 }

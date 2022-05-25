@@ -23,7 +23,6 @@ D:\software-technology-project\GarageManager\GarageManager\bin\Debug\EntityFrame
 D:\software-technology-project\GarageManager\GarageManager\bin\Debug\EntityFramework.SqlServer.dll
 D:\software-technology-project\GarageManager\GarageManager\bin\Debug\EntityFramework.xml
 D:\software-technology-project\GarageManager\GarageManager\bin\Debug\EntityFramework.SqlServer.xml
-D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.AssemblyReference.cache
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.SuggestedBindingRedirects.cache
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.Properties.Resources.resources
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.LapphieusuachuaUserControl.resources
@@ -59,3 +58,5 @@ D:\School\CNPM\software-technology-project\GarageManager\GarageManager\obj\Debug
 D:\School\CNPM\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.pdb
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.LoginForm.resources
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.UserControldatagrid1.resources
+D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.UserControl1.resources
+D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.AssemblyReference.cache

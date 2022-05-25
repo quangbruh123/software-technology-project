@@ -83,9 +83,19 @@ namespace GarageManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Business_Report_32px {
+        internal static System.Drawing.Bitmap back_40px {
             get {
-                object obj = ResourceManager.GetObject("Business_Report_32px", resourceCulture);
+                object obj = ResourceManager.GetObject("back_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap billboard_40px {
+            get {
+                object obj = ResourceManager.GetObject("billboard_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +113,9 @@ namespace GarageManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cash_in_hand_32px {
+        internal static System.Drawing.Bitmap cash_40px {
             get {
-                object obj = ResourceManager.GetObject("cash_in_hand_32px", resourceCulture);
+                object obj = ResourceManager.GetObject("cash_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +136,26 @@ namespace GarageManager.Properties {
         internal static System.Drawing.Bitmap Close_40px {
             get {
                 object obj = ResourceManager.GetObject("Close_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap construction_40px {
+            get {
+                object obj = ResourceManager.GetObject("construction_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drill_40px {
+            get {
+                object obj = ResourceManager.GetObject("drill_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +193,16 @@ namespace GarageManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap garage_40px {
+            get {
+                object obj = ResourceManager.GetObject("garage_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gmail_40px {
             get {
                 object obj = ResourceManager.GetObject("gmail_40px", resourceCulture);
@@ -176,6 +216,16 @@ namespace GarageManager.Properties {
         internal static System.Drawing.Bitmap help_32px {
             get {
                 object obj = ResourceManager.GetObject("help_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_40px {
+            get {
+                object obj = ResourceManager.GetObject("home_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,6 +283,16 @@ namespace GarageManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap under_construction_64px {
+            get {
+                object obj = ResourceManager.GetObject("under_construction_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_24px {
             get {
                 object obj = ResourceManager.GetObject("user_24px", resourceCulture);
@@ -243,9 +303,9 @@ namespace GarageManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap wrench_50px {
+        internal static System.Drawing.Bitmap wrench_40px {
             get {
-                object obj = ResourceManager.GetObject("wrench_50px", resourceCulture);
+                object obj = ResourceManager.GetObject("wrench_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

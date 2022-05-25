@@ -74,6 +74,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Account.cs" />
+    <Compile Include="Classes\CircularButton1.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\DataProvider.cs" />
     <Compile Include="Classes\Finance.cs" />
     <Compile Include="Classes\Regulation.cs" />
@@ -180,6 +183,12 @@
     <Compile Include="usercontrol\TracuuUserControl.Designer.cs">
       <DependentUpon>TracuuUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="usercontrol\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="usercontrol\UserControldatagrid1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -214,6 +223,9 @@
     <EmbeddedResource Include="usercontrol\TracuuUserControl.resx">
       <DependentUpon>TracuuUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="usercontrol\UserControldatagrid1.resx">
       <DependentUpon>UserControldatagrid1.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,7 +255,6 @@
     <None Include="Resources\search_50px.png" />
     <None Include="Resources\Business Report_32px.png" />
     <None Include="Resources\cash_in_hand_32px.png" />
-    <None Include="Resources\wrench_50px.png" />
     <None Include="Resources\edit_32px.png" />
     <None Include="Resources\align_left_32px.png" />
     <None Include="Resources\administrator_male_32px.png" />
@@ -289,6 +300,15 @@
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
       <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\back_40px.png" />
+    <None Include="Resources\home_40px.png" />
+    <None Include="Resources\garage_40px.png" />
+    <None Include="Resources\construction_40px.png" />
+    <None Include="Resources\billboard_40px.png" />
+    <None Include="Resources\drill_40px.png" />
+    <None Include="Resources\cash_40px.png" />
+    <None Include="Resources\wrench_40px.png" />
+    <None Include="Resources\wrench_50px.png" />
     <None Include="Resources\garage_48px.png" />
     <None Include="Resources\drill_48px.png" />
     <None Include="Resources\under_construction_64px.png" />
