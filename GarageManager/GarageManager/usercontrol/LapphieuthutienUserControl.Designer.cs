@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LapphieuthutienUserControl));
             this.label2 = new System.Windows.Forms.Label();
             this.panelHoTenChuXePTT = new System.Windows.Forms.Panel();
             this.textBoxHoTenChuXePTT = new System.Windows.Forms.TextBox();
@@ -51,6 +52,8 @@
             this.buttonPhieuThuTienMoiPTT = new System.Windows.Forms.Button();
             this.buttonInPhieuThuTienPTT = new System.Windows.Forms.Button();
             this.buttonLapPhieuThuTienPTT = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panelHoTenChuXePTT.SuspendLayout();
             this.panelDienThoaiPTT.SuspendLayout();
             this.panelNgayThuTienPTT.SuspendLayout();
@@ -305,6 +308,7 @@
             this.buttonInPhieuThuTienPTT.TabIndex = 5;
             this.buttonInPhieuThuTienPTT.Text = "In phiếu thu tiền";
             this.buttonInPhieuThuTienPTT.UseVisualStyleBackColor = true;
+            this.buttonInPhieuThuTienPTT.Click += new System.EventHandler(this.buttonInPhieuThuTienPTT_Click);
             // 
             // buttonLapPhieuThuTienPTT
             // 
@@ -317,6 +321,20 @@
             this.buttonLapPhieuThuTienPTT.TabIndex = 3;
             this.buttonLapPhieuThuTienPTT.Text = "Lập phiếu thu tiền";
             this.buttonLapPhieuThuTienPTT.UseVisualStyleBackColor = true;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // LapphieuthutienUserControl
             // 
@@ -375,5 +393,7 @@
         private System.Windows.Forms.Button buttonPhieuThuTienMoiPTT;
         private System.Windows.Forms.Button buttonInPhieuThuTienPTT;
         private System.Windows.Forms.Button buttonLapPhieuThuTienPTT;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

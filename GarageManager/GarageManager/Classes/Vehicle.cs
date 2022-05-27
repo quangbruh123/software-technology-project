@@ -89,7 +89,8 @@ namespace GarageManager.Classes
         /// <returns>True if successfully added, otherwise false</returns>
         public static bool AddMaintenanceInfo(string plate, DateTime date, string details, string wageName, string[] parts, int[] amount)
         {
-            if (VerifyPlate(plate))
+            Model.XE vehicle = DataProvider.Instance.DB.XEs.Where(x => x.BienSo == plate).FirstOrDefault();
+            if (vehicle != null)
             {              
                 Model.CT_SUDUNGVATTU[] ct_sdvt = new Model.CT_SUDUNGVATTU[parts.Length];
                 for (int i = 0; i < parts.Length; i++)
@@ -121,6 +122,8 @@ namespace GarageManager.Classes
                     phieusuachua.TongTien += ct_psc[i].ThanhTien;
                 }
                 DataProvider.Instance.DB.PHIEUSUACHUAs.Add(phieusuachua);
+                vehicle.PHIEUSUACHUAs.Add(phieusuachua);
+                vehicle.TienNo = phieusuachua.TongTien;
                 DataProvider.Instance.DB.SaveChanges();
 
                 for (int i = 0; i < ct_psc.Length; i++)
@@ -131,6 +134,7 @@ namespace GarageManager.Classes
 
                 for (int i = 0; i < ct_sdvt.Length; i++)
                 {
+                    ct_sdvt[i].CT_PSC = ct_psc[i];
                     DataProvider.Instance.DB.CT_SUDUNGVATTU.Add(ct_sdvt[i]);
                 }
                 DataProvider.Instance.DB.SaveChanges();
@@ -181,6 +185,11 @@ namespace GarageManager.Classes
             }
             else
                 return null;
+        }
+
+        public static List<Model.CT_PSC> GetAllMaintenanceInfo()
+        {
+            return DataProvider.Instance.DB.CT_PSC.ToList();
         }
     }
 }

@@ -18,7 +18,8 @@ namespace GarageManager.Classes
         /// <returns>True if the pay satisfy the condition, false if not</returns>
         public static bool AddReceipt(string plate, decimal pay)
         {
-            if (DataProvider.Instance.DB.XEs.Where(x => x.BienSo == plate).FirstOrDefault().TienNo > pay)
+            Model.XE vehicle = DataProvider.Instance.DB.XEs.Where(x => x.BienSo == plate).FirstOrDefault();
+            if (vehicle != null && vehicle.TienNo >= pay)
             {
                 Model.PHIEUTHUTIEN receipt = new Model.PHIEUTHUTIEN()
                 {
@@ -26,6 +27,8 @@ namespace GarageManager.Classes
                     SoTienThu = pay
                 };
                 DataProvider.Instance.DB.PHIEUTHUTIENs.Add(receipt);
+                vehicle.PHIEUTHUTIENs.Add(receipt);
+                vehicle.TienNo -= pay;
                 DataProvider.Instance.DB.SaveChanges();
                 return true;
             }

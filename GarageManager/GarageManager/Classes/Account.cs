@@ -90,6 +90,15 @@ namespace GarageManager.Classes
                 return false;
         }
 
+        /// <summary>
+        /// Get all accounts in the database
+        /// </summary>
+        /// <returns>A list of accounts</returns>
+        public static List<Model.TAIKHOAN> GetAccounts()
+        {
+            return DataProvider.Instance.DB.TAIKHOANs.ToList();
+        }
+
         private static string GetHash(HashAlgorithm hashAlgorithm, string input)
         {
             // Convert the input string to a byte array and compute the hash.
