@@ -22,7 +22,7 @@ namespace GarageManager
         private LapphieuthutienUserControl uc1;
         private tracuuUserControl1 uc2;
         private LapphieusuachuaUserControl uc3;
-
+        private LAPPHIEU uc5;
         public MainForm()
         {
             InitializeComponent();
@@ -39,47 +39,29 @@ namespace GarageManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            mainpanel.Visible = true;
             uc1 = new LapphieuthutienUserControl();
             Controls.Add(uc1);
             uc2 = new tracuuUserControl1();
             Controls.Add(uc2);
             uc3 = new LapphieusuachuaUserControl();
             Controls.Add(uc3);
+            uc5 = new LAPPHIEU();
+            Controls.Add(uc5);
             uc1.Visible = false;
             uc2.Visible = false;
             uc3.Visible = false;
+            uc5.Visible = false;
         }     
-        private void lapphieuthutien_Click(object sender, EventArgs e)
+         
+        private void Lapphieubtn_Click(object sender, EventArgs e)
         {
-            mainpanel.Visible = false;
-            uc1.Visible = true;
-            uc2.Visible = false;
-            uc3.Visible = false;
-            uc1.Location = new Point(4, 61);
-        }
 
-        private void lapphieusuachua_Click(object sender, EventArgs e)
-        {
-            //panel1.Visible = false;
             mainpanel.Visible = false;
             uc1.Visible = false;
             uc2.Visible = false;
-            uc3.Visible = true;
-            uc3.Location = new Point(4, 61);
-        }
-        private void homebutotn_Click(object sender, EventArgs e)
-        {
-            mainpanel.Visible = true;
-        }
-
-        private void tracuuxebutton_Click(object sender, EventArgs e)
-        {
-            mainpanel.Visible = false;
-            uc1.Visible = false;
-            uc2.Visible = true;
             uc3.Visible = false;
-            uc2.Location = new Point(7, 61);
+            uc5.Visible = true;
+            uc5.Location = new Point(211, 48);
         }
     }
 }
