@@ -86,6 +86,7 @@
             this.button2.Text = "Lập phiếu thu tiền";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Lapphieusuachuabtn
             // 
@@ -116,7 +117,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "LAPPHIEU";
-            this.Size = new System.Drawing.Size(1175, 512);
+            this.Size = new System.Drawing.Size(1175, 876);
             this.Load += new System.EventHandler(this.LAPPHIEU_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
