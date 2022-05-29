@@ -19,7 +19,7 @@ namespace GarageManager
         /// 
         public static bool isLoggedIn = false;
         //Nút nhảy usercontrol
-        private LapphieuthutienUserControl uc1;
+        private Chinhsuaquydinh uc1;
         private tracuuUserControl1 uc2;
         private Tiepnhanbaotrixe uc4;
         private LAPPHIEU uc5;
@@ -40,7 +40,7 @@ namespace GarageManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            uc1 = new LapphieuthutienUserControl();
+            uc1 = new Chinhsuaquydinh();
             Controls.Add(uc1);
             uc2 = new tracuuUserControl1();
             Controls.Add(uc2);
@@ -100,6 +100,17 @@ namespace GarageManager
             uc4.Visible = false;
             uc5.Visible = false;
             uc3.Location = new Point(211, 48);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            mainpanel.Visible = false;
+            uc1.Visible = true;
+            uc2.Visible = false;
+            uc3.Visible = false;
+            uc4.Visible = false;
+            uc5.Visible = false;
+            uc1.Location = new Point(211, 48);
         }
     }
 }

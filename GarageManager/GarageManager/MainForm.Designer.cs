@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.paneltaskbar = new System.Windows.Forms.Panel();
-            this.functionbutton = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,12 +38,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.Tracuubtn = new System.Windows.Forms.Button();
+            this.Baocaothangbtn = new System.Windows.Forms.Button();
             this.Lapphieubtn = new System.Windows.Forms.Button();
             this.Tiepnhanbaotrixebtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Trangchubtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.Baocaothangbtn = new System.Windows.Forms.Button();
+            this.functionbutton = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.paneltaskbar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -61,41 +61,6 @@
             this.paneltaskbar.Name = "paneltaskbar";
             this.paneltaskbar.Size = new System.Drawing.Size(1386, 57);
             this.paneltaskbar.TabIndex = 5;
-            // 
-            // functionbutton
-            // 
-            this.functionbutton.AllowDrop = true;
-            this.functionbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.functionbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.functionbutton.FlatAppearance.BorderSize = 0;
-            this.functionbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.functionbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.functionbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.functionbutton.Image = ((System.Drawing.Image)(resources.GetObject("functionbutton.Image")));
-            this.functionbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.functionbutton.Location = new System.Drawing.Point(1190, 18);
-            this.functionbutton.Name = "functionbutton";
-            this.functionbutton.Size = new System.Drawing.Size(43, 28);
-            this.functionbutton.TabIndex = 0;
-            this.functionbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.functionbutton.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.AllowDrop = true;
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Image = global::GarageManager.Properties.Resources.find_and_replace_30px;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(649, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(61, 40);
-            this.button5.TabIndex = 1;
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -186,6 +151,7 @@
             this.button7.Text = "Chỉnh sửa quy định";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Tracuubtn
             // 
@@ -202,6 +168,22 @@
             this.Tracuubtn.Text = "Tra cứu";
             this.Tracuubtn.UseVisualStyleBackColor = true;
             this.Tracuubtn.Click += new System.EventHandler(this.Tracuubtn_Click);
+            // 
+            // Baocaothangbtn
+            // 
+            this.Baocaothangbtn.FlatAppearance.BorderSize = 0;
+            this.Baocaothangbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Baocaothangbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Baocaothangbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Baocaothangbtn.Image = global::GarageManager.Properties.Resources.billboard_40px;
+            this.Baocaothangbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Baocaothangbtn.Location = new System.Drawing.Point(3, 276);
+            this.Baocaothangbtn.Name = "Baocaothangbtn";
+            this.Baocaothangbtn.Size = new System.Drawing.Size(211, 50);
+            this.Baocaothangbtn.TabIndex = 1;
+            this.Baocaothangbtn.Text = "Lập báo cáo ";
+            this.Baocaothangbtn.UseVisualStyleBackColor = true;
+            this.Baocaothangbtn.Click += new System.EventHandler(this.Baocaothangbtn_Click);
             // 
             // Lapphieubtn
             // 
@@ -283,21 +265,40 @@
             this.button3.TabIndex = 0;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // Baocaothangbtn
+            // functionbutton
             // 
-            this.Baocaothangbtn.FlatAppearance.BorderSize = 0;
-            this.Baocaothangbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Baocaothangbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Baocaothangbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Baocaothangbtn.Image = global::GarageManager.Properties.Resources.billboard_40px;
-            this.Baocaothangbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Baocaothangbtn.Location = new System.Drawing.Point(3, 276);
-            this.Baocaothangbtn.Name = "Baocaothangbtn";
-            this.Baocaothangbtn.Size = new System.Drawing.Size(211, 50);
-            this.Baocaothangbtn.TabIndex = 1;
-            this.Baocaothangbtn.Text = "Lập báo cáo ";
-            this.Baocaothangbtn.UseVisualStyleBackColor = true;
-            this.Baocaothangbtn.Click += new System.EventHandler(this.Baocaothangbtn_Click);
+            this.functionbutton.AllowDrop = true;
+            this.functionbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.functionbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.functionbutton.FlatAppearance.BorderSize = 0;
+            this.functionbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.functionbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.functionbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.functionbutton.Image = ((System.Drawing.Image)(resources.GetObject("functionbutton.Image")));
+            this.functionbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.functionbutton.Location = new System.Drawing.Point(1190, 18);
+            this.functionbutton.Name = "functionbutton";
+            this.functionbutton.Size = new System.Drawing.Size(43, 28);
+            this.functionbutton.TabIndex = 0;
+            this.functionbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.functionbutton.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.AllowDrop = true;
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Image = global::GarageManager.Properties.Resources.find_and_replace_30px;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(649, 12);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(61, 40);
+            this.button5.TabIndex = 1;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 

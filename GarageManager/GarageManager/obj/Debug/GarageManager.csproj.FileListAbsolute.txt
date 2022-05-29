@@ -63,3 +63,4 @@ D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManag
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaothang.resources
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaodoanhso.resources
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaoton.resources
+D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Chinhsuaquydinh.resources
