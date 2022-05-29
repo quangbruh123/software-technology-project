@@ -45,6 +45,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Trangchubtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.Baocaothangbtn = new System.Windows.Forms.Button();
             this.paneltaskbar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +123,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.Tracuubtn);
+            this.panel1.Controls.Add(this.Baocaothangbtn);
             this.panel1.Controls.Add(this.Lapphieubtn);
             this.panel1.Controls.Add(this.Tiepnhanbaotrixebtn);
             this.panel1.Controls.Add(this.button1);
@@ -162,7 +164,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Image = global::GarageManager.Properties.Resources.help_32px;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 388);
+            this.button2.Location = new System.Drawing.Point(1, 437);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(208, 50);
             this.button2.TabIndex = 1;
@@ -177,7 +179,7 @@
             this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button7.Image = global::GarageManager.Properties.Resources.home_40px;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(3, 332);
+            this.button7.Location = new System.Drawing.Point(1, 381);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(208, 50);
             this.button7.TabIndex = 1;
@@ -193,12 +195,13 @@
             this.Tracuubtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Tracuubtn.Image = global::GarageManager.Properties.Resources.search_50px;
             this.Tracuubtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Tracuubtn.Location = new System.Drawing.Point(3, 276);
+            this.Tracuubtn.Location = new System.Drawing.Point(3, 325);
             this.Tracuubtn.Name = "Tracuubtn";
             this.Tracuubtn.Size = new System.Drawing.Size(199, 50);
             this.Tracuubtn.TabIndex = 1;
             this.Tracuubtn.Text = "Tra cứu";
             this.Tracuubtn.UseVisualStyleBackColor = true;
+            this.Tracuubtn.Click += new System.EventHandler(this.Tracuubtn_Click);
             // 
             // Lapphieubtn
             // 
@@ -231,6 +234,7 @@
             this.Tiepnhanbaotrixebtn.Text = "Tiếp nhận bảo trì xe";
             this.Tiepnhanbaotrixebtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Tiepnhanbaotrixebtn.UseVisualStyleBackColor = true;
+            this.Tiepnhanbaotrixebtn.Click += new System.EventHandler(this.Tiepnhanbaotrixebtn_Click);
             // 
             // button1
             // 
@@ -279,6 +283,22 @@
             this.button3.TabIndex = 0;
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // Baocaothangbtn
+            // 
+            this.Baocaothangbtn.FlatAppearance.BorderSize = 0;
+            this.Baocaothangbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Baocaothangbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Baocaothangbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Baocaothangbtn.Image = global::GarageManager.Properties.Resources.billboard_40px;
+            this.Baocaothangbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Baocaothangbtn.Location = new System.Drawing.Point(3, 276);
+            this.Baocaothangbtn.Name = "Baocaothangbtn";
+            this.Baocaothangbtn.Size = new System.Drawing.Size(211, 50);
+            this.Baocaothangbtn.TabIndex = 1;
+            this.Baocaothangbtn.Text = "Lập báo cáo ";
+            this.Baocaothangbtn.UseVisualStyleBackColor = true;
+            this.Baocaothangbtn.Click += new System.EventHandler(this.Baocaothangbtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,6 +338,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Trangchubtn;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Baocaothangbtn;
     }
 }
 

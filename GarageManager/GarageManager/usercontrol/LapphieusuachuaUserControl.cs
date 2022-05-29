@@ -83,5 +83,10 @@ namespace GarageManager.usercontrol
         {
             e.Graphics.DrawImage(memoryImage, 0, 0);
         }
+
+        private void btnLuuPSC_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

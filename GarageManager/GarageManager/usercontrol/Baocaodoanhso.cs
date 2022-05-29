@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GarageManager.usercontrol
 {
-    public partial class UserControl1 : UserControl
+    public partial class Baocaodoanhso : UserControl
     {
-        public UserControl1()
+        public Baocaodoanhso()
         {
             InitializeComponent();
         }

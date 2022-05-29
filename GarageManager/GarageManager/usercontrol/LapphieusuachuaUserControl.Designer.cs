@@ -285,6 +285,7 @@
             this.btnLuuPSC.TabIndex = 58;
             this.btnLuuPSC.Text = "Lưu phiếu sửa chữa";
             this.btnLuuPSC.UseVisualStyleBackColor = false;
+            this.btnLuuPSC.Click += new System.EventHandler(this.btnLuuPSC_Click);
             // 
             // button1
             // 
@@ -354,7 +355,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Location = new System.Drawing.Point(0, 150);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(250, 3);
+            this.panel3.Size = new System.Drawing.Size(297, 4);
             this.panel3.TabIndex = 54;
             // 
             // LapphieusuachuaUserControl

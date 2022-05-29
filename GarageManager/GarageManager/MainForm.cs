@@ -21,8 +21,9 @@ namespace GarageManager
         //Nút nhảy usercontrol
         private LapphieuthutienUserControl uc1;
         private tracuuUserControl1 uc2;
-        private LapphieusuachuaUserControl uc3;
+        private Tiepnhanbaotrixe uc4;
         private LAPPHIEU uc5;
+        private Baocaothang uc3;
         public MainForm()
         {
             InitializeComponent();
@@ -43,13 +44,16 @@ namespace GarageManager
             Controls.Add(uc1);
             uc2 = new tracuuUserControl1();
             Controls.Add(uc2);
-            uc3 = new LapphieusuachuaUserControl();
+            uc3 = new Baocaothang();
             Controls.Add(uc3);
+            uc4 = new Tiepnhanbaotrixe();
+            Controls.Add(uc4);
             uc5 = new LAPPHIEU();
             Controls.Add(uc5);
             uc1.Visible = false;
             uc2.Visible = false;
             uc3.Visible = false;
+            uc4.Visible = false;
             uc5.Visible = false;
         }     
          
@@ -60,8 +64,42 @@ namespace GarageManager
             uc1.Visible = false;
             uc2.Visible = false;
             uc3.Visible = false;
+            uc4.Visible = false;
             uc5.Visible = true;
             uc5.Location = new Point(211, 48);
+        }
+
+        private void Tracuubtn_Click(object sender, EventArgs e)
+        {
+            mainpanel.Visible = false;
+            uc1.Visible = false;
+            uc2.Visible = true;
+            uc3.Visible = false;
+            uc4.Visible = false;
+            uc5.Visible = false;
+            uc2.Location = new Point(211, 48);
+        }
+
+        private void Tiepnhanbaotrixebtn_Click(object sender, EventArgs e)
+        {
+            mainpanel.Visible = false;
+            uc1.Visible = false;
+            uc2.Visible = false;
+            uc3.Visible = false;
+            uc4.Visible = true;
+            uc5.Visible = false;
+            uc4.Location = new Point(211, 48);
+        }
+
+        private void Baocaothangbtn_Click(object sender, EventArgs e)
+        {
+            mainpanel.Visible = false;
+            uc1.Visible = false;
+            uc2.Visible = false;
+            uc3.Visible = true;
+            uc4.Visible = false;
+            uc5.Visible = false;
+            uc3.Location = new Point(211, 48);
         }
     }
 }
