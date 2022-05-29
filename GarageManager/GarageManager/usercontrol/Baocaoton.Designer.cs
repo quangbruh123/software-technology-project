@@ -34,7 +34,7 @@
             this.btnLapBaoCaoTon = new System.Windows.Forms.Button();
             this.lblThangBaoCaoTon = new System.Windows.Forms.Label();
             this.dataGridViewBaoCaoTon = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCapNhatQuyDinh = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaoCaoTon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,22 +105,23 @@
             this.dataGridViewBaoCaoTon.Size = new System.Drawing.Size(1076, 368);
             this.dataGridViewBaoCaoTon.TabIndex = 9;
             // 
-            // label2
+            // lblCapNhatQuyDinh
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(508, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 32);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Tồn kho";
+            this.lblCapNhatQuyDinh.BackColor = System.Drawing.Color.Transparent;
+            this.lblCapNhatQuyDinh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCapNhatQuyDinh.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblCapNhatQuyDinh.Location = new System.Drawing.Point(524, 38);
+            this.lblCapNhatQuyDinh.Name = "lblCapNhatQuyDinh";
+            this.lblCapNhatQuyDinh.Size = new System.Drawing.Size(115, 27);
+            this.lblCapNhatQuyDinh.TabIndex = 13;
+            this.lblCapNhatQuyDinh.Text = "TỒN KHO";
             // 
             // Baocaoton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCapNhatQuyDinh);
             this.Controls.Add(this.btnBaoCaoTonMoi);
             this.Controls.Add(this.lblChonThoiDiemTon);
             this.Controls.Add(this.dateTimePickerChonThoiDiemBaoCaoTon);
@@ -143,6 +144,6 @@
         private System.Windows.Forms.Button btnLapBaoCaoTon;
         private System.Windows.Forms.Label lblThangBaoCaoTon;
         private System.Windows.Forms.DataGridView dataGridViewBaoCaoTon;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCapNhatQuyDinh;
     }
 }

@@ -28,21 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.baocaotonbtn = new System.Windows.Forms.Button();
             this.baocaodoanhsobtn = new System.Windows.Forms.Button();
+            this.lblCapNhatQuyDinh = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 25);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Lập các loại phiếu";
             // 
             // panel1
             // 
@@ -88,12 +78,23 @@
             this.baocaodoanhsobtn.UseVisualStyleBackColor = false;
             this.baocaodoanhsobtn.Click += new System.EventHandler(this.baocaodoanhsobtn_Click);
             // 
+            // lblCapNhatQuyDinh
+            // 
+            this.lblCapNhatQuyDinh.BackColor = System.Drawing.Color.Transparent;
+            this.lblCapNhatQuyDinh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCapNhatQuyDinh.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblCapNhatQuyDinh.Location = new System.Drawing.Point(3, 12);
+            this.lblCapNhatQuyDinh.Name = "lblCapNhatQuyDinh";
+            this.lblCapNhatQuyDinh.Size = new System.Drawing.Size(218, 27);
+            this.lblCapNhatQuyDinh.TabIndex = 23;
+            this.lblCapNhatQuyDinh.Text = "LẬP CÁC LOẠI PHIẾU";
+            // 
             // Baocaothang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCapNhatQuyDinh);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.baocaotonbtn);
             this.Controls.Add(this.baocaodoanhsobtn);
@@ -101,7 +102,6 @@
             this.Size = new System.Drawing.Size(1175, 876);
             this.Load += new System.EventHandler(this.Baocaothang_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -109,7 +109,7 @@
 
         private System.Windows.Forms.Button baocaotonbtn;
         private System.Windows.Forms.Button baocaodoanhsobtn;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblCapNhatQuyDinh;
     }
 }

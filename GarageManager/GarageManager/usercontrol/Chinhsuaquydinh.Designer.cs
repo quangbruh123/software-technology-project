@@ -64,7 +64,7 @@
             this.panelQuyDinhHienHanh.Controls.Add(this.buttonLamMoiQuyDinh);
             this.panelQuyDinhHienHanh.Controls.Add(this.labelQuyDinhHienHanh);
             this.panelQuyDinhHienHanh.Controls.Add(this.dataGridViewQuyDinhHienHanh);
-            this.panelQuyDinhHienHanh.Location = new System.Drawing.Point(289, 361);
+            this.panelQuyDinhHienHanh.Location = new System.Drawing.Point(503, 88);
             this.panelQuyDinhHienHanh.Margin = new System.Windows.Forms.Padding(2);
             this.panelQuyDinhHienHanh.Name = "panelQuyDinhHienHanh";
             this.panelQuyDinhHienHanh.Size = new System.Drawing.Size(514, 356);
@@ -94,13 +94,14 @@
             // 
             // dataGridViewQuyDinhHienHanh
             // 
+            this.dataGridViewQuyDinhHienHanh.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewQuyDinhHienHanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewQuyDinhHienHanh.Location = new System.Drawing.Point(4, 93);
             this.dataGridViewQuyDinhHienHanh.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewQuyDinhHienHanh.Name = "dataGridViewQuyDinhHienHanh";
             this.dataGridViewQuyDinhHienHanh.RowHeadersWidth = 51;
             this.dataGridViewQuyDinhHienHanh.RowTemplate.Height = 24;
-            this.dataGridViewQuyDinhHienHanh.Size = new System.Drawing.Size(493, 261);
+            this.dataGridViewQuyDinhHienHanh.Size = new System.Drawing.Size(493, 246);
             this.dataGridViewQuyDinhHienHanh.TabIndex = 0;
             // 
             // pnCapNhatQuyDinh
@@ -110,7 +111,7 @@
             this.pnCapNhatQuyDinh.Controls.Add(this.panel12);
             this.pnCapNhatQuyDinh.Controls.Add(this.panel13);
             this.pnCapNhatQuyDinh.Controls.Add(this.panel14);
-            this.pnCapNhatQuyDinh.Location = new System.Drawing.Point(289, 4);
+            this.pnCapNhatQuyDinh.Location = new System.Drawing.Point(2, 88);
             this.pnCapNhatQuyDinh.Margin = new System.Windows.Forms.Padding(2);
             this.pnCapNhatQuyDinh.Name = "pnCapNhatQuyDinh";
             this.pnCapNhatQuyDinh.Size = new System.Drawing.Size(497, 353);
