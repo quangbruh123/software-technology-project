@@ -37,5 +37,11 @@ namespace GarageManager
             LoginForm formDăngNhập = new LoginForm();
             formDăngNhập.ShowDialog();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            passwordtxt.UseSystemPasswordChar = !passwordtxt.UseSystemPasswordChar;
+            repasswordtxt.UseSystemPasswordChar = !repasswordtxt.UseSystemPasswordChar;
+        }
     }
 }
