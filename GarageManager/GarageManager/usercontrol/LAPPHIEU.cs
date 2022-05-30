@@ -39,5 +39,13 @@ namespace GarageManager.usercontrol
             uc3.Visible = true;
             uc3.Location = new Point(0, 156);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            uc1.Visible = true;
+            uc2.Visible = false;
+            uc3.Visible = false;
+            uc1.Location = new Point(0, 156);
+        }
     }
 }

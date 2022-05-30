@@ -57,6 +57,10 @@ D:\School\CNPM\software-technology-project\GarageManager\GarageManager\obj\Debug
 D:\School\CNPM\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.exe
 D:\School\CNPM\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.pdb
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.LoginForm.resources
-D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.UserControl1.resources
-D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.AssemblyReference.cache
 D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.LAPPHIEU.resources
+D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Tiepnhanbaotrixe.resources
+D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.AssemblyReference.cache
+D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaothang.resources
+D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaodoanhso.resources
+D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaoton.resources
+D:\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Chinhsuaquydinh.resources

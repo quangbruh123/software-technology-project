@@ -28,22 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.Lapphieusuachuabtn = new System.Windows.Forms.Button();
+            this.lblCapNhatQuyDinh = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Lập các loại phiếu";
             // 
             // panel1
             // 
@@ -52,23 +41,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1172, 3);
             this.panel1.TabIndex = 4;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Image = global::GarageManager.Properties.Resources.cash_40px;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(830, 56);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(268, 93);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Lập báo cáo tháng";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -86,6 +58,7 @@
             this.button2.Text = "Lập phiếu thu tiền";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Lapphieusuachuabtn
             // 
@@ -105,29 +78,37 @@
             this.Lapphieusuachuabtn.UseVisualStyleBackColor = false;
             this.Lapphieusuachuabtn.Click += new System.EventHandler(this.Lapphieusuachuabtn_Click);
             // 
+            // lblCapNhatQuyDinh
+            // 
+            this.lblCapNhatQuyDinh.BackColor = System.Drawing.Color.Transparent;
+            this.lblCapNhatQuyDinh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCapNhatQuyDinh.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblCapNhatQuyDinh.Location = new System.Drawing.Point(3, 12);
+            this.lblCapNhatQuyDinh.Name = "lblCapNhatQuyDinh";
+            this.lblCapNhatQuyDinh.Size = new System.Drawing.Size(218, 27);
+            this.lblCapNhatQuyDinh.TabIndex = 23;
+            this.lblCapNhatQuyDinh.Text = "LẬP CÁC LOẠI PHIẾU";
+            // 
             // LAPPHIEU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.lblCapNhatQuyDinh);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Lapphieusuachuabtn);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "LAPPHIEU";
-            this.Size = new System.Drawing.Size(1175, 512);
+            this.Size = new System.Drawing.Size(1175, 876);
             this.Load += new System.EventHandler(this.LAPPHIEU_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Lapphieusuachuabtn;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblCapNhatQuyDinh;
     }
 }
