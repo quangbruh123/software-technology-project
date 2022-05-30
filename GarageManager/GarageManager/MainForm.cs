@@ -112,5 +112,15 @@ namespace GarageManager
             uc5.Visible = false;
             uc1.Location = new Point(211, 48);
         }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void paneltaskbar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
