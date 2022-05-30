@@ -90,5 +90,10 @@ namespace GarageManager.Classes
             else
                 return false;
         }
+
+        public static int GetWage(string wageName)
+        {
+            return (int)DataProvider.Instance.DB.TIENCONGs.Where(x => x.TenTienCong == wageName).FirstOrDefault().GiaTienCong;
+        }
     }
 }

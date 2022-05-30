@@ -23,7 +23,8 @@ namespace GarageManager.usercontrol
         
         private void buttonplus_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(i,comboBoxvattuphutung.Text,textBoxsoluong.Text, comboBoxTiencong.Text);
+            int partPrice = (int)Storage.GetPartPrice(comboBoxvattuphutung.Text);
+            dataGridView1.Rows.Add(i, comboBoxvattuphutung.Text, textBoxsoluong.Text, partPrice, comboBoxTiencong.Text, partPrice * Int32.Parse(textBoxsoluong.Text) + Finance.GetWage(textBoxsoluong.Text));
             i++;
         }
 
@@ -37,17 +38,26 @@ namespace GarageManager.usercontrol
         private void button2_Click(object sender, EventArgs e)
         {
             int count = dataGridView1.SelectedRows.Count;
+            i--;
             if (dataGridView1.SelectedRows.Count > 1)
             {
-                for (int i = 0; i < count; i++)
+                for (int j = 0; j < count; j++)
                 {
                     dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                }
+                for (int j = 0; j < dataGridView1.RowCount - 1; j++)
+                {
+                    dataGridView1.Rows[j].Cells[0].Value = j + 1;
                 }
             }
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
-            }        
+                for (int j = 0; j < dataGridView1.RowCount - 1; j++)
+                {
+                    dataGridView1.Rows[j].Cells[0].Value = j + 1;
+                }
+            }
         }
 
         private void btnInPhieuSuaChua_Click(object sender, EventArgs e)
