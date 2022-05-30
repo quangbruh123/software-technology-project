@@ -103,9 +103,11 @@ namespace GarageManager.Classes
                 Model.CT_PSC[] ct_psc = new Model.CT_PSC[parts.Length];
                 for (int i = 0; i < parts.Length; i++)
                 {
+                    Model.TIENCONG wage = DataProvider.Instance.DB.TIENCONGs.Where(x => x.TenTienCong == wageName).FirstOrDefault();
                     ct_psc[i].NoiDung = details;
                     ct_psc[i].SoLan = DataProvider.Instance.DB.PHIEUSUACHUAs.Where(x => x.BienSo == plate).Count() + 1;
-                    ct_psc[i].MaTienCong = GetWageId(wageName);
+                    ct_psc[i].MaTienCong = wage.MaTienCong;
+                    ct_psc[i].TIENCONG = wage;
                     ct_psc[i].ThanhTien = ct_sdvt[i].SoLuong * ct_sdvt[i].DonGia + GetWage((int)ct_psc[i].MaTienCong);
                     ct_psc[i].CT_SUDUNGVATTU = ct_sdvt[i];
                 }
@@ -115,6 +117,7 @@ namespace GarageManager.Classes
                     BienSo = plate,
                     NgaySuaChua = date,
                     CT_PSC = ct_psc,
+                    XE = vehicle,
                     TongTien = 0
                 };
                 for (int i = 0; i < parts.Length; i++)
@@ -187,6 +190,10 @@ namespace GarageManager.Classes
                 return null;
         }
 
+        /// <summary>
+        /// Get all maintenance information
+        /// </summary>
+        /// <returns>Return a list of maintenance information</returns>
         public static List<Model.CT_PSC> GetAllMaintenanceInfo()
         {
             return DataProvider.Instance.DB.CT_PSC.ToList();
