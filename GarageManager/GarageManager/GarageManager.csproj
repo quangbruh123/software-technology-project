@@ -326,16 +326,6 @@
     <None Include="Resources\Close_40px.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\GarageManagementModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
-      <LastGenOutput>GarageManagementModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\GarageManagementModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
-      <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\find_and_replace_30px.png" />
     <None Include="Resources\back_40px.png" />
     <None Include="Resources\home_40px.png" />
@@ -349,6 +339,18 @@
     <None Include="Resources\garage_48px.png" />
     <None Include="Resources\drill_48px.png" />
     <None Include="Resources\under_construction_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\GarageManagementModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
+      <LastGenOutput>GarageManagementModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\GarageManagementModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
+      <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
