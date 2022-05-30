@@ -145,5 +145,10 @@ namespace GarageManager.Classes
             else
                 return false;
         }
+
+        public static decimal? GetPartPrice(string partName)
+        {
+            return DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partName).FirstOrDefault().DonGiaHienTai;
+        }
     }
 }
