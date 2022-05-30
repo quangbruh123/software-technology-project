@@ -43,9 +43,7 @@
             this.dangnhapbtn = new System.Windows.Forms.Button();
             this.taotaikhoanbtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxgmail = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGarage)).BeginInit();
             this.paneluser.SuspendLayout();
@@ -53,7 +51,6 @@
             this.panelpassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxgmail)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,7 +71,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(116, 486);
+            this.label3.Location = new System.Drawing.Point(139, 423);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(170, 25);
@@ -130,7 +127,7 @@
             this.usertxt.Location = new System.Drawing.Point(45, 11);
             this.usertxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.usertxt.Name = "usertxt";
-            this.usertxt.Size = new System.Drawing.Size(512, 29);
+            this.usertxt.Size = new System.Drawing.Size(464, 29);
             this.usertxt.TabIndex = 1;
             // 
             // pictureBox1
@@ -160,7 +157,7 @@
             this.passwordtxt.Location = new System.Drawing.Point(45, 11);
             this.passwordtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.passwordtxt.Name = "passwordtxt";
-            this.passwordtxt.Size = new System.Drawing.Size(512, 29);
+            this.passwordtxt.Size = new System.Drawing.Size(464, 29);
             this.passwordtxt.TabIndex = 1;
             this.passwordtxt.UseSystemPasswordChar = true;
             // 
@@ -231,18 +228,6 @@
             this.button2.Text = "Quên mật khẩu";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label5.Location = new System.Drawing.Point(339, 500);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(298, 31);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Hoặc đăng nhập bằng";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GarageManager.Properties.Resources.Close_40px;
@@ -255,27 +240,14 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // pictureBoxgmail
-            // 
-            this.pictureBoxgmail.Image = global::GarageManager.Properties.Resources.gmail_40px;
-            this.pictureBoxgmail.Location = new System.Drawing.Point(671, 490);
-            this.pictureBoxgmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBoxgmail.Name = "pictureBoxgmail";
-            this.pictureBoxgmail.Size = new System.Drawing.Size(40, 40);
-            this.pictureBoxgmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxgmail.TabIndex = 2;
-            this.pictureBoxgmail.TabStop = false;
-            // 
             // LoginForm
             // 
             this.AcceptButton = this.dangnhapbtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(895, 554);
+            this.ClientSize = new System.Drawing.Size(895, 476);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBoxgmail);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.taotaikhoanbtn);
             this.Controls.Add(this.dangnhapbtn);
@@ -298,7 +270,6 @@
             this.panelpassword.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxgmail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,8 +292,6 @@
         private System.Windows.Forms.Button dangnhapbtn;
         private System.Windows.Forms.Button taotaikhoanbtn;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBoxgmail;
         private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

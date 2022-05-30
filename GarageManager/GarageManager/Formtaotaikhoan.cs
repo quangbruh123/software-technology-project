@@ -20,8 +20,8 @@ namespace GarageManager
         private void pictureBoxexit_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LoginForm formDăngNhập = new LoginForm();
-            formDăngNhập.ShowDialog();
+            LoginForm loginform = new LoginForm();
+            loginform.ShowDialog();
         }
 
         private void dangnhapbtn_Click(object sender, EventArgs e)
@@ -34,8 +34,8 @@ namespace GarageManager
         private void taotaikhoanbtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LoginForm formDăngNhập = new LoginForm();
-            formDăngNhập.ShowDialog();
+            LoginForm loginform = new LoginForm();
+            loginform.ShowDialog();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
