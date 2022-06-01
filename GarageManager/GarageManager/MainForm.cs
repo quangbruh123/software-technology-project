@@ -115,20 +115,12 @@ namespace GarageManager
 
         private void CloseBtn_Click(object sender, EventArgs e)
         {
-            if ( MessageBox.Show("Do you want to close this Application?", "Notice", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+
         }
 
         private void paneltaskbar_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void MinimizeBtn_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

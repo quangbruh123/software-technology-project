@@ -39,10 +39,7 @@ namespace GarageManager
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to close this Application?", "Notice", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            Application.Exit();
         }
     }
 }
