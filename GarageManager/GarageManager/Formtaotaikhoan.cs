@@ -11,13 +11,23 @@ using System.Windows.Forms;
 namespace GarageManager
 {
     public partial class Formtaotaikhoan : Form
-    {
+    {    
         public Formtaotaikhoan()
         {
             InitializeComponent();
+            label11.Parent = gradient1;
+            label11.BackColor = Color.Transparent;
+            paneluser.Parent = gradient1;
+            paneluser.BackColor = Color.Transparent;
+            panelpassword.Parent = gradient1;
+            panelpassword.BackColor = Color.Transparent;
+            panel1.Parent = gradient1;
+            panel1.BackColor = Color.Transparent;
+
+
         }
 
-        private void pictureBoxexit_Click(object sender, EventArgs e)
+        private void pictureBoxexit_Click(object sender, EventArgs e)   
         {
             this.Hide();
             LoginForm loginform = new LoginForm();
@@ -28,7 +38,7 @@ namespace GarageManager
         {
             this.Hide();
             MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();  
+            mainForm.ShowDialog();
         }
 
         private void taotaikhoanbtn_Click(object sender, EventArgs e)
@@ -42,6 +52,12 @@ namespace GarageManager
         {
             passwordtxt.UseSystemPasswordChar = !passwordtxt.UseSystemPasswordChar;
             repasswordtxt.UseSystemPasswordChar = !repasswordtxt.UseSystemPasswordChar;
+        }
+
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

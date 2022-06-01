@@ -38,9 +38,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.lblCapNhatQuyDinh = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -148,6 +148,15 @@
             this.textBox2.Size = new System.Drawing.Size(163, 31);
             this.textBox2.TabIndex = 11;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(36, 123);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 25);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Tìm kiếm theo:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -163,15 +172,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(137, 31);
             this.textBox1.TabIndex = 11;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 123);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 25);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Tìm kiếm theo:";
             // 
             // lblCapNhatQuyDinh
             // 
@@ -193,7 +193,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "tracuuUserControl1";
-            this.Size = new System.Drawing.Size(1175, 717);
+            this.Size = new System.Drawing.Size(1089, 668);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

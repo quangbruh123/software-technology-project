@@ -15,6 +15,21 @@ namespace GarageManager
         public LoginForm()
         {
             InitializeComponent();
+            passwordtxt.UseSystemPasswordChar = true;
+            label4.Parent = gradient1;
+            label4.BackColor = Color.Transparent;
+            label1.Parent = gradient1;
+            label1.BackColor = Color.Transparent;
+            label2.Parent = gradient1;
+            label2.BackColor = Color.Transparent;
+            taotaikhoanbtn.Parent = gradient1;
+            taotaikhoanbtn.BackColor = Color.Transparent;
+            button2.Parent = gradient1;
+            button2.BackColor = Color.Transparent;
+            pictureBox3.Parent = gradient1;
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox4.Parent = gradient1;
+            pictureBox4.BackColor = Color.Transparent;
         }
 
         private void taotaikhoanbtn_Click(object sender, EventArgs e)
@@ -39,7 +54,10 @@ namespace GarageManager
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Do you want to close this Application?", "Notice", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

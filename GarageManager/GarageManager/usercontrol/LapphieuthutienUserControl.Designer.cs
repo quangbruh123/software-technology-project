@@ -133,7 +133,7 @@
             this.panel23.Controls.Add(this.buttonPhieuThuTienMoiPTT);
             this.panel23.Controls.Add(this.buttonInPhieuThuTienPTT);
             this.panel23.Controls.Add(this.buttonLapPhieuThuTienPTT);
-            this.panel23.Location = new System.Drawing.Point(536, 433);
+            this.panel23.Location = new System.Drawing.Point(446, 377);
             this.panel23.Margin = new System.Windows.Forms.Padding(2);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(639, 130);
@@ -278,7 +278,7 @@
             this.Controls.Add(this.panel23);
             this.Controls.Add(this.label2);
             this.Name = "LapphieuthutienUserControl";
-            this.Size = new System.Drawing.Size(1175, 564);
+            this.Size = new System.Drawing.Size(1089, 668);
             this.panel23.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -73,6 +73,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUTTON\gradient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BUTTON\RJ.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\Account.cs" />
     <Compile Include="Classes\CircularButton1.cs">
       <SubType>Component</SubType>
@@ -351,6 +357,9 @@
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
       <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Password Key_26px.png" />
+    <None Include="Resources\user_30px.png" />
+    <None Include="Resources\istockphoto-1152779126-612x612.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

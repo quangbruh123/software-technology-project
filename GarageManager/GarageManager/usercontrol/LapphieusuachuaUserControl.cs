@@ -98,5 +98,10 @@ namespace GarageManager.usercontrol
         {
 
         }
+
+        private void LapphieusuachuaUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

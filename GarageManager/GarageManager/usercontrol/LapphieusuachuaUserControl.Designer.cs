@@ -164,9 +164,9 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(344, 153);
+            this.dataGridView1.Location = new System.Drawing.Point(317, 153);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(810, 226);
+            this.dataGridView1.Size = new System.Drawing.Size(765, 226);
             this.dataGridView1.TabIndex = 42;
             // 
             // Column1
@@ -230,14 +230,14 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(34, 156);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(116, 16);
+            this.label8.Size = new System.Drawing.Size(117, 16);
             this.label8.TabIndex = 47;
             this.label8.Text = "Vật tư phụ tùng :";
             // 
             // textBoxTongTienPhieuSuaChua
             // 
             this.textBoxTongTienPhieuSuaChua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTongTienPhieuSuaChua.Location = new System.Drawing.Point(985, 397);
+            this.textBoxTongTienPhieuSuaChua.Location = new System.Drawing.Point(865, 384);
             this.textBoxTongTienPhieuSuaChua.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTongTienPhieuSuaChua.Name = "textBoxTongTienPhieuSuaChua";
             this.textBoxTongTienPhieuSuaChua.ReadOnly = true;
@@ -248,7 +248,7 @@
             // 
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongTien.Location = new System.Drawing.Point(905, 404);
+            this.lblTongTien.Location = new System.Drawing.Point(785, 391);
             this.lblTongTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(65, 19);
@@ -262,7 +262,7 @@
             this.btnInPhieuSuaChua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInPhieuSuaChua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInPhieuSuaChua.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnInPhieuSuaChua.Location = new System.Drawing.Point(900, 528);
+            this.btnInPhieuSuaChua.Location = new System.Drawing.Point(706, 467);
             this.btnInPhieuSuaChua.Margin = new System.Windows.Forms.Padding(2);
             this.btnInPhieuSuaChua.Name = "btnInPhieuSuaChua";
             this.btnInPhieuSuaChua.Size = new System.Drawing.Size(275, 36);
@@ -278,7 +278,7 @@
             this.btnLuuPSC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuuPSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuuPSC.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLuuPSC.Location = new System.Drawing.Point(900, 475);
+            this.btnLuuPSC.Location = new System.Drawing.Point(706, 414);
             this.btnLuuPSC.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuuPSC.Name = "btnLuuPSC";
             this.btnLuuPSC.Size = new System.Drawing.Size(273, 36);
@@ -294,7 +294,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(645, 475);
+            this.button1.Location = new System.Drawing.Point(451, 414);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(238, 89);
             this.button1.TabIndex = 55;
@@ -344,7 +344,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(343, 150);
+            this.panel1.Location = new System.Drawing.Point(321, 150);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(835, 3);
             this.panel1.TabIndex = 53;
@@ -386,7 +386,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Name = "LapphieusuachuaUserControl";
-            this.Size = new System.Drawing.Size(1175, 564);
+            this.Size = new System.Drawing.Size(1089, 512);
+            this.Load += new System.EventHandler(this.LapphieusuachuaUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

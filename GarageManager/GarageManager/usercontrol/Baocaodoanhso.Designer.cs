@@ -117,7 +117,7 @@
             this.dataGridViewBaoCaoDoanhSo.RowHeadersWidth = 51;
             this.dataGridViewBaoCaoDoanhSo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewBaoCaoDoanhSo.RowTemplate.Height = 24;
-            this.dataGridViewBaoCaoDoanhSo.Size = new System.Drawing.Size(940, 326);
+            this.dataGridViewBaoCaoDoanhSo.Size = new System.Drawing.Size(940, 254);
             this.dataGridViewBaoCaoDoanhSo.TabIndex = 12;
             // 
             // Column1
@@ -186,7 +186,7 @@
             this.Controls.Add(this.textBoxTongDoanhThu);
             this.Controls.Add(this.dataGridViewBaoCaoDoanhSo);
             this.Name = "Baocaodoanhso";
-            this.Size = new System.Drawing.Size(1175, 564);
+            this.Size = new System.Drawing.Size(1089, 668);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaoCaoDoanhSo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

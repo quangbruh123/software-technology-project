@@ -66,7 +66,7 @@ namespace GarageManager
             uc3.Visible = false;
             uc4.Visible = false;
             uc5.Visible = true;
-            uc5.Location = new Point(211, 48);
+            uc5.Location = new Point(212, 56);
         }
 
         private void Tracuubtn_Click(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace GarageManager
             uc3.Visible = false;
             uc4.Visible = false;
             uc5.Visible = false;
-            uc2.Location = new Point(211, 48);
+            uc2.Location = new Point(212, 56);
         }
 
         private void Tiepnhanbaotrixebtn_Click(object sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace GarageManager
             uc3.Visible = false;
             uc4.Visible = true;
             uc5.Visible = false;
-            uc4.Location = new Point(211, 48);
+            uc4.Location = new Point(212, 56);
         }
 
         private void Baocaothangbtn_Click(object sender, EventArgs e)
@@ -99,7 +99,7 @@ namespace GarageManager
             uc3.Visible = true;
             uc4.Visible = false;
             uc5.Visible = false;
-            uc3.Location = new Point(211, 48);
+            uc3.Location = new Point(212, 56);
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -110,15 +110,10 @@ namespace GarageManager
             uc3.Visible = false;
             uc4.Visible = false;
             uc5.Visible = false;
-            uc1.Location = new Point(211, 48);
+            uc1.Location = new Point(212, 56);
         }
 
-        private void CloseBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void paneltaskbar_Paint(object sender, PaintEventArgs e)
+        private void mainpanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

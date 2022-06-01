@@ -243,6 +243,16 @@ namespace GarageManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1152779126_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto_1152779126_612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lock_24px {
             get {
                 object obj = ResourceManager.GetObject("lock_24px", resourceCulture);
@@ -256,6 +266,16 @@ namespace GarageManager.Properties {
         internal static System.Drawing.Bitmap maximize_window_24px {
             get {
                 object obj = ResourceManager.GetObject("maximize_window_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Password_Key_26px {
+            get {
+                object obj = ResourceManager.GetObject("Password_Key_26px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +326,16 @@ namespace GarageManager.Properties {
         internal static System.Drawing.Bitmap user_24px {
             get {
                 object obj = ResourceManager.GetObject("user_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_30px {
+            get {
+                object obj = ResourceManager.GetObject("user_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

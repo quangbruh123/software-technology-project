@@ -97,12 +97,12 @@
             // 
             this.dataGridViewBaoCaoTon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewBaoCaoTon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBaoCaoTon.Location = new System.Drawing.Point(63, 168);
+            this.dataGridViewBaoCaoTon.Location = new System.Drawing.Point(70, 162);
             this.dataGridViewBaoCaoTon.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewBaoCaoTon.Name = "dataGridViewBaoCaoTon";
             this.dataGridViewBaoCaoTon.RowHeadersWidth = 51;
             this.dataGridViewBaoCaoTon.RowTemplate.Height = 24;
-            this.dataGridViewBaoCaoTon.Size = new System.Drawing.Size(1076, 368);
+            this.dataGridViewBaoCaoTon.Size = new System.Drawing.Size(934, 240);
             this.dataGridViewBaoCaoTon.TabIndex = 9;
             // 
             // lblCapNhatQuyDinh
@@ -129,7 +129,7 @@
             this.Controls.Add(this.lblThangBaoCaoTon);
             this.Controls.Add(this.dataGridViewBaoCaoTon);
             this.Name = "Baocaoton";
-            this.Size = new System.Drawing.Size(1175, 564);
+            this.Size = new System.Drawing.Size(1089, 668);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaoCaoTon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
