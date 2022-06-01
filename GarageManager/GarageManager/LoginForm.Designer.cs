@@ -30,13 +30,13 @@
         {
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gradient1 = new GarageManager.Control.gradient();
+            this.passwordtxt = new System.Windows.Forms.TextBox();
             this.dangnhapbtn = new GarageManager.Control.RJButton();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.taotaikhoanbtn = new System.Windows.Forms.Button();
             this.CloseBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.passwordtxt = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.minbtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -78,6 +78,19 @@
             this.gradient1.Name = "gradient1";
             this.gradient1.Size = new System.Drawing.Size(368, 463);
             this.gradient1.TabIndex = 33;
+            this.gradient1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradient1_Paint);
+            // 
+            // passwordtxt
+            // 
+            this.passwordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordtxt.Location = new System.Drawing.Point(72, 203);
+            this.passwordtxt.Multiline = true;
+            this.passwordtxt.Name = "passwordtxt";
+            this.passwordtxt.PasswordChar = '*';
+            this.passwordtxt.Size = new System.Drawing.Size(283, 35);
+            this.passwordtxt.TabIndex = 22;
+            this.passwordtxt.Text = "Mật khẩu";
+            this.passwordtxt.UseSystemPasswordChar = true;
             // 
             // dangnhapbtn
             // 
@@ -161,18 +174,6 @@
             this.label2.Size = new System.Drawing.Size(55, 24);
             this.label2.TabIndex = 24;
             this.label2.Text = "Hoặc";
-            // 
-            // passwordtxt
-            // 
-            this.passwordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordtxt.Location = new System.Drawing.Point(72, 203);
-            this.passwordtxt.Multiline = true;
-            this.passwordtxt.Name = "passwordtxt";
-            this.passwordtxt.PasswordChar = '*';
-            this.passwordtxt.Size = new System.Drawing.Size(283, 35);
-            this.passwordtxt.TabIndex = 22;
-            this.passwordtxt.Text = "Mật khẩu";
-            this.passwordtxt.UseSystemPasswordChar = true;
             // 
             // pictureBox3
             // 

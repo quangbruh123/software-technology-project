@@ -59,5 +59,10 @@ namespace GarageManager
                 Application.Exit();
             }
         }
+
+        private void gradient1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

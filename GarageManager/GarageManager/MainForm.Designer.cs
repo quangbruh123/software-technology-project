@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.paneltaskbar = new System.Windows.Forms.Panel();
-            this.MinimizeBtn = new System.Windows.Forms.Button();
-            this.CloseBtn = new System.Windows.Forms.Button();
-            this.functionbutton = new System.Windows.Forms.Button();
             this.gradient1 = new GarageManager.Control.gradient();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,81 +40,18 @@
             this.button13 = new System.Windows.Forms.Button();
             this.Trangchubtn = new System.Windows.Forms.Button();
             this.mainpanel = new System.Windows.Forms.Panel();
-            this.paneltaskbar.SuspendLayout();
+            this.gradient2 = new GarageManager.Control.gradient();
+            this.CloseBtn = new System.Windows.Forms.Button();
+            this.MinimizeBtn = new System.Windows.Forms.Button();
             this.gradient1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.gradient2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // paneltaskbar
-            // 
-            this.paneltaskbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.paneltaskbar.Controls.Add(this.MinimizeBtn);
-            this.paneltaskbar.Controls.Add(this.CloseBtn);
-            this.paneltaskbar.Controls.Add(this.functionbutton);
-            this.paneltaskbar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paneltaskbar.Location = new System.Drawing.Point(0, 0);
-            this.paneltaskbar.Name = "paneltaskbar";
-            this.paneltaskbar.Size = new System.Drawing.Size(1300, 57);
-            this.paneltaskbar.TabIndex = 5;
-            // 
-            // MinimizeBtn
-            // 
-            this.MinimizeBtn.AllowDrop = true;
-            this.MinimizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.MinimizeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.MinimizeBtn.FlatAppearance.BorderSize = 0;
-            this.MinimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimizeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MinimizeBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.MinimizeBtn.Image = global::GarageManager.Properties.Resources.subtract_30px;
-            this.MinimizeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MinimizeBtn.Location = new System.Drawing.Point(1219, 0);
-            this.MinimizeBtn.Name = "MinimizeBtn";
-            this.MinimizeBtn.Size = new System.Drawing.Size(43, 28);
-            this.MinimizeBtn.TabIndex = 16;
-            this.MinimizeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.MinimizeBtn.UseVisualStyleBackColor = false;
-            // 
-            // CloseBtn
-            // 
-            this.CloseBtn.AllowDrop = true;
-            this.CloseBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CloseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.CloseBtn.FlatAppearance.BorderSize = 0;
-            this.CloseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CloseBtn.Image = global::GarageManager.Properties.Resources.Close_30px;
-            this.CloseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CloseBtn.Location = new System.Drawing.Point(1257, 0);
-            this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(43, 28);
-            this.CloseBtn.TabIndex = 14;
-            this.CloseBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CloseBtn.UseVisualStyleBackColor = false;
-            // 
-            // functionbutton
-            // 
-            this.functionbutton.AllowDrop = true;
-            this.functionbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.functionbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.functionbutton.FlatAppearance.BorderSize = 0;
-            this.functionbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.functionbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.functionbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.functionbutton.Image = ((System.Drawing.Image)(resources.GetObject("functionbutton.Image")));
-            this.functionbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.functionbutton.Location = new System.Drawing.Point(1170, 0);
-            this.functionbutton.Name = "functionbutton";
-            this.functionbutton.Size = new System.Drawing.Size(43, 28);
-            this.functionbutton.TabIndex = 0;
-            this.functionbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.functionbutton.UseVisualStyleBackColor = false;
             // 
             // gradient1
             // 
             this.gradient1.BackColor = System.Drawing.Color.CadetBlue;
-            this.gradient1.ColorBottom = System.Drawing.Color.CadetBlue;
+            this.gradient1.ColorBottom = System.Drawing.SystemColors.ActiveCaptionText;
             this.gradient1.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
             this.gradient1.Controls.Add(this.pictureBox2);
             this.gradient1.Controls.Add(this.button2);
@@ -131,7 +63,7 @@
             this.gradient1.Controls.Add(this.Tiepnhanbaotrixebtn);
             this.gradient1.Controls.Add(this.button13);
             this.gradient1.Controls.Add(this.Trangchubtn);
-            this.gradient1.Location = new System.Drawing.Point(-1, 57);
+            this.gradient1.Location = new System.Drawing.Point(-1, 29);
             this.gradient1.Margin = new System.Windows.Forms.Padding(2);
             this.gradient1.Name = "gradient1";
             this.gradient1.Size = new System.Drawing.Size(215, 925);
@@ -313,11 +245,58 @@
             this.mainpanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainpanel.Location = new System.Drawing.Point(212, 56);
+            this.mainpanel.Location = new System.Drawing.Point(213, 31);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(1089, 668);
+            this.mainpanel.Size = new System.Drawing.Size(1089, 661);
             this.mainpanel.TabIndex = 6;
             this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
+            // 
+            // gradient2
+            // 
+            this.gradient2.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
+            this.gradient2.ColorTop = System.Drawing.Color.Silver;
+            this.gradient2.Controls.Add(this.CloseBtn);
+            this.gradient2.Controls.Add(this.MinimizeBtn);
+            this.gradient2.Location = new System.Drawing.Point(0, 0);
+            this.gradient2.Name = "gradient2";
+            this.gradient2.Size = new System.Drawing.Size(1301, 29);
+            this.gradient2.TabIndex = 24;
+            // 
+            // CloseBtn
+            // 
+            this.CloseBtn.AllowDrop = true;
+            this.CloseBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.CloseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.CloseBtn.FlatAppearance.BorderSize = 0;
+            this.CloseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CloseBtn.Image = global::GarageManager.Properties.Resources.Close_30px;
+            this.CloseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CloseBtn.Location = new System.Drawing.Point(1258, 1);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(43, 28);
+            this.CloseBtn.TabIndex = 14;
+            this.CloseBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CloseBtn.UseVisualStyleBackColor = false;
+            // 
+            // MinimizeBtn
+            // 
+            this.MinimizeBtn.AllowDrop = true;
+            this.MinimizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.MinimizeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.MinimizeBtn.FlatAppearance.BorderSize = 0;
+            this.MinimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinimizeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimizeBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MinimizeBtn.Image = global::GarageManager.Properties.Resources.subtract_30px;
+            this.MinimizeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MinimizeBtn.Location = new System.Drawing.Point(1217, 1);
+            this.MinimizeBtn.Name = "MinimizeBtn";
+            this.MinimizeBtn.Size = new System.Drawing.Size(43, 28);
+            this.MinimizeBtn.TabIndex = 16;
+            this.MinimizeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MinimizeBtn.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -325,27 +304,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1300, 725);
+            this.Controls.Add(this.gradient2);
             this.Controls.Add(this.gradient1);
             this.Controls.Add(this.mainpanel);
-            this.Controls.Add(this.paneltaskbar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.paneltaskbar.ResumeLayout(false);
             this.gradient1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.gradient2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel paneltaskbar;
-        private System.Windows.Forms.Button functionbutton;
-        private System.Windows.Forms.Button CloseBtn;
-        private System.Windows.Forms.Button MinimizeBtn;
         private Control.gradient gradient1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button2;
@@ -358,6 +332,9 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button Trangchubtn;
         private System.Windows.Forms.Panel mainpanel;
+        private Control.gradient gradient2;
+        private System.Windows.Forms.Button CloseBtn;
+        private System.Windows.Forms.Button MinimizeBtn;
     }
 }
 

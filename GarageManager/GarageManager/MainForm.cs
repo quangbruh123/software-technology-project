@@ -27,7 +27,11 @@ namespace GarageManager
         public MainForm()
         {
             InitializeComponent();
-         
+            MinimizeBtn.Parent = gradient2;
+            MinimizeBtn.BackColor = Color.Transparent;
+            CloseBtn.Parent = gradient2;
+            CloseBtn.BackColor = Color.Transparent;
+
         }
         //Nút exit zoom mini
         private void button4_Click(object sender, EventArgs e)
@@ -66,7 +70,7 @@ namespace GarageManager
             uc3.Visible = false;
             uc4.Visible = false;
             uc5.Visible = true;
-            uc5.Location = new Point(212, 56);
+            uc5.Location = new Point(213, 31);
         }
 
         private void Tracuubtn_Click(object sender, EventArgs e)
@@ -77,7 +81,7 @@ namespace GarageManager
             uc3.Visible = false;
             uc4.Visible = false;
             uc5.Visible = false;
-            uc2.Location = new Point(212, 56);
+            uc2.Location = new Point(213, 31);
         }
 
         private void Tiepnhanbaotrixebtn_Click(object sender, EventArgs e)
@@ -88,7 +92,7 @@ namespace GarageManager
             uc3.Visible = false;
             uc4.Visible = true;
             uc5.Visible = false;
-            uc4.Location = new Point(212, 56);
+            uc4.Location = new Point(213, 31);
         }
 
         private void Baocaothangbtn_Click(object sender, EventArgs e)
@@ -99,7 +103,7 @@ namespace GarageManager
             uc3.Visible = true;
             uc4.Visible = false;
             uc5.Visible = false;
-            uc3.Location = new Point(212, 56);
+            uc3.Location = new Point(213, 31);
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -110,7 +114,7 @@ namespace GarageManager
             uc3.Visible = false;
             uc4.Visible = false;
             uc5.Visible = false;
-            uc1.Location = new Point(212, 56);
+            uc1.Location = new Point(213, 31);
         }
 
         private void mainpanel_Paint(object sender, PaintEventArgs e)
