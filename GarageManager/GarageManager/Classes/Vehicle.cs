@@ -87,24 +87,24 @@ namespace GarageManager.Classes
         /// <param name="date"></param>
         /// <param name="details"></param>
         /// <returns>True if successfully added, otherwise false</returns>
-        public static bool AddMaintenanceInfo(string plate, DateTime date, string details, string wageName, string[] parts, int[] amount)
+        public static bool AddMaintenanceInfo(string plate, DateTime date, List<string> details, List<string> wageName, List<string> parts, List<int> amount)
         {
-            Model.XE vehicle = DataProvider.Instance.DB.XEs.Where(x => x.BienSo == plate).FirstOrDefault();
+            Model.XE vehicle = DataProvider.Instance.DB.XEs.FirstOrDefault(x => x.BienSo == plate);
             if (vehicle != null)
-            {              
-                Model.CT_SUDUNGVATTU[] ct_sdvt = new Model.CT_SUDUNGVATTU[parts.Length];
-                for (int i = 0; i < parts.Length; i++)
+            {
+                Model.CT_SUDUNGVATTU[] ct_sdvt = new Model.CT_SUDUNGVATTU[parts.Count];
+                for (int i = 0; i < parts.Count; i++)
                 {
                     ct_sdvt[i].MaVatTu = GetPartsID(parts[i]);
                     ct_sdvt[i].SoLuong = amount[i];
                     ct_sdvt[i].DonGia = GetPartsPrice(parts[i]);
                 }
 
-                Model.CT_PSC[] ct_psc = new Model.CT_PSC[parts.Length];
-                for (int i = 0; i < parts.Length; i++)
+                Model.CT_PSC[] ct_psc = new Model.CT_PSC[parts.Count];
+                for (int i = 0; i < parts.Count; i++)
                 {
-                    Model.TIENCONG wage = DataProvider.Instance.DB.TIENCONGs.Where(x => x.TenTienCong == wageName).FirstOrDefault();
-                    ct_psc[i].NoiDung = details;
+                    Model.TIENCONG wage = DataProvider.Instance.DB.TIENCONGs.FirstOrDefault(x => x.TenTienCong == wageName[i]);
+                    ct_psc[i].NoiDung = details[i];
                     ct_psc[i].SoLan = DataProvider.Instance.DB.PHIEUSUACHUAs.Where(x => x.BienSo == plate).Count() + 1;
                     ct_psc[i].MaTienCong = wage.MaTienCong;
                     ct_psc[i].TIENCONG = wage;
@@ -120,7 +120,7 @@ namespace GarageManager.Classes
                     XE = vehicle,
                     TongTien = 0
                 };
-                for (int i = 0; i < parts.Length; i++)
+                for (int i = 0; i < parts.Count; i++)
                 {
                     phieusuachua.TongTien += ct_psc[i].ThanhTien;
                 }
@@ -131,17 +131,17 @@ namespace GarageManager.Classes
 
                 for (int i = 0; i < ct_psc.Length; i++)
                 {
-                    DataProvider.Instance.DB.CT_PSC.Add(ct_psc[i]);
+                    DataProvider.Instance.DB.CT_PSC.AddRange(ct_psc);
                 }
                 DataProvider.Instance.DB.SaveChanges();
 
                 for (int i = 0; i < ct_sdvt.Length; i++)
                 {
                     ct_sdvt[i].CT_PSC = ct_psc[i];
-                    DataProvider.Instance.DB.CT_SUDUNGVATTU.Add(ct_sdvt[i]);
+                    DataProvider.Instance.DB.CT_SUDUNGVATTU.AddRange(ct_sdvt);
                 }
                 DataProvider.Instance.DB.SaveChanges();
-                
+
                 return true;
             }
             else

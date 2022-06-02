@@ -150,5 +150,10 @@ namespace GarageManager.Classes
         {
             return DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partName).FirstOrDefault().DonGiaHienTai;
         }
+
+        public static List<Model.VATTU> GetAllParts()
+        {
+            return DataProvider.Instance.DB.VATTUs.ToList();
+        }
     }
 }
