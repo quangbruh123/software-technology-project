@@ -63,20 +63,20 @@
             this.gradient1.Controls.Add(this.Tiepnhanbaotrixebtn);
             this.gradient1.Controls.Add(this.button13);
             this.gradient1.Controls.Add(this.Trangchubtn);
-            this.gradient1.Location = new System.Drawing.Point(-1, 29);
-            this.gradient1.Margin = new System.Windows.Forms.Padding(2);
+            this.gradient1.Location = new System.Drawing.Point(-1, 36);
+            this.gradient1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gradient1.Name = "gradient1";
-            this.gradient1.Size = new System.Drawing.Size(215, 925);
+            this.gradient1.Size = new System.Drawing.Size(287, 1138);
             this.gradient1.TabIndex = 23;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::GarageManager.Properties.Resources.car_maintenance_606ab2f8ab000;
-            this.pictureBox2.Location = new System.Drawing.Point(2, 38);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 47);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(207, 113);
+            this.pictureBox2.Size = new System.Drawing.Size(276, 139);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 30;
             this.pictureBox2.TabStop = false;
@@ -90,10 +90,10 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Image = global::GarageManager.Properties.Resources.help_32px;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(2, 469);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(3, 577);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 41);
+            this.button2.Size = new System.Drawing.Size(273, 50);
             this.button2.TabIndex = 1;
             this.button2.Text = "Trợ giúp";
             this.button2.UseVisualStyleBackColor = false;
@@ -105,10 +105,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button5.Location = new System.Drawing.Point(0, 155);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Location = new System.Drawing.Point(0, 191);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(158, 42);
+            this.button5.Size = new System.Drawing.Size(211, 52);
             this.button5.TabIndex = 29;
             this.button5.Text = "Chức năng";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,10 +123,10 @@
             this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button7.Image = global::GarageManager.Properties.Resources.home_40px;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(2, 424);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Location = new System.Drawing.Point(3, 522);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(205, 41);
+            this.button7.Size = new System.Drawing.Size(273, 50);
             this.button7.TabIndex = 22;
             this.button7.Text = "Chỉnh sửa quy định";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -142,10 +142,10 @@
             this.Tracuubtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Tracuubtn.Image = global::GarageManager.Properties.Resources.search_50px;
             this.Tracuubtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Tracuubtn.Location = new System.Drawing.Point(3, 378);
-            this.Tracuubtn.Margin = new System.Windows.Forms.Padding(2);
+            this.Tracuubtn.Location = new System.Drawing.Point(4, 465);
+            this.Tracuubtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tracuubtn.Name = "Tracuubtn";
-            this.Tracuubtn.Size = new System.Drawing.Size(192, 41);
+            this.Tracuubtn.Size = new System.Drawing.Size(256, 50);
             this.Tracuubtn.TabIndex = 23;
             this.Tracuubtn.Text = "Tra cứu";
             this.Tracuubtn.UseVisualStyleBackColor = false;
@@ -160,10 +160,10 @@
             this.Baocaothangbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Baocaothangbtn.Image = global::GarageManager.Properties.Resources.cash_40px;
             this.Baocaothangbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Baocaothangbtn.Location = new System.Drawing.Point(3, 339);
-            this.Baocaothangbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.Baocaothangbtn.Location = new System.Drawing.Point(4, 417);
+            this.Baocaothangbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Baocaothangbtn.Name = "Baocaothangbtn";
-            this.Baocaothangbtn.Size = new System.Drawing.Size(228, 41);
+            this.Baocaothangbtn.Size = new System.Drawing.Size(304, 50);
             this.Baocaothangbtn.TabIndex = 24;
             this.Baocaothangbtn.Text = "Lập báo cáo ";
             this.Baocaothangbtn.UseVisualStyleBackColor = false;
@@ -178,10 +178,10 @@
             this.Lapphieubtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lapphieubtn.Image = global::GarageManager.Properties.Resources.billboard_40px;
             this.Lapphieubtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Lapphieubtn.Location = new System.Drawing.Point(3, 293);
-            this.Lapphieubtn.Margin = new System.Windows.Forms.Padding(2);
+            this.Lapphieubtn.Location = new System.Drawing.Point(4, 361);
+            this.Lapphieubtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Lapphieubtn.Name = "Lapphieubtn";
-            this.Lapphieubtn.Size = new System.Drawing.Size(207, 41);
+            this.Lapphieubtn.Size = new System.Drawing.Size(276, 50);
             this.Lapphieubtn.TabIndex = 25;
             this.Lapphieubtn.Text = "Lập phiếu";
             this.Lapphieubtn.UseVisualStyleBackColor = false;
@@ -196,10 +196,10 @@
             this.Tiepnhanbaotrixebtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Tiepnhanbaotrixebtn.Image = global::GarageManager.Properties.Resources.drill_40px;
             this.Tiepnhanbaotrixebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Tiepnhanbaotrixebtn.Location = new System.Drawing.Point(1, 248);
-            this.Tiepnhanbaotrixebtn.Margin = new System.Windows.Forms.Padding(2);
+            this.Tiepnhanbaotrixebtn.Location = new System.Drawing.Point(1, 305);
+            this.Tiepnhanbaotrixebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tiepnhanbaotrixebtn.Name = "Tiepnhanbaotrixebtn";
-            this.Tiepnhanbaotrixebtn.Size = new System.Drawing.Size(208, 41);
+            this.Tiepnhanbaotrixebtn.Size = new System.Drawing.Size(277, 50);
             this.Tiepnhanbaotrixebtn.TabIndex = 26;
             this.Tiepnhanbaotrixebtn.Text = "Tiếp nhận bảo trì xe";
             this.Tiepnhanbaotrixebtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -216,9 +216,9 @@
             this.button13.Image = global::GarageManager.Properties.Resources.administrator_male_32px;
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.Location = new System.Drawing.Point(1, -1);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
+            this.button13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(158, 41);
+            this.button13.Size = new System.Drawing.Size(211, 50);
             this.button13.TabIndex = 27;
             this.button13.Text = " ";
             this.button13.UseVisualStyleBackColor = false;
@@ -232,10 +232,10 @@
             this.Trangchubtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Trangchubtn.Image = global::GarageManager.Properties.Resources.home_40px;
             this.Trangchubtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Trangchubtn.Location = new System.Drawing.Point(1, 202);
-            this.Trangchubtn.Margin = new System.Windows.Forms.Padding(2);
+            this.Trangchubtn.Location = new System.Drawing.Point(1, 249);
+            this.Trangchubtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Trangchubtn.Name = "Trangchubtn";
-            this.Trangchubtn.Size = new System.Drawing.Size(209, 41);
+            this.Trangchubtn.Size = new System.Drawing.Size(279, 50);
             this.Trangchubtn.TabIndex = 28;
             this.Trangchubtn.Text = "Trang chủ";
             this.Trangchubtn.UseVisualStyleBackColor = false;
@@ -245,9 +245,10 @@
             this.mainpanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainpanel.Location = new System.Drawing.Point(213, 31);
+            this.mainpanel.Location = new System.Drawing.Point(284, 38);
+            this.mainpanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(1089, 661);
+            this.mainpanel.Size = new System.Drawing.Size(1452, 814);
             this.mainpanel.TabIndex = 6;
             this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
             // 
@@ -258,8 +259,9 @@
             this.gradient2.Controls.Add(this.CloseBtn);
             this.gradient2.Controls.Add(this.MinimizeBtn);
             this.gradient2.Location = new System.Drawing.Point(0, 0);
+            this.gradient2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gradient2.Name = "gradient2";
-            this.gradient2.Size = new System.Drawing.Size(1301, 29);
+            this.gradient2.Size = new System.Drawing.Size(1735, 36);
             this.gradient2.TabIndex = 24;
             // 
             // CloseBtn
@@ -273,12 +275,14 @@
             this.CloseBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CloseBtn.Image = global::GarageManager.Properties.Resources.Close_30px;
             this.CloseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CloseBtn.Location = new System.Drawing.Point(1258, 1);
+            this.CloseBtn.Location = new System.Drawing.Point(1677, 1);
+            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(43, 28);
+            this.CloseBtn.Size = new System.Drawing.Size(57, 34);
             this.CloseBtn.TabIndex = 14;
             this.CloseBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.CloseBtn.UseVisualStyleBackColor = false;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // MinimizeBtn
             // 
@@ -291,23 +295,26 @@
             this.MinimizeBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.MinimizeBtn.Image = global::GarageManager.Properties.Resources.subtract_30px;
             this.MinimizeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MinimizeBtn.Location = new System.Drawing.Point(1217, 1);
+            this.MinimizeBtn.Location = new System.Drawing.Point(1623, 1);
+            this.MinimizeBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MinimizeBtn.Name = "MinimizeBtn";
-            this.MinimizeBtn.Size = new System.Drawing.Size(43, 28);
+            this.MinimizeBtn.Size = new System.Drawing.Size(57, 34);
             this.MinimizeBtn.TabIndex = 16;
             this.MinimizeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.MinimizeBtn.UseVisualStyleBackColor = false;
+            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1300, 725);
+            this.ClientSize = new System.Drawing.Size(1733, 892);
             this.Controls.Add(this.gradient2);
             this.Controls.Add(this.gradient1);
             this.Controls.Add(this.mainpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

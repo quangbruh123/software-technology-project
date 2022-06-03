@@ -64,8 +64,9 @@
             this.gradient1.Controls.Add(this.minbtn);
             this.gradient1.Controls.Add(this.CloseBtn);
             this.gradient1.Location = new System.Drawing.Point(-1, 0);
+            this.gradient1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gradient1.Name = "gradient1";
-            this.gradient1.Size = new System.Drawing.Size(494, 408);
+            this.gradient1.Size = new System.Drawing.Size(659, 502);
             this.gradient1.TabIndex = 18;
             // 
             // checkBox2
@@ -74,9 +75,10 @@
             this.checkBox2.BackColor = System.Drawing.Color.Transparent;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox2.Location = new System.Drawing.Point(184, 278);
+            this.checkBox2.Location = new System.Drawing.Point(245, 342);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(150, 28);
+            this.checkBox2.Size = new System.Drawing.Size(187, 33);
             this.checkBox2.TabIndex = 24;
             this.checkBox2.Text = "Hiện mật khẩu";
             this.checkBox2.UseVisualStyleBackColor = false;
@@ -88,9 +90,10 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.repasswordtxt);
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(72, 230);
+            this.panel1.Location = new System.Drawing.Point(96, 283);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(356, 42);
+            this.panel1.Size = new System.Drawing.Size(475, 52);
             this.panel1.TabIndex = 20;
             // 
             // label3
@@ -99,18 +102,20 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(5, 10);
+            this.label3.Location = new System.Drawing.Point(7, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 20);
+            this.label3.Size = new System.Drawing.Size(185, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nhập lại mật khẩu";
             // 
             // repasswordtxt
             // 
             this.repasswordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repasswordtxt.Location = new System.Drawing.Point(168, 6);
+            this.repasswordtxt.Location = new System.Drawing.Point(224, 7);
+            this.repasswordtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.repasswordtxt.Name = "repasswordtxt";
-            this.repasswordtxt.Size = new System.Drawing.Size(178, 24);
+            this.repasswordtxt.Size = new System.Drawing.Size(236, 29);
             this.repasswordtxt.TabIndex = 1;
             this.repasswordtxt.UseSystemPasswordChar = true;
             // 
@@ -120,9 +125,10 @@
             this.taotaikhoanbtn.FlatAppearance.BorderSize = 0;
             this.taotaikhoanbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.taotaikhoanbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taotaikhoanbtn.Location = new System.Drawing.Point(291, 312);
+            this.taotaikhoanbtn.Location = new System.Drawing.Point(388, 384);
+            this.taotaikhoanbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.taotaikhoanbtn.Name = "taotaikhoanbtn";
-            this.taotaikhoanbtn.Size = new System.Drawing.Size(127, 41);
+            this.taotaikhoanbtn.Size = new System.Drawing.Size(169, 50);
             this.taotaikhoanbtn.TabIndex = 22;
             this.taotaikhoanbtn.Text = "Hủy bỏ";
             this.taotaikhoanbtn.UseVisualStyleBackColor = false;
@@ -134,9 +140,10 @@
             this.dangnhapbtn.FlatAppearance.BorderSize = 0;
             this.dangnhapbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dangnhapbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dangnhapbtn.Location = new System.Drawing.Point(68, 312);
+            this.dangnhapbtn.Location = new System.Drawing.Point(91, 384);
+            this.dangnhapbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dangnhapbtn.Name = "dangnhapbtn";
-            this.dangnhapbtn.Size = new System.Drawing.Size(127, 41);
+            this.dangnhapbtn.Size = new System.Drawing.Size(169, 50);
             this.dangnhapbtn.TabIndex = 23;
             this.dangnhapbtn.Text = "Đồng ý";
             this.dangnhapbtn.UseVisualStyleBackColor = false;
@@ -146,9 +153,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(138, 30);
+            this.label11.Location = new System.Drawing.Point(184, 37);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(226, 37);
+            this.label11.Size = new System.Drawing.Size(275, 46);
             this.label11.TabIndex = 21;
             this.label11.Text = "Tạo tài khoản";
             // 
@@ -156,9 +164,10 @@
             // 
             this.panelpassword.Controls.Add(this.label2);
             this.panelpassword.Controls.Add(this.passwordtxt);
-            this.panelpassword.Location = new System.Drawing.Point(72, 161);
+            this.panelpassword.Location = new System.Drawing.Point(96, 198);
+            this.panelpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelpassword.Name = "panelpassword";
-            this.panelpassword.Size = new System.Drawing.Size(356, 42);
+            this.panelpassword.Size = new System.Drawing.Size(475, 52);
             this.panelpassword.TabIndex = 19;
             // 
             // label2
@@ -167,18 +176,20 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(5, 12);
+            this.label2.Location = new System.Drawing.Point(7, 15);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.Size = new System.Drawing.Size(101, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mật khẩu";
             // 
             // passwordtxt
             // 
             this.passwordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordtxt.Location = new System.Drawing.Point(168, 8);
+            this.passwordtxt.Location = new System.Drawing.Point(224, 10);
+            this.passwordtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.passwordtxt.Name = "passwordtxt";
-            this.passwordtxt.Size = new System.Drawing.Size(178, 24);
+            this.passwordtxt.Size = new System.Drawing.Size(236, 29);
             this.passwordtxt.TabIndex = 1;
             this.passwordtxt.UseSystemPasswordChar = true;
             // 
@@ -186,9 +197,10 @@
             // 
             this.paneluser.Controls.Add(this.label1);
             this.paneluser.Controls.Add(this.usertxt);
-            this.paneluser.Location = new System.Drawing.Point(72, 93);
+            this.paneluser.Location = new System.Drawing.Point(96, 114);
+            this.paneluser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.paneluser.Name = "paneluser";
-            this.paneluser.Size = new System.Drawing.Size(356, 42);
+            this.paneluser.Size = new System.Drawing.Size(475, 52);
             this.paneluser.TabIndex = 18;
             // 
             // label1
@@ -197,18 +209,20 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(5, 13);
+            this.label1.Location = new System.Drawing.Point(7, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 20);
+            this.label1.Size = new System.Drawing.Size(144, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tên tài khoản";
             // 
             // usertxt
             // 
             this.usertxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usertxt.Location = new System.Drawing.Point(168, 9);
+            this.usertxt.Location = new System.Drawing.Point(224, 11);
+            this.usertxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.usertxt.Name = "usertxt";
-            this.usertxt.Size = new System.Drawing.Size(178, 24);
+            this.usertxt.Size = new System.Drawing.Size(236, 29);
             this.usertxt.TabIndex = 1;
             // 
             // minbtn
@@ -217,11 +231,13 @@
             this.minbtn.FlatAppearance.BorderSize = 0;
             this.minbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minbtn.Image = global::GarageManager.Properties.Resources.subtract_30px;
-            this.minbtn.Location = new System.Drawing.Point(432, 0);
+            this.minbtn.Location = new System.Drawing.Point(576, 0);
+            this.minbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.minbtn.Name = "minbtn";
-            this.minbtn.Size = new System.Drawing.Size(28, 26);
+            this.minbtn.Size = new System.Drawing.Size(37, 32);
             this.minbtn.TabIndex = 16;
             this.minbtn.UseVisualStyleBackColor = false;
+            this.minbtn.Click += new System.EventHandler(this.minbtn_Click);
             // 
             // CloseBtn
             // 
@@ -229,21 +245,23 @@
             this.CloseBtn.FlatAppearance.BorderSize = 0;
             this.CloseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseBtn.Image = global::GarageManager.Properties.Resources.Close_30px;
-            this.CloseBtn.Location = new System.Drawing.Point(466, 0);
+            this.CloseBtn.Location = new System.Drawing.Point(621, 0);
+            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(28, 26);
+            this.CloseBtn.Size = new System.Drawing.Size(37, 32);
             this.CloseBtn.TabIndex = 17;
             this.CloseBtn.UseVisualStyleBackColor = false;
             this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // Formtaotaikhoan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(494, 408);
+            this.ClientSize = new System.Drawing.Size(659, 502);
             this.Controls.Add(this.gradient1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Formtaotaikhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formtaotaikhoan";

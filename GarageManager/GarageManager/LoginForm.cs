@@ -64,5 +64,46 @@ namespace GarageManager
         {
 
         }
+
+        private void usertxt_Enter(object sender, EventArgs e)
+        {
+            if (usertxt.Text == "Tên đăng nhập")
+            {
+                usertxt.Text = "";
+                usertxt.ForeColor = Color.Black;
+            }
+        }
+
+        private void usertxt_Leave(object sender, EventArgs e)
+        {
+            if (usertxt.Text == "")
+            {
+                usertxt.Text = "Tên đăng nhập";
+                usertxt.ForeColor = Color.Silver;
+            }
+        }
+
+        private void minbtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void passwordtxt_Enter(object sender, EventArgs e)
+        {
+            if (passwordtxt.Text == "Mật khẩu")
+            {
+                passwordtxt.Text = "";
+                passwordtxt.ForeColor = Color.Black;
+            }
+        }
+
+        private void passwordtxt_Leave(object sender, EventArgs e)
+        {
+            if (passwordtxt.Text == "")
+            {
+                passwordtxt.Text = "Mật khẩu";
+                passwordtxt.ForeColor = Color.Silver;
+            }
+        }
     }
 }

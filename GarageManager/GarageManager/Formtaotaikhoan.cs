@@ -57,7 +57,14 @@ namespace GarageManager
 
         private void CloseBtn_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            LoginForm loginform = new LoginForm();
+            loginform.ShowDialog();
+        }
 
+        private void minbtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
