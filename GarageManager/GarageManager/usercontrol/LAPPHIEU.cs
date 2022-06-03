@@ -17,14 +17,15 @@ namespace GarageManager.usercontrol
             InitializeComponent();
         }
         private LapphieuthutienUserControl uc1;
-        private tracuuUserControl1 uc2;
+        private Nhapvatu uc2;
         private LapphieusuachuaUserControl uc3;
+
 
         private void LAPPHIEU_Load(object sender, EventArgs e)
         {
             uc1 = new LapphieuthutienUserControl();
             Controls.Add(uc1);
-            uc2 = new tracuuUserControl1();
+            uc2 = new Nhapvatu();
             Controls.Add(uc2);
             uc3 = new LapphieusuachuaUserControl();
             Controls.Add(uc3);
@@ -46,6 +47,14 @@ namespace GarageManager.usercontrol
             uc2.Visible = false;
             uc3.Visible = false;
             uc1.Location = new Point(0, 156);
+        }
+
+        private void VTPTbtn_Click(object sender, EventArgs e)
+        {
+            uc1.Visible = false;
+            uc2.Visible = true;
+            uc3.Visible = false;
+            uc2.Location = new Point(0, 156);
         }
     }
 }
