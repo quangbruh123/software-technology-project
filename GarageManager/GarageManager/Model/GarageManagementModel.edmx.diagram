@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7988d288ef8c413b9dddde763da9163a" Name="Diagram1" ZoomLevel="95">
+      <Diagram DiagramId="eb7d9aa3983c40e3aee4eaa30fa28bad" Name="Diagram1">
         <EntityTypeShape EntityType="GarageManagementModel.BAOCAODOANHSO" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="GarageManagementModel.BAOCAOTON" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
         <EntityTypeShape EntityType="GarageManagementModel.CT_BCDS" Width="1.5" PointX="8" PointY="1.125" IsExpanded="true" />

@@ -15,7 +15,7 @@ namespace GarageManager.Model
     public partial class CT_SUDUNGVATTU
     {
         public int MaCTPSC { get; set; }
-        public Nullable<int> MaVatTu { get; set; }
+        public int MaVatTu { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<decimal> DonGia { get; set; }
         public Nullable<decimal> ThanhTien { get; set; }

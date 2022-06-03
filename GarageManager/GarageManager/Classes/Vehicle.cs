@@ -109,7 +109,7 @@ namespace GarageManager.Classes
                     ct_psc[i].MaTienCong = wage.MaTienCong;
                     ct_psc[i].TIENCONG = wage;
                     ct_psc[i].ThanhTien = ct_sdvt[i].SoLuong * ct_sdvt[i].DonGia + GetWage((int)ct_psc[i].MaTienCong);
-                    ct_psc[i].CT_SUDUNGVATTU = ct_sdvt[i];
+                    ct_psc[i].CT_SUDUNGVATTU.Add(ct_sdvt[i]);
                 }
 
                 Model.PHIEUSUACHUA phieusuachua = new Model.PHIEUSUACHUA

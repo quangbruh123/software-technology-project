@@ -63,9 +63,10 @@
         <EntityType Name="CT_SUDUNGVATTU">
           <Key>
             <PropertyRef Name="MaCTPSC" />
+            <PropertyRef Name="MaVatTu" />
           </Key>
           <Property Name="MaCTPSC" Type="int" Nullable="false" />
-          <Property Name="MaVatTu" Type="int" />
+          <Property Name="MaVatTu" Type="int" Nullable="false" />
           <Property Name="SoLuong" Type="int" />
           <Property Name="DonGia" Type="money" />
           <Property Name="ThanhTien" Type="money" />
@@ -75,7 +76,7 @@
             <PropertyRef Name="MaHieuXe" />
           </Key>
           <Property Name="MaHieuXe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TenHieuXe" Type="varchar" MaxLength="1" />
+          <Property Name="TenHieuXe" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="PHIEUNHAPVATTU">
           <Key>
@@ -195,7 +196,7 @@
         </Association>
         <Association Name="FK_MaCTPSC">
           <End Role="CT_PSC" Type="Self.CT_PSC" Multiplicity="1" />
-          <End Role="CT_SUDUNGVATTU" Type="Self.CT_SUDUNGVATTU" Multiplicity="0..1" />
+          <End Role="CT_SUDUNGVATTU" Type="Self.CT_SUDUNGVATTU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CT_PSC">
               <PropertyRef Name="MaCTPSC" />
@@ -290,7 +291,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SDVT_MaVatTu">
-          <End Role="VATTU" Type="Self.VATTU" Multiplicity="0..1" />
+          <End Role="VATTU" Type="Self.VATTU" Multiplicity="1" />
           <End Role="CT_SUDUNGVATTU" Type="Self.CT_SUDUNGVATTU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="VATTU">
@@ -439,9 +440,10 @@
         <EntityType Name="CT_SUDUNGVATTU">
           <Key>
             <PropertyRef Name="MaCTPSC" />
+            <PropertyRef Name="MaVatTu" />
           </Key>
           <Property Name="MaCTPSC" Type="Int32" Nullable="false" />
-          <Property Name="MaVatTu" Type="Int32" />
+          <Property Name="MaVatTu" Type="Int32" Nullable="false" />
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
@@ -453,7 +455,7 @@
             <PropertyRef Name="MaHieuXe" />
           </Key>
           <Property Name="MaHieuXe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TenHieuXe" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TenHieuXe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CT_BCDS" Relationship="Self.FK_HieuXe" FromRole="HIEUXE" ToRole="CT_BCDS" />
         </EntityType>
         <EntityType Name="PHIEUNHAPVATTU">
@@ -610,7 +612,7 @@
         </Association>
         <Association Name="FK_MaCTPSC">
           <End Role="CT_PSC" Type="Self.CT_PSC" Multiplicity="1" />
-          <End Role="CT_SUDUNGVATTU" Type="Self.CT_SUDUNGVATTU" Multiplicity="0..1" />
+          <End Role="CT_SUDUNGVATTU" Type="Self.CT_SUDUNGVATTU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CT_PSC">
               <PropertyRef Name="MaCTPSC" />
@@ -645,7 +647,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SDVT_MaVatTu">
-          <End Role="VATTU" Type="Self.VATTU" Multiplicity="0..1" />
+          <End Role="VATTU" Type="Self.VATTU" Multiplicity="1" />
           <End Role="CT_SUDUNGVATTU" Type="Self.CT_SUDUNGVATTU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="VATTU">

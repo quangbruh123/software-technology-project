@@ -14,6 +14,12 @@ namespace GarageManager.Model
     
     public partial class CT_PSC
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public CT_PSC()
+        {
+            this.CT_SUDUNGVATTU = new HashSet<CT_SUDUNGVATTU>();
+        }
+    
         public int MaCTPSC { get; set; }
         public Nullable<int> MaPhieuSC { get; set; }
         public string NoiDung { get; set; }
@@ -21,7 +27,8 @@ namespace GarageManager.Model
         public Nullable<int> MaTienCong { get; set; }
         public Nullable<decimal> ThanhTien { get; set; }
     
-        public virtual CT_SUDUNGVATTU CT_SUDUNGVATTU { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CT_SUDUNGVATTU> CT_SUDUNGVATTU { get; set; }
         public virtual PHIEUSUACHUA PHIEUSUACHUA { get; set; }
         public virtual TIENCONG TIENCONG { get; set; }
     }
