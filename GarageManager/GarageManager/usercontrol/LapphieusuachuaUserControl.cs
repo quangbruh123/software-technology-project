@@ -31,7 +31,7 @@ namespace GarageManager.usercontrol
                 int totalForAFix = partPrice * int.Parse(textBoxsoluong.Text) + Finance.GetWage(comboBoxTiencong.GetItemText(comboBoxTiencong.SelectedItem));
                 dataGridView1.Rows.Add(
                     itemCounter,
-                    "",
+                    textBoxDetails.Text,
                     comboBoxvattuphutung.GetItemText(comboBoxvattuphutung.SelectedItem),
                     textBoxsoluong.Text,
                     partPrice,
