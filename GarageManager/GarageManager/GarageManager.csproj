@@ -125,18 +125,18 @@
       <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\GarageManagementModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>GarageManagementModel.Context.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Model\GarageManagementModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Model\GarageManagementModel.Designer.cs">
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\HIEUXE.cs">
@@ -189,6 +189,12 @@
     <Compile Include="usercontrol\Chinhsuaquydinh.Designer.cs">
       <DependentUpon>Chinhsuaquydinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="usercontrol\DatagridLapphieusuachua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\DatagridLapphieusuachua.Designer.cs">
+      <DependentUpon>DatagridLapphieusuachua.cs</DependentUpon>
+    </Compile>
     <Compile Include="usercontrol\LAPPHIEU.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -212,6 +218,12 @@
     </Compile>
     <Compile Include="usercontrol\Baocaothang.Designer.cs">
       <DependentUpon>Baocaothang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrol\Nhapvatu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\Nhapvatu.Designer.cs">
+      <DependentUpon>Nhapvatu.cs</DependentUpon>
     </Compile>
     <Compile Include="usercontrol\TracuuUserControl.cs">
       <SubType>UserControl</SubType>
@@ -264,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrol\LapphieuthutienUserControl.resx">
       <DependentUpon>LapphieuthutienUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\Nhapvatu.resx">
+      <DependentUpon>Nhapvatu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrol\TracuuUserControl.resx">
       <DependentUpon>TracuuUserControl.cs</DependentUpon>
@@ -354,13 +369,13 @@
   <ItemGroup>
     <Content Include="Model\GarageManagementModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
       <LastGenOutput>GarageManagementModel.Context.cs</LastGenOutput>
+      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
     </Content>
     <Content Include="Model\GarageManagementModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
       <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
+      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
