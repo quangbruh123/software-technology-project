@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.SqlServer;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -93,7 +94,62 @@ namespace GarageManager.Classes
 
         public static int GetWage(string wageName)
         {
-            return (int)DataProvider.Instance.DB.TIENCONGs.Where(x => x.TenTienCong == wageName).FirstOrDefault().GiaTienCong;
+            return (int)DataProvider.Instance.DB.TIENCONGs.FirstOrDefault(x => x.TenTienCong == wageName).GiaTienCong;
+        }
+
+        public static Model.BAOCAODOANHSO GetMonthlyFinancialReport(int month, int year)
+        {
+            Model.BAOCAODOANHSO financialReport = DataProvider.Instance.DB.BAOCAODOANHSOes.FirstOrDefault(x => x.Thang == month && x.Nam == year);
+            if (financialReport != null)
+            {
+                return financialReport;
+            }
+            else
+            {
+                financialReport = new Model.BAOCAODOANHSO();
+                List<Model.HIEUXE> vehicleBrands = DataProvider.Instance.DB.HIEUXEs.ToList();
+                Model.CT_BCDS[] reportDetails = new Model.CT_BCDS[vehicleBrands.Count];
+                List<Model.XE> vehicles = DataProvider.Instance.DB.XEs.Where(x => SqlFunctions.DatePart("month", x.NgayTiepNhan) == month
+                                                                               && SqlFunctions.DatePart("year", x.NgayTiepNhan) == year).ToList();
+
+                for (int i = 0; i < vehicleBrands.Count; i++)
+                {
+                    reportDetails[i].MaHieuXe = vehicleBrands[i].MaHieuXe;                    
+                    reportDetails[i].HIEUXE = vehicleBrands[i];
+                }
+                for (int i = 0; i < vehicles.Count(); i++)
+                {
+                    for (int j = 0; j < reportDetails.Length; j++)
+                    {
+                        if (vehicles[i].HIEUXE == reportDetails[j].HIEUXE)
+                        {
+                            foreach (var receipt in vehicles[i].PHIEUTHUTIENs)
+                            {
+                                reportDetails[i].ThanhTien += receipt.SoTienThu;
+                            }
+                        }
+                    }
+                }
+                for (int i = 0; i < reportDetails.Length; i++)
+                {
+                    reportDetails[i].TiLe = (reportDetails[i].ThanhTien / vehicleBrands.Count * 100).ToString();
+                }
+
+                financialReport.CT_BCDS = reportDetails;
+                financialReport.Thang = month;
+                financialReport.Nam = year;
+                for (int i = 0; i < reportDetails.Length; i++)
+                {
+                    financialReport.TongDoanhThu += reportDetails[i].ThanhTien;
+                }
+
+                DataProvider.Instance.DB.BAOCAODOANHSOes.Add(financialReport);
+                DataProvider.Instance.DB.SaveChanges();
+                DataProvider.Instance.DB.CT_BCDS.AddRange(reportDetails);
+                DataProvider.Instance.DB.SaveChanges();
+
+                return financialReport;
+            }
         }
     }
 }

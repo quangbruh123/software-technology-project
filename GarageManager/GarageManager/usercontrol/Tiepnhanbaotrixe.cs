@@ -16,5 +16,13 @@ namespace GarageManager.usercontrol
         {
             InitializeComponent();
         }
+
+        private void Tiepnhanbaotrixe_Load(object sender, EventArgs e)
+        {
+            foreach (string brand in Classes.DataProvider.Instance.DB.HIEUXEs.Select(x => x.TenHieuXe))
+            {
+                comboBoxHieuXe.Items.Add(brand);
+            }
+        }
     }
 }

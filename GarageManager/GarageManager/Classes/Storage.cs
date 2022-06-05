@@ -148,7 +148,7 @@ namespace GarageManager.Classes
 
         public static decimal? GetPartPrice(string partName)
         {
-            return DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partName).FirstOrDefault().DonGiaHienTai;
+            return DataProvider.Instance.DB.VATTUs.FirstOrDefault(x => x.TenVatTu == partName).DonGiaHienTai;
         }
 
         public static List<Model.VATTU> GetAllParts()

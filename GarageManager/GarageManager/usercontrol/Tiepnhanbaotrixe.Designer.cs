@@ -30,7 +30,7 @@
         {
             this.pnThemThongTinKHVaXe = new System.Windows.Forms.Panel();
             this.lblHieuXe = new System.Windows.Forms.Label();
-            this.comBoxHieuXe = new System.Windows.Forms.ComboBox();
+            this.comboBoxHieuXe = new System.Windows.Forms.ComboBox();
             this.lblBienSo = new System.Windows.Forms.Label();
             this.lblDiaChi = new System.Windows.Forms.Label();
             this.txtBoxBienSo = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@
             // pnThemThongTinKHVaXe
             // 
             this.pnThemThongTinKHVaXe.Controls.Add(this.lblHieuXe);
-            this.pnThemThongTinKHVaXe.Controls.Add(this.comBoxHieuXe);
+            this.pnThemThongTinKHVaXe.Controls.Add(this.comboBoxHieuXe);
             this.pnThemThongTinKHVaXe.Controls.Add(this.lblBienSo);
             this.pnThemThongTinKHVaXe.Controls.Add(this.lblDiaChi);
             this.pnThemThongTinKHVaXe.Controls.Add(this.txtBoxBienSo);
@@ -86,18 +86,18 @@
             this.lblHieuXe.TabIndex = 2;
             this.lblHieuXe.Text = "Hiệu xe:";
             // 
-            // comBoxHieuXe
+            // comboBoxHieuXe
             // 
-            this.comBoxHieuXe.DisplayMember = "TenHieuXe";
-            this.comBoxHieuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comBoxHieuXe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comBoxHieuXe.FormattingEnabled = true;
-            this.comBoxHieuXe.Location = new System.Drawing.Point(172, 349);
-            this.comBoxHieuXe.Margin = new System.Windows.Forms.Padding(2);
-            this.comBoxHieuXe.Name = "comBoxHieuXe";
-            this.comBoxHieuXe.Size = new System.Drawing.Size(224, 27);
-            this.comBoxHieuXe.TabIndex = 5;
-            this.comBoxHieuXe.ValueMember = "MaHX";
+            this.comboBoxHieuXe.DisplayMember = "TenHieuXe";
+            this.comboBoxHieuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxHieuXe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxHieuXe.FormattingEnabled = true;
+            this.comboBoxHieuXe.Location = new System.Drawing.Point(172, 349);
+            this.comboBoxHieuXe.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxHieuXe.Name = "comboBoxHieuXe";
+            this.comboBoxHieuXe.Size = new System.Drawing.Size(282, 27);
+            this.comboBoxHieuXe.TabIndex = 5;
+            this.comboBoxHieuXe.ValueMember = "MaHX";
             // 
             // lblBienSo
             // 
@@ -126,7 +126,7 @@
             this.txtBoxBienSo.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxBienSo.MaxLength = 10;
             this.txtBoxBienSo.Name = "txtBoxBienSo";
-            this.txtBoxBienSo.Size = new System.Drawing.Size(125, 26);
+            this.txtBoxBienSo.Size = new System.Drawing.Size(282, 26);
             this.txtBoxBienSo.TabIndex = 4;
             // 
             // lblDienThoai
@@ -146,7 +146,7 @@
             this.txtBoxDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxDiaChi.MaxLength = 100;
             this.txtBoxDiaChi.Name = "txtBoxDiaChi";
-            this.txtBoxDiaChi.Size = new System.Drawing.Size(125, 26);
+            this.txtBoxDiaChi.Size = new System.Drawing.Size(282, 26);
             this.txtBoxDiaChi.TabIndex = 3;
             // 
             // labelTenKhachHang
@@ -166,33 +166,33 @@
             this.txtBoxDienThoai.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxDienThoai.MaxLength = 10;
             this.txtBoxDienThoai.Name = "txtBoxDienThoai";
-            this.txtBoxDienThoai.Size = new System.Drawing.Size(125, 26);
+            this.txtBoxDienThoai.Size = new System.Drawing.Size(282, 26);
             this.txtBoxDienThoai.TabIndex = 2;
             // 
             // buttonClear
             // 
             this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonClear.Location = new System.Drawing.Point(321, 390);
+            this.buttonClear.Location = new System.Drawing.Point(321, 397);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(75, 23);
             this.buttonClear.TabIndex = 7;
-            this.buttonClear.Text = "Clear";
+            this.buttonClear.Text = "Hủy";
             this.buttonClear.UseVisualStyleBackColor = true;
             // 
             // txtBoxTenKH
             // 
             this.txtBoxTenKH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxTenKH.Location = new System.Drawing.Point(172, 73);
+            this.txtBoxTenKH.Location = new System.Drawing.Point(172, 79);
             this.txtBoxTenKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxTenKH.MaxLength = 30;
             this.txtBoxTenKH.Name = "txtBoxTenKH";
-            this.txtBoxTenKH.Size = new System.Drawing.Size(125, 26);
+            this.txtBoxTenKH.Size = new System.Drawing.Size(282, 26);
             this.txtBoxTenKH.TabIndex = 1;
             // 
             // buttonThemXe
             // 
             this.buttonThemXe.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonThemXe.Location = new System.Drawing.Point(101, 390);
+            this.buttonThemXe.Location = new System.Drawing.Point(101, 397);
             this.buttonThemXe.Name = "buttonThemXe";
             this.buttonThemXe.Size = new System.Drawing.Size(75, 23);
             this.buttonThemXe.TabIndex = 6;
@@ -202,7 +202,7 @@
             // progressBarSoXeDaThem
             // 
             this.progressBarSoXeDaThem.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.progressBarSoXeDaThem.Location = new System.Drawing.Point(51, 429);
+            this.progressBarSoXeDaThem.Location = new System.Drawing.Point(53, 441);
             this.progressBarSoXeDaThem.Margin = new System.Windows.Forms.Padding(2);
             this.progressBarSoXeDaThem.Maximum = 30;
             this.progressBarSoXeDaThem.Name = "progressBarSoXeDaThem";
@@ -235,7 +235,7 @@
             // buttonLamMoi
             // 
             this.buttonLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonLamMoi.Location = new System.Drawing.Point(3, 36);
+            this.buttonLamMoi.Location = new System.Drawing.Point(13, 48);
             this.buttonLamMoi.Name = "buttonLamMoi";
             this.buttonLamMoi.Size = new System.Drawing.Size(75, 23);
             this.buttonLamMoi.TabIndex = 8;
@@ -247,7 +247,7 @@
             this.lblDanhSachTiepNhan.BackColor = System.Drawing.Color.Transparent;
             this.lblDanhSachTiepNhan.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblDanhSachTiepNhan.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblDanhSachTiepNhan.Location = new System.Drawing.Point(120, 14);
+            this.lblDanhSachTiepNhan.Location = new System.Drawing.Point(86, 14);
             this.lblDanhSachTiepNhan.Name = "lblDanhSachTiepNhan";
             this.lblDanhSachTiepNhan.Size = new System.Drawing.Size(315, 27);
             this.lblDanhSachTiepNhan.TabIndex = 6;
@@ -262,7 +262,7 @@
             this.dataGridViewXeDaTiepNhan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewXeDaTiepNhan.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewXeDaTiepNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewXeDaTiepNhan.Location = new System.Drawing.Point(2, 64);
+            this.dataGridViewXeDaTiepNhan.Location = new System.Drawing.Point(13, 76);
             this.dataGridViewXeDaTiepNhan.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewXeDaTiepNhan.Name = "dataGridViewXeDaTiepNhan";
             this.dataGridViewXeDaTiepNhan.ReadOnly = true;
@@ -293,6 +293,7 @@
             this.Controls.Add(this.pnThemThongTinKHVaXe);
             this.Name = "Tiepnhanbaotrixe";
             this.Size = new System.Drawing.Size(1089, 668);
+            this.Load += new System.EventHandler(this.Tiepnhanbaotrixe_Load);
             this.pnThemThongTinKHVaXe.ResumeLayout(false);
             this.pnThemThongTinKHVaXe.PerformLayout();
             this.pnDanhSachTiepNhan.ResumeLayout(false);
@@ -309,7 +310,7 @@
         private System.Windows.Forms.Button buttonThemXe;
         private System.Windows.Forms.ProgressBar progressBarSoXeDaThem;
         private System.Windows.Forms.Label labelTieuDe;
-        private System.Windows.Forms.ComboBox comBoxHieuXe;
+        private System.Windows.Forms.ComboBox comboBoxHieuXe;
         private System.Windows.Forms.Label lblHieuXe;
         private System.Windows.Forms.Label lblBienSo;
         private System.Windows.Forms.TextBox txtBoxBienSo;

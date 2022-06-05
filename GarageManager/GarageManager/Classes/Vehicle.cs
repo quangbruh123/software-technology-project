@@ -29,17 +29,20 @@ namespace GarageManager.Classes
         /// <param name="phonenum"></param>
         /// <param name="address"></param>
         /// <param name="email"></param>
-        public static void AddVehicle(string plate, string owner, string phonenum, string address, string email, DateTime date)
+        public static void AddVehicle(string plate, string owner, string vehicleBrand, string phonenum, string address, string email, DateTime date)
         {
+            Model.HIEUXE brand = DataProvider.Instance.DB.HIEUXEs.FirstOrDefault(x => x.TenHieuXe == vehicleBrand); 
             Model.XE car = new Model.XE()
             {
                 BienSo = plate,
                 TenChuXe = owner,
+                MaHieuXe = brand.MaHieuXe,
                 DienThoai = phonenum,
                 DiaChi = address,
                 Email = email,
                 NgayTiepNhan = date,
-                TienNo = 0
+                TienNo = 0,
+                HIEUXE = brand
             };
             DataProvider.Instance.DB.XEs.Add(car);
             DataProvider.Instance.DB.SaveChanges();

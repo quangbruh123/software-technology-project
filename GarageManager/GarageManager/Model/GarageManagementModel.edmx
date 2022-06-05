@@ -152,6 +152,7 @@
           </Key>
           <Property Name="BienSo" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="TenChuXe" Type="nvarchar(max)" />
+          <Property Name="MaHieuXe" Type="int" />
           <Property Name="DienThoai" Type="nvarchar" MaxLength="20" />
           <Property Name="DiaChi" Type="nvarchar(max)" />
           <Property Name="Email" Type="nvarchar(max)" />
@@ -302,6 +303,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_XE_MaHieuXe">
+          <End Role="HIEUXE" Type="Self.HIEUXE" Multiplicity="0..1" />
+          <End Role="XE" Type="Self.XE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HIEUXE">
+              <PropertyRef Name="MaHieuXe" />
+            </Principal>
+            <Dependent Role="XE">
+              <PropertyRef Name="MaHieuXe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="GarageManagementModelStoreContainer">
           <EntitySet Name="BAOCAODOANHSO" EntityType="Self.BAOCAODOANHSO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BAOCAOTON" EntityType="Self.BAOCAOTON" Schema="dbo" store:Type="Tables" />
@@ -366,6 +379,10 @@
           <AssociationSet Name="FK_SDVT_MaVatTu" Association="Self.FK_SDVT_MaVatTu">
             <End Role="VATTU" EntitySet="VATTU" />
             <End Role="CT_SUDUNGVATTU" EntitySet="CT_SUDUNGVATTU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_XE_MaHieuXe" Association="Self.FK_XE_MaHieuXe">
+            <End Role="HIEUXE" EntitySet="HIEUXE" />
+            <End Role="XE" EntitySet="XE" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -457,6 +474,7 @@
           <Property Name="MaHieuXe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenHieuXe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CT_BCDS" Relationship="Self.FK_HieuXe" FromRole="HIEUXE" ToRole="CT_BCDS" />
+          <NavigationProperty Name="XEs" Relationship="Self.FK_XE_MaHieuXe" FromRole="HIEUXE" ToRole="XE" />
         </EntityType>
         <EntityType Name="PHIEUNHAPVATTU">
           <Key>
@@ -542,11 +560,13 @@
           </Key>
           <Property Name="BienSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TenChuXe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MaHieuXe" Type="Int32" />
           <Property Name="DienThoai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="NgayTiepNhan" Type="DateTime" Precision="3" />
           <Property Name="TienNo" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="HIEUXE" Relationship="Self.FK_XE_MaHieuXe" FromRole="XE" ToRole="HIEUXE" />
           <NavigationProperty Name="PHIEUSUACHUAs" Relationship="Self.FK_PSC_BienSo" FromRole="XE" ToRole="PHIEUSUACHUA" />
           <NavigationProperty Name="PHIEUTHUTIENs" Relationship="Self.FK_PTT_BienSo" FromRole="XE" ToRole="PHIEUTHUTIEN" />
         </EntityType>
@@ -658,6 +678,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_XE_MaHieuXe">
+          <End Role="HIEUXE" Type="Self.HIEUXE" Multiplicity="0..1" />
+          <End Role="XE" Type="Self.XE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HIEUXE">
+              <PropertyRef Name="MaHieuXe" />
+            </Principal>
+            <Dependent Role="XE">
+              <PropertyRef Name="MaHieuXe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_PSC_BienSo">
           <End Role="XE" Type="Self.XE" Multiplicity="0..1" />
           <End Role="PHIEUSUACHUA" Type="Self.PHIEUSUACHUA" Multiplicity="*" />
@@ -746,6 +778,10 @@
           <AssociationSet Name="FK_SDVT_MaVatTu" Association="Self.FK_SDVT_MaVatTu">
             <End Role="VATTU" EntitySet="VATTUs" />
             <End Role="CT_SUDUNGVATTU" EntitySet="CT_SUDUNGVATTU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_XE_MaHieuXe" Association="Self.FK_XE_MaHieuXe">
+            <End Role="HIEUXE" EntitySet="HIEUXEs" />
+            <End Role="XE" EntitySet="XEs" />
           </AssociationSet>
           <AssociationSet Name="FK_PSC_BienSo" Association="Self.FK_PSC_BienSo">
             <End Role="XE" EntitySet="XEs" />
@@ -924,6 +960,7 @@
               <MappingFragment StoreEntitySet="XE">
                 <ScalarProperty Name="BienSo" ColumnName="BienSo" />
                 <ScalarProperty Name="TenChuXe" ColumnName="TenChuXe" />
+                <ScalarProperty Name="MaHieuXe" ColumnName="MaHieuXe" />
                 <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
                 <ScalarProperty Name="Email" ColumnName="Email" />

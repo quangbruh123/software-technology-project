@@ -18,6 +18,7 @@ namespace GarageManager.Model
         public HIEUXE()
         {
             this.CT_BCDS = new HashSet<CT_BCDS>();
+            this.XEs = new HashSet<XE>();
         }
     
         public int MaHieuXe { get; set; }
@@ -25,5 +26,7 @@ namespace GarageManager.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_BCDS> CT_BCDS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<XE> XEs { get; set; }
     }
 }
