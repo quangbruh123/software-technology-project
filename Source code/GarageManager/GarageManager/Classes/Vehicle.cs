@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GarageManager.Classes
 {
@@ -46,41 +48,7 @@ namespace GarageManager.Classes
             };
             DataProvider.Instance.DB.XEs.Add(car);
             DataProvider.Instance.DB.SaveChanges();
-        }
-
-        /// <summary>
-        /// Get the ID of a type of wage (service) from its name
-        /// </summary>
-        /// <param name="wageName"></param>
-        /// <returns>The ID</returns>
-        private static int GetWageId (string wageName)
-        {
-            return DataProvider.Instance.DB.TIENCONGs.Where(x => x.TenTienCong == wageName).FirstOrDefault().MaTienCong;
-        }
-
-        private static decimal? GetWage (int wageID)
-        {
-            return DataProvider.Instance.DB.TIENCONGs.Where(x => x.MaTienCong == wageID).FirstOrDefault().GiaTienCong;
-        }
-
-        /// <summary>
-        /// Get the ID of a car part from its name
-        /// </summary>
-        /// <param name="partsName"></param>
-        /// <returns>The ID</returns>
-        private static int GetPartsID (string partsName)
-        {
-            return DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partsName).FirstOrDefault().MaVatTu;
-        }
-
-        /// <summary>
-        /// Get the price of a part from its name
-        /// </summary>
-        /// <param name="partsName"></param>
-        /// <returns>The price</returns>
-        private static decimal? GetPartsPrice (string partsName)
-        {
-            return DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partsName).FirstOrDefault().DonGiaHienTai;
+            Debug.WriteLine(car.BienSo + " " + car.TenChuXe + " " + car.MaHieuXe + " " + car.DienThoai + " " + car.DiaChi + " " + car.Email + " " + car.NgayTiepNhan.ToString() + " " + car.TienNo);
         }
 
         /// <summary>
@@ -90,65 +58,80 @@ namespace GarageManager.Classes
         /// <param name="date"></param>
         /// <param name="details"></param>
         /// <returns>True if successfully added, otherwise false</returns>
-        public static bool AddMaintenanceInfo(string plate, DateTime date, List<string> details, List<string> wageName, List<string> parts, List<int> amount)
+        public static void AddMaintenanceInfo(string plate, DateTime date, List<string> details, List<string> wageName, List<string> partNames, List<int> amount)
         {
-            Model.XE vehicle = DataProvider.Instance.DB.XEs.FirstOrDefault(x => x.BienSo == plate);
+            Model.XE vehicle = DataProvider.Instance.DB.XEs.FirstOrDefault(x => x.BienSo == plate);     
             if (vehicle != null)
             {
-                Model.CT_SUDUNGVATTU[] ct_sdvt = new Model.CT_SUDUNGVATTU[parts.Count];
-                for (int i = 0; i < parts.Count; i++)
+                List<Model.CT_SUDUNGVATTU> partUsageDetailList = new List<Model.CT_SUDUNGVATTU>();
+                for (int i = 0; i < partNames.Count; i++)
                 {
-                    ct_sdvt[i].MaVatTu = GetPartsID(parts[i]);
-                    ct_sdvt[i].SoLuong = amount[i];
-                    ct_sdvt[i].DonGia = GetPartsPrice(parts[i]);
+                    string requiredPart = partNames[i];
+                    Debug.WriteLine(requiredPart);
+                    var part = DataProvider.Instance.DB.VATTUs.FirstOrDefault(x => x.TenVatTu == requiredPart);
+                    if (part.SoLuongTon < amount[i])
+                    {
+                        MessageBox.Show("Không đủ vật tư trong kho để lập phiếu.\nVật tư: " + part.TenVatTu);
+                        return;
+                    }
+                    Model.CT_SUDUNGVATTU partUsageDetail = new Model.CT_SUDUNGVATTU
+                    {
+                        MaVatTu = part.MaVatTu,
+                        SoLuong = amount[i],
+                        DonGia = part.DonGiaHienTai
+                    };
+                    partUsageDetailList.Add(partUsageDetail);
+                    part.SoLuongTon -= amount[i];
                 }
 
-                Model.CT_PSC[] ct_psc = new Model.CT_PSC[parts.Count];
-                for (int i = 0; i < parts.Count; i++)
+                List<Model.CT_PSC> maintenanceDetailList = new List<Model.CT_PSC>();
+                for (int i = 0; i < partNames.Count; i++)
                 {
-                    Model.TIENCONG wage = DataProvider.Instance.DB.TIENCONGs.FirstOrDefault(x => x.TenTienCong == wageName[i]);
-                    ct_psc[i].NoiDung = details[i];
-                    ct_psc[i].SoLan = DataProvider.Instance.DB.PHIEUSUACHUAs.Where(x => x.BienSo == plate).Count() + 1;
-                    ct_psc[i].MaTienCong = wage.MaTienCong;
-                    ct_psc[i].TIENCONG = wage;
-                    ct_psc[i].ThanhTien = ct_sdvt[i].SoLuong * ct_sdvt[i].DonGia + GetWage((int)ct_psc[i].MaTienCong);
-                    ct_psc[i].CT_SUDUNGVATTU.Add(ct_sdvt[i]);
+                    string requiredWage = wageName[i];
+                    Model.TIENCONG wage = DataProvider.Instance.DB.TIENCONGs.FirstOrDefault(x => x.TenTienCong == requiredWage);
+                    Model.CT_PSC maintenanceDetail = new Model.CT_PSC
+                    {
+                        NoiDung = details[i],
+                        SoLan = DataProvider.Instance.DB.PHIEUSUACHUAs.Where(x => x.BienSo == plate).Count() + 1,
+                        MaTienCong = wage.MaTienCong,
+                        ThanhTien = partUsageDetailList[i].SoLuong * partUsageDetailList[i].DonGia + wage.MaTienCong,
+                        TIENCONG = wage
+                    };
+                    maintenanceDetail.CT_SUDUNGVATTU.Add(partUsageDetailList[i]);                    
+                    maintenanceDetailList.Add(maintenanceDetail);
                 }
 
-                Model.PHIEUSUACHUA phieusuachua = new Model.PHIEUSUACHUA
+                Model.PHIEUSUACHUA maintenanceCard = new Model.PHIEUSUACHUA
                 {
                     BienSo = plate,
                     NgaySuaChua = date,
-                    CT_PSC = ct_psc,
+                    CT_PSC = maintenanceDetailList,
                     XE = vehicle,
                     TongTien = 0
                 };
-                for (int i = 0; i < parts.Count; i++)
+                for (int i = 0; i < partNames.Count; i++)
                 {
-                    phieusuachua.TongTien += ct_psc[i].ThanhTien;
+                    maintenanceCard.TongTien += maintenanceDetailList[i].ThanhTien;
                 }
-                DataProvider.Instance.DB.PHIEUSUACHUAs.Add(phieusuachua);
-                vehicle.PHIEUSUACHUAs.Add(phieusuachua);
-                vehicle.TienNo = phieusuachua.TongTien;
-                DataProvider.Instance.DB.SaveChanges();
-
-                for (int i = 0; i < ct_psc.Length; i++)
+                DataProvider.Instance.DB.PHIEUSUACHUAs.Add(maintenanceCard);
+                vehicle.PHIEUSUACHUAs.Add(maintenanceCard);
+                vehicle.TienNo = maintenanceCard.TongTien;
+                DataProvider.Instance.DB.CT_PSC.AddRange(maintenanceDetailList);
+                for (int i = 0; i < partUsageDetailList.Count; i++)
                 {
-                    DataProvider.Instance.DB.CT_PSC.AddRange(ct_psc);
-                }
-                DataProvider.Instance.DB.SaveChanges();
-
-                for (int i = 0; i < ct_sdvt.Length; i++)
-                {
-                    ct_sdvt[i].CT_PSC = ct_psc[i];
-                    DataProvider.Instance.DB.CT_SUDUNGVATTU.AddRange(ct_sdvt);
+                    partUsageDetailList[i].CT_PSC = maintenanceDetailList[i];
+                    DataProvider.Instance.DB.CT_SUDUNGVATTU.Add(partUsageDetailList[i]);
                 }
                 DataProvider.Instance.DB.SaveChanges();
 
-                return true;
+                MessageBox.Show("Lưu phiếu sửa chữa thành công");
+                return;
             }
             else
-                return false;
+            {
+                MessageBox.Show("Không tìm thấy xe với biển số đã cho.\nHãy chắc chắn xe đã được tiếp nhận rồi.");
+                return;
+            }
         }
 
         /// <summary>

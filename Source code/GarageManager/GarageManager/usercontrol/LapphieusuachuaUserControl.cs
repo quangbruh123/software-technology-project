@@ -79,19 +79,12 @@ namespace GarageManager.usercontrol
 
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 {
-                    detail.Add(dataGridView1.Rows[i].Cells[1].ToString());
-                    parts.Add(dataGridView1.Rows[i].Cells[2].ToString());
+                    detail.Add(dataGridView1.Rows[i].Cells[1].Value.ToString());
+                    parts.Add(dataGridView1.Rows[i].Cells[2].Value.ToString());
                     amount.Add(int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString()));
-                    wage.Add(dataGridView1.Rows[i].Cells[5].ToString());
+                    wage.Add(dataGridView1.Rows[i].Cells[5].Value.ToString());
                 }
-                if (Vehicle.AddMaintenanceInfo(licenseplatetxt.Text, DateTime.Today, detail, wage, parts, amount))
-                {
-                    MessageBox.Show("Lưu phiếu sửa chữa thành công");
-                }
-                else
-                {
-                    MessageBox.Show("Không lưu được phiếu sửa chữa");
-                }
+                Vehicle.AddMaintenanceInfo(licenseplatetxt.Text, DateTime.Now, detail, wage, parts, amount);
             }
             else if (dataGridView1.Rows == null && dataGridView1.Rows.Count == 0)
             {
