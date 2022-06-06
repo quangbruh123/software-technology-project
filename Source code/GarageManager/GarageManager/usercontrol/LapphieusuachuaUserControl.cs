@@ -58,7 +58,7 @@ namespace GarageManager.usercontrol
             if (dataGridView1.Rows.Count > 0)
             {
                 itemCounter--;
-                total -= (int)dataGridView1.SelectedRows[0].Cells[5].Value;
+                total -= int.Parse(dataGridView1.SelectedRows[0].Cells[6].Value.ToString());
                 textBoxTongTienPhieuSuaChua.Text = total.ToString();
                 dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
                 for (int j = 0; j < dataGridView1.RowCount; j++)
