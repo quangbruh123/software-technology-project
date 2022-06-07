@@ -1,4 +1,5 @@
 ﻿using GarageManager.usercontrol;
+using GarageManager.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace GarageManager
 {
@@ -44,6 +46,12 @@ namespace GarageManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
+             
+            var taikhoan = DataProvider.Instance.DB.TAIKHOANs;
+            foreach (var x in taikhoan)
+            {
+                dataGridViewNhanvien.Rows.Add(x.MaTaiKhoan, x.MatKhau,"1",x.QuyenHan);
+            }
             uc1 = new Chinhsuaquydinh();
             Controls.Add(uc1);
             uc2 = new tracuuUserControl1();
@@ -133,6 +141,26 @@ namespace GarageManager
         private void MinimizeBtn_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Addaccount_Click(object sender, EventArgs e)
+        {
+            Classes.Account.AddStaffAccount(tktxt.Text, Mktxt.Text);
+        }
+
+        private void deletebnt_Click(object sender, EventArgs e)
+        {
+            Classes.Account.DeleteAccount(deletetktxt.Text);
+        }
+
+        private void Trangchubtn_Click(object sender, EventArgs e)
+        {
+            mainpanel.Visible = true;
+            uc1.Visible = false;
+            uc2.Visible = false;
+            uc3.Visible = false;
+            uc4.Visible = false;
+            uc5.Visible = false;
         }
     }
 }

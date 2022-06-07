@@ -68,7 +68,7 @@ namespace GarageManager.Classes
         /// Delete an account from the database
         /// </summary>
         /// <param name="username"></param>
-        public void DeleteAccount(string username)
+        public static void DeleteAccount(string username)
         {
             Model.TAIKHOAN unwantedAccount = DataProvider.Instance.DB.TAIKHOANs.Where(x => x.TenTaiKhoan == username).First();
             DataProvider.Instance.DB.TAIKHOANs.Remove(unwantedAccount);
