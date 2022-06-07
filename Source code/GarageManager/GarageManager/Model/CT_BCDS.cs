@@ -18,7 +18,6 @@ namespace GarageManager.Model
         public int MaHieuXe { get; set; }
         public Nullable<int> SoLuotSua { get; set; }
         public Nullable<decimal> ThanhTien { get; set; }
-        public string TiLe { get; set; }
     
         public virtual BAOCAODOANHSO BAOCAODOANHSO { get; set; }
         public virtual HIEUXE HIEUXE { get; set; }

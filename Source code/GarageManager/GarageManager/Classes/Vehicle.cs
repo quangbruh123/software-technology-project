@@ -31,24 +31,32 @@ namespace GarageManager.Classes
         /// <param name="phonenum"></param>
         /// <param name="address"></param>
         /// <param name="email"></param>
-        public static void AddVehicle(string plate, string owner, string vehicleBrand, string phonenum, string address, string email, DateTime date)
+        public static bool AddVehicle(string plate, string owner, string vehicleBrand, string phonenum, string address, string email, DateTime date)
         {
-            Model.HIEUXE brand = DataProvider.Instance.DB.HIEUXEs.FirstOrDefault(x => x.TenHieuXe == vehicleBrand); 
-            Model.XE car = new Model.XE()
+            if (!DataProvider.Instance.DB.XEs.Any(x => x.BienSo == plate))
             {
-                BienSo = plate,
-                TenChuXe = owner,
-                MaHieuXe = brand.MaHieuXe,
-                DienThoai = phonenum,
-                DiaChi = address,
-                Email = email,
-                NgayTiepNhan = date,
-                TienNo = 0,
-                HIEUXE = brand
-            };
-            DataProvider.Instance.DB.XEs.Add(car);
-            DataProvider.Instance.DB.SaveChanges();
-            Debug.WriteLine(car.BienSo + " " + car.TenChuXe + " " + car.MaHieuXe + " " + car.DienThoai + " " + car.DiaChi + " " + car.Email + " " + car.NgayTiepNhan.ToString() + " " + car.TienNo);
+                Model.HIEUXE brand = DataProvider.Instance.DB.HIEUXEs.FirstOrDefault(x => x.TenHieuXe == vehicleBrand);
+                Model.XE car = new Model.XE()
+                {
+                    BienSo = plate,
+                    TenChuXe = owner,
+                    MaHieuXe = brand.MaHieuXe,
+                    DienThoai = phonenum,
+                    DiaChi = address,
+                    Email = email,
+                    NgayTiepNhan = date,
+                    TienNo = 0,
+                    HIEUXE = brand
+                };
+                DataProvider.Instance.DB.XEs.Add(car);
+                DataProvider.Instance.DB.SaveChanges();
+                Debug.WriteLine(car.BienSo + " " + car.TenChuXe + " " + car.MaHieuXe + " " + car.DienThoai + " " + car.DiaChi + " " + car.Email + " " + car.NgayTiepNhan.ToString() + " " + car.TienNo);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -59,10 +67,10 @@ namespace GarageManager.Classes
         /// <param name="details"></param>
         /// <returns>True if successfully added, otherwise false</returns>
         public static void AddMaintenanceInfo(string plate, DateTime date, List<string> details, List<string> wageName, List<string> partNames, List<int> amount)
-        {
-            Model.XE vehicle = DataProvider.Instance.DB.XEs.FirstOrDefault(x => x.BienSo == plate);     
-            if (vehicle != null)
+        {                
+            if (DataProvider.Instance.DB.XEs.Any(x => x.BienSo == plate))
             {
+                Model.XE vehicle = DataProvider.Instance.DB.XEs.FirstOrDefault(x => x.BienSo == plate);
                 List<Model.CT_SUDUNGVATTU> partUsageDetailList = new List<Model.CT_SUDUNGVATTU>();
                 for (int i = 0; i < partNames.Count; i++)
                 {
@@ -161,9 +169,10 @@ namespace GarageManager.Classes
         /// <returns>PHIEUSUACHUA, a list of CT_PSC and a list of CT_SUDUNGVATTU, or null if it doesn't have a maintenance card yet</returns>
         public static dynamic GetMaintenanceCard(string plate)
         {
-            Model.PHIEUSUACHUA psc = DataProvider.Instance.DB.PHIEUSUACHUAs.Where(x => x.BienSo == plate).FirstOrDefault();
-            if (psc != null)
+            Model.PHIEUSUACHUA psc = new Model.PHIEUSUACHUA();
+            if (DataProvider.Instance.DB.PHIEUSUACHUAs.Any(x => x.BienSo == plate))
             {
+                psc = DataProvider.Instance.DB.PHIEUSUACHUAs.Where(x => x.BienSo == plate).FirstOrDefault();
                 List<Model.CT_PSC> ct_psc = DataProvider.Instance.DB.CT_PSC.Where(x => x.MaPhieuSC == psc.MaPhieuSC).ToList();
                 List<Model.CT_SUDUNGVATTU> ct_sdvt = new List<Model.CT_SUDUNGVATTU>();
                 for (int i = 0; i < ct_psc.Count; i++)

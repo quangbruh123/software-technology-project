@@ -4,6 +4,7 @@ using System.Data.Entity.SqlServer;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GarageManager.Classes
 {
@@ -17,23 +18,90 @@ namespace GarageManager.Classes
         /// </summary>
         /// <param name="plate"></param>
         /// <returns>True if the pay satisfy the condition, false if not</returns>
-        public static bool AddReceipt(string plate, decimal pay)
+        public static void AddReceipt(string plate, decimal pay, DateTime createDate)
         {
-            Model.XE vehicle = DataProvider.Instance.DB.XEs.Where(x => x.BienSo == plate).FirstOrDefault();
-            if (vehicle != null && vehicle.TienNo >= pay)
+            if (DataProvider.Instance.DB.XEs.Any(x => x.BienSo == plate))
             {
-                Model.PHIEUTHUTIEN receipt = new Model.PHIEUTHUTIEN()
+                Model.XE vehicle = DataProvider.Instance.DB.XEs.FirstOrDefault(x => x.BienSo == plate);
+                if (vehicle.TienNo >= pay)
                 {
-                    BienSo = plate,
-                    SoTienThu = pay
-                };
-                DataProvider.Instance.DB.PHIEUTHUTIENs.Add(receipt);
-                vehicle.PHIEUTHUTIENs.Add(receipt);
-                vehicle.TienNo -= pay;
-                DataProvider.Instance.DB.SaveChanges();
-                return true;
+                    Model.PHIEUTHUTIEN receipt = new Model.PHIEUTHUTIEN()
+                    {
+                        BienSo = plate,
+                        SoTienThu = pay,
+                        NgayLap = createDate,
+                        XE = vehicle
+                    };
+                    DataProvider.Instance.DB.PHIEUTHUTIENs.Add(receipt);
+                    vehicle.PHIEUTHUTIENs.Add(receipt);
+                    vehicle.TienNo -= pay;
+
+                    if (DataProvider.Instance.DB.BAOCAODOANHSOes.Any(x => x.Thang == createDate.Month && x.Nam == createDate.Year))
+                    {
+                        Model.BAOCAODOANHSO financialReport = DataProvider.Instance.DB.BAOCAODOANHSOes
+                            .Where(x => x.Thang == createDate.Month && x.Nam == createDate.Year)
+                            .FirstOrDefault();
+                        if (financialReport.CT_BCDS.Any(x => x.HIEUXE == vehicle.HIEUXE))
+                        {
+                            Model.CT_BCDS financialReportDetail = DataProvider.Instance.DB.CT_BCDS
+                                .FirstOrDefault(x => x.BAOCAODOANHSO == financialReport && x.HIEUXE == vehicle.HIEUXE);
+                            financialReport.CT_BCDS.Where(x => x.HIEUXE == vehicle.HIEUXE).FirstOrDefault().SoLuotSua++;
+                            financialReport.CT_BCDS.Where(x => x.HIEUXE == vehicle.HIEUXE).FirstOrDefault().ThanhTien += receipt.SoTienThu;                            
+                            financialReport.TongDoanhThu += receipt.SoTienThu;
+                            financialReportDetail.SoLuotSua++;
+                            financialReportDetail.ThanhTien += receipt.SoTienThu;
+                        }
+                        else
+                        {
+                            financialReport.TongDoanhThu += receipt.SoTienThu;
+                            Model.CT_BCDS financialReportDetail = new Model.CT_BCDS()
+                            {
+                                MaHieuXe = vehicle.HIEUXE.MaHieuXe,
+                                SoLuotSua = 1,
+                                ThanhTien = receipt.SoTienThu,
+                                BAOCAODOANHSO = financialReport,
+                                HIEUXE = vehicle.HIEUXE
+                            };                                                   
+                            financialReport.CT_BCDS.Add(financialReportDetail);
+                        }
+                    }
+                    else
+                    {
+                        Model.BAOCAODOANHSO financialReport = new Model.BAOCAODOANHSO()
+                        {
+                            Thang = createDate.Month,
+                            Nam = createDate.Year
+                        };
+                        List<Model.CT_BCDS> reportDetailsList = new List<Model.CT_BCDS>();
+                        foreach (var vehicleBrand in DataProvider.Instance.DB.HIEUXEs)
+                        {
+                            Model.CT_BCDS reportDetail = new Model.CT_BCDS
+                            {
+                                MaHieuXe = vehicleBrand.MaHieuXe,
+                                HIEUXE = vehicleBrand,
+                                SoLuotSua = 0,
+                                ThanhTien = 0,
+                            };
+                            reportDetailsList.Add(reportDetail);
+                        }
+                        financialReport.CT_BCDS = reportDetailsList;
+                    }
+
+                    DataProvider.Instance.DB.SaveChanges();
+                    MessageBox.Show("Lập phiếu thu tiền thành công.");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Lập phiếu thu tiền thất bại.\nSố tiền thu không được vượt quá số tiền nợ.");
+                    return;
+                }
             }
-            return false;
+            else
+            {
+                MessageBox.Show("Lập phiếu thu tiền thất bại.\nKhông tìm thấy xe nào với biển số xe vừa nhập.");
+                return;
+            }
         }
 
         /// <summary>
@@ -100,67 +168,81 @@ namespace GarageManager.Classes
         public static Model.BAOCAODOANHSO GetMonthlyFinancialReport(int month, int year)
         {
             Model.BAOCAODOANHSO financialReport = DataProvider.Instance.DB.BAOCAODOANHSOes.FirstOrDefault(x => x.Thang == month && x.Nam == year);
-            if (financialReport != null)
+            if (DataProvider.Instance.DB.BAOCAODOANHSOes.Any(x => x.Thang == month && x.Nam == year))
             {
                 return financialReport;
             }
             else
             {
                 financialReport = new Model.BAOCAODOANHSO();
-                List<Model.HIEUXE> vehicleBrands = DataProvider.Instance.DB.HIEUXEs.ToList();
-                List<Model.CT_BCDS> reportDetailsList = new List<Model.CT_BCDS>();
-                List<Model.XE> vehicles = DataProvider.Instance.DB.XEs.Where(x => SqlFunctions.DatePart("month", x.NgayTiepNhan) == month
-                                                                               && SqlFunctions.DatePart("year", x.NgayTiepNhan) == year).ToList();
-
-                foreach (var vehicleBrand in DataProvider.Instance.DB.HIEUXEs)
-                {
-                    Model.CT_BCDS reportDetail = new Model.CT_BCDS
+                List<Model.PHIEUTHUTIEN> receipts = DataProvider.Instance.DB.PHIEUTHUTIENs.Where(x => SqlFunctions.DatePart("month", x.NgayLap) == month
+                                                                                         && SqlFunctions.DatePart("year", x.NgayLap) == year).ToList();
+                if (receipts.Count > 0)
+                {                    
+                    List<Model.HIEUXE> vehicleBrands = DataProvider.Instance.DB.HIEUXEs.ToList();
+                    List<Model.CT_BCDS> reportDetailsList = new List<Model.CT_BCDS>();
+                    foreach (var vehicleBrand in DataProvider.Instance.DB.HIEUXEs)
                     {
-                        MaHieuXe = vehicleBrand.MaHieuXe,
-                        HIEUXE = vehicleBrand
-                    };
-                    reportDetailsList.Add(reportDetail);
-                }
-                //for (int i = 0; i < vehicleBrands.Count; i++)
-                //{
-                //    Model.CT_BCDS reportDetail = new Model.CT_BCDS
-                //    {
-                //        MaHieuXe = vehicleBrands[i].MaHieuXe,
-                //        HIEUXE = vehicleBrands[i]
-                //    };
-                //    reportDetailsList.Add(reportDetail);
-                //}
-                for (int i = 0; i < vehicles.Count(); i++)
-                {
-                    for (int j = 0; j < reportDetailsList.Count; j++)
-                    {
-                        if (vehicles[i].HIEUXE == reportDetailsList[j].HIEUXE)
+                        Model.CT_BCDS reportDetail = new Model.CT_BCDS
                         {
-                            foreach (var receipt in vehicles[i].PHIEUTHUTIENs)
+                            MaHieuXe = vehicleBrand.MaHieuXe,
+                            HIEUXE = vehicleBrand
+                        };
+                        reportDetailsList.Add(reportDetail);
+                    }
+                    for (int i = 0; i < receipts.Count(); i++)
+                    {
+                        for (int j = 0; j < reportDetailsList.Count; j++)
+                        {
+                            if (receipts[i].XE.HIEUXE == reportDetailsList[j].HIEUXE)
                             {
-                                reportDetailsList[i].ThanhTien += receipt.SoTienThu;
+                                foreach (var receipt in receipts[i].XE.PHIEUTHUTIENs)
+                                {
+                                    reportDetailsList[j].ThanhTien += receipt.SoTienThu;
+                                    reportDetailsList[j].SoLuotSua += 1;
+                                }
                             }
                         }
                     }
+                    //for (int i = 0; i < reportDetailsList.Count; i++)
+                    //{
+                    //    reportDetailsList[i].TiLe = (double)reportDetailsList[i].ThanhTien * 1.0 / vehicleBrands.Count * 100 * 1.0;
+                    //}
+
+                    financialReport.CT_BCDS = reportDetailsList;
+                    financialReport.Thang = month;
+                    financialReport.Nam = year;
+                    for (int i = 0; i < reportDetailsList.Count; i++)
+                    {
+                        financialReport.TongDoanhThu += reportDetailsList[i].ThanhTien;
+                    }
+
+                    DataProvider.Instance.DB.BAOCAODOANHSOes.Add(financialReport);
+                    DataProvider.Instance.DB.CT_BCDS.AddRange(reportDetailsList);
+                    DataProvider.Instance.DB.SaveChanges();
+
+                    return financialReport;
                 }
-                for (int i = 0; i < reportDetailsList.Count; i++)
+                else
                 {
-                    reportDetailsList[i].TiLe = (reportDetailsList[i].ThanhTien / vehicleBrands.Count * 100).ToString();
+                    financialReport.Thang = month;
+                    financialReport.Nam = year;
+                    financialReport.TongDoanhThu = 0;
+                    List<Model.CT_BCDS> reportDetailsList = new List<Model.CT_BCDS>();
+                    foreach (var vehicleBrand in DataProvider.Instance.DB.HIEUXEs)
+                    {
+                        Model.CT_BCDS reportDetail = new Model.CT_BCDS
+                        {
+                            MaHieuXe = vehicleBrand.MaHieuXe,
+                            HIEUXE = vehicleBrand,
+                            SoLuotSua = 0,
+                            ThanhTien = 0,
+                            //TiLe = 0
+                        };
+                        reportDetailsList.Add(reportDetail);
+                    }
+                    return financialReport;
                 }
-
-                financialReport.CT_BCDS = reportDetailsList;
-                financialReport.Thang = month;
-                financialReport.Nam = year;
-                for (int i = 0; i < reportDetailsList.Count; i++)
-                {
-                    financialReport.TongDoanhThu += reportDetailsList[i].ThanhTien;
-                }
-
-                DataProvider.Instance.DB.BAOCAODOANHSOes.Add(financialReport);
-                DataProvider.Instance.DB.CT_BCDS.AddRange(reportDetailsList);
-                DataProvider.Instance.DB.SaveChanges();
-
-                return financialReport;
             }
         }
     }

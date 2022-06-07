@@ -1,5 +1,5 @@
-﻿CREATE DATABASE GARAGE_MANAGEMENT
-USE GARAGE_MANAGEMENT
+﻿CREATE DATABASE GarageManagement
+USE GarageManagement
 
 CREATE TABLE HIEUXE (
 	MaHieuXe	INT IDENTITY (1, 1) PRIMARY KEY,
@@ -7,7 +7,7 @@ CREATE TABLE HIEUXE (
 )
 
 CREATE TABLE XE (
-	BienSo			NVARCHAR(20) PRIMARY KEY,
+	BienSo			NVARCHAR(50) PRIMARY KEY,
 	TenChuXe		NVARCHAR(MAX),
 	MaHieuXe		INT,
 	DienThoai		NVARCHAR(20),
@@ -19,7 +19,7 @@ CREATE TABLE XE (
 
 CREATE TABLE PHIEUSUACHUA (
 	MaPhieuSC	INT IDENTITY (1, 1)  PRIMARY KEY,
-	BienSo		NVARCHAR(20),
+	BienSo		NVARCHAR(50),
 	NgaySuaChua	SMALLDATETIME,
 	TongTien	MONEY
 )
@@ -28,7 +28,7 @@ CREATE TABLE CT_PSC (
 	MaCTPSC		INT IDENTITY (1, 1)  PRIMARY KEY,
 	MaPhieuSC	INT,
 	NoiDung		NVARCHAR(MAX),
-	SoLan		INT,
+	SoLan		INT DEFAULT 1,
 	MaTienCong	INT,
 	ThanhTien	MONEY
 )
@@ -45,26 +45,27 @@ CREATE TABLE CT_SUDUNGVATTU (
 CREATE TABLE VATTU (
 	MaVatTu			INT IDENTITY (1, 1)  PRIMARY KEY,
 	TenVatTu		NVARCHAR(MAX),
-	DonGiaHienTai	MONEY,
+	DonGiaHienTai	MONEY DEFAULT 0,
 	SoLuongTon		INT
 )
 
 CREATE TABLE TIENCONG (
 	MaTienCong	INT IDENTITY (1, 1)  PRIMARY KEY,
 	TenTienCong	NVARCHAR(MAX),
-	GiaTienCong	MONEY
+	GiaTienCong MONEY
 )
 
 CREATE TABLE PHIEUTHUTIEN (
 	MaPTT		INT IDENTITY (1, 1)  PRIMARY KEY,
-	BienSo		NVARCHAR(20),
-	SoTienThu	MONEY
+	NgayLap		SMALLDATETIME,
+	BienSo		NVARCHAR(50),
+	SoTienThu	MONEY DEFAULT 0
 )
 
 CREATE TABLE PHIEUNHAPVATTU (
 	MaPhieuNhap		INT IDENTITY (1, 1)  PRIMARY KEY,
 	NgayNhap		SMALLDATETIME,
-	TongTien		MONEY
+	TongTien		MONEY DEFAULT 0
 )
 
 CREATE TABLE CT_PNVT (
@@ -73,7 +74,7 @@ CREATE TABLE CT_PNVT (
 	SoLuong		INT,
 	DonGiaNhap	MONEY,
 	DonGiaBan	MONEY,
-	ThanhTien	MONEY,
+	ThanhTien	MONEY DEFAULT 0,
 	CONSTRAINT CT_PNVT_PK PRIMARY KEY (MaPhieuNhap, MaVatTu)
 )
 
@@ -91,15 +92,14 @@ CREATE TABLE BAOCAODOANHSO (
 	MaBCDS			INT IDENTITY (1, 1)  PRIMARY KEY,
 	Thang			INT,
 	Nam				INT,
-	TongDoanhThu	MONEY
+	TongDoanhThu	MONEY DEFAULT 0
 )
 
 CREATE TABLE CT_BCDS (
 	MaBCDS		INT,
 	MaHieuXe	INT,
-	SoLuotSua	INT,
-	ThanhTien	MONEY,
-	TiLe		VARCHAR
+	SoLuotSua	INT DEFAULT 0,
+	ThanhTien	MONEY DEFAULT 0
 	CONSTRAINT CT_BCDS_PK PRIMARY KEY (MaBCDS, MaHieuXe)
 )
 
@@ -110,6 +110,8 @@ CREATE TABLE THAMSO (
 
 CREATE TABLE TAIKHOAN (
 	MaTaiKhoan	INT IDENTITY (1, 1) PRIMARY KEY,
+	HoTen		NVARCHAR(MAX),
+	GioiTinh	NVARCHAR(10),
 	TenTaiKhoan	NVARCHAR(MAX),
 	MatKhau		NVARCHAR(MAX),
 	QuyenHan	INT
@@ -194,16 +196,3 @@ INSERT INTO TIENCONG (TenTienCong, GiaTienCong) VALUES
     (N'Sửa chữa gầm bệ', 6000000),
     (N'Sửa chữa hệ thống điện', 4000000),
     (N'Dán phim cách nhiệt', 2000000);
-
-INSERT INTO XE (BienSo, TenChuXe) VALUES
-    (N'20A000', N'Nguyễn Duy Hào'),
-    (N'20B001', N'Dương Minh Thái'),
-    (N'20C002', N'Trương Đức Thiện'),
-    (N'20D003', N'Cấn Đức Quang'),
-    (N'20E004', N'Nguyễn Bá Công'),
-    (N'20F005', N'Châu Vĩnh Sinh'),
-    (N'20G006', N'Nguyễn Bá Công'),
-    (N'20H007', N'Tạ Hoàng Long'),
-    (N'20I008', N'Nguyễn Minh Duy'),
-    (N'20J009', N'Mai Phúc Tâm'),
-    (N'21A000', N'Châu Vĩnh Sinh');

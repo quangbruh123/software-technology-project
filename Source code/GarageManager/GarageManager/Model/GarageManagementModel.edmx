@@ -35,7 +35,6 @@
           <Property Name="MaHieuXe" Type="int" Nullable="false" />
           <Property Name="SoLuotSua" Type="int" />
           <Property Name="ThanhTien" Type="money" />
-          <Property Name="TiLe" Type="varchar" MaxLength="1" />
         </EntityType>
         <EntityType Name="CT_PNVT">
           <Key>
@@ -91,7 +90,7 @@
             <PropertyRef Name="MaPhieuSC" />
           </Key>
           <Property Name="MaPhieuSC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="BienSo" Type="nvarchar" MaxLength="20" />
+          <Property Name="BienSo" Type="nvarchar" MaxLength="50" />
           <Property Name="NgaySuaChua" Type="smalldatetime" />
           <Property Name="TongTien" Type="money" />
         </EntityType>
@@ -100,7 +99,8 @@
             <PropertyRef Name="MaPTT" />
           </Key>
           <Property Name="MaPTT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="BienSo" Type="nvarchar" MaxLength="20" />
+          <Property Name="NgayLap" Type="smalldatetime" />
+          <Property Name="BienSo" Type="nvarchar" MaxLength="50" />
           <Property Name="SoTienThu" Type="money" />
         </EntityType>
         <EntityType Name="TAIKHOAN">
@@ -108,6 +108,8 @@
             <PropertyRef Name="MaTaiKhoan" />
           </Key>
           <Property Name="MaTaiKhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar(max)" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" />
           <Property Name="TenTaiKhoan" Type="nvarchar(max)" />
           <Property Name="MatKhau" Type="nvarchar(max)" />
           <Property Name="QuyenHan" Type="int" />
@@ -147,7 +149,7 @@
           <Key>
             <PropertyRef Name="BienSo" />
           </Key>
-          <Property Name="BienSo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BienSo" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="TenChuXe" Type="nvarchar(max)" />
           <Property Name="MaHieuXe" Type="int" />
           <Property Name="DienThoai" Type="nvarchar" MaxLength="20" />
@@ -419,7 +421,6 @@
           <Property Name="MaHieuXe" Type="Int32" Nullable="false" />
           <Property Name="SoLuotSua" Type="Int32" />
           <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="TiLe" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="BAOCAODOANHSO" Relationship="Self.FK_MaBCDS" FromRole="CT_BCDS" ToRole="BAOCAODOANHSO" />
           <NavigationProperty Name="HIEUXE" Relationship="Self.FK_HieuXe" FromRole="CT_BCDS" ToRole="HIEUXE" />
         </EntityType>
@@ -487,7 +488,7 @@
             <PropertyRef Name="MaPhieuSC" />
           </Key>
           <Property Name="MaPhieuSC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BienSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="BienSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NgaySuaChua" Type="DateTime" Precision="0" />
           <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="CT_PSC" Relationship="Self.FK_MaPhieuSC" FromRole="PHIEUSUACHUA" ToRole="CT_PSC" />
@@ -498,7 +499,8 @@
             <PropertyRef Name="MaPTT" />
           </Key>
           <Property Name="MaPTT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BienSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NgayLap" Type="DateTime" Precision="0" />
+          <Property Name="BienSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SoTienThu" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="XE" Relationship="Self.FK_PTT_BienSo" FromRole="PHIEUTHUTIEN" ToRole="XE" />
         </EntityType>
@@ -507,6 +509,8 @@
             <PropertyRef Name="MaTaiKhoan" />
           </Key>
           <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HoTen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="TenTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="QuyenHan" Type="Int32" />
@@ -552,7 +556,7 @@
           <Key>
             <PropertyRef Name="BienSo" />
           </Key>
-          <Property Name="BienSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BienSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TenChuXe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MaHieuXe" Type="Int32" />
           <Property Name="DienThoai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -826,7 +830,6 @@
                 <ScalarProperty Name="MaHieuXe" ColumnName="MaHieuXe" />
                 <ScalarProperty Name="SoLuotSua" ColumnName="SoLuotSua" />
                 <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
-                <ScalarProperty Name="TiLe" ColumnName="TiLe" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -896,6 +899,7 @@
             <EntityTypeMapping TypeName="GarageManagementModel.PHIEUTHUTIEN">
               <MappingFragment StoreEntitySet="PHIEUTHUTIEN">
                 <ScalarProperty Name="MaPTT" ColumnName="MaPTT" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
                 <ScalarProperty Name="BienSo" ColumnName="BienSo" />
                 <ScalarProperty Name="SoTienThu" ColumnName="SoTienThu" />
               </MappingFragment>
@@ -905,6 +909,8 @@
             <EntityTypeMapping TypeName="GarageManagementModel.TAIKHOAN">
               <MappingFragment StoreEntitySet="TAIKHOAN">
                 <ScalarProperty Name="MaTaiKhoan" ColumnName="MaTaiKhoan" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
                 <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
                 <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
                 <ScalarProperty Name="QuyenHan" ColumnName="QuyenHan" />

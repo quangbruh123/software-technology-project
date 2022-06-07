@@ -4,23 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="53cced7d51f343798bf09bfca3e11857" Name="Diagram1">
-        <EntityTypeShape EntityType="GarageManagementModel.BAOCAODOANHSO" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+      <Diagram DiagramId="bcb01e10b1914d0c969d58375b871f4b" Name="Diagram1">
+        <EntityTypeShape EntityType="GarageManagementModel.BAOCAODOANHSO" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="GarageManagementModel.BAOCAOTON" Width="1.5" PointX="9.75" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="GarageManagementModel.CT_BCDS" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarageManagementModel.CT_BCDS" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="GarageManagementModel.CT_PNVT" Width="1.5" PointX="12.75" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="GarageManagementModel.CT_PSC" Width="1.5" PointX="7.5" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="GarageManagementModel.CT_SUDUNGVATTU" Width="1.5" PointX="9.75" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="GarageManagementModel.HIEUXE" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarageManagementModel.HIEUXE" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
         <EntityTypeShape EntityType="GarageManagementModel.PHIEUNHAPVATTU" Width="1.5" PointX="10.5" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GarageManagementModel.PHIEUSUACHUA" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="GarageManagementModel.PHIEUTHUTIEN" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="GarageManagementModel.TAIKHOAN" Width="1.5" PointX="10" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="GarageManagementModel.THAMSO" Width="1.5" PointX="2.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarageManagementModel.TAIKHOAN" Width="1.5" PointX="10" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarageManagementModel.THAMSO" Width="1.5" PointX="2.75" PointY="2.375" IsExpanded="true" />
         <EntityTypeShape EntityType="GarageManagementModel.TIENCONG" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="GarageManagementModel.VAITRO" Width="1.5" PointX="7.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarageManagementModel.VAITRO" Width="1.5" PointX="7.75" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="GarageManagementModel.VATTU" Width="1.5" PointX="7.5" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="GarageManagementModel.XE" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarageManagementModel.XE" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
         <AssociationConnector Association="GarageManagementModel.FK_MaBCDS" ManuallyRouted="false" />
         <AssociationConnector Association="GarageManagementModel.FK_BCT_MaVatTu" ManuallyRouted="false" />
         <AssociationConnector Association="GarageManagementModel.FK_HieuXe" ManuallyRouted="false" />
