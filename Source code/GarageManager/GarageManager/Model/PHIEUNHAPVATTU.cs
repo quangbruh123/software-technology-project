@@ -21,11 +21,8 @@ namespace GarageManager.Model
         }
     
         public int MaPhieuNhap { get; set; }
-        public Nullable<int> MaVatTu { get; set; }
-        public Nullable<int> SoLuong { get; set; }
-        public Nullable<decimal> DonGiaNhap { get; set; }
-        public Nullable<decimal> DonGiaBan { get; set; }
-        public Nullable<decimal> ThanhTien { get; set; }
+        public Nullable<System.DateTime> NgayNhap { get; set; }
+        public Nullable<decimal> TongTien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_PNVT> CT_PNVT { get; set; }

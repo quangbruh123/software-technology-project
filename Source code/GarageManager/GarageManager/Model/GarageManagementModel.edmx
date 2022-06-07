@@ -83,11 +83,8 @@
             <PropertyRef Name="MaPhieuNhap" />
           </Key>
           <Property Name="MaPhieuNhap" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MaVatTu" Type="int" />
-          <Property Name="SoLuong" Type="int" />
-          <Property Name="DonGiaNhap" Type="money" />
-          <Property Name="DonGiaBan" Type="money" />
-          <Property Name="ThanhTien" Type="money" />
+          <Property Name="NgayNhap" Type="smalldatetime" />
+          <Property Name="TongTien" Type="money" />
         </EntityType>
         <EntityType Name="PHIEUSUACHUA">
           <Key>
@@ -481,11 +478,8 @@
             <PropertyRef Name="MaPhieuNhap" />
           </Key>
           <Property Name="MaPhieuNhap" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MaVatTu" Type="Int32" />
-          <Property Name="SoLuong" Type="Int32" />
-          <Property Name="DonGiaNhap" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="DonGiaBan" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+          <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="CT_PNVT" Relationship="Self.FK_MaPhieuNhap" FromRole="PHIEUNHAPVATTU" ToRole="CT_PNVT" />
         </EntityType>
         <EntityType Name="PHIEUSUACHUA">
@@ -883,11 +877,8 @@
             <EntityTypeMapping TypeName="GarageManagementModel.PHIEUNHAPVATTU">
               <MappingFragment StoreEntitySet="PHIEUNHAPVATTU">
                 <ScalarProperty Name="MaPhieuNhap" ColumnName="MaPhieuNhap" />
-                <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
-                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-                <ScalarProperty Name="DonGiaNhap" ColumnName="DonGiaNhap" />
-                <ScalarProperty Name="DonGiaBan" ColumnName="DonGiaBan" />
-                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+                <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

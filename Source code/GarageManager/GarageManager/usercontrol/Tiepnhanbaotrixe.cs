@@ -24,5 +24,10 @@ namespace GarageManager.usercontrol
                 comboBoxHieuXe.Items.Add(brand);
             }
         }
+
+        private void buttonThemXe_Click(object sender, EventArgs e)
+        {
+            Classes.Vehicle.AddVehicle(txtBoxBienSo.Text, txtBoxTenKH.Text, comboBoxHieuXe.GetItemText(comboBoxHieuXe.SelectedItem), txtBoxDienThoai.Text, txtBoxDiaChi.Text, "test@gmail.com", DateTime.Now);
+        }
     }
 }

@@ -108,44 +108,56 @@ namespace GarageManager.Classes
             {
                 financialReport = new Model.BAOCAODOANHSO();
                 List<Model.HIEUXE> vehicleBrands = DataProvider.Instance.DB.HIEUXEs.ToList();
-                Model.CT_BCDS[] reportDetails = new Model.CT_BCDS[vehicleBrands.Count];
+                List<Model.CT_BCDS> reportDetailsList = new List<Model.CT_BCDS>();
                 List<Model.XE> vehicles = DataProvider.Instance.DB.XEs.Where(x => SqlFunctions.DatePart("month", x.NgayTiepNhan) == month
                                                                                && SqlFunctions.DatePart("year", x.NgayTiepNhan) == year).ToList();
 
-                for (int i = 0; i < vehicleBrands.Count; i++)
+                foreach (var vehicleBrand in DataProvider.Instance.DB.HIEUXEs)
                 {
-                    reportDetails[i].MaHieuXe = vehicleBrands[i].MaHieuXe;                    
-                    reportDetails[i].HIEUXE = vehicleBrands[i];
+                    Model.CT_BCDS reportDetail = new Model.CT_BCDS
+                    {
+                        MaHieuXe = vehicleBrand.MaHieuXe,
+                        HIEUXE = vehicleBrand
+                    };
+                    reportDetailsList.Add(reportDetail);
                 }
+                //for (int i = 0; i < vehicleBrands.Count; i++)
+                //{
+                //    Model.CT_BCDS reportDetail = new Model.CT_BCDS
+                //    {
+                //        MaHieuXe = vehicleBrands[i].MaHieuXe,
+                //        HIEUXE = vehicleBrands[i]
+                //    };
+                //    reportDetailsList.Add(reportDetail);
+                //}
                 for (int i = 0; i < vehicles.Count(); i++)
                 {
-                    for (int j = 0; j < reportDetails.Length; j++)
+                    for (int j = 0; j < reportDetailsList.Count; j++)
                     {
-                        if (vehicles[i].HIEUXE == reportDetails[j].HIEUXE)
+                        if (vehicles[i].HIEUXE == reportDetailsList[j].HIEUXE)
                         {
                             foreach (var receipt in vehicles[i].PHIEUTHUTIENs)
                             {
-                                reportDetails[i].ThanhTien += receipt.SoTienThu;
+                                reportDetailsList[i].ThanhTien += receipt.SoTienThu;
                             }
                         }
                     }
                 }
-                for (int i = 0; i < reportDetails.Length; i++)
+                for (int i = 0; i < reportDetailsList.Count; i++)
                 {
-                    reportDetails[i].TiLe = (reportDetails[i].ThanhTien / vehicleBrands.Count * 100).ToString();
+                    reportDetailsList[i].TiLe = (reportDetailsList[i].ThanhTien / vehicleBrands.Count * 100).ToString();
                 }
 
-                financialReport.CT_BCDS = reportDetails;
+                financialReport.CT_BCDS = reportDetailsList;
                 financialReport.Thang = month;
                 financialReport.Nam = year;
-                for (int i = 0; i < reportDetails.Length; i++)
+                for (int i = 0; i < reportDetailsList.Count; i++)
                 {
-                    financialReport.TongDoanhThu += reportDetails[i].ThanhTien;
+                    financialReport.TongDoanhThu += reportDetailsList[i].ThanhTien;
                 }
 
                 DataProvider.Instance.DB.BAOCAODOANHSOes.Add(financialReport);
-                DataProvider.Instance.DB.SaveChanges();
-                DataProvider.Instance.DB.CT_BCDS.AddRange(reportDetails);
+                DataProvider.Instance.DB.CT_BCDS.AddRange(reportDetailsList);
                 DataProvider.Instance.DB.SaveChanges();
 
                 return financialReport;

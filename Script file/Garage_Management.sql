@@ -62,12 +62,9 @@ CREATE TABLE PHIEUTHUTIEN (
 )
 
 CREATE TABLE PHIEUNHAPVATTU (
-	MaPhieuNhap	INT IDENTITY (1, 1)  PRIMARY KEY,
-	MaVatTu		INT,
-	SoLuong		INT,
-	DonGiaNhap	MONEY,
-	DonGiaBan	MONEY,
-	ThanhTien	MONEY
+	MaPhieuNhap		INT IDENTITY (1, 1)  PRIMARY KEY,
+	NgayNhap		SMALLDATETIME,
+	TongTien		MONEY
 )
 
 CREATE TABLE CT_PNVT (
@@ -197,3 +194,16 @@ INSERT INTO TIENCONG (TenTienCong, GiaTienCong) VALUES
     (N'Sửa chữa gầm bệ', 6000000),
     (N'Sửa chữa hệ thống điện', 4000000),
     (N'Dán phim cách nhiệt', 2000000);
+
+INSERT INTO XE (BienSo, TenChuXe) VALUES
+    (N'20A000', N'Nguyễn Duy Hào'),
+    (N'20B001', N'Dương Minh Thái'),
+    (N'20C002', N'Trương Đức Thiện'),
+    (N'20D003', N'Cấn Đức Quang'),
+    (N'20E004', N'Nguyễn Bá Công'),
+    (N'20F005', N'Châu Vĩnh Sinh'),
+    (N'20G006', N'Nguyễn Bá Công'),
+    (N'20H007', N'Tạ Hoàng Long'),
+    (N'20I008', N'Nguyễn Minh Duy'),
+    (N'20J009', N'Mai Phúc Tâm'),
+    (N'21A000', N'Châu Vĩnh Sinh');
