@@ -114,5 +114,15 @@ namespace GarageManager.usercontrol
             dataGridView1.Rows.Clear();
             licenseplatetxt.Clear();
         }
+
+        private void lblTongTien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTongTienPhieuSuaChua_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

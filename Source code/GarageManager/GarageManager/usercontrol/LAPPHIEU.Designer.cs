@@ -63,7 +63,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Image = global::GarageManager.Properties.Resources.construction_40px;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(299, 50);
+            this.button2.Location = new System.Drawing.Point(275, 50);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(262, 93);
             this.button2.TabIndex = 7;
@@ -74,7 +74,7 @@
             // 
             // Lapphieusuachuabtn
             // 
-            this.Lapphieusuachuabtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(82)))));
+            this.Lapphieusuachuabtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
             this.Lapphieusuachuabtn.FlatAppearance.BorderSize = 0;
             this.Lapphieusuachuabtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Lapphieusuachuabtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

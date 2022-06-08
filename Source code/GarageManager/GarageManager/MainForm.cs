@@ -153,12 +153,12 @@ namespace GarageManager
 
         private void Addaccount_Click(object sender, EventArgs e)
         {
-            Account.AddStaffAccount(tktxt.Text, Mktxt.Text);
+            //Account.AddStaffAccount(tktxt.Text, Mktxt.Text);
         }
 
         private void deletebnt_Click(object sender, EventArgs e)
         {
-            Account.DeleteAccount(deletetktxt.Text);
+            //Account.DeleteAccount(deletetktxt.Text);
         }
 
         private void Trangchubtn_Click(object sender, EventArgs e)

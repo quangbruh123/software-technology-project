@@ -16,15 +16,7 @@ namespace GarageManager
         public LoginForm()
         {
             InitializeComponent();
-            passwordtxt.UseSystemPasswordChar = true;
-            label4.Parent = gradient1;
-            label4.BackColor = Color.Transparent;
-            label1.Parent = gradient1;
-            label1.BackColor = Color.Transparent;
-            label2.Parent = gradient1;
-            label2.BackColor = Color.Transparent;
-            taotaikhoanbtn.Parent = gradient1;
-            taotaikhoanbtn.BackColor = Color.Transparent;
+            passwordtxt.UseSystemPasswordChar = true;            
             button2.Parent = gradient1;
             button2.BackColor = Color.Transparent;
             pictureBox3.Parent = gradient1;
@@ -128,6 +120,26 @@ namespace GarageManager
 
             // Return the hexadecimal string.
             return sBuilder.ToString();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void circularButton11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
