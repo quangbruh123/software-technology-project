@@ -48,7 +48,7 @@
             // 
             this.textBoxThangBaoCao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxThangBaoCao.Location = new System.Drawing.Point(452, 133);
-            this.textBoxThangBaoCao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxThangBaoCao.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxThangBaoCao.Name = "textBoxThangBaoCao";
             this.textBoxThangBaoCao.Size = new System.Drawing.Size(197, 30);
             this.textBoxThangBaoCao.TabIndex = 19;
@@ -75,6 +75,7 @@
             this.btnBaoCaoDoanhSoMoi.TabIndex = 16;
             this.btnBaoCaoDoanhSoMoi.Text = "Báo cáo mới";
             this.btnBaoCaoDoanhSoMoi.UseVisualStyleBackColor = true;
+            this.btnBaoCaoDoanhSoMoi.Click += new System.EventHandler(this.btnBaoCaoDoanhSoMoi_Click);
             // 
             // btnLapBaoCaoDoanhSo
             // 
@@ -93,7 +94,7 @@
             // 
             this.textBoxTongDoanhThu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTongDoanhThu.Location = new System.Drawing.Point(452, 215);
-            this.textBoxTongDoanhThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTongDoanhThu.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTongDoanhThu.Name = "textBoxTongDoanhThu";
             this.textBoxTongDoanhThu.ReadOnly = true;
             this.textBoxTongDoanhThu.Size = new System.Drawing.Size(245, 30);
@@ -194,7 +195,7 @@
             this.Controls.Add(this.btnLapBaoCaoDoanhSo);
             this.Controls.Add(this.textBoxTongDoanhThu);
             this.Controls.Add(this.dataGridViewBaoCaoDoanhSo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Baocaodoanhso";
             this.Size = new System.Drawing.Size(1452, 822);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaoCaoDoanhSo)).EndInit();
