@@ -87,6 +87,7 @@
     <Compile Include="Classes\Finance.cs" />
     <Compile Include="Classes\Regulation.cs" />
     <Compile Include="Classes\Storage.cs" />
+    <Compile Include="Classes\ValidateEmail.cs" />
     <Compile Include="Classes\Vehicle.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -125,18 +126,18 @@
       <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\GarageManagementModel.Context.cs">
-      <DependentUpon>GarageManagementModel.Context.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GarageManagementModel.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\GarageManagementModel.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\GarageManagementModel.Designer.cs">
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\HIEUXE.cs">
@@ -369,13 +370,13 @@
   <ItemGroup>
     <Content Include="Model\GarageManagementModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GarageManagementModel.Context.cs</LastGenOutput>
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
+      <LastGenOutput>GarageManagementModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model\GarageManagementModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
+      <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

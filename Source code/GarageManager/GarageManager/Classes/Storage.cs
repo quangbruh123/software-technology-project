@@ -166,7 +166,7 @@ namespace GarageManager.Classes
             };
             List<Model.CT_PNVT> partInputInfoesList = new List<Model.CT_PNVT>();
             for (int i = 0; i < partNamesList.Count; i++)
-            {                
+            {
                 string partName = partNamesList[i];
                 
                 if (DataProvider.Instance.DB.VATTUs.Any(x => x.TenVatTu == partName))
@@ -196,7 +196,6 @@ namespace GarageManager.Classes
                     };
                     DataProvider.Instance.DB.VATTUs.Add(part);
                     DataProvider.Instance.DB.SaveChanges();
-
                     Model.CT_PNVT partInputInfo = new Model.CT_PNVT()
                     {
                         MaVatTu = part.MaVatTu,

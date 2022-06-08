@@ -146,3 +146,31 @@ E:\Study\Year 2\Introduction to Software Technology\Project\main\software-techno
 E:\Study\Year 2\Introduction to Software Technology\Project\main\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.exe
 E:\Study\Year 2\Introduction to Software Technology\Project\main\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.pdb
 E:\Study\Year 2\Introduction to Software Technology\Project\main\software-technology-project\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Nhapvatu.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\GarageManager.exe.config
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\GarageManager.exe
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\GarageManager.pdb
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\EntityFramework.dll
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\EntityFramework.xml
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.AssemblyReference.cache
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.SuggestedBindingRedirects.cache
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.LoginForm.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.Formtaotaikhoan.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.MainForm.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.Properties.Resources.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaodoanhso.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaothang.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaoton.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Chinhsuaquydinh.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.LAPPHIEU.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.LapphieusuachuaUserControl.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.LapphieuthutienUserControl.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Nhapvatu.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.tracuuUserControl1.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Tiepnhanbaotrixe.resources
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.GenerateResource.cache
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.CoreCompileInputs.cache
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.CopyComplete
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.exe
+C:\Users\Quang\Desktop\Năm II HKII\Nhập môn công nghệ phần mềm\Đồ án\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.pdb

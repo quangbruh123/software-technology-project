@@ -32,7 +32,6 @@
     <Property Name="MaHieuXe" Type="Int32" Nullable="false" />
     <Property Name="SoLuotSua" Type="Int32" />
     <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="TiLe" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="BAOCAODOANHSO" Relationship="Self.FK_MaBCDS" FromRole="CT_BCDS" ToRole="BAOCAODOANHSO" />
     <NavigationProperty Name="HIEUXE" Relationship="Self.FK_HieuXe" FromRole="CT_BCDS" ToRole="HIEUXE" />
   </EntityType>
@@ -91,11 +90,8 @@
       <PropertyRef Name="MaPhieuNhap" />
     </Key>
     <Property Name="MaPhieuNhap" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="MaVatTu" Type="Int32" />
-    <Property Name="SoLuong" Type="Int32" />
-    <Property Name="DonGiaNhap" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="DonGiaBan" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+    <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="CT_PNVT" Relationship="Self.FK_MaPhieuNhap" FromRole="PHIEUNHAPVATTU" ToRole="CT_PNVT" />
   </EntityType>
   <EntityType Name="PHIEUSUACHUA">
@@ -103,7 +99,7 @@
       <PropertyRef Name="MaPhieuSC" />
     </Key>
     <Property Name="MaPhieuSC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="BienSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BienSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="NgaySuaChua" Type="DateTime" Precision="0" />
     <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="CT_PSC" Relationship="Self.FK_MaPhieuSC" FromRole="PHIEUSUACHUA" ToRole="CT_PSC" />
@@ -114,7 +110,8 @@
       <PropertyRef Name="MaPTT" />
     </Key>
     <Property Name="MaPTT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="BienSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="NgayLap" Type="DateTime" Precision="0" />
+    <Property Name="BienSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SoTienThu" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="XE" Relationship="Self.FK_PTT_BienSo" FromRole="PHIEUTHUTIEN" ToRole="XE" />
   </EntityType>
@@ -123,6 +120,8 @@
       <PropertyRef Name="MaTaiKhoan" />
     </Key>
     <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="TenTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="QuyenHan" Type="Int32" />
@@ -168,7 +167,7 @@
     <Key>
       <PropertyRef Name="BienSo" />
     </Key>
-    <Property Name="BienSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BienSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="TenChuXe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="MaHieuXe" Type="Int32" />
     <Property Name="DienThoai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
