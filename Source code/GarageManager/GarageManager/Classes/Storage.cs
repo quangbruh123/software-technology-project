@@ -157,20 +157,21 @@ namespace GarageManager.Classes
             return DataProvider.Instance.DB.VATTUs.ToList();
         }
 
-        public static void AddPartInputCard(List<string> partNamesList, List<int> amountList, List<int> originalValuesList, List<int> priceTagsList)
+        public static void AddPartInputCard(List<string> partNamesList, List<int> amountList, List<int> originalValuesList, List<int> priceTagsList, DateTime inputDate)
         {
             Model.PHIEUNHAPVATTU partInputCard = new Model.PHIEUNHAPVATTU()
             {
-                NgayNhap = DateTime.Now,
+                NgayNhap = inputDate,
                 TongTien = 0
             };
             List<Model.CT_PNVT> partInputInfoesList = new List<Model.CT_PNVT>();
             for (int i = 0; i < partNamesList.Count; i++)
             {                
                 string partName = partNamesList[i];
-                Model.VATTU part = DataProvider.Instance.DB.VATTUs.FirstOrDefault(x => x.TenVatTu == partName);
-                if (part != null)
+                
+                if (DataProvider.Instance.DB.VATTUs.Any(x => x.TenVatTu == partName))
                 {
+                    Model.VATTU part = DataProvider.Instance.DB.VATTUs.FirstOrDefault(x => x.TenVatTu == partName);
                     Model.CT_PNVT partInputInfo = new Model.CT_PNVT()
                     {
                         MaVatTu = part.MaVatTu,
@@ -187,7 +188,7 @@ namespace GarageManager.Classes
                 }
                 else
                 {
-                    part = new Model.VATTU()
+                    Model.VATTU part = new Model.VATTU()
                     {
                         TenVatTu = partNamesList[i],
                         DonGiaHienTai = priceTagsList[i],
