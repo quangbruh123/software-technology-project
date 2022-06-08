@@ -168,7 +168,7 @@ namespace GarageManager.Classes
             for (int i = 0; i < partNamesList.Count; i++)
             {
                 string partName = partNamesList[i];
-
+                
                 if (DataProvider.Instance.DB.VATTUs.Any(x => x.TenVatTu == partName))
                 {
                     Model.VATTU part = DataProvider.Instance.DB.VATTUs.FirstOrDefault(x => x.TenVatTu == partName);
