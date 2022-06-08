@@ -27,7 +27,51 @@ namespace GarageManager.usercontrol
 
         private void buttonThemXe_Click(object sender, EventArgs e)
         {
-            Classes.Vehicle.AddVehicle(txtBoxBienSo.Text, txtBoxTenKH.Text, comboBoxHieuXe.GetItemText(comboBoxHieuXe.SelectedItem), txtBoxDienThoai.Text, txtBoxDiaChi.Text, "test@gmail.com", DateTime.Now);
+            if (
+                String.IsNullOrEmpty(txtBoxTenKH.Text) ||
+                String.IsNullOrEmpty(txtBoxDienThoai.Text) ||
+                String.IsNullOrEmpty(txtBoxDiaChi.Text) ||
+                String.IsNullOrEmpty(txtBoxBienSo.Text) ||
+                String.IsNullOrEmpty(txtboxEmail.Text) ||
+                comboBoxHieuXe.SelectedIndex == -1
+                )
+            {
+                MessageBox.Show("Thông tin chưa được điền đầy đủ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (Classes.ValidateEmail.EmailIsValid(txtboxEmail.Text) == false)
+            {
+                MessageBox.Show("Email được nhập không đúng cú pháp", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Classes.Vehicle.AddVehicle(txtBoxBienSo.Text, txtBoxTenKH.Text, comboBoxHieuXe.Text, txtBoxDienThoai.Text, txtBoxDiaChi.Text, txtboxEmail.Text, DateTime.Now);
+                dataGridViewXeDaTiepNhan.Rows.Clear();
+                var renewTable = Classes.DataProvider.Instance.DB.XEs.ToList();
+                foreach (var item in renewTable)
+                {
+                    dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan,item.DienThoai, item.DiaChi, item.Email, item.TienNo.ToString());
+                }
+            }
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            txtBoxTenKH.Clear();
+            txtBoxDienThoai.Clear();
+            txtBoxDiaChi.Clear();
+            txtBoxBienSo.Clear();
+            txtboxEmail.Clear();
+            comboBoxHieuXe.Items.Clear();
+        }
+
+        private void buttonLamMoi_Click(object sender, EventArgs e)
+        {
+            dataGridViewXeDaTiepNhan.Rows.Clear();
+            var renewTable = Classes.DataProvider.Instance.DB.XEs.ToList();
+            foreach (var item in renewTable)
+            {
+                dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, item.DienThoai, item.DiaChi, item.Email, item.TienNo.ToString());
+            }
         }
     }
 }

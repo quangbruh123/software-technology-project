@@ -31,7 +31,6 @@
           <ScalarProperty Name="MaHieuXe" ColumnName="MaHieuXe" />
           <ScalarProperty Name="SoLuotSua" ColumnName="SoLuotSua" />
           <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
-          <ScalarProperty Name="TiLe" ColumnName="TiLe" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -82,11 +81,8 @@
       <EntityTypeMapping TypeName="GarageManagementModel.PHIEUNHAPVATTU">
         <MappingFragment StoreEntitySet="PHIEUNHAPVATTU">
           <ScalarProperty Name="MaPhieuNhap" ColumnName="MaPhieuNhap" />
-          <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
-          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-          <ScalarProperty Name="DonGiaNhap" ColumnName="DonGiaNhap" />
-          <ScalarProperty Name="DonGiaBan" ColumnName="DonGiaBan" />
-          <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+          <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -104,6 +100,7 @@
       <EntityTypeMapping TypeName="GarageManagementModel.PHIEUTHUTIEN">
         <MappingFragment StoreEntitySet="PHIEUTHUTIEN">
           <ScalarProperty Name="MaPTT" ColumnName="MaPTT" />
+          <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
           <ScalarProperty Name="BienSo" ColumnName="BienSo" />
           <ScalarProperty Name="SoTienThu" ColumnName="SoTienThu" />
         </MappingFragment>
@@ -113,6 +110,8 @@
       <EntityTypeMapping TypeName="GarageManagementModel.TAIKHOAN">
         <MappingFragment StoreEntitySet="TAIKHOAN">
           <ScalarProperty Name="MaTaiKhoan" ColumnName="MaTaiKhoan" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
           <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
           <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
           <ScalarProperty Name="QuyenHan" ColumnName="QuyenHan" />

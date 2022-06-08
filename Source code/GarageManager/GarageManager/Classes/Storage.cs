@@ -209,7 +209,6 @@ namespace GarageManager.Classes
                     };
                     DataProvider.Instance.DB.VATTUs.Add(part);
                     DataProvider.Instance.DB.SaveChanges();
-
                     Model.CT_PNVT partInputInfo = new Model.CT_PNVT()
                     {
                         MaVatTu = part.MaVatTu,
