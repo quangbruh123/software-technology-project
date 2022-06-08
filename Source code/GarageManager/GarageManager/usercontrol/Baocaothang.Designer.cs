@@ -51,7 +51,7 @@
             this.baocaotonbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.baocaotonbtn.Image = global::GarageManager.Properties.Resources.construction_40px;
             this.baocaotonbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.baocaotonbtn.Location = new System.Drawing.Point(634, 88);
+            this.baocaotonbtn.Location = new System.Drawing.Point(291, 62);
             this.baocaotonbtn.Name = "baocaotonbtn";
             this.baocaotonbtn.Size = new System.Drawing.Size(262, 93);
             this.baocaotonbtn.TabIndex = 9;
@@ -62,14 +62,14 @@
             // 
             // baocaodoanhsobtn
             // 
-            this.baocaodoanhsobtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(82)))));
+            this.baocaodoanhsobtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
             this.baocaodoanhsobtn.FlatAppearance.BorderSize = 0;
             this.baocaodoanhsobtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.baocaodoanhsobtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.baocaodoanhsobtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.baocaodoanhsobtn.Image = global::GarageManager.Properties.Resources.wrench_40px;
             this.baocaodoanhsobtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.baocaodoanhsobtn.Location = new System.Drawing.Point(245, 88);
+            this.baocaodoanhsobtn.Location = new System.Drawing.Point(7, 62);
             this.baocaodoanhsobtn.Name = "baocaodoanhsobtn";
             this.baocaodoanhsobtn.Size = new System.Drawing.Size(267, 93);
             this.baocaodoanhsobtn.TabIndex = 10;

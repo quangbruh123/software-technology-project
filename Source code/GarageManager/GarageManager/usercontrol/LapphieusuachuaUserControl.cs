@@ -15,10 +15,17 @@ namespace GarageManager.usercontrol
     {
         private int itemCounter = 0;
         private int total = 0;
-
+        private Nhapvatu uc2;
+        private Nhaptiencong uc1;
         public LapphieusuachuaUserControl()
         {
             InitializeComponent();
+            uc1 = new Nhaptiencong();
+            Controls.Add(uc1);
+            uc1.Visible = false;
+            uc2 = new Nhapvatu();
+            Controls.Add(uc2);
+            uc2.Visible = false;
         }
         
         private void buttonplus_Click(object sender, EventArgs e)
@@ -29,7 +36,7 @@ namespace GarageManager.usercontrol
                 itemCounter++;
                 int partPrice = (int)Storage.GetPartPrice(comboBoxvattuphutung.Text);
                 int totalForAFix = partPrice * int.Parse(textBoxsoluong.Text) + Finance.GetWage(comboBoxTiencong.GetItemText(comboBoxTiencong.SelectedItem));
-                dataGridView1.Rows.Add(
+                addtcbtn.Rows.Add(
                     itemCounter,
                     textBoxDetails.Text,
                     comboBoxvattuphutung.GetItemText(comboBoxvattuphutung.SelectedItem),
@@ -55,38 +62,38 @@ namespace GarageManager.usercontrol
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count > 0)
+            if (addtcbtn.Rows.Count > 0)
             {
                 itemCounter--;
-                total -= int.Parse(dataGridView1.SelectedRows[0].Cells[6].Value.ToString());
+                total -= int.Parse(addtcbtn.SelectedRows[0].Cells[6].Value.ToString());
                 textBoxTongTienPhieuSuaChua.Text = total.ToString();
-                dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
-                for (int j = 0; j < dataGridView1.RowCount; j++)
+                addtcbtn.Rows.Remove(addtcbtn.SelectedRows[0]);
+                for (int j = 0; j < addtcbtn.RowCount; j++)
                 {
-                    dataGridView1.Rows[j].Cells[0].Value = j + 1;
+                    addtcbtn.Rows[j].Cells[0].Value = j + 1;
                 }
             }
         }
 
         private void btnLuuPSC_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows != null && dataGridView1.Rows.Count != 0 && !string.IsNullOrEmpty(licenseplatetxt.Text))
+            if (addtcbtn.Rows != null && addtcbtn.Rows.Count != 0 && !string.IsNullOrEmpty(licenseplatetxt.Text))
             {
                 List<string> detail = new List<string>();
                 List<string> parts = new List<string>();
                 List<string> wage = new List<string>();
                 List<int> amount = new List<int>();
 
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                for (int i = 0; i < addtcbtn.Rows.Count; i++)
                 {
-                    detail.Add(dataGridView1.Rows[i].Cells[1].Value.ToString());
-                    parts.Add(dataGridView1.Rows[i].Cells[2].Value.ToString());
-                    amount.Add(int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString()));
-                    wage.Add(dataGridView1.Rows[i].Cells[5].Value.ToString());
+                    detail.Add(addtcbtn.Rows[i].Cells[1].Value.ToString());
+                    parts.Add(addtcbtn.Rows[i].Cells[2].Value.ToString());
+                    amount.Add(int.Parse(addtcbtn.Rows[i].Cells[3].Value.ToString()));
+                    wage.Add(addtcbtn.Rows[i].Cells[5].Value.ToString());
                 }
                 Vehicle.AddMaintenanceInfo(licenseplatetxt.Text, DateTime.Now, detail, wage, parts, amount);
             }
-            else if (dataGridView1.Rows == null && dataGridView1.Rows.Count == 0)
+            else if (addtcbtn.Rows == null && addtcbtn.Rows.Count == 0)
             {
                 MessageBox.Show("Chưa có thông tin sửa chữa");
             }
@@ -111,7 +118,7 @@ namespace GarageManager.usercontrol
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
+            addtcbtn.Rows.Clear();
             licenseplatetxt.Clear();
         }
 
@@ -123,6 +130,19 @@ namespace GarageManager.usercontrol
         private void textBoxTongTienPhieuSuaChua_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void addvtptbtn_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            uc2.Visible = true;
+            uc2.BringToFront();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            uc1.Visible = true;
         }
     }
 }

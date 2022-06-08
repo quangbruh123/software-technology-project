@@ -9,32 +9,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace GarageManager.usercontrol
 {
-    public partial class Nhapvatu : UserControl
+    public partial class Nhaptiencong : UserControl
     {
-        public Nhapvatu()
+        public Nhaptiencong()
         {
             InitializeComponent();
         }
 
-        private void MAVTlb_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Nhapvatu_Load(object sender, EventArgs e)
+        private void Nhaptiencong_Load(object sender, EventArgs e)
         {
             int i = 1;
-            var taikhoan = DataProvider.Instance.DB.VATTUs;
+            var taikhoan = DataProvider.Instance.DB.TIENCONGs;
             foreach (var x in taikhoan)
             {
-                dataGridView1.Rows.Add(i, x.TenVatTu, x.DonGiaHienTai, x.SoLuongTon);
+                dataGridView1.Rows.Add(i, x.TenTienCong,x.GiaTienCong);
                 i++;
             }
         }
