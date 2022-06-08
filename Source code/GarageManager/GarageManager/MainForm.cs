@@ -26,6 +26,7 @@ namespace GarageManager
         private Tiepnhanbaotrixe uc4;
         private LAPPHIEU uc5;
         private Baocaothang uc3;
+
         public MainForm()
         {
             InitializeComponent();
@@ -45,8 +46,7 @@ namespace GarageManager
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-             
+        {             
             var taikhoan = DataProvider.Instance.DB.TAIKHOANs;
             foreach (var x in taikhoan)
             {
@@ -67,11 +67,20 @@ namespace GarageManager
             uc3.Visible = false;
             uc4.Visible = false;
             uc5.Visible = false;
-        }     
-         
+
+            if (DateTime.Today != Properties.Settings.Default.LastLoginDate)
+            {
+                if (DateTime.Today.Month != Properties.Settings.Default.LastLoginDate.Month)
+                {
+                    Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);
+                    Properties.Settings.Default["LastLoginDate"] = DateTime.Today;
+                    Properties.Settings.Default.Save();
+                }
+            }
+        }
+        
         private void Lapphieubtn_Click(object sender, EventArgs e)
         {
-
             mainpanel.Visible = false;
             uc1.Visible = false;
             uc2.Visible = false;
@@ -145,12 +154,12 @@ namespace GarageManager
 
         private void Addaccount_Click(object sender, EventArgs e)
         {
-            Classes.Account.AddStaffAccount(tktxt.Text, Mktxt.Text);
+            Account.AddStaffAccount(tktxt.Text, Mktxt.Text);
         }
 
         private void deletebnt_Click(object sender, EventArgs e)
         {
-            Classes.Account.DeleteAccount(deletetktxt.Text);
+            Account.DeleteAccount(deletetktxt.Text);
         }
 
         private void Trangchubtn_Click(object sender, EventArgs e)
