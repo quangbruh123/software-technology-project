@@ -20,9 +20,6 @@ namespace GarageManager.usercontrol
             InitializeComponent();
         }
 
-
-        
-
         private void buttonLapPhieuThuTienPTT_Click(object sender, EventArgs e)
         {
             string plate = comboBienSoXe2.SelectedItem.ToString();
@@ -42,11 +39,7 @@ namespace GarageManager.usercontrol
 
         private void LapphieuthutienUserControl_Load(object sender, EventArgs e)
         {
-            textBoxNgayThuTien.Text = DateTime.Now.ToString();
-            textBoxHoTenChuXePTT.Text = null;
-            comboBienSoXe2.Items.Clear();
-            comboBienSoXe2.SelectedIndex = -1;
-            comboBienSoXe2.SelectedItem = null;
+            
         }
 
         private void buttonPhieuThuTienMoiPTT_Click(object sender, EventArgs e)
@@ -56,6 +49,15 @@ namespace GarageManager.usercontrol
             comboBienSoXe2.Items.Clear();
             comboBienSoXe2.SelectedIndex = -1;
             textBoxNgayThuTien.Text = DateTime.Now.ToString();
+        }
+
+        private void LapphieuthutienUserControl_VisibleChanged(object sender, EventArgs e)
+        {
+            textBoxNgayThuTien.Text = DateTime.Now.ToString();
+            textBoxHoTenChuXePTT.Text = null;
+            comboBienSoXe2.Items.Clear();
+            comboBienSoXe2.SelectedIndex = -1;
+            comboBienSoXe2.SelectedItem = null;
         }
     }
 }

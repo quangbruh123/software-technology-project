@@ -207,6 +207,7 @@
             this.Name = "LapphieuthutienUserControl";
             this.Size = new System.Drawing.Size(1452, 822);
             this.Load += new System.EventHandler(this.LapphieuthutienUserControl_Load);
+            this.VisibleChanged += new System.EventHandler(this.LapphieuthutienUserControl_VisibleChanged);
             this.panel23.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
