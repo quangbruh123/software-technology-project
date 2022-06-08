@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GarageManager.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,34 +20,42 @@ namespace GarageManager.usercontrol
             InitializeComponent();
         }
 
-        private void buttonInPhieuThuTienPTT_Click(object sender, EventArgs e)
+
+        
+
+        private void buttonLapPhieuThuTienPTT_Click(object sender, EventArgs e)
         {
-            buttonLapPhieuThuTienPTT.Visible = false;
-            buttonPhieuThuTienMoiPTT.Visible = false;
-            buttonInPhieuThuTienPTT.Visible = false;
-
-            Graphics myGraphics = CreateGraphics();
-            Size s = Size;
-            memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
-            Graphics memoryGraphics = Graphics.FromImage(memoryImage);
-            memoryGraphics.CopyFromScreen(Location.X, Location.Y, 0, 0, s);
-            try
-            {
-                printDocument1.Print();
-            }
-            catch (System.Drawing.Printing.InvalidPrinterException)
-            {
-                MessageBox.Show("Failed to print");
-            }
-
-            buttonLapPhieuThuTienPTT.Visible = true;
-            buttonPhieuThuTienMoiPTT.Visible = true;
-            buttonInPhieuThuTienPTT.Visible = true;
+            string plate = comboBienSoXe2.SelectedItem.ToString();
+            int pay = int.Parse(textBoxSoTienThuPTT.Text);
+            DateTime a = DateTime.Now;
+            Finance.AddReceipt(plate, pay, a);
         }
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void textBoxHoTenChuXePTT_TextChanged(object sender, EventArgs e)
         {
-            e.Graphics.DrawImage(memoryImage, 0, 0);
+            comboBienSoXe2.Items.Clear();
+            foreach (var plates in DataProvider.Instance.DB.XEs.Where(x => x.TenChuXe == textBoxHoTenChuXePTT.Text).Select(x => x.BienSo))
+            {
+                comboBienSoXe2.Items.Add(plates);
+            }
+        }
+
+        private void LapphieuthutienUserControl_Load(object sender, EventArgs e)
+        {
+            textBoxNgayThuTien.Text = DateTime.Now.ToString();
+            textBoxHoTenChuXePTT.Text = null;
+            comboBienSoXe2.Items.Clear();
+            comboBienSoXe2.SelectedIndex = -1;
+            comboBienSoXe2.SelectedItem = null;
+        }
+
+        private void buttonPhieuThuTienMoiPTT_Click(object sender, EventArgs e)
+        {
+            textBoxSoTienThuPTT.Clear();
+            textBoxHoTenChuXePTT.Clear();
+            comboBienSoXe2.Items.Clear();
+            comboBienSoXe2.SelectedIndex = -1;
+            textBoxNgayThuTien.Text = DateTime.Now.ToString();
         }
     }
 }
