@@ -14,6 +14,7 @@ namespace GarageManager.usercontrol
     {
         int month;
         int year;
+        double TongTien;
         public Baocaodoanhso()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace GarageManager.usercontrol
         
         void LoadData()
         {
+            TongTien = 0;
             Model.BAOCAODOANHSO financialReport = Classes.Finance.GetMonthlyFinancialReport(month, year);
             int stt = 1;
             foreach (var item in financialReport.CT_BCDS)
@@ -33,11 +35,14 @@ namespace GarageManager.usercontrol
                 string brand = xe.TenHieuXe.ToString();
                 dataGridViewBaoCaoDoanhSo.Rows.Add(stt.ToString(), brand, item.SoLuotSua.ToString(), item.ThanhTien.ToString());
                 stt++;
+                TongTien += double.Parse(item.ThanhTien.ToString());
             }
+            textBoxTongDoanhThu.Text = TongTien.ToString();
         }
 
         private void btnLapBaoCaoDoanhSo_Click(object sender, EventArgs e)
         {
+            dataGridViewBaoCaoDoanhSo.Rows.Clear();
             string[] txt = textBoxThangBaoCao.Text.Split('/');
             month = Convert.ToInt32(txt[0]);
             year = Convert.ToInt32(txt[1]);
@@ -52,6 +57,11 @@ namespace GarageManager.usercontrol
                 return;
             }
             LoadData();
+        }
+
+        private void btnBaoCaoDoanhSoMoi_Click(object sender, EventArgs e)
+        {
+            dataGridViewBaoCaoDoanhSo.Rows.Clear();
         }
     }
 }
