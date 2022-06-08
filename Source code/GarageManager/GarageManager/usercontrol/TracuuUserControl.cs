@@ -24,6 +24,10 @@ namespace GarageManager.usercontrol
             {
                 comboBoxCarBrand.Items.Add(brand);
             }
+            dataGridView1.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy";
+
+            radioButton1.Checked = true;
+            radioButton2.Checked = false;
         }
 
         private int itemCounter = 0;
@@ -49,8 +53,11 @@ namespace GarageManager.usercontrol
                             itemCounter++;
                             dataGridView1.Rows.Add(
                             itemCounter,
+                            x.TenChuXe,
                             x.HIEUXE.TenHieuXe,
-                            x.BienSo, x.TenChuXe
+                            x.BienSo,
+                            x.NgayTiepNhan,
+                            x.TienNo
                             );
                         }
                     }
@@ -63,8 +70,11 @@ namespace GarageManager.usercontrol
                             itemCounter++;
                             dataGridView1.Rows.Add(
                             itemCounter,
+                            x.TenChuXe,
                             x.HIEUXE.TenHieuXe,
-                            x.BienSo, x.TenChuXe
+                            x.BienSo,
+                            x.NgayTiepNhan,
+                            x.TienNo
                             );
                         }
                     }
@@ -77,8 +87,11 @@ namespace GarageManager.usercontrol
                             itemCounter++;
                             dataGridView1.Rows.Add(
                             itemCounter,
+                            x.TenChuXe,
                             x.HIEUXE.TenHieuXe,
-                            x.BienSo, x.TenChuXe
+                            x.BienSo,
+                            x.NgayTiepNhan,
+                            x.TienNo
                             );
                         }
                     }
@@ -91,8 +104,11 @@ namespace GarageManager.usercontrol
                             itemCounter++;
                             dataGridView1.Rows.Add(
                             itemCounter,
+                            x.TenChuXe,
                             x.HIEUXE.TenHieuXe,
-                            x.BienSo, x.TenChuXe
+                            x.BienSo,
+                            x.NgayTiepNhan,
+                            x.TienNo
                             );
                         }
                     }
@@ -115,8 +131,11 @@ namespace GarageManager.usercontrol
                         itemCounter++;
                         dataGridView1.Rows.Add(
                         itemCounter,
-                        x.HIEUXE.TenHieuXe,
-                        x.BienSo, x.TenChuXe
+                        x.TenChuXe,
+                            x.HIEUXE.TenHieuXe,
+                            x.BienSo,
+                            x.NgayTiepNhan,
+                            x.TienNo
                         );
                     }
 
@@ -140,6 +159,41 @@ namespace GarageManager.usercontrol
             OwnerTextbox.Clear();
             CarPlateTextbox.Clear();
             comboBoxCarBrand.SelectedItem = null;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            itemCounter = 0;
+            MainWordTextbox.Clear();
+            OwnerTextbox.Clear();
+            CarPlateTextbox.Clear();
+            comboBoxCarBrand.SelectedItem = null;
+
+            if ( radioButton1.Checked == true)
+            {
+                label1.Visible = true;
+                MainWordTextbox.Visible = true;
+
+                label2.Visible = false;
+                label3.Visible = false;
+                label4.Visible = false;
+                CarPlateTextbox.Visible = false;
+                comboBoxCarBrand.Visible = false;
+                OwnerTextbox.Visible = false;
+            }
+            else
+            {
+                label1.Visible = false; 
+                MainWordTextbox.Visible = false;
+
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = true;
+                CarPlateTextbox.Visible = true;
+                comboBoxCarBrand.Visible = true;
+                OwnerTextbox.Visible = true;
+            }
         }
     }
 }
