@@ -109,14 +109,9 @@ namespace GarageManager.Classes
         /// </summary>
         /// <param name="plate"></param>
         /// <returns>The vehicle's information and a list of its receipts, or null if the vehicle doesn't exist in the databse</returns>
-        public static dynamic GetReceiptInfo(string plate)
+        public static List<Model.PHIEUTHUTIEN> GetReceiptInfo(string plate)
         {
-            Model.XE vehicle = DataProvider.Instance.DB.XEs.Where(x => x.BienSo == plate).FirstOrDefault();
-            List<Model.PHIEUTHUTIEN> receipt = DataProvider.Instance.DB.PHIEUTHUTIENs.Where(x => x.BienSo == plate).ToList();
-            if (vehicle != null && receipt != null)
-                return new { vehicle, receipt };
-            else
-                return null;
+            return (List<Model.PHIEUTHUTIEN>)DataProvider.Instance.DB.XEs.FirstOrDefault(x => x.BienSo == plate).PHIEUTHUTIENs;
         }
 
         /// <summary>
