@@ -30,7 +30,6 @@
     <Property Name="MaHieuXe" Type="int" Nullable="false" />
     <Property Name="SoLuotSua" Type="int" />
     <Property Name="ThanhTien" Type="money" />
-    <Property Name="TiLe" Type="varchar" MaxLength="1" />
   </EntityType>
   <EntityType Name="CT_PNVT">
     <Key>
@@ -78,18 +77,15 @@
       <PropertyRef Name="MaPhieuNhap" />
     </Key>
     <Property Name="MaPhieuNhap" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MaVatTu" Type="int" />
-    <Property Name="SoLuong" Type="int" />
-    <Property Name="DonGiaNhap" Type="money" />
-    <Property Name="DonGiaBan" Type="money" />
-    <Property Name="ThanhTien" Type="money" />
+    <Property Name="NgayNhap" Type="smalldatetime" />
+    <Property Name="TongTien" Type="money" />
   </EntityType>
   <EntityType Name="PHIEUSUACHUA">
     <Key>
       <PropertyRef Name="MaPhieuSC" />
     </Key>
     <Property Name="MaPhieuSC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="BienSo" Type="nvarchar" MaxLength="20" />
+    <Property Name="BienSo" Type="nvarchar" MaxLength="50" />
     <Property Name="NgaySuaChua" Type="smalldatetime" />
     <Property Name="TongTien" Type="money" />
   </EntityType>
@@ -98,7 +94,8 @@
       <PropertyRef Name="MaPTT" />
     </Key>
     <Property Name="MaPTT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="BienSo" Type="nvarchar" MaxLength="20" />
+    <Property Name="NgayLap" Type="smalldatetime" />
+    <Property Name="BienSo" Type="nvarchar" MaxLength="50" />
     <Property Name="SoTienThu" Type="money" />
   </EntityType>
   <EntityType Name="TAIKHOAN">
@@ -106,6 +103,8 @@
       <PropertyRef Name="MaTaiKhoan" />
     </Key>
     <Property Name="MaTaiKhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar(max)" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" />
     <Property Name="TenTaiKhoan" Type="nvarchar(max)" />
     <Property Name="MatKhau" Type="nvarchar(max)" />
     <Property Name="QuyenHan" Type="int" />
@@ -145,7 +144,7 @@
     <Key>
       <PropertyRef Name="BienSo" />
     </Key>
-    <Property Name="BienSo" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="BienSo" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TenChuXe" Type="nvarchar(max)" />
     <Property Name="MaHieuXe" Type="int" />
     <Property Name="DienThoai" Type="nvarchar" MaxLength="20" />
