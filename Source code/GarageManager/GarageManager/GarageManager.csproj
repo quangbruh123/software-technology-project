@@ -89,6 +89,18 @@
     <Compile Include="Classes\Storage.cs" />
     <Compile Include="Classes\ValidateEmail.cs" />
     <Compile Include="Classes\Vehicle.cs" />
+    <Compile Include="CreateNewPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewPassword.Designer.cs">
+      <DependentUpon>CreateNewPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +250,12 @@
     <Compile Include="usercontrol\Tiepnhanbaotrixe.Designer.cs">
       <DependentUpon>Tiepnhanbaotrixe.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CreateNewPassword.resx">
+      <DependentUpon>CreateNewPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

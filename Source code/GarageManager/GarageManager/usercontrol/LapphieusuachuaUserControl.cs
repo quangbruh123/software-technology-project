@@ -16,13 +16,13 @@ namespace GarageManager.usercontrol
         private int itemCounter = 0;
         private int total = 0;
         private Nhapvatu uc2;
-        private Nhaptiencong uc1;
+        //private Nhaptiencong uc1;
         public LapphieusuachuaUserControl()
         {
             InitializeComponent();
-            uc1 = new Nhaptiencong();
-            Controls.Add(uc1);
-            uc1.Visible = false;
+            //uc1 = new Nhaptiencong();
+            //Controls.Add(uc1);
+            //uc1.Visible = false;
             uc2 = new Nhapvatu();
             Controls.Add(uc2);
             uc2.Visible = false;
@@ -142,7 +142,7 @@ namespace GarageManager.usercontrol
         private void button4_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
-            uc1.Visible = true;
+            //uc1.Visible = true;
         }
     }
 }
