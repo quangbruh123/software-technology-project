@@ -127,13 +127,6 @@
     <Property Name="QuyenHan" Type="Int32" />
     <NavigationProperty Name="VAITRO" Relationship="Self.FK_QuyenHan" FromRole="TAIKHOAN" ToRole="VAITRO" />
   </EntityType>
-  <EntityType Name="THAMSO">
-    <Key>
-      <PropertyRef Name="TenThamSo" />
-    </Key>
-    <Property Name="TenThamSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="GiaTri" Type="Int32" />
-  </EntityType>
   <EntityType Name="TIENCONG">
     <Key>
       <PropertyRef Name="MaTienCong" />
@@ -142,6 +135,13 @@
     <Property Name="TenTienCong" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="GiaTienCong" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="CT_PSC" Relationship="Self.FK_MaTienCong" FromRole="TIENCONG" ToRole="CT_PSC" />
+  </EntityType>
+  <EntityType Name="THAMSO">
+    <Key>
+      <PropertyRef Name="TenThamSo" />
+    </Key>
+    <Property Name="TenThamSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GiaTri" Type="Int32" />
   </EntityType>
   <EntityType Name="VAITRO">
     <Key>
@@ -347,8 +347,8 @@
     <EntitySet Name="PHIEUSUACHUAs" EntityType="Self.PHIEUSUACHUA" />
     <EntitySet Name="PHIEUTHUTIENs" EntityType="Self.PHIEUTHUTIEN" />
     <EntitySet Name="TAIKHOANs" EntityType="Self.TAIKHOAN" />
-    <EntitySet Name="THAMSOes" EntityType="Self.THAMSO" />
     <EntitySet Name="TIENCONGs" EntityType="Self.TIENCONG" />
+    <EntitySet Name="THAMSOes" EntityType="Self.THAMSO" />
     <EntitySet Name="VAITROes" EntityType="Self.VAITRO" />
     <EntitySet Name="VATTUs" EntityType="Self.VATTU" />
     <EntitySet Name="XEs" EntityType="Self.XE" />

@@ -1,14 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\GarageManager",
-    "\\GarageManager\\GarageManager",
-    "\\Source code",
-    "\\Source code\\GarageManager",
-    "\\Source code\\GarageManager\\GarageManager",
-    "\\Source code\\GarageManager\\GarageManager\\Classes",
-    "\\Source code\\GarageManager\\GarageManager\\usercontrol"
+    ""
   ],
-  "SelectedNode": "\\Source code\\GarageManager\\GarageManager.sln",
+  "SelectedNode": "\\GarageManager.sln",
   "PreviewInSolutionExplorer": false
 }

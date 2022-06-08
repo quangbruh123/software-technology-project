@@ -118,20 +118,20 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="THAMSOes">
-      <EntityTypeMapping TypeName="GarageManagementModel.THAMSO">
-        <MappingFragment StoreEntitySet="THAMSO">
-          <ScalarProperty Name="TenThamSo" ColumnName="TenThamSo" />
-          <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="TIENCONGs">
       <EntityTypeMapping TypeName="GarageManagementModel.TIENCONG">
         <MappingFragment StoreEntitySet="TIENCONG">
           <ScalarProperty Name="MaTienCong" ColumnName="MaTienCong" />
           <ScalarProperty Name="TenTienCong" ColumnName="TenTienCong" />
           <ScalarProperty Name="GiaTienCong" ColumnName="GiaTienCong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THAMSOes">
+      <EntityTypeMapping TypeName="GarageManagementModel.THAMSO">
+        <MappingFragment StoreEntitySet="THAMSO">
+          <ScalarProperty Name="TenThamSo" ColumnName="TenThamSo" />
+          <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
