@@ -12,11 +12,6 @@ namespace GarageManager.Classes
     /// </summary>
     public class Storage
     {
-        private static int GetPartID(string partName)
-        {
-            return DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partName).FirstOrDefault().MaVatTu;
-        }
-
         /// <summary>
         /// Add a new vehicle part. The part must have not existed in the database
         /// </summary>

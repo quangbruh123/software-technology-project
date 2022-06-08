@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -41,12 +42,15 @@ namespace GarageManager
 
         private void dangnhapbtn_Click(object sender, EventArgs e)
         {
-            if (Classes.Account.LogIn(usertxt.Text, passwordtxt.Text))
+            SHA256 sha256hash = SHA256.Create();
+            string passwordhash = GetHash(sha256hash, passwordtxt.Text);
+            if (Classes.DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == usertxt.Text && x.MatKhau == passwordhash))
             {
+                Model.TAIKHOAN currentAccount = Classes.DataProvider.Instance.DB.TAIKHOANs.FirstOrDefault(x => x.TenTaiKhoan == usertxt.Text && x.MatKhau == passwordhash);
+                MainForm.currentRole = (int)currentAccount.QuyenHan;
                 this.Hide();
                 MainForm mainForm = new MainForm();
                 mainForm.ShowDialog();
-                MainForm.isLoggedIn = true;
             }
             else
                 MessageBox.Show("Sai mật khẩu hoặc tên tài khoản");
@@ -104,6 +108,26 @@ namespace GarageManager
                 passwordtxt.Text = "Mật khẩu";
                 passwordtxt.ForeColor = Color.Silver;
             }
+        }
+
+        private string GetHash(HashAlgorithm hashAlgorithm, string input)
+        {
+            // Convert the input string to a byte array and compute the hash.
+            byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            // Create a new Stringbuilder to collect the bytes
+            // and create a string.
+            var sBuilder = new StringBuilder();
+
+            // Loop through each byte of the hashed data
+            // and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
         }
     }
 }

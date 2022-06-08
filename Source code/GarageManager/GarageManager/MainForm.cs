@@ -15,17 +15,16 @@ namespace GarageManager
 {
     public partial class MainForm : Form
     {
-        /// <summary>
-        /// Log in state
-        /// </summary>
-        /// 
-        public static bool isLoggedIn = false;
         //Nút nhảy usercontrol
         private Chinhsuaquydinh uc1;
         private tracuuUserControl1 uc2;
         private Tiepnhanbaotrixe uc4;
         private LAPPHIEU uc5;
         private Baocaothang uc3;
+        /// <summary>
+        /// Stores the current role of the user. 0 is staff, 1 is admin
+        /// </summary>
+        public static int currentRole;
 
         public MainForm()
         {

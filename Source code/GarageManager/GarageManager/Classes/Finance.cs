@@ -265,8 +265,6 @@ namespace GarageManager.Classes
             //        return financialReport;
             //    }
             //}
-
-
         }
     }
 }
