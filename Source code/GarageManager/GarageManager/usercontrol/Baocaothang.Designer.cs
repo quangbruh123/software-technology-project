@@ -37,9 +37,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.panel1.Location = new System.Drawing.Point(2, 53);
+            this.panel1.Location = new System.Drawing.Point(3, 65);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1172, 3);
+            this.panel1.Size = new System.Drawing.Size(1563, 4);
             this.panel1.TabIndex = 11;
             // 
             // baocaotonbtn
@@ -51,9 +52,10 @@
             this.baocaotonbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.baocaotonbtn.Image = global::GarageManager.Properties.Resources.construction_40px;
             this.baocaotonbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.baocaotonbtn.Location = new System.Drawing.Point(291, 62);
+            this.baocaotonbtn.Location = new System.Drawing.Point(388, 76);
+            this.baocaotonbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.baocaotonbtn.Name = "baocaotonbtn";
-            this.baocaotonbtn.Size = new System.Drawing.Size(262, 93);
+            this.baocaotonbtn.Size = new System.Drawing.Size(349, 114);
             this.baocaotonbtn.TabIndex = 9;
             this.baocaotonbtn.Text = "Báo cáo tồn";
             this.baocaotonbtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -69,9 +71,10 @@
             this.baocaodoanhsobtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.baocaodoanhsobtn.Image = global::GarageManager.Properties.Resources.wrench_40px;
             this.baocaodoanhsobtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.baocaodoanhsobtn.Location = new System.Drawing.Point(7, 62);
+            this.baocaodoanhsobtn.Location = new System.Drawing.Point(9, 76);
+            this.baocaodoanhsobtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.baocaodoanhsobtn.Name = "baocaodoanhsobtn";
-            this.baocaodoanhsobtn.Size = new System.Drawing.Size(267, 93);
+            this.baocaodoanhsobtn.Size = new System.Drawing.Size(356, 114);
             this.baocaodoanhsobtn.TabIndex = 10;
             this.baocaodoanhsobtn.Text = "Báo cáo doanh số";
             this.baocaodoanhsobtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -83,24 +86,27 @@
             this.lblCapNhatQuyDinh.BackColor = System.Drawing.Color.Transparent;
             this.lblCapNhatQuyDinh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblCapNhatQuyDinh.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblCapNhatQuyDinh.Location = new System.Drawing.Point(3, 12);
+            this.lblCapNhatQuyDinh.Location = new System.Drawing.Point(4, 15);
+            this.lblCapNhatQuyDinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCapNhatQuyDinh.Name = "lblCapNhatQuyDinh";
-            this.lblCapNhatQuyDinh.Size = new System.Drawing.Size(218, 27);
+            this.lblCapNhatQuyDinh.Size = new System.Drawing.Size(291, 33);
             this.lblCapNhatQuyDinh.TabIndex = 23;
             this.lblCapNhatQuyDinh.Text = "LẬP CÁC LOẠI PHIẾU";
             // 
             // Baocaothang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.lblCapNhatQuyDinh);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.baocaotonbtn);
             this.Controls.Add(this.baocaodoanhsobtn);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Baocaothang";
-            this.Size = new System.Drawing.Size(1175, 876);
+            this.Size = new System.Drawing.Size(1567, 1078);
             this.Load += new System.EventHandler(this.Baocaothang_Load);
+            this.VisibleChanged += new System.EventHandler(this.Baocaothang_VisibleChanged);
             this.ResumeLayout(false);
 
         }

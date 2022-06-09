@@ -73,5 +73,13 @@ namespace GarageManager.usercontrol
             uc3.Visible = false;
             uc4.Location = new Point(0, 156);
         }
+
+        private void LAPPHIEU_VisibleChanged(object sender, EventArgs e)
+        {
+            uc1.Visible = false;
+            uc2.Visible = false;
+            uc3.Visible = false;
+            uc4.Visible = false;
+        }
     }
 }

@@ -57,7 +57,7 @@ namespace GarageManager.usercontrol
                             x.HIEUXE.TenHieuXe,
                             x.BienSo,
                             x.NgayTiepNhan,
-                            x.TienNo
+                            ((int?)x.TienNo)
                             );
                         }
                     }
@@ -75,7 +75,7 @@ namespace GarageManager.usercontrol
                             x.HIEUXE.TenHieuXe,
                             x.BienSo,
                             x.NgayTiepNhan,
-                            x.TienNo
+                            ((int?)x.TienNo)
                             );
                         }
                     }
@@ -93,7 +93,7 @@ namespace GarageManager.usercontrol
                             x.HIEUXE.TenHieuXe,
                             x.BienSo,
                             x.NgayTiepNhan,
-                            x.TienNo
+                            ((int?)x.TienNo)
                             );
                         }
                     }
@@ -111,7 +111,7 @@ namespace GarageManager.usercontrol
                             x.HIEUXE.TenHieuXe,
                             x.BienSo,
                             x.NgayTiepNhan,
-                            x.TienNo
+                            ((int?)x.TienNo)
                             );
                         }
                     }
@@ -138,7 +138,7 @@ namespace GarageManager.usercontrol
                         x.HIEUXE.TenHieuXe,
                         x.BienSo,
                         x.NgayTiepNhan,
-                        x.TienNo
+                        ((int?)x.TienNo)
                         );
                     }
 

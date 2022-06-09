@@ -43,5 +43,11 @@ namespace GarageManager.usercontrol
             uc2.Visible = true;
             uc2.Location = new Point(0, 156);
         }
+
+        private void Baocaothang_VisibleChanged(object sender, EventArgs e)
+        {
+            uc1.Visible = false;
+            uc2.Visible = false;
+        }
     }
 }
