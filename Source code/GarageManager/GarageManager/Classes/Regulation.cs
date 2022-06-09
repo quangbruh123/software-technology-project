@@ -40,17 +40,10 @@ namespace GarageManager.Classes
         /// Change the limit of the number of vehicles can be maintenanced in a day
         /// </summary>
         /// <param name="newLimit"></param>
-        public static void ChangeVehicleLimitPerDay(int newLimit)
+        public static void ChangeRule(string TenQuyDinh, int GiaTriMoi)
         {
-            Model.THAMSO vehicleLimit = DataProvider.Instance.DB.THAMSOes.FirstOrDefault();
-            vehicleLimit.SoSuaChua = newLimit;
-            DataProvider.Instance.DB.SaveChanges();
-        }
-
-        public static void ChangePaymentRule (bool yesOrno)
-        {
-            Model.THAMSO vehicleLimit = DataProvider.Instance.DB.THAMSOes.FirstOrDefault();
-            vehicleLimit.TienNo = yesOrno;
+            Model.THAMSO Rule = DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == TenQuyDinh);
+            Rule.GiaTri = GiaTriMoi;
             DataProvider.Instance.DB.SaveChanges();
         }
     }

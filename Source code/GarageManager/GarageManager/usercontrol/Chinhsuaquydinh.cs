@@ -25,12 +25,15 @@ namespace GarageManager.usercontrol
 
         private void btnCapNhatSoXeSuaToiDa_Click(object sender, EventArgs e)
         {
-            Regulation.ChangeVehicleLimitPerDay(int.Parse(txtBoxSoXeSuaChuaToiDa.Text));
-            dataGridViewQuyDinhHienHanh.Rows.Clear();
-            var quydinh = DataProvider.Instance.DB.THAMSOes;
-            foreach(var item in quydinh)
+            if (!String.IsNullOrEmpty(txtBoxSoXeSuaChuaToiDa.Text))
             {
-                dataGridViewQuyDinhHienHanh.Rows.Add(item.SoSuaChua, item.TienNo);
+                Regulation.ChangeRule("Số xe sửa chữa trong ngày tối đa", int.Parse(txtBoxSoXeSuaChuaToiDa.Text));
+                dataGridViewQuyDinhHienHanh.Rows.Clear();
+                var quydinh = DataProvider.Instance.DB.THAMSOes;
+                foreach (var item in quydinh)
+                {
+                    dataGridViewQuyDinhHienHanh.Rows.Add(item.TenThamSo, item.GiaTri);
+                }
             }
         }
 
@@ -40,32 +43,59 @@ namespace GarageManager.usercontrol
             var quydinh = DataProvider.Instance.DB.THAMSOes;
             foreach (var item in quydinh)
             {
-                dataGridViewQuyDinhHienHanh.Rows.Add(item.SoSuaChua, item.TienNo);
+                dataGridViewQuyDinhHienHanh.Rows.Add(item.TenThamSo, item.GiaTri);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
+            
+        }
+
+        private void txtboxHieuxe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtboxTienCong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void btnCapNhatHieuxe_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtboxHieuxe.Text))
             {
-                Regulation.ChangePaymentRule(true);
+                Regulation.ChangeRule("Số lượng hiệu xe", int.Parse(txtboxHieuxe.Text));
                 dataGridViewQuyDinhHienHanh.Rows.Clear();
                 var quydinh = DataProvider.Instance.DB.THAMSOes;
                 foreach (var item in quydinh)
                 {
-                    dataGridViewQuyDinhHienHanh.Rows.Add(item.SoSuaChua, item.TienNo);
+                    dataGridViewQuyDinhHienHanh.Rows.Add(item.TenThamSo, item.GiaTri);
                 }
             }
-            else
+            
+        }
+
+        private void btnCapNhatTienCong_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtboxTienCong.Text))
             {
-                Regulation.ChangePaymentRule(false);
+                Regulation.ChangeRule("Số lượng tiền công", int.Parse(txtboxTienCong.Text));
                 dataGridViewQuyDinhHienHanh.Rows.Clear();
                 var quydinh = DataProvider.Instance.DB.THAMSOes;
                 foreach (var item in quydinh)
                 {
-                    dataGridViewQuyDinhHienHanh.Rows.Add(item.SoSuaChua, item.TienNo);
+                    dataGridViewQuyDinhHienHanh.Rows.Add(item.TenThamSo, item.GiaTri);
                 }
             }
+        }
+
+        private void Chinhsuaquydinh_VisibleChanged(object sender, EventArgs e)
+        {
+            txtboxHieuxe.Clear();
+            txtBoxSoXeSuaChuaToiDa.Clear();
+            txtboxTienCong.Clear();
         }
     }
 }
