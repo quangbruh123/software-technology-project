@@ -232,3 +232,5 @@ D:\Software Technology\Do an\software-technology-project\Source code\GarageManag
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.pdb
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.ForgetPassword.resources
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.CreateNewPassword.resources
+D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Nhaptiencong.resources
+D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Quenmk.resources
