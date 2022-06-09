@@ -96,6 +96,7 @@ namespace GarageManager.Classes
             if (DataProvider.Instance.DB.VATTUs.Any(x => x.TenVatTu == partName))
             {
                 Model.VATTU unwantedPart = DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partName).FirstOrDefault();
+                DataProvider.Instance.DB.BAOCAOTONs.RemoveRange(DataProvider.Instance.DB.BAOCAOTONs.Where(x => x.MaVatTu == unwantedPart.MaVatTu));
                 DataProvider.Instance.DB.VATTUs.Remove(unwantedPart);
                 DataProvider.Instance.DB.SaveChanges();
                 return true;
@@ -129,12 +130,12 @@ namespace GarageManager.Classes
         /// <param name="partName"></param>
         /// <param name="newAmount"></param>
         /// <returns>True if successfully added, false if not</returns>
-        public static bool UpdatePartAmount(string partName, int newAmount)
+        public static bool UpdatePartName(string partName, string newName)
         {
             if (DataProvider.Instance.DB.VATTUs.Any(x => x.TenVatTu == partName))
             {
                 Model.VATTU part = DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partName).FirstOrDefault();
-                part.SoLuongTon = newAmount;
+                part.TenVatTu = newName;
                 DataProvider.Instance.DB.SaveChanges();
                 return true;
             }
@@ -225,6 +226,7 @@ namespace GarageManager.Classes
                         TonCuoi = amountList[i],
                         VATTU = part
                     };
+                    part.BAOCAOTONs.Add(storageReport);
                     DataProvider.Instance.DB.BAOCAOTONs.Add(storageReport);
                     DataProvider.Instance.DB.SaveChanges();
                 }

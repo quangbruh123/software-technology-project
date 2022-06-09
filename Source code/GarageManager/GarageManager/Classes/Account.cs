@@ -22,14 +22,16 @@ namespace GarageManager.Classes
         /// <returns>
         /// True if successfully added, otherwise false
         /// </returns>
-        public static bool AddStaffAccount(string username, string password)
+        public static bool AddStaffAccount(string fullName, string userName, string gender, string password)
         {
-            if (!DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == username && x.MatKhau == password))
+            if (!DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == userName && x.MatKhau == password))
             {
                 Model.TAIKHOAN newaccount = new Model.TAIKHOAN
                 {
-                    TenTaiKhoan = username,
+                    HoTen = fullName,
+                    TenTaiKhoan = userName,
                     MatKhau = password,
+                    GioiTinh = gender,
                     QuyenHan = 0
                 };
                 DataProvider.Instance.DB.TAIKHOANs.Add(newaccount);
@@ -47,14 +49,16 @@ namespace GarageManager.Classes
         /// <returns>
         /// True if successfully added, otherwise false
         /// </returns>
-        public static bool AddAdminAccount(string username, string password)
+        public static bool AddAdminAccount(string fullName, string userName, string gender, string password)
         {
-            if (!DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == username && x.MatKhau == password))
+            if (!DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == userName && x.MatKhau == password))
             {
                 Model.TAIKHOAN newaccount = new Model.TAIKHOAN
                 {
-                    TenTaiKhoan = username,
+                    HoTen = fullName,
+                    TenTaiKhoan = userName,
                     MatKhau = password,
+                    GioiTinh = gender,
                     QuyenHan = 1
                 };
                 DataProvider.Instance.DB.TAIKHOANs.Add(newaccount);
@@ -68,47 +72,20 @@ namespace GarageManager.Classes
         /// Delete an account from the database
         /// </summary>
         /// <param name="username"></param>
-        public static void DeleteAccount(string username)
+        public static bool DeleteAccount(string username)
         {
-            Model.TAIKHOAN unwantedAccount = DataProvider.Instance.DB.TAIKHOANs.Where(x => x.TenTaiKhoan == username).First();
-            DataProvider.Instance.DB.TAIKHOANs.Remove(unwantedAccount);
-            DataProvider.Instance.DB.SaveChanges();
+            if (DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == username))
+            {
+                Model.TAIKHOAN unwantedAccount = DataProvider.Instance.DB.TAIKHOANs.Where(x => x.TenTaiKhoan == username).FirstOrDefault();
+                Model.VAITRO role = DataProvider.Instance.DB.VAITROes.FirstOrDefault(x => x.MaVaiTro == unwantedAccount.QuyenHan);
+                role.TAIKHOANs.Remove(unwantedAccount);
+                DataProvider.Instance.DB.TAIKHOANs.Remove(unwantedAccount);
+                DataProvider.Instance.DB.SaveChanges();
+                return true;
+            }
+            else
+                return false;
         }
-
-        /// <summary>
-        /// User log in check, set isLoggedIn to true if the user's account existed, false if it doesn't
-        /// </summary>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
-        //public static bool LogIn(string username, string password)
-        //{
-        //    SHA256 sha256hash = SHA256.Create();
-        //    string passwordhash = GetHash(sha256hash, password);
-        //    if (DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == username && x.MatKhau == passwordhash))
-        //        return true;
-        //    else
-        //        return false;
-        //}
-
-        //private static string GetHash(HashAlgorithm hashAlgorithm, string input)
-        //{
-        //    // Convert the input string to a byte array and compute the hash.
-        //    byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
-
-        //    // Create a new Stringbuilder to collect the bytes
-        //    // and create a string.
-        //    var sBuilder = new StringBuilder();
-
-        //    // Loop through each byte of the hashed data
-        //    // and format each one as a hexadecimal string.
-        //    for (int i = 0; i < data.Length; i++)
-        //    {
-        //        sBuilder.Append(data[i].ToString("x2"));
-        //    }
-
-        //    // Return the hexadecimal string.
-        //    return sBuilder.ToString();
-        //}
     }
 }
     

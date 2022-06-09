@@ -14,16 +14,6 @@ namespace GarageManager.Classes
     public class Vehicle
     {
         /// <summary>
-        /// Check if a vehicle's plate exists in the database
-        /// </summary>
-        /// <param name="plate"></param>
-        /// <returns>True if the vehicle is in the database, false if not</returns>
-        public static bool VerifyPlate(string plate)
-        {
-            return DataProvider.Instance.DB.XEs.Any(x => x.BienSo == plate);
-        }
-
-        /// <summary>
         /// Add a vehicle to the garage
         /// </summary>
         /// <param name="plate"></param>
@@ -79,7 +69,7 @@ namespace GarageManager.Classes
                     var part = DataProvider.Instance.DB.VATTUs.FirstOrDefault(x => x.TenVatTu == requiredPart);
                     if (part.SoLuongTon < amount[i])
                     {
-                        MessageBox.Show("Không đủ vật tư trong kho để lập phiếu.\nVật tư: " + part.TenVatTu);
+                        MessageBox.Show("Không đủ vật tư trong kho để lập phiếu.\nVật tư: " + part.TenVatTu, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                     Model.CT_SUDUNGVATTU partUsageDetail = new Model.CT_SUDUNGVATTU
@@ -132,12 +122,12 @@ namespace GarageManager.Classes
                 }
                 DataProvider.Instance.DB.SaveChanges();
 
-                MessageBox.Show("Lưu phiếu sửa chữa thành công");
+                MessageBox.Show("Lưu phiếu sửa chữa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else
             {
-                MessageBox.Show("Không tìm thấy xe với biển số đã cho.\nHãy chắc chắn xe đã được tiếp nhận rồi.");
+                MessageBox.Show("Không tìm thấy xe với biển số đã cho.\nHãy chắc chắn xe đã được tiếp nhận rồi.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
@@ -160,38 +150,6 @@ namespace GarageManager.Classes
         public static List<Model.XE> FindVehicleFromNameOfOwner(string name)
         {
             return DataProvider.Instance.DB.XEs.Where(x => x.TenChuXe.Contains(name)).ToList();
-        }
-
-        /// <summary>
-        /// Get all maintenance information of a vehicle from its plate. The vehicle must already has a maintenance card
-        /// </summary>
-        /// <param name="plate"></param>
-        /// <returns>PHIEUSUACHUA, a list of CT_PSC and a list of CT_SUDUNGVATTU, or null if it doesn't have a maintenance card yet</returns>
-        public static dynamic GetMaintenanceCard(string plate)
-        {
-            Model.PHIEUSUACHUA psc = new Model.PHIEUSUACHUA();
-            if (DataProvider.Instance.DB.PHIEUSUACHUAs.Any(x => x.BienSo == plate))
-            {
-                psc = DataProvider.Instance.DB.PHIEUSUACHUAs.Where(x => x.BienSo == plate).FirstOrDefault();
-                List<Model.CT_PSC> ct_psc = DataProvider.Instance.DB.CT_PSC.Where(x => x.MaPhieuSC == psc.MaPhieuSC).ToList();
-                List<Model.CT_SUDUNGVATTU> ct_sdvt = new List<Model.CT_SUDUNGVATTU>();
-                for (int i = 0; i < ct_psc.Count; i++)
-                {
-                    ct_sdvt.Add(DataProvider.Instance.DB.CT_SUDUNGVATTU.Where(x => x.MaCTPSC == ct_psc[i].MaCTPSC).FirstOrDefault());
-                }
-                return new { psc, ct_psc, ct_sdvt };
-            }
-            else
-                return null;
-        }
-
-        /// <summary>
-        /// Get all maintenance information
-        /// </summary>
-        /// <returns>Return a list of maintenance information</returns>
-        public static List<Model.CT_PSC> GetAllMaintenanceInfo()
-        {
-            return DataProvider.Instance.DB.CT_PSC.ToList();
         }
     }
 }

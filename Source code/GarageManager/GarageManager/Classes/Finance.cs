@@ -39,8 +39,7 @@ namespace GarageManager.Classes
                     if (DataProvider.Instance.DB.BAOCAODOANHSOes.Any(x => x.Thang == createDate.Month && x.Nam == createDate.Year))
                     {
                         Model.BAOCAODOANHSO financialReport = DataProvider.Instance.DB.BAOCAODOANHSOes
-                            .Where(x => x.Thang == createDate.Month && x.Nam == createDate.Year)
-                            .FirstOrDefault();
+                            .FirstOrDefault(x => x.Thang == createDate.Month && x.Nam == createDate.Year);
                         if (financialReport.CT_BCDS.Any(x => x.HIEUXE == vehicle.HIEUXE))
                         {
                             Model.CT_BCDS financialReportDetail = DataProvider.Instance.DB.CT_BCDS
@@ -81,6 +80,7 @@ namespace GarageManager.Classes
                                 HIEUXE = vehicleBrand,
                                 SoLuotSua = 0,
                                 ThanhTien = 0,
+                                BAOCAODOANHSO = financialReport
                             };
                             reportDetailsList.Add(reportDetail);
                         }
@@ -88,18 +88,18 @@ namespace GarageManager.Classes
                     }
 
                     DataProvider.Instance.DB.SaveChanges();
-                    MessageBox.Show("Lập phiếu thu tiền thành công.");
+                    MessageBox.Show("Lập phiếu thu tiền thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 else
                 {
-                    MessageBox.Show("Lập phiếu thu tiền thất bại.\nSố tiền thu không được vượt quá số tiền nợ.");
+                    MessageBox.Show("Lập phiếu thu tiền thất bại.\nSố tiền thu không được vượt quá số tiền nợ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
             }
             else
             {
-                MessageBox.Show("Lập phiếu thu tiền thất bại.\nKhông tìm thấy xe nào với biển số xe vừa nhập.");
+                MessageBox.Show("Lập phiếu thu tiền thất bại.\nKhông tìm thấy xe nào với biển số xe vừa nhập.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
@@ -108,7 +108,7 @@ namespace GarageManager.Classes
         /// Get full information of a receipt from a plate
         /// </summary>
         /// <param name="plate"></param>
-        /// <returns>The vehicle's information and a list of its receipts, or null if the vehicle doesn't exist in the databse</returns>
+        /// <returns>The vehicle's information and a list of its receipts, or null if the vehicle doesn't exist in the database</returns>
         public static List<Model.PHIEUTHUTIEN> GetReceiptInfo(string plate)
         {
             return (List<Model.PHIEUTHUTIEN>)DataProvider.Instance.DB.XEs.FirstOrDefault(x => x.BienSo == plate).PHIEUTHUTIENs;

@@ -13,8 +13,6 @@ namespace GarageManager.usercontrol
 {
     public partial class LapphieuthutienUserControl : UserControl
     {
-        private Bitmap memoryImage;
-
         public LapphieuthutienUserControl()
         {
             InitializeComponent();
