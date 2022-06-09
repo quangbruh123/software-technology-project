@@ -45,7 +45,7 @@ namespace GarageManager
 
         private void dangnhapbtn_Click(object sender, EventArgs e)
         {
-            if(codetxt.Text == code)
+            if(codetxt.Text == code && code != "0")
             {
                 this.Hide();
                 CreateNewPassword newPassword = new CreateNewPassword();
@@ -72,6 +72,11 @@ namespace GarageManager
         private void minbtn_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -33,11 +33,6 @@
             this.monthLabel = new System.Windows.Forms.Label();
             this.textBoxTongDoanhThu = new System.Windows.Forms.TextBox();
             this.dataGridViewBaoCaoDoanhSo = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCapNhatQuyDinh = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,6 +40,11 @@
             this.yearLabel = new System.Windows.Forms.Label();
             this.monthComboBox = new System.Windows.Forms.ComboBox();
             this.yearComboBox = new System.Windows.Forms.ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaoCaoDoanhSo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +63,7 @@
             // 
             this.textBoxTongDoanhThu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTongDoanhThu.Location = new System.Drawing.Point(336, 191);
-            this.textBoxTongDoanhThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTongDoanhThu.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTongDoanhThu.Name = "textBoxTongDoanhThu";
             this.textBoxTongDoanhThu.ReadOnly = true;
             this.textBoxTongDoanhThu.Size = new System.Drawing.Size(245, 30);
@@ -108,41 +108,6 @@
             this.dataGridViewBaoCaoDoanhSo.Size = new System.Drawing.Size(1285, 332);
             this.dataGridViewBaoCaoDoanhSo.TabIndex = 12;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Hiệu xe";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Số lượt sửa";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Thành tiền";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Tỷ lệ (%)";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -169,7 +134,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
             this.panel1.Location = new System.Drawing.Point(123, 247);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1291, 337);
             this.panel1.TabIndex = 23;
@@ -202,7 +167,7 @@
             // 
             this.monthComboBox.FormattingEnabled = true;
             this.monthComboBox.Location = new System.Drawing.Point(232, 123);
-            this.monthComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.monthComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.monthComboBox.Name = "monthComboBox";
             this.monthComboBox.Size = new System.Drawing.Size(87, 24);
             this.monthComboBox.TabIndex = 25;
@@ -211,10 +176,50 @@
             // 
             this.yearComboBox.FormattingEnabled = true;
             this.yearComboBox.Location = new System.Drawing.Point(423, 123);
-            this.yearComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.yearComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.yearComboBox.Name = "yearComboBox";
             this.yearComboBox.Size = new System.Drawing.Size(123, 24);
             this.yearComboBox.TabIndex = 25;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 53.47594F;
+            this.Column1.HeaderText = "STT";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 111.631F;
+            this.Column2.HeaderText = "Hiệu xe";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 111.631F;
+            this.Column3.HeaderText = "Số lượt sửa";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 111.631F;
+            this.Column4.HeaderText = "Thành tiền";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 111.631F;
+            this.Column5.HeaderText = "Tỷ lệ (%)";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Baocaodoanhso
             // 
@@ -231,7 +236,7 @@
             this.Controls.Add(this.textBoxTongDoanhThu);
             this.Controls.Add(this.dataGridViewBaoCaoDoanhSo);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Baocaodoanhso";
             this.Size = new System.Drawing.Size(1452, 822);
             this.Load += new System.EventHandler(this.Baocaodoanhso_Load);

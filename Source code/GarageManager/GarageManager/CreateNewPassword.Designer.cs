@@ -33,7 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.repasswordtxt = new System.Windows.Forms.TextBox();
             this.dangnhapbtn = new GarageManager.Control.RJButton();
-            this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.CloseBtn = new System.Windows.Forms.Button();
@@ -53,7 +52,6 @@
             this.gradient1.Controls.Add(this.panel1);
             this.gradient1.Controls.Add(this.repasswordtxt);
             this.gradient1.Controls.Add(this.dangnhapbtn);
-            this.gradient1.Controls.Add(this.button2);
             this.gradient1.Controls.Add(this.label3);
             this.gradient1.Controls.Add(this.pictureBox4);
             this.gradient1.Controls.Add(this.CloseBtn);
@@ -91,13 +89,12 @@
             this.repasswordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repasswordtxt.Location = new System.Drawing.Point(78, 194);
             this.repasswordtxt.Margin = new System.Windows.Forms.Padding(4);
-            this.repasswordtxt.Multiline = true;
             this.repasswordtxt.Name = "repasswordtxt";
-            this.repasswordtxt.PasswordChar = '*';
-            this.repasswordtxt.Size = new System.Drawing.Size(381, 43);
-            this.repasswordtxt.TabIndex = 35;
+            this.repasswordtxt.Size = new System.Drawing.Size(381, 34);
+            this.repasswordtxt.TabIndex = 2;
             this.repasswordtxt.Text = "Nhập lại mật khẩu";
-            this.repasswordtxt.UseSystemPasswordChar = true;
+            this.repasswordtxt.Enter += new System.EventHandler(this.repasswordtxt_Enter);
+            this.repasswordtxt.Leave += new System.EventHandler(this.repasswordtxt_Leave);
             // 
             // dangnhapbtn
             // 
@@ -114,26 +111,11 @@
             this.dangnhapbtn.Margin = new System.Windows.Forms.Padding(4);
             this.dangnhapbtn.Name = "dangnhapbtn";
             this.dangnhapbtn.Size = new System.Drawing.Size(377, 49);
-            this.dangnhapbtn.TabIndex = 33;
+            this.dangnhapbtn.TabIndex = 3;
             this.dangnhapbtn.Text = "Xác nhận";
             this.dangnhapbtn.TextColor = System.Drawing.Color.White;
             this.dangnhapbtn.UseVisualStyleBackColor = false;
             this.dangnhapbtn.Click += new System.EventHandler(this.dangnhapbtn_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(172, 398);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 53);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Quay lại";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -203,8 +185,10 @@
             this.passwordtxt.Margin = new System.Windows.Forms.Padding(4);
             this.passwordtxt.Name = "passwordtxt";
             this.passwordtxt.Size = new System.Drawing.Size(377, 34);
-            this.passwordtxt.TabIndex = 23;
+            this.passwordtxt.TabIndex = 1;
             this.passwordtxt.Text = "Mậu khẩu mới";
+            this.passwordtxt.Enter += new System.EventHandler(this.passwordtxt_Enter);
+            this.passwordtxt.Leave += new System.EventHandler(this.passwordtxt_Leave);
             // 
             // CreateNewPassword
             // 
@@ -231,7 +215,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox repasswordtxt;
         private Control.RJButton dangnhapbtn;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button CloseBtn;

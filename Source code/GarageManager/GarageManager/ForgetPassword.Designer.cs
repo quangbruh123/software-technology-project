@@ -90,7 +90,7 @@
             this.rjButton1.Margin = new System.Windows.Forms.Padding(4);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(199, 49);
-            this.rjButton1.TabIndex = 43;
+            this.rjButton1.TabIndex = 3;
             this.rjButton1.Text = "Gửi mã xác nhận";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
@@ -116,7 +116,7 @@
             this.codetxt.Name = "codetxt";
             this.codetxt.PasswordChar = '*';
             this.codetxt.Size = new System.Drawing.Size(381, 43);
-            this.codetxt.TabIndex = 41;
+            this.codetxt.TabIndex = 4;
             this.codetxt.Text = "Mã xác nhận";
             this.codetxt.UseSystemPasswordChar = true;
             // 
@@ -159,7 +159,7 @@
             this.gmailtxt.Name = "gmailtxt";
             this.gmailtxt.PasswordChar = '*';
             this.gmailtxt.Size = new System.Drawing.Size(381, 43);
-            this.gmailtxt.TabIndex = 35;
+            this.gmailtxt.TabIndex = 2;
             this.gmailtxt.Text = "Gmail";
             this.gmailtxt.UseSystemPasswordChar = true;
             // 
@@ -178,7 +178,7 @@
             this.dangnhapbtn.Margin = new System.Windows.Forms.Padding(4);
             this.dangnhapbtn.Name = "dangnhapbtn";
             this.dangnhapbtn.Size = new System.Drawing.Size(377, 49);
-            this.dangnhapbtn.TabIndex = 33;
+            this.dangnhapbtn.TabIndex = 5;
             this.dangnhapbtn.Text = "Xác nhận";
             this.dangnhapbtn.TextColor = System.Drawing.Color.White;
             this.dangnhapbtn.UseVisualStyleBackColor = false;
@@ -195,9 +195,10 @@
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(173, 53);
-            this.button2.TabIndex = 27;
+            this.button2.TabIndex = 6;
             this.button2.Text = "Quay lại";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -269,7 +270,7 @@
             this.usertxt.Margin = new System.Windows.Forms.Padding(4);
             this.usertxt.Name = "usertxt";
             this.usertxt.Size = new System.Drawing.Size(377, 34);
-            this.usertxt.TabIndex = 23;
+            this.usertxt.TabIndex = 1;
             this.usertxt.Text = "Tên đăng nhập";
             // 
             // ForgetPassword

@@ -109,12 +109,13 @@ CREATE TABLE THAMSO (
 )
 
 CREATE TABLE TAIKHOAN (
-	MaTaiKhoan	INT IDENTITY (1, 1) PRIMARY KEY,
-	HoTen		NVARCHAR(MAX),
-	GioiTinh	NVARCHAR(10),
-	TenTaiKhoan	NVARCHAR(MAX),
-	MatKhau		NVARCHAR(MAX),
-	QuyenHan	INT
+    MaTaiKhoan    INT IDENTITY (1, 1) PRIMARY KEY,
+    HoTen        NVARCHAR(MAX),
+    GioiTinh    NVARCHAR(10),
+    TenTaiKhoan    NVARCHAR(MAX),
+    Email        NVARCHAR(MAX) DEFAULT '',
+    MatKhau        NVARCHAR(MAX),
+    QuyenHan    INT
 )
 
 CREATE TABLE VAITRO (
@@ -211,6 +212,4 @@ INSERT INTO XE (MaHieuXe,TenChuXe, NgayTiepNhan, TienNo, BienSo) VALUES
 (1,N'Châu Vĩnh Sinh','05/06/2022',100000,N'21A000');
 
 INSERT INTO THAMSO (TenThamSo, GiaTri) VALUES
-(N'Số xe sửa chữa trong ngày tối đa', 30),
-(N'Số lượng hiệu xe', 10),
-(N'Số lượng tiền công', 100);
+(N'Số xe sửa chữa trong ngày tối đa', 30)
