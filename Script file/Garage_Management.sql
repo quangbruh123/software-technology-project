@@ -109,12 +109,13 @@ CREATE TABLE THAMSO (
 )
 
 CREATE TABLE TAIKHOAN (
-	MaTaiKhoan	INT IDENTITY (1, 1) PRIMARY KEY,
-	HoTen		NVARCHAR(MAX),
-	GioiTinh	NVARCHAR(10),
-	TenTaiKhoan	NVARCHAR(MAX),
-	MatKhau		NVARCHAR(MAX),
-	QuyenHan	INT
+    MaTaiKhoan    INT IDENTITY (1, 1) PRIMARY KEY,
+    HoTen        NVARCHAR(MAX),
+    GioiTinh    NVARCHAR(10),
+    TenTaiKhoan    NVARCHAR(MAX),
+    Email        NVARCHAR(MAX) DEFAULT '',
+    MatKhau        NVARCHAR(MAX),
+    QuyenHan    INT
 )
 
 CREATE TABLE VAITRO (
