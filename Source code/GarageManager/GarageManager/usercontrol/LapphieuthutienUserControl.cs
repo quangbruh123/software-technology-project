@@ -51,7 +51,7 @@ namespace GarageManager.usercontrol
 
         private void LapphieuthutienUserControl_VisibleChanged(object sender, EventArgs e)
         {
-            textBoxNgayThuTien.Text = DateTime.Now.ToString();
+            textBoxNgayThuTien.Text = DateTime.Now.ToShortDateString();
             textBoxHoTenChuXePTT.Text = null;
             comboBienSoXe2.Items.Clear();
             comboBienSoXe2.SelectedIndex = -1;

@@ -45,7 +45,7 @@ namespace GarageManager.usercontrol
                     comboBoxTiencong.GetItemText(comboBoxTiencong.SelectedItem),
                     totalForAFix);
                 total += totalForAFix;
-                textBoxTongTienPhieuSuaChua.Text = total.ToString();
+                textBoxTongTienPhieuSuaChua.Text = total.ToString() + " VND";
             }
             else
             {

@@ -87,25 +87,6 @@ namespace GarageManager.Classes
         //}
 
         /// <summary>
-        /// Remove a vehicle part. The part must exists in the database
-        /// </summary>
-        /// <param name="partName"></param>
-        /// <returns>True if successfullt removed, false if not</returns>
-        public static bool RemovePart(string partName)
-        {
-            if (DataProvider.Instance.DB.VATTUs.Any(x => x.TenVatTu == partName))
-            {
-                Model.VATTU unwantedPart = DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partName).FirstOrDefault();
-                DataProvider.Instance.DB.BAOCAOTONs.RemoveRange(DataProvider.Instance.DB.BAOCAOTONs.Where(x => x.MaVatTu == unwantedPart.MaVatTu));
-                DataProvider.Instance.DB.VATTUs.Remove(unwantedPart);
-                DataProvider.Instance.DB.SaveChanges();
-                return true;
-            }
-            else
-                return false;
-        }
-
-        /// <summary>
         /// Update the price of a part. The part must exist in the database
         /// </summary>
         /// <param name="partName"></param>
@@ -126,6 +107,7 @@ namespace GarageManager.Classes
 
         /// <summary>
         /// Update the amount of a vehicle part. The part must have existed in the database
+        /// (might not be stable, using a try catch block recommended)
         /// </summary>
         /// <param name="partName"></param>
         /// <param name="newAmount"></param>
@@ -135,7 +117,7 @@ namespace GarageManager.Classes
             if (DataProvider.Instance.DB.VATTUs.Any(x => x.TenVatTu == partName))
             {
                 Model.VATTU part = DataProvider.Instance.DB.VATTUs.Where(x => x.TenVatTu == partName).FirstOrDefault();
-                part.TenVatTu = newName;
+                part.TenVatTu = newName;                
                 DataProvider.Instance.DB.SaveChanges();
                 return true;
             }
@@ -146,11 +128,6 @@ namespace GarageManager.Classes
         public static decimal? GetPartPrice(string partName)
         {
             return DataProvider.Instance.DB.VATTUs.FirstOrDefault(x => x.TenVatTu == partName).DonGiaHienTai;
-        }
-
-        public static List<Model.VATTU> GetAllParts()
-        {
-            return DataProvider.Instance.DB.VATTUs.ToList();
         }
 
         /// <summary>
@@ -247,6 +224,11 @@ namespace GarageManager.Classes
             return DataProvider.Instance.DB.BAOCAOTONs.Where(x => x.Thang == month && x.Nam == year).ToList();
         }
 
+        /// <summary>
+        /// Initialize a new storage report for a specified time
+        /// </summary>
+        /// <param name="month"></param>
+        /// <param name="year"></param>
         public static void NewStorageReports(int month, int year)
         {
             List<Model.BAOCAOTON> storageReportList = new List<Model.BAOCAOTON>();

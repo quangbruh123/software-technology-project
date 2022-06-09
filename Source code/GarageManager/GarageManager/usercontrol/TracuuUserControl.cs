@@ -13,6 +13,8 @@ namespace GarageManager.usercontrol
 {
     public partial class tracuuUserControl1 : UserControl
     {
+        private int itemCounter = 0;
+
         public tracuuUserControl1()
         {
             InitializeComponent();
@@ -20,7 +22,7 @@ namespace GarageManager.usercontrol
 
         private void tracuuUserControl1_Load(object sender, EventArgs e)
         {
-            foreach ( var brand in DataProvider.Instance.DB.HIEUXEs.Select(p => p.TenHieuXe))
+            foreach (var brand in DataProvider.Instance.DB.HIEUXEs.Select(p => p.TenHieuXe))
             {
                 comboBoxCarBrand.Items.Add(brand);
             }
@@ -29,9 +31,7 @@ namespace GarageManager.usercontrol
             radioButton1.Checked = true;
             radioButton2.Checked = false;
         }
-
-        private int itemCounter = 0;
-
+      
         private void FindBtn_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
@@ -47,8 +47,8 @@ namespace GarageManager.usercontrol
                 {
                     if (string.IsNullOrEmpty(CarPlateTextbox.Text) && string.IsNullOrEmpty(OwnerTextbox.Text))
                     {
-                        var Xe = DataProvider.Instance.DB.XEs.Where(x => comboBoxCarBrand.SelectedItem.ToString() == x.HIEUXE.TenHieuXe).ToList();
-                        foreach (var x in Xe)
+                        string brand = comboBoxCarBrand.GetItemText(comboBoxCarBrand.SelectedItem);
+                        foreach (var x in DataProvider.Instance.DB.XEs.Where(x => brand == x.HIEUXE.TenHieuXe))
                         {
                             itemCounter++;
                             dataGridView1.Rows.Add(
@@ -64,8 +64,9 @@ namespace GarageManager.usercontrol
 
                     if (string.IsNullOrEmpty(CarPlateTextbox.Text) && OwnerTextbox.Text != null)
                     {
-                        var Xe = DataProvider.Instance.DB.XEs.Where(x => comboBoxCarBrand.SelectedItem.ToString() == x.HIEUXE.TenHieuXe && OwnerTextbox.Text == x.TenChuXe).ToList();
-                        foreach (var x in Xe)
+                        string brand = comboBoxCarBrand.GetItemText(comboBoxCarBrand.SelectedItem);
+                        foreach (var x in DataProvider.Instance.DB.XEs
+                            .Where(x => brand == x.HIEUXE.TenHieuXe && OwnerTextbox.Text == x.TenChuXe))
                         {
                             itemCounter++;
                             dataGridView1.Rows.Add(
@@ -81,8 +82,9 @@ namespace GarageManager.usercontrol
 
                     if (string.IsNullOrEmpty(OwnerTextbox.Text) && CarPlateTextbox.Text != null)
                     {
-                        var Xe = DataProvider.Instance.DB.XEs.Where(x => comboBoxCarBrand.SelectedItem.ToString() == x.HIEUXE.TenHieuXe && CarPlateTextbox.Text == x.BienSo).ToList();
-                        foreach (var x in Xe)
+                        string brand = comboBoxCarBrand.GetItemText(comboBoxCarBrand.SelectedItem);
+                        foreach (var x in DataProvider.Instance.DB.XEs
+                            .Where(x => brand == x.HIEUXE.TenHieuXe && CarPlateTextbox.Text == x.BienSo))
                         {
                             itemCounter++;
                             dataGridView1.Rows.Add(
@@ -98,8 +100,9 @@ namespace GarageManager.usercontrol
 
                     if (CarPlateTextbox.Text != null && OwnerTextbox.Text != null)
                     {
-                        var Xe = DataProvider.Instance.DB.XEs.Where(x => comboBoxCarBrand.SelectedItem.ToString() == x.HIEUXE.TenHieuXe && OwnerTextbox.Text == x.TenChuXe && CarPlateTextbox.Text == x.BienSo).ToList();
-                        foreach (var x in Xe)
+                        string brand = comboBoxCarBrand.GetItemText(comboBoxCarBrand.SelectedItem);
+                        foreach (var x in DataProvider.Instance.DB.XEs
+                            .Where(x => brand == x.HIEUXE.TenHieuXe && OwnerTextbox.Text == x.TenChuXe && CarPlateTextbox.Text == x.BienSo))
                         {
                             itemCounter++;
                             dataGridView1.Rows.Add(
@@ -115,18 +118,18 @@ namespace GarageManager.usercontrol
 
                     if (dataGridView1.Rows.Count < 2)
                     {
-                        MessageBox.Show("Not success");
+                        MessageBox.Show("Không có kết quả");
                     }
                     else
                     {
-                        MessageBox.Show("Success");
+                        
                     }
                 }
 
                 if (MainWordTextbox.Text != null && comboBoxCarBrand.SelectedItem == null)
                 {
-                    var Xe = DataProvider.Instance.DB.XEs.Where(x => MainWordTextbox.Text == x.HIEUXE.TenHieuXe || MainWordTextbox.Text == x.TenChuXe || MainWordTextbox.Text == x.BienSo).ToList();
-                    foreach (var x in Xe)
+                    foreach (var x in DataProvider.Instance.DB.XEs
+                        .Where(x => MainWordTextbox.Text == x.HIEUXE.TenHieuXe || MainWordTextbox.Text == x.TenChuXe || MainWordTextbox.Text == x.BienSo))
                     {
                         itemCounter++;
                         dataGridView1.Rows.Add(
@@ -141,11 +144,11 @@ namespace GarageManager.usercontrol
 
                     if (dataGridView1.Rows.Count < 2)
                     {
-                        MessageBox.Show("Not success");
+                        MessageBox.Show("Không có kết quả");
                     }
                     else
                     {
-                        MessageBox.Show("Success");
+                        
                     }
                 }
             }
@@ -170,7 +173,7 @@ namespace GarageManager.usercontrol
             CarPlateTextbox.Clear();
             comboBoxCarBrand.SelectedItem = null;
 
-            if ( radioButton1.Checked == true)
+            if (radioButton1.Checked == true)
             {
                 label1.Visible = true;
                 MainWordTextbox.Visible = true;
