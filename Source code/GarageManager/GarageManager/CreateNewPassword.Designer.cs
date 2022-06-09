@@ -35,11 +35,11 @@
             this.dangnhapbtn = new GarageManager.Control.RJButton();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.passwordtxt = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.CloseBtn = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.minbtn = new System.Windows.Forms.Button();
+            this.passwordtxt = new System.Windows.Forms.TextBox();
             this.gradient1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -148,18 +148,6 @@
             this.label3.TabIndex = 26;
             this.label3.Text = "Làm mới mật khẩu";
             // 
-            // passwordtxt
-            // 
-            this.passwordtxt.BackColor = System.Drawing.SystemColors.Control;
-            this.passwordtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordtxt.Location = new System.Drawing.Point(82, 112);
-            this.passwordtxt.Margin = new System.Windows.Forms.Padding(4);
-            this.passwordtxt.Name = "passwordtxt";
-            this.passwordtxt.Size = new System.Drawing.Size(377, 34);
-            this.passwordtxt.TabIndex = 23;
-            this.passwordtxt.Text = "Mậu khẩu mới";
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GarageManager.Properties.Resources.Password_Key_26px;
@@ -205,6 +193,18 @@
             this.minbtn.Size = new System.Drawing.Size(37, 32);
             this.minbtn.TabIndex = 29;
             this.minbtn.UseVisualStyleBackColor = false;
+            // 
+            // passwordtxt
+            // 
+            this.passwordtxt.BackColor = System.Drawing.SystemColors.Control;
+            this.passwordtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordtxt.Location = new System.Drawing.Point(82, 112);
+            this.passwordtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.passwordtxt.Name = "passwordtxt";
+            this.passwordtxt.Size = new System.Drawing.Size(377, 34);
+            this.passwordtxt.TabIndex = 23;
+            this.passwordtxt.Text = "Mậu khẩu mới";
             // 
             // CreateNewPassword
             // 

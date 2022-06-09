@@ -32,18 +32,18 @@
             this.rjButton1 = new GarageManager.Control.RJButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.codetxt = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gmailtxt = new System.Windows.Forms.TextBox();
             this.dangnhapbtn = new GarageManager.Control.RJButton();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.usertxt = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.CloseBtn = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.minbtn = new System.Windows.Forms.Button();
+            this.usertxt = new System.Windows.Forms.TextBox();
             this.gradient1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -119,6 +119,16 @@
             this.codetxt.TabIndex = 41;
             this.codetxt.Text = "Mã xác nhận";
             this.codetxt.UseSystemPasswordChar = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GarageManager.Properties.Resources.Password_Key_26px;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 272);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox2.TabIndex = 40;
+            this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
@@ -202,28 +212,6 @@
             this.label3.TabIndex = 26;
             this.label3.Text = "Quên mật khẩu";
             // 
-            // usertxt
-            // 
-            this.usertxt.BackColor = System.Drawing.SystemColors.Control;
-            this.usertxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.usertxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usertxt.Location = new System.Drawing.Point(82, 112);
-            this.usertxt.Margin = new System.Windows.Forms.Padding(4);
-            this.usertxt.Name = "usertxt";
-            this.usertxt.Size = new System.Drawing.Size(377, 34);
-            this.usertxt.TabIndex = 23;
-            this.usertxt.Text = "Tên đăng nhập";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GarageManager.Properties.Resources.Password_Key_26px;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 272);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 43);
-            this.pictureBox2.TabIndex = 40;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GarageManager.Properties.Resources.Password_Key_26px;
@@ -246,6 +234,7 @@
             this.CloseBtn.Size = new System.Drawing.Size(37, 32);
             this.CloseBtn.TabIndex = 30;
             this.CloseBtn.UseVisualStyleBackColor = false;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // pictureBox3
             // 
@@ -269,6 +258,19 @@
             this.minbtn.Size = new System.Drawing.Size(37, 32);
             this.minbtn.TabIndex = 29;
             this.minbtn.UseVisualStyleBackColor = false;
+            this.minbtn.Click += new System.EventHandler(this.minbtn_Click);
+            // 
+            // usertxt
+            // 
+            this.usertxt.BackColor = System.Drawing.SystemColors.Control;
+            this.usertxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.usertxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usertxt.Location = new System.Drawing.Point(82, 112);
+            this.usertxt.Margin = new System.Windows.Forms.Padding(4);
+            this.usertxt.Name = "usertxt";
+            this.usertxt.Size = new System.Drawing.Size(377, 34);
+            this.usertxt.TabIndex = 23;
+            this.usertxt.Text = "Tên đăng nhập";
             // 
             // ForgetPassword
             // 

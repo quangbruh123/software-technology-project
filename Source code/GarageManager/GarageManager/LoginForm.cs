@@ -25,13 +25,6 @@ namespace GarageManager
             pictureBox4.BackColor = Color.Transparent;
         }
 
-        private void taotaikhoanbtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();    
-            Formtaotaikhoan formtaotaikhoan = new Formtaotaikhoan();
-            formtaotaikhoan.ShowDialog();
-        }
-
         private void dangnhapbtn_Click(object sender, EventArgs e)
         {
             SHA256 sha256hash = SHA256.Create();
@@ -102,7 +95,7 @@ namespace GarageManager
             }
         }
 
-        private string GetHash(HashAlgorithm hashAlgorithm, string input)
+        public static string GetHash(HashAlgorithm hashAlgorithm, string input)
         {
             // Convert the input string to a byte array and compute the hash.
             byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
@@ -122,24 +115,18 @@ namespace GarageManager
             return sBuilder.ToString();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ForgetPassword forgetPassword = new ForgetPassword();
+            forgetPassword.FormClosed += ForgetPassword_FormClosed;
+            forgetPassword.Show();
+            
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void ForgetPassword_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void circularButton11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
+            this.Show();
         }
     }
 }
