@@ -49,7 +49,7 @@ namespace GarageManager.usercontrol
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtboxHieuxe_KeyPress(object sender, KeyPressEventArgs e)
@@ -62,40 +62,37 @@ namespace GarageManager.usercontrol
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void btnCapNhatHieuxe_Click(object sender, EventArgs e)
-        {
-            if (!String.IsNullOrEmpty(txtboxHieuxe.Text))
-            {
-                Regulation.ChangeRule("Số lượng hiệu xe", int.Parse(txtboxHieuxe.Text));
-                dataGridViewQuyDinhHienHanh.Rows.Clear();
-                var quydinh = DataProvider.Instance.DB.THAMSOes;
-                foreach (var item in quydinh)
-                {
-                    dataGridViewQuyDinhHienHanh.Rows.Add(item.TenThamSo, item.GiaTri);
-                }
-            }
-            
-        }
-
-        private void btnCapNhatTienCong_Click(object sender, EventArgs e)
-        {
-            if (!String.IsNullOrEmpty(txtboxTienCong.Text))
-            {
-                Regulation.ChangeRule("Số lượng tiền công", int.Parse(txtboxTienCong.Text));
-                dataGridViewQuyDinhHienHanh.Rows.Clear();
-                var quydinh = DataProvider.Instance.DB.THAMSOes;
-                foreach (var item in quydinh)
-                {
-                    dataGridViewQuyDinhHienHanh.Rows.Add(item.TenThamSo, item.GiaTri);
-                }
-            }
-        }
-
         private void Chinhsuaquydinh_VisibleChanged(object sender, EventArgs e)
         {
-            txtboxHieuxe.Clear();
             txtBoxSoXeSuaChuaToiDa.Clear();
-            txtboxTienCong.Clear();
+        }
+
+        private void btnLammoiHieuXe_Click(object sender, EventArgs e)
+        {
+            int i = 1;
+            dataGridViewHieuXe.Rows.Clear();
+            var hieuxe = DataProvider.Instance.DB.HIEUXEs;
+            foreach (var item in hieuxe)
+            {
+                dataGridViewHieuXe.Rows.Add(i, item.TenHieuXe);
+                i++;
+            }
+        }
+
+        private void btnCapNhatHieuXe_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtboxAddHieuXe.Text))
+            {
+                Regulation.AddVehicleBrand(txtboxAddHieuXe.Text);
+                int i = 1;
+                dataGridViewHieuXe.Rows.Clear();
+                var hieuxe = DataProvider.Instance.DB.HIEUXEs;
+                foreach (var item in hieuxe)
+                {
+                    dataGridViewHieuXe.Rows.Add(i, item.TenHieuXe);
+                    i++;
+                }
+            }
         }
     }
 }
