@@ -42,8 +42,15 @@ namespace GarageManager.Classes
         /// <param name="newLimit"></param>
         public static void ChangeVehicleLimitPerDay(int newLimit)
         {
-            Model.THAMSO vehicleLimit = DataProvider.Instance.DB.THAMSOes.Where(x => x.TenThamSo == "VehicleLimitPerDay").FirstOrDefault();
-            vehicleLimit.GiaTri = newLimit;
+            Model.THAMSO vehicleLimit = DataProvider.Instance.DB.THAMSOes.FirstOrDefault();
+            vehicleLimit.SoSuaChua = newLimit;
+            DataProvider.Instance.DB.SaveChanges();
+        }
+
+        public static void ChangePaymentRule (bool yesOrno)
+        {
+            Model.THAMSO vehicleLimit = DataProvider.Instance.DB.THAMSOes.FirstOrDefault();
+            vehicleLimit.TienNo = yesOrno;
             DataProvider.Instance.DB.SaveChanges();
         }
     }
