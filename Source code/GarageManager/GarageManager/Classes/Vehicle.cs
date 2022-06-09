@@ -80,6 +80,8 @@ namespace GarageManager.Classes
                     };
                     partUsageDetailList.Add(partUsageDetail);
                     part.SoLuongTon -= amount[i];
+                    Model.BAOCAOTON storageReport = DataProvider.Instance.DB.BAOCAOTONs.FirstOrDefault(x => x.Thang == date.Month && x.Nam == date.Year && x.MaVatTu == part.MaVatTu);
+                    storageReport.TonCuoi -= amount[i];
                 }
 
                 List<Model.CT_PSC> maintenanceDetailList = new List<Model.CT_PSC>();

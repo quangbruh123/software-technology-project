@@ -52,7 +52,7 @@
             // 
             this.getStorageReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.getStorageReportButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.getStorageReportButton.Location = new System.Drawing.Point(617, 63);
+            this.getStorageReportButton.Location = new System.Drawing.Point(626, 63);
             this.getStorageReportButton.Margin = new System.Windows.Forms.Padding(2);
             this.getStorageReportButton.Name = "getStorageReportButton";
             this.getStorageReportButton.Size = new System.Drawing.Size(92, 30);
@@ -66,7 +66,7 @@
             this.lblCapNhatQuyDinh.BackColor = System.Drawing.Color.Transparent;
             this.lblCapNhatQuyDinh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblCapNhatQuyDinh.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblCapNhatQuyDinh.Location = new System.Drawing.Point(348, 31);
+            this.lblCapNhatQuyDinh.Location = new System.Drawing.Point(357, 31);
             this.lblCapNhatQuyDinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCapNhatQuyDinh.Name = "lblCapNhatQuyDinh";
             this.lblCapNhatQuyDinh.Size = new System.Drawing.Size(131, 22);
@@ -102,7 +102,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewStorageReport.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewStorageReport.Location = new System.Drawing.Point(52, 124);
+            this.dataGridViewStorageReport.Location = new System.Drawing.Point(61, 124);
             this.dataGridViewStorageReport.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewStorageReport.MultiSelect = false;
             this.dataGridViewStorageReport.Name = "dataGridViewStorageReport";
@@ -158,7 +158,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(186, 91);
+            this.panel2.Location = new System.Drawing.Point(195, 91);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(58, 2);
             this.panel2.TabIndex = 62;
@@ -169,7 +169,7 @@
             this.monthComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.monthComboBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monthComboBox.FormattingEnabled = true;
-            this.monthComboBox.Location = new System.Drawing.Point(185, 66);
+            this.monthComboBox.Location = new System.Drawing.Point(194, 66);
             this.monthComboBox.Name = "monthComboBox";
             this.monthComboBox.Size = new System.Drawing.Size(75, 27);
             this.monthComboBox.TabIndex = 61;
@@ -179,7 +179,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(343, 91);
+            this.panel1.Location = new System.Drawing.Point(352, 91);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(69, 2);
             this.panel1.TabIndex = 64;
@@ -190,7 +190,7 @@
             this.yearComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yearComboBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yearComboBox.FormattingEnabled = true;
-            this.yearComboBox.Location = new System.Drawing.Point(342, 66);
+            this.yearComboBox.Location = new System.Drawing.Point(351, 66);
             this.yearComboBox.Name = "yearComboBox";
             this.yearComboBox.Size = new System.Drawing.Size(86, 27);
             this.yearComboBox.TabIndex = 63;
@@ -200,7 +200,7 @@
             // 
             this.yearLabel.AutoSize = true;
             this.yearLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearLabel.Location = new System.Drawing.Point(290, 69);
+            this.yearLabel.Location = new System.Drawing.Point(299, 69);
             this.yearLabel.Name = "yearLabel";
             this.yearLabel.Size = new System.Drawing.Size(46, 19);
             this.yearLabel.TabIndex = 65;
@@ -210,7 +210,7 @@
             // 
             this.monthLabel.AutoSize = true;
             this.monthLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthLabel.Location = new System.Drawing.Point(126, 69);
+            this.monthLabel.Location = new System.Drawing.Point(135, 69);
             this.monthLabel.Name = "monthLabel";
             this.monthLabel.Size = new System.Drawing.Size(53, 19);
             this.monthLabel.TabIndex = 66;
