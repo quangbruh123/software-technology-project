@@ -85,5 +85,20 @@ namespace GarageManager.usercontrol
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void Tiepnhanbaotrixe_VisibleChanged(object sender, EventArgs e)
+        {
+            txtBoxTenKH.Clear();
+            txtBoxDienThoai.Clear();
+            txtBoxDiaChi.Clear();
+            txtBoxBienSo.Clear();
+            txtboxEmail.Clear();
+            comboBoxHieuXe.Items.Clear();
+
+            foreach (string brand in Classes.DataProvider.Instance.DB.HIEUXEs.Select(x => x.TenHieuXe))
+            {
+                comboBoxHieuXe.Items.Add(brand);
+            }
+        }
     }
 }

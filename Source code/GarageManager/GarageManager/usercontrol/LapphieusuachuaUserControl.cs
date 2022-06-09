@@ -109,6 +109,7 @@ namespace GarageManager.usercontrol
             {
                 comboBoxvattuphutung.Items.Add(part);
             }
+
             foreach (var wage in DataProvider.Instance.DB.TIENCONGs.Select(x => x.TenTienCong))
             {
                 comboBoxTiencong.Items.Add(wage);
@@ -120,6 +121,13 @@ namespace GarageManager.usercontrol
         {
             addtcbtn.Rows.Clear();
             licenseplatetxt.Clear();
+            textBoxDetails.Clear();
+            comboBoxvattuphutung.SelectedItem = null;
+            textBoxsoluong.Clear();
+            comboBoxTiencong.SelectedItem = null;
+            textBoxTongTienPhieuSuaChua.Clear();
+            itemCounter = 0;
+            total = 0;
         }
 
         private void lblTongTien_Click(object sender, EventArgs e)
@@ -143,6 +151,19 @@ namespace GarageManager.usercontrol
         {
             panel1.Visible = false;
             uc1.Visible = true;
+        }
+
+        private void LapphieusuachuaUserControl_VisibleChanged(object sender, EventArgs e)
+        {
+            addtcbtn.Rows.Clear();
+            licenseplatetxt.Clear();
+            textBoxDetails.Clear();
+            comboBoxvattuphutung.SelectedItem = null;
+            textBoxsoluong.Clear();
+            comboBoxTiencong.SelectedItem = null;
+            textBoxTongTienPhieuSuaChua.Clear();
+            itemCounter = 0;
+            total = 0;
         }
     }
 }

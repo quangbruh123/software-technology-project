@@ -48,9 +48,16 @@ namespace GarageManager.usercontrol
 
         private void getFinancialReportButton_Click(object sender, EventArgs e)
         {
-            month = DateTime.ParseExact((string)monthComboBox.SelectedValue, "MMMM", CultureInfo.InvariantCulture).Month;
-            year = int.Parse(yearComboBox.GetItemText(yearComboBox.SelectedItem));
-            LoadData();
+            if (yearComboBox.SelectedItem == null || monthComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ giá trị");
+            }
+            else
+            {
+                month = DateTime.ParseExact((string)monthComboBox.SelectedValue, "MMMM", CultureInfo.InvariantCulture).Month;
+                year = int.Parse(yearComboBox.GetItemText(yearComboBox.SelectedItem));
+                LoadData();
+            }
         }
 
         private void Baocaodoanhso_Load(object sender, EventArgs e)
@@ -59,6 +66,14 @@ namespace GarageManager.usercontrol
             monthComboBox.SelectedItem = CultureInfo.InvariantCulture.DateTimeFormat.MonthNames[DateTime.Now.AddMonths(-1).Month];
             yearComboBox.DataSource = Enumerable.Range(2010, DateTime.Now.Year - 2010 + 1).ToList();
             yearComboBox.SelectedItem = DateTime.Now.Year;     
+        }
+
+        private void Baocaodoanhso_VisibleChanged(object sender, EventArgs e)
+        {
+            monthComboBox.SelectedItem = null;
+            yearComboBox.SelectedItem = null;
+            dataGridViewBaoCaoDoanhSo.Rows.Clear();
+            
         }
     }
 }
