@@ -14,10 +14,7 @@ namespace GarageManager.Model
     
     public partial class THAMSO
     {
-        public Nullable<bool> TienNo { get; set; }
-        public Nullable<int> SoSuaChua { get; set; }
-        public int SoHieuXe { get; set; }
-        public Nullable<int> SoVatTu { get; set; }
-        public Nullable<int> SoTienCong { get; set; }
+        public string TenThamSo { get; set; }
+        public Nullable<int> GiaTri { get; set; }
     }
 }

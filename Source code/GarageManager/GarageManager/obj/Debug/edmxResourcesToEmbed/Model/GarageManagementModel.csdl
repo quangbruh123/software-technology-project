@@ -123,7 +123,6 @@
     <Property Name="HoTen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="TenTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="QuyenHan" Type="Int32" />
     <NavigationProperty Name="VAITRO" Relationship="Self.FK_QuyenHan" FromRole="TAIKHOAN" ToRole="VAITRO" />
@@ -139,13 +138,10 @@
   </EntityType>
   <EntityType Name="THAMSO">
     <Key>
-      <PropertyRef Name="SoHieuXe" />
+      <PropertyRef Name="TenThamSo" />
     </Key>
-    <Property Name="TienNo" Type="Boolean" />
-    <Property Name="SoSuaChua" Type="Int32" />
-    <Property Name="SoHieuXe" Type="Int32" Nullable="false" />
-    <Property Name="SoVatTu" Type="Int32" />
-    <Property Name="SoTienCong" Type="Int32" />
+    <Property Name="TenThamSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GiaTri" Type="Int32" />
   </EntityType>
   <EntityType Name="VAITRO">
     <Key>

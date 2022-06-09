@@ -113,7 +113,6 @@
           <ScalarProperty Name="HoTen" ColumnName="HoTen" />
           <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
           <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
           <ScalarProperty Name="QuyenHan" ColumnName="QuyenHan" />
         </MappingFragment>
@@ -131,11 +130,8 @@
     <EntitySetMapping Name="THAMSOes">
       <EntityTypeMapping TypeName="GarageManagementModel.THAMSO">
         <MappingFragment StoreEntitySet="THAMSO">
-          <ScalarProperty Name="TienNo" ColumnName="TienNo" />
-          <ScalarProperty Name="SoSuaChua" ColumnName="SoSuaChua" />
-          <ScalarProperty Name="SoHieuXe" ColumnName="SoHieuXe" />
-          <ScalarProperty Name="SoVatTu" ColumnName="SoVatTu" />
-          <ScalarProperty Name="SoTienCong" ColumnName="SoTienCong" />
+          <ScalarProperty Name="TenThamSo" ColumnName="TenThamSo" />
+          <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
