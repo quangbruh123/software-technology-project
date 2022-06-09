@@ -85,6 +85,7 @@
     </Compile>
     <Compile Include="Classes\DataProvider.cs" />
     <Compile Include="Classes\Finance.cs" />
+    <Compile Include="Model\GarageManagerConfiguration.cs" />
     <Compile Include="Classes\Regulation.cs" />
     <Compile Include="Classes\Storage.cs" />
     <Compile Include="Classes\ValidateEmail.cs" />
@@ -220,11 +221,23 @@
     <Compile Include="usercontrol\Baocaothang.Designer.cs">
       <DependentUpon>Baocaothang.cs</DependentUpon>
     </Compile>
+    <Compile Include="usercontrol\Nhaptiencong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\Nhaptiencong.Designer.cs">
+      <DependentUpon>Nhaptiencong.cs</DependentUpon>
+    </Compile>
     <Compile Include="usercontrol\Nhapvatu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="usercontrol\Nhapvatu.Designer.cs">
       <DependentUpon>Nhapvatu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrol\Quenmk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\Quenmk.Designer.cs">
+      <DependentUpon>Quenmk.cs</DependentUpon>
     </Compile>
     <Compile Include="usercontrol\TracuuUserControl.cs">
       <SubType>UserControl</SubType>
@@ -278,8 +291,14 @@
     <EmbeddedResource Include="usercontrol\LapphieuthutienUserControl.resx">
       <DependentUpon>LapphieuthutienUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\Nhaptiencong.resx">
+      <DependentUpon>Nhaptiencong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="usercontrol\Nhapvatu.resx">
       <DependentUpon>Nhapvatu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\Quenmk.resx">
+      <DependentUpon>Quenmk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrol\TracuuUserControl.resx">
       <DependentUpon>TracuuUserControl.cs</DependentUpon>
@@ -367,6 +386,7 @@
     <None Include="Resources\user_30px.png" />
     <None Include="Resources\istockphoto-1152779126-612x612.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Model\GarageManagementModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -378,6 +398,8 @@
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
       <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Resources\add_30px.png" />
+    <Content Include="Resources\minus_40px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
