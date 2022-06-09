@@ -212,7 +212,6 @@ D:\Software Technology\Do an\software-technology-project\Source code\GarageManag
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.AssemblyReference.cache
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.SuggestedBindingRedirects.cache
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.LoginForm.resources
-D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.Formtaotaikhoan.resources
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.MainForm.resources
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.Properties.Resources.resources
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaodoanhso.resources
@@ -233,7 +232,6 @@ D:\Software Technology\Do an\software-technology-project\Source code\GarageManag
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.ForgetPassword.resources
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.CreateNewPassword.resources
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Nhaptiencong.resources
-D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Quenmk.resources
 D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.AssemblyReference.cache
 D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.SuggestedBindingRedirects.cache
 D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.CreateNewPassword.resources

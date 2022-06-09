@@ -107,12 +107,6 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formtaotaikhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formtaotaikhoan.Designer.cs">
-      <DependentUpon>Formtaotaikhoan.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,67 +114,67 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\BAOCAODOANHSO.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\BAOCAOTON.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\CT_BCDS.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\CT_PNVT.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\CT_PSC.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\CT_SUDUNGVATTU.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\GarageManagerModel.Context.cs">
+    <Compile Include="Model\GarageManagementModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GarageManagerModel.Context.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\GarageManagerModel.cs">
+    <Compile Include="Model\GarageManagementModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\GarageManagerModel.Designer.cs">
+    <Compile Include="Model\GarageManagementModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GarageManagerModel.edmx</DependentUpon>
+      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\HIEUXE.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PHIEUNHAPVATTU.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PHIEUSUACHUA.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PHIEUTHUTIEN.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TAIKHOAN.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\THAMSO.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TIENCONG.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\VAITRO.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\VATTU.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\XE.cs">
-      <DependentUpon>GarageManagerModel.tt</DependentUpon>
+      <DependentUpon>GarageManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -244,12 +238,6 @@
     <Compile Include="usercontrol\Nhapvatu.Designer.cs">
       <DependentUpon>Nhapvatu.cs</DependentUpon>
     </Compile>
-    <Compile Include="usercontrol\Quenmk.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usercontrol\Quenmk.Designer.cs">
-      <DependentUpon>Quenmk.cs</DependentUpon>
-    </Compile>
     <Compile Include="usercontrol\TracuuUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -270,9 +258,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formtaotaikhoan.resx">
-      <DependentUpon>Formtaotaikhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -314,21 +299,18 @@
     <EmbeddedResource Include="usercontrol\Nhapvatu.resx">
       <DependentUpon>Nhapvatu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="usercontrol\Quenmk.resx">
-      <DependentUpon>Quenmk.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="usercontrol\TracuuUserControl.resx">
       <DependentUpon>TracuuUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrol\Tiepnhanbaotrixe.resx">
       <DependentUpon>Tiepnhanbaotrixe.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\GarageManagerModel.edmx">
+    <EntityDeploy Include="Model\GarageManagementModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GarageManagerModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>GarageManagementModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\GarageManagerModel.edmx.diagram">
-      <DependentUpon>GarageManagerModel.edmx</DependentUpon>
+    <None Include="Model\GarageManagementModel.edmx.diagram">
+      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -409,15 +391,15 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Model\GarageManagerModel.Context.tt">
+    <Content Include="Model\GarageManagementModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GarageManagerModel.edmx</DependentUpon>
-      <LastGenOutput>GarageManagerModel.Context.cs</LastGenOutput>
+      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
+      <LastGenOutput>GarageManagementModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\GarageManagerModel.tt">
+    <Content Include="Model\GarageManagementModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GarageManagerModel.edmx</DependentUpon>
-      <LastGenOutput>GarageManagerModel.cs</LastGenOutput>
+      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
+      <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

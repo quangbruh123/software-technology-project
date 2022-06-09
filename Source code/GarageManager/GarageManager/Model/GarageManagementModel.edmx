@@ -111,15 +111,9 @@
           <Property Name="HoTen" Type="nvarchar(max)" />
           <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" />
           <Property Name="TenTaiKhoan" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
           <Property Name="MatKhau" Type="nvarchar(max)" />
           <Property Name="QuyenHan" Type="int" />
-        </EntityType>
-        <EntityType Name="THAMSO">
-          <Key>
-            <PropertyRef Name="TenThamSo" />
-          </Key>
-          <Property Name="TenThamSo" Type="nvarchar" MaxLength="20" Nullable="false" />
-          <Property Name="GiaTri" Type="int" />
         </EntityType>
         <EntityType Name="TIENCONG">
           <Key>
@@ -128,6 +122,16 @@
           <Property Name="MaTienCong" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenTienCong" Type="nvarchar(max)" />
           <Property Name="GiaTienCong" Type="money" />
+        </EntityType>
+        <EntityType Name="THAMSO">
+          <Key>
+            <PropertyRef Name="SoHieuXe" />
+          </Key>
+          <Property Name="TienNo" Type="bit" />
+          <Property Name="SoSuaChua" Type="int" />
+          <Property Name="SoHieuXe" Type="int" Nullable="false" />
+          <Property Name="SoVatTu" Type="int" />
+          <Property Name="SoTienCong" Type="int" />
         </EntityType>
         <EntityType Name="VAITRO">
           <Key>
@@ -326,8 +330,8 @@
           <EntitySet Name="PHIEUSUACHUA" EntityType="Self.PHIEUSUACHUA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PHIEUTHUTIEN" EntityType="Self.PHIEUTHUTIEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="THAMSO" EntityType="Self.THAMSO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TIENCONG" EntityType="Self.TIENCONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THAMSO" EntityType="Self.THAMSO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VAITRO" EntityType="Self.VAITRO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VATTU" EntityType="Self.VATTU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="XE" EntityType="Self.XE" Schema="dbo" store:Type="Tables" />
@@ -512,16 +516,10 @@
           <Property Name="HoTen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="TenTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="QuyenHan" Type="Int32" />
           <NavigationProperty Name="VAITRO" Relationship="Self.FK_QuyenHan" FromRole="TAIKHOAN" ToRole="VAITRO" />
-        </EntityType>
-        <EntityType Name="THAMSO">
-          <Key>
-            <PropertyRef Name="TenThamSo" />
-          </Key>
-          <Property Name="TenThamSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GiaTri" Type="Int32" />
         </EntityType>
         <EntityType Name="TIENCONG">
           <Key>
@@ -531,6 +529,16 @@
           <Property Name="TenTienCong" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="GiaTienCong" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="CT_PSC" Relationship="Self.FK_MaTienCong" FromRole="TIENCONG" ToRole="CT_PSC" />
+        </EntityType>
+        <EntityType Name="THAMSO">
+          <Key>
+            <PropertyRef Name="SoHieuXe" />
+          </Key>
+          <Property Name="TienNo" Type="Boolean" />
+          <Property Name="SoSuaChua" Type="Int32" />
+          <Property Name="SoHieuXe" Type="Int32" Nullable="false" />
+          <Property Name="SoVatTu" Type="Int32" />
+          <Property Name="SoTienCong" Type="Int32" />
         </EntityType>
         <EntityType Name="VAITRO">
           <Key>
@@ -736,8 +744,8 @@
           <EntitySet Name="PHIEUSUACHUAs" EntityType="Self.PHIEUSUACHUA" />
           <EntitySet Name="PHIEUTHUTIENs" EntityType="Self.PHIEUTHUTIEN" />
           <EntitySet Name="TAIKHOANs" EntityType="Self.TAIKHOAN" />
-          <EntitySet Name="THAMSOes" EntityType="Self.THAMSO" />
           <EntitySet Name="TIENCONGs" EntityType="Self.TIENCONG" />
+          <EntitySet Name="THAMSOes" EntityType="Self.THAMSO" />
           <EntitySet Name="VAITROes" EntityType="Self.VAITRO" />
           <EntitySet Name="VATTUs" EntityType="Self.VATTU" />
           <EntitySet Name="XEs" EntityType="Self.XE" />
@@ -912,16 +920,9 @@
                 <ScalarProperty Name="HoTen" ColumnName="HoTen" />
                 <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
                 <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
                 <ScalarProperty Name="QuyenHan" ColumnName="QuyenHan" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="THAMSOes">
-            <EntityTypeMapping TypeName="GarageManagementModel.THAMSO">
-              <MappingFragment StoreEntitySet="THAMSO">
-                <ScalarProperty Name="TenThamSo" ColumnName="TenThamSo" />
-                <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -931,6 +932,17 @@
                 <ScalarProperty Name="MaTienCong" ColumnName="MaTienCong" />
                 <ScalarProperty Name="TenTienCong" ColumnName="TenTienCong" />
                 <ScalarProperty Name="GiaTienCong" ColumnName="GiaTienCong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THAMSOes">
+            <EntityTypeMapping TypeName="GarageManagementModel.THAMSO">
+              <MappingFragment StoreEntitySet="THAMSO">
+                <ScalarProperty Name="TienNo" ColumnName="TienNo" />
+                <ScalarProperty Name="SoSuaChua" ColumnName="SoSuaChua" />
+                <ScalarProperty Name="SoHieuXe" ColumnName="SoHieuXe" />
+                <ScalarProperty Name="SoVatTu" ColumnName="SoVatTu" />
+                <ScalarProperty Name="SoTienCong" ColumnName="SoTienCong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

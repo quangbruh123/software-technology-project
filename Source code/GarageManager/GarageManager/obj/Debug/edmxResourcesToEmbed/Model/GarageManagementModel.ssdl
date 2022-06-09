@@ -106,6 +106,7 @@
     <Property Name="HoTen" Type="nvarchar(max)" />
     <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" />
     <Property Name="TenTaiKhoan" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
     <Property Name="MatKhau" Type="nvarchar(max)" />
     <Property Name="QuyenHan" Type="int" />
   </EntityType>
@@ -119,10 +120,13 @@
   </EntityType>
   <EntityType Name="THAMSO">
     <Key>
-      <PropertyRef Name="TenThamSo" />
+      <PropertyRef Name="SoHieuXe" />
     </Key>
-    <Property Name="TenThamSo" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="GiaTri" Type="int" />
+    <Property Name="TienNo" Type="bit" />
+    <Property Name="SoSuaChua" Type="int" />
+    <Property Name="SoHieuXe" Type="int" Nullable="false" />
+    <Property Name="SoVatTu" Type="int" />
+    <Property Name="SoTienCong" Type="int" />
   </EntityType>
   <EntityType Name="VAITRO">
     <Key>
