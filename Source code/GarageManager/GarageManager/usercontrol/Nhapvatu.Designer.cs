@@ -29,76 +29,29 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelTenVTPTMoi = new System.Windows.Forms.Label();
             this.textBoxTenVTPTMoi = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.labelGiaVTPT = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBoxDongiaNhap = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelSoLuongVTPT = new System.Windows.Forms.Label();
             this.cancerbtn = new System.Windows.Forms.Button();
             this.labelPhieuNhapVTPT = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel3.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 19);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Tên Vật Tư Phụ Tùng:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(159, 3);
-            this.textBox2.MaxLength = 30;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 26);
-            this.textBox2.TabIndex = 26;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(298, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 32);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(577, 295);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(462, 41);
-            this.panel3.TabIndex = 44;
-            this.panel3.Visible = false;
             // 
             // panel2
             // 
@@ -111,11 +64,10 @@
             this.panel2.Controls.Add(this.textBoxDongiaNhap);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.labelSoLuongVTPT);
-            this.panel2.Location = new System.Drawing.Point(538, 79);
+            this.panel2.Location = new System.Drawing.Point(538, 128);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(530, 148);
             this.panel2.TabIndex = 45;
-            this.panel2.Visible = false;
             // 
             // labelTenVTPTMoi
             // 
@@ -135,6 +87,16 @@
             this.textBoxTenVTPTMoi.Name = "textBoxTenVTPTMoi";
             this.textBoxTenVTPTMoi.Size = new System.Drawing.Size(121, 26);
             this.textBoxTenVTPTMoi.TabIndex = 26;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(57, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 19);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Đơn giá bán :";
             // 
             // labelGiaVTPT
             // 
@@ -156,6 +118,14 @@
             this.button1.TabIndex = 33;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(159, 97);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(121, 26);
+            this.textBox3.TabIndex = 30;
             // 
             // textBoxDongiaNhap
             // 
@@ -205,19 +175,6 @@
             this.labelPhieuNhapVTPT.Size = new System.Drawing.Size(318, 33);
             this.labelPhieuNhapVTPT.TabIndex = 39;
             this.labelPhieuNhapVTPT.Text = "Phiếu nhập vật tư phụ tùng";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Thêm",
-            "Xóa"});
-            this.comboBox1.Location = new System.Drawing.Point(538, 42);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 42;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -277,40 +234,30 @@
             this.Column4.HeaderText = "Số lượng";
             this.Column4.Name = "Column4";
             // 
-            // textBox3
+            // label1
             // 
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(159, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 26);
-            this.textBox3.TabIndex = 30;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(57, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 19);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Đơn giá bán :";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(691, 95);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(259, 33);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Thêm vật tư phụ tùng";
             // 
             // Nhapvatu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cancerbtn);
             this.Controls.Add(this.labelPhieuNhapVTPT);
-            this.Controls.Add(this.comboBox1);
             this.Name = "Nhapvatu";
             this.Size = new System.Drawing.Size(1089, 512);
             this.Load += new System.EventHandler(this.Nhapvatu_Load);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -321,10 +268,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelTenVTPTMoi;
         private System.Windows.Forms.TextBox textBoxTenVTPTMoi;
@@ -335,7 +278,6 @@
         private System.Windows.Forms.Label labelSoLuongVTPT;
         private System.Windows.Forms.Button cancerbtn;
         private System.Windows.Forms.Label labelPhieuNhapVTPT;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -344,5 +286,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label1;
     }
 }
