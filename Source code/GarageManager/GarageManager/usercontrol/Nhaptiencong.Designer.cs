@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.cancerbtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,10 +38,12 @@
             this.textBoxSoLuongVTPT = new System.Windows.Forms.TextBox();
             this.labelPhieuNhapVTPT = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -69,9 +72,9 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(872, 161);
+            this.button1.Location = new System.Drawing.Point(873, 161);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 32);
+            this.button1.Size = new System.Drawing.Size(142, 32);
             this.button1.TabIndex = 48;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = false;
@@ -92,7 +95,7 @@
             this.textBoxTenVTPTMoi.Location = new System.Drawing.Point(702, 116);
             this.textBoxTenVTPTMoi.MaxLength = 30;
             this.textBoxTenVTPTMoi.Name = "textBoxTenVTPTMoi";
-            this.textBoxTenVTPTMoi.Size = new System.Drawing.Size(121, 26);
+            this.textBoxTenVTPTMoi.Size = new System.Drawing.Size(142, 26);
             this.textBoxTenVTPTMoi.TabIndex = 41;
             // 
             // label3
@@ -110,7 +113,7 @@
             this.textBoxSoLuongVTPT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSoLuongVTPT.Location = new System.Drawing.Point(702, 167);
             this.textBoxSoLuongVTPT.Name = "textBoxSoLuongVTPT";
-            this.textBoxSoLuongVTPT.Size = new System.Drawing.Size(122, 26);
+            this.textBoxSoLuongVTPT.Size = new System.Drawing.Size(142, 26);
             this.textBoxSoLuongVTPT.TabIndex = 39;
             // 
             // labelPhieuNhapVTPT
@@ -127,23 +130,42 @@
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 69);
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(413, 320);
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(446, 320);
             this.dataGridView1.TabIndex = 49;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Column3
+            // panel1
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column3.HeaderText = "Đơn giá";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 69;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(5, 62);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(452, 329);
+            this.panel1.TabIndex = 51;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Stt";
+            this.Column1.Name = "Column1";
             // 
             // Column2
             // 
@@ -151,10 +173,11 @@
             this.Column2.HeaderText = "Tên tiền công";
             this.Column2.Name = "Column2";
             // 
-            // Column1
+            // Column3
             // 
-            this.Column1.HeaderText = "Stt";
-            this.Column1.Name = "Column1";
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Đơn giá";
+            this.Column3.Name = "Column3";
             // 
             // Nhaptiencong
             // 
@@ -169,11 +192,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxSoLuongVTPT);
             this.Controls.Add(this.labelPhieuNhapVTPT);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel1);
             this.Name = "Nhaptiencong";
             this.Size = new System.Drawing.Size(1089, 512);
             this.Load += new System.EventHandler(this.Nhaptiencong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,6 +213,7 @@
         private System.Windows.Forms.TextBox textBoxSoLuongVTPT;
         private System.Windows.Forms.Label labelPhieuNhapVTPT;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

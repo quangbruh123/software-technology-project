@@ -31,8 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.addvtptbtn = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -57,15 +55,17 @@
             this.licenseplatetxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DetailsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.addtcbtn = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DetailsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button4 = new System.Windows.Forms.Button();
+            this.addvtptbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addtcbtn)).BeginInit();
@@ -104,36 +104,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1089, 512);
             this.panel1.TabIndex = 0;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(223, 303);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(38, 35);
-            this.button4.TabIndex = 90;
-            this.button4.Text = "+";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // addvtptbtn
-            // 
-            this.addvtptbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            this.addvtptbtn.FlatAppearance.BorderSize = 0;
-            this.addvtptbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addvtptbtn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addvtptbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.addvtptbtn.Location = new System.Drawing.Point(223, 186);
-            this.addvtptbtn.Name = "addvtptbtn";
-            this.addvtptbtn.Size = new System.Drawing.Size(38, 35);
-            this.addvtptbtn.TabIndex = 89;
-            this.addvtptbtn.Text = "+";
-            this.addvtptbtn.UseVisualStyleBackColor = false;
-            this.addvtptbtn.Click += new System.EventHandler(this.addvtptbtn_Click);
             // 
             // panel8
             // 
@@ -191,7 +161,7 @@
             // textBoxTongTienPhieuSuaChua
             // 
             this.textBoxTongTienPhieuSuaChua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTongTienPhieuSuaChua.Location = new System.Drawing.Point(851, 393);
+            this.textBoxTongTienPhieuSuaChua.Location = new System.Drawing.Point(835, 412);
             this.textBoxTongTienPhieuSuaChua.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTongTienPhieuSuaChua.Name = "textBoxTongTienPhieuSuaChua";
             this.textBoxTongTienPhieuSuaChua.ReadOnly = true;
@@ -202,7 +172,7 @@
             // 
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongTien.Location = new System.Drawing.Point(766, 400);
+            this.lblTongTien.Location = new System.Drawing.Point(766, 419);
             this.lblTongTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(65, 19);
@@ -265,7 +235,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(3, 179);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 16);
+            this.label8.Size = new System.Drawing.Size(116, 16);
             this.label8.TabIndex = 72;
             this.label8.Text = "Vật tư phụ tùng :";
             // 
@@ -299,16 +269,16 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
+            this.button2.BackColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(1009, 135);
+            this.button2.Image = global::GarageManager.Properties.Resources.minus_40px;
+            this.button2.Location = new System.Drawing.Point(1009, 134);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 37);
+            this.button2.Size = new System.Drawing.Size(56, 49);
             this.button2.TabIndex = 70;
-            this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -388,18 +358,6 @@
             this.label1.TabIndex = 64;
             this.label1.Text = "PHIẾU SỬA CHỮA";
             // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 40F;
-            this.Column1.HeaderText = "Stt";
-            this.Column1.MaxInputLength = 30000;
-            this.Column1.Name = "Column1";
-            // 
-            // DetailsColumn
-            // 
-            this.DetailsColumn.HeaderText = "Nội dung";
-            this.DetailsColumn.Name = "DetailsColumn";
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
@@ -449,6 +407,18 @@
             this.addtcbtn.Size = new System.Drawing.Size(726, 247);
             this.addtcbtn.TabIndex = 42;
             // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 40F;
+            this.Column1.HeaderText = "Stt";
+            this.Column1.MaxInputLength = 30000;
+            this.Column1.Name = "Column1";
+            // 
+            // DetailsColumn
+            // 
+            this.DetailsColumn.HeaderText = "Nội dung";
+            this.DetailsColumn.Name = "DetailsColumn";
+            // 
             // Column2
             // 
             this.Column2.FillWeight = 133.0798F;
@@ -478,6 +448,36 @@
             this.Column6.HeaderText = "Thành tiền";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.Image = global::GarageManager.Properties.Resources.add_30px;
+            this.button4.Location = new System.Drawing.Point(223, 307);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(38, 35);
+            this.button4.TabIndex = 90;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // addvtptbtn
+            // 
+            this.addvtptbtn.BackColor = System.Drawing.Color.White;
+            this.addvtptbtn.FlatAppearance.BorderSize = 0;
+            this.addvtptbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addvtptbtn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addvtptbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.addvtptbtn.Image = global::GarageManager.Properties.Resources.add_30px;
+            this.addvtptbtn.Location = new System.Drawing.Point(223, 188);
+            this.addvtptbtn.Name = "addvtptbtn";
+            this.addvtptbtn.Size = new System.Drawing.Size(38, 35);
+            this.addvtptbtn.TabIndex = 89;
+            this.addvtptbtn.UseVisualStyleBackColor = false;
+            this.addvtptbtn.Click += new System.EventHandler(this.addvtptbtn_Click);
             // 
             // LapphieusuachuaUserControl
             // 
