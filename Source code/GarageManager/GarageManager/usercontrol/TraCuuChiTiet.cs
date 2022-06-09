@@ -21,13 +21,8 @@ namespace GarageManager.usercontrol
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            uc1 = new tracuuUserControl1();
-            
-            Controls.Add(uc1);
-            uc1.Visible = true;
-            uc1.Location = new Point(213, 31);
-            uc1.BringToFront();
+            TraCuu tracuu = (TraCuu)Parent;
+            tracuu.LoadTraCuuUserControl();
         }
     }
 }

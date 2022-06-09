@@ -416,7 +416,6 @@
     <None Include="Resources\minus_40px.png" />
     <None Include="Resources\add_30px.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Model\GarageManagementModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

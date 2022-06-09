@@ -17,11 +17,10 @@ namespace GarageManager
     {
         //Nút nhảy usercontrol
         private Chinhsuaquydinh uc1;
-        private tracuuUserControl1 uc2;
+        private TraCuu uc2;
         private Tiepnhanbaotrixe uc4;
         private LAPPHIEU uc5;
         private Baocaothang uc3;
-        private TraCuuChiTiet uc7;
         /// <summary>
         /// Stores the current role of the user. 0 is staff, 1 is admin
         /// </summary>
@@ -55,7 +54,7 @@ namespace GarageManager
             }
             uc1 = new Chinhsuaquydinh();
             Controls.Add(uc1);
-            uc2 = new tracuuUserControl1();
+            uc2 = new TraCuu();
             Controls.Add(uc2);
             uc3 = new Baocaothang();
             Controls.Add(uc3);

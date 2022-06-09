@@ -12,9 +12,28 @@ namespace GarageManager.usercontrol
 {
     public partial class TraCuu : UserControl
     {
+        private static tracuuUserControl1 tc1;
+        private static TraCuuChiTiet tcct;
         public TraCuu()
         {
             InitializeComponent();
+            tc1 = new tracuuUserControl1();
+            tcct = new TraCuuChiTiet();
+            Controls.Add(tc1);
+            Controls.Add(tcct);
+            LoadTraCuuUserControl();
+        }
+
+        public void LoadTraCuuUserControl()
+        {
+            tc1.Show();
+            tcct.Hide();
+        }
+
+        public void LoadTraCuuChiTiet()
+        {
+            tc1.Hide();
+            tcct.Show();
         }
     }
 }
