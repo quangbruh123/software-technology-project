@@ -87,7 +87,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(172, 409);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -105,6 +105,7 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Size = new System.Drawing.Size(1069, 370);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Stt
             // 
@@ -170,7 +171,7 @@
             // 
             this.MainWordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.MainWordTextbox.Location = new System.Drawing.Point(23, 111);
-            this.MainWordTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MainWordTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.MainWordTextbox.Name = "MainWordTextbox";
             this.MainWordTextbox.Size = new System.Drawing.Size(216, 23);
             this.MainWordTextbox.TabIndex = 11;
@@ -209,7 +210,7 @@
             // 
             this.CarPlateTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.CarPlateTextbox.Location = new System.Drawing.Point(335, 185);
-            this.CarPlateTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CarPlateTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.CarPlateTextbox.Name = "CarPlateTextbox";
             this.CarPlateTextbox.Size = new System.Drawing.Size(216, 23);
             this.CarPlateTextbox.TabIndex = 13;
@@ -228,7 +229,7 @@
             // 
             this.OwnerTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.OwnerTextbox.Location = new System.Drawing.Point(657, 182);
-            this.OwnerTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OwnerTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.OwnerTextbox.Name = "OwnerTextbox";
             this.OwnerTextbox.Size = new System.Drawing.Size(216, 23);
             this.OwnerTextbox.TabIndex = 15;
@@ -250,7 +251,7 @@
             this.FindBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FindBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.FindBtn.Location = new System.Drawing.Point(920, 52);
-            this.FindBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FindBtn.Margin = new System.Windows.Forms.Padding(4);
             this.FindBtn.Name = "FindBtn";
             this.FindBtn.Size = new System.Drawing.Size(105, 43);
             this.FindBtn.TabIndex = 19;
@@ -265,7 +266,7 @@
             this.ResetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ResetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.ResetBtn.Location = new System.Drawing.Point(920, 137);
-            this.ResetBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ResetBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ResetBtn.Name = "ResetBtn";
             this.ResetBtn.Size = new System.Drawing.Size(105, 44);
             this.ResetBtn.TabIndex = 19;
@@ -279,7 +280,7 @@
             this.comboBoxCarBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.comboBoxCarBrand.FormattingEnabled = true;
             this.comboBoxCarBrand.Location = new System.Drawing.Point(23, 185);
-            this.comboBoxCarBrand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxCarBrand.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCarBrand.Name = "comboBoxCarBrand";
             this.comboBoxCarBrand.Size = new System.Drawing.Size(216, 25);
             this.comboBoxCarBrand.TabIndex = 20;
@@ -303,7 +304,7 @@
             this.panel1.Controls.Add(this.MainWordTextbox);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(172, 119);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1069, 262);
             this.panel1.TabIndex = 14;
@@ -313,7 +314,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.radioButton2.Location = new System.Drawing.Point(420, 25);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(82, 24);
             this.radioButton2.TabIndex = 22;
@@ -326,7 +327,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.radioButton1.Location = new System.Drawing.Point(299, 25);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(89, 24);
             this.radioButton1.TabIndex = 21;
@@ -343,7 +344,7 @@
             this.Controls.Add(this.lblCapNhatQuyDinh);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "tracuuUserControl1";
             this.Size = new System.Drawing.Size(1452, 822);
             this.Load += new System.EventHandler(this.tracuuUserControl1_Load);

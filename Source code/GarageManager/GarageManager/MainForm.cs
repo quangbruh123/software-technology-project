@@ -21,6 +21,7 @@ namespace GarageManager
         private Tiepnhanbaotrixe uc4;
         private LAPPHIEU uc5;
         private Baocaothang uc3;
+        private TraCuuChiTiet uc7;
         /// <summary>
         /// Stores the current role of the user. 0 is staff, 1 is admin
         /// </summary>
