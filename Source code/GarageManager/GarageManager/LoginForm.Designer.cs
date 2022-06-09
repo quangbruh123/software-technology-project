@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.circularButton11 = new GarageManager.Classes.CircularButton1();
             this.gradient1 = new GarageManager.Control.gradient();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,11 +41,23 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.minbtn = new System.Windows.Forms.Button();
             this.usertxt = new System.Windows.Forms.TextBox();
-            this.circularButton11 = new GarageManager.Classes.CircularButton1();
             this.gradient1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
+            // 
+            // circularButton11
+            // 
+            this.circularButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
+            this.circularButton11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.circularButton11.Location = new System.Drawing.Point(-68, -159);
+            this.circularButton11.Margin = new System.Windows.Forms.Padding(4);
+            this.circularButton11.Name = "circularButton11";
+            this.circularButton11.Size = new System.Drawing.Size(317, 790);
+            this.circularButton11.TabIndex = 34;
+            this.circularButton11.Text = "              Garage \r\n         Management";
+            this.circularButton11.UseVisualStyleBackColor = false;
             // 
             // gradient1
             // 
@@ -62,7 +75,7 @@
             this.gradient1.Controls.Add(this.minbtn);
             this.gradient1.Controls.Add(this.usertxt);
             this.gradient1.Location = new System.Drawing.Point(257, 0);
-            this.gradient1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gradient1.Margin = new System.Windows.Forms.Padding(4);
             this.gradient1.Name = "gradient1";
             this.gradient1.Size = new System.Drawing.Size(469, 570);
             this.gradient1.TabIndex = 33;
@@ -72,7 +85,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
             this.panel2.Location = new System.Drawing.Point(84, 282);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(377, 4);
             this.panel2.TabIndex = 36;
@@ -81,7 +94,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
             this.panel1.Location = new System.Drawing.Point(83, 224);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(377, 4);
             this.panel1.TabIndex = 36;
@@ -92,14 +105,13 @@
             this.passwordtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordtxt.Location = new System.Drawing.Point(84, 242);
-            this.passwordtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.passwordtxt.Multiline = true;
+            this.passwordtxt.Margin = new System.Windows.Forms.Padding(4);
             this.passwordtxt.Name = "passwordtxt";
-            this.passwordtxt.PasswordChar = '*';
-            this.passwordtxt.Size = new System.Drawing.Size(381, 43);
-            this.passwordtxt.TabIndex = 35;
+            this.passwordtxt.Size = new System.Drawing.Size(381, 34);
+            this.passwordtxt.TabIndex = 2;
             this.passwordtxt.Text = "Mật khẩu";
-            this.passwordtxt.UseSystemPasswordChar = true;
+            this.passwordtxt.Enter += new System.EventHandler(this.passwordtxt_Enter);
+            this.passwordtxt.Leave += new System.EventHandler(this.passwordtxt_Leave);
             // 
             // dangnhapbtn
             // 
@@ -113,10 +125,10 @@
             this.dangnhapbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dangnhapbtn.ForeColor = System.Drawing.Color.White;
             this.dangnhapbtn.Location = new System.Drawing.Point(69, 293);
-            this.dangnhapbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dangnhapbtn.Margin = new System.Windows.Forms.Padding(4);
             this.dangnhapbtn.Name = "dangnhapbtn";
             this.dangnhapbtn.Size = new System.Drawing.Size(377, 49);
-            this.dangnhapbtn.TabIndex = 33;
+            this.dangnhapbtn.TabIndex = 3;
             this.dangnhapbtn.Text = "Đăng nhập";
             this.dangnhapbtn.TextColor = System.Drawing.Color.White;
             this.dangnhapbtn.UseVisualStyleBackColor = false;
@@ -130,10 +142,10 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(163, 350);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(173, 53);
-            this.button2.TabIndex = 27;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Quên mật khẩu";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -155,7 +167,7 @@
             // 
             this.pictureBox4.Image = global::GarageManager.Properties.Resources.Password_Key_26px;
             this.pictureBox4.Location = new System.Drawing.Point(16, 242);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(43, 43);
             this.pictureBox4.TabIndex = 31;
@@ -168,10 +180,10 @@
             this.CloseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseBtn.Image = global::GarageManager.Properties.Resources.Close_30px;
             this.CloseBtn.Location = new System.Drawing.Point(427, 0);
-            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4);
             this.CloseBtn.Name = "CloseBtn";
             this.CloseBtn.Size = new System.Drawing.Size(37, 32);
-            this.CloseBtn.TabIndex = 30;
+            this.CloseBtn.TabIndex = 6;
             this.CloseBtn.UseVisualStyleBackColor = false;
             this.CloseBtn.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
@@ -179,7 +191,7 @@
             // 
             this.pictureBox3.Image = global::GarageManager.Properties.Resources.user_30px;
             this.pictureBox3.Location = new System.Drawing.Point(16, 182);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(49, 43);
             this.pictureBox3.TabIndex = 32;
@@ -192,10 +204,10 @@
             this.minbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minbtn.Image = global::GarageManager.Properties.Resources.subtract_30px;
             this.minbtn.Location = new System.Drawing.Point(389, 0);
-            this.minbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.minbtn.Margin = new System.Windows.Forms.Padding(4);
             this.minbtn.Name = "minbtn";
             this.minbtn.Size = new System.Drawing.Size(37, 32);
-            this.minbtn.TabIndex = 29;
+            this.minbtn.TabIndex = 5;
             this.minbtn.UseVisualStyleBackColor = false;
             this.minbtn.Click += new System.EventHandler(this.minbtn_Click);
             // 
@@ -205,30 +217,17 @@
             this.usertxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usertxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usertxt.Location = new System.Drawing.Point(83, 182);
-            this.usertxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usertxt.Margin = new System.Windows.Forms.Padding(4);
             this.usertxt.Name = "usertxt";
             this.usertxt.Size = new System.Drawing.Size(377, 34);
-            this.usertxt.TabIndex = 23;
+            this.usertxt.TabIndex = 1;
             this.usertxt.Text = "Tên đăng nhập";
             this.usertxt.Enter += new System.EventHandler(this.usertxt_Enter);
             this.usertxt.Leave += new System.EventHandler(this.usertxt_Leave);
             // 
-            // circularButton11
-            // 
-            this.circularButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            this.circularButton11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularButton11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.circularButton11.Location = new System.Drawing.Point(-68, -159);
-            this.circularButton11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.circularButton11.Name = "circularButton11";
-            this.circularButton11.Size = new System.Drawing.Size(317, 790);
-            this.circularButton11.TabIndex = 34;
-            this.circularButton11.Text = "Garage manament";
-            this.circularButton11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.circularButton11.UseVisualStyleBackColor = false;
-            // 
             // LoginForm
             // 
+            this.AcceptButton = this.dangnhapbtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -236,7 +235,7 @@
             this.Controls.Add(this.circularButton11);
             this.Controls.Add(this.gradient1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDăngNhập";

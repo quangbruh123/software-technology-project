@@ -45,11 +45,12 @@ namespace GarageManager
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {             
-            var taikhoan = DataProvider.Instance.DB.TAIKHOANs;
-            foreach (var x in taikhoan)
+        {            
+            int stt = 1;
+            foreach (Model.TAIKHOAN item in DataProvider.Instance.DB.TAIKHOANs)
             {
-                dataGridViewNhanvien.Rows.Add(x.MaTaiKhoan, x.MatKhau,"1",x.QuyenHan);
+                dataGridViewNhanvien.Rows.Add(stt, item.HoTen, item.TenTaiKhoan, item.Email, item.QuyenHan);
+                stt++;
             }
             uc1 = new Chinhsuaquydinh();
             Controls.Add(uc1);

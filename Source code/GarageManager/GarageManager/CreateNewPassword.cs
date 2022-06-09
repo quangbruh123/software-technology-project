@@ -34,5 +34,41 @@ namespace GarageManager
             forgetAccount.MatKhau = passwordhash;
             this.Close();
         }
+
+        private void passwordtxt_Enter(object sender, EventArgs e)
+        {
+            if (passwordtxt.Text == "Mậu khẩu mới")
+            {
+                passwordtxt.Clear();
+                passwordtxt.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void passwordtxt_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(passwordtxt.Text))
+            {
+                passwordtxt.Text = "Mậu khẩu mới";
+                passwordtxt.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void repasswordtxt_Enter(object sender, EventArgs e)
+        {
+            if (repasswordtxt.Text == "Nhập lại mật khẩu")
+            {
+                repasswordtxt.Clear();
+                repasswordtxt.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void repasswordtxt_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(repasswordtxt.Text))
+            {
+                repasswordtxt.Text = "Nhập lại mật khẩu";
+                repasswordtxt.UseSystemPasswordChar = false;
+            }
+        }
     }
 }
