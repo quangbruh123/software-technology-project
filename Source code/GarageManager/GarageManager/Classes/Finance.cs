@@ -138,6 +138,24 @@ namespace GarageManager.Classes
         }
 
         /// <summary>
+        /// Update the price of a wage. The wage must have existed in the database
+        /// </summary>
+        /// <param name="wageName"></param>
+        /// <param name="wagePrice"></param>
+        /// <returns>True if successfully added, false if not</returns>
+        public static bool UpdateWagePrice(string wageName, int wagePrice)
+        {
+            if (DataProvider.Instance.DB.TIENCONGs.Any(x => x.TenTienCong == wageName))
+            {
+                Model.TIENCONG wage = DataProvider.Instance.DB.TIENCONGs.FirstOrDefault(x => x.TenTienCong == wageName);
+                wage.GiaTienCong = wagePrice;
+                return true;
+            }
+            else
+                return false;
+        }
+
+        /// <summary>
         /// Remove a wage type. The wage type must have existed in the database
         /// </summary>
         /// <param name="wageName"></param>
