@@ -20,15 +20,7 @@ namespace GarageManager.usercontrol
         }
 
         private void Baocaoton_Load(object sender, EventArgs e)
-        {
-            Debug.WriteLine(Properties.Settings.Default.LastLoginDate.Month + " " + Properties.Settings.Default.LastLoginDate.Year);
-            if (DateTime.Today.Month != Properties.Settings.Default.LastLoginDate.Month || DateTime.Today.Year != Properties.Settings.Default.LastLoginDate.Year)
-            {
-                Classes.Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);
-                Properties.Settings.Default.LastLoginDate = DateTime.Today;
-                Properties.Settings.Default.Save();
-            }
-
+        {           
             List<string> months = CultureInfo.InvariantCulture.DateTimeFormat.MonthNames.Take(12).ToList();
             for (int i = 0; i < months.Count; i++)
             {

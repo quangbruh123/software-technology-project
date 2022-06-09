@@ -23,12 +23,15 @@ namespace GarageManager.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2022-01-01")]
         public global::System.DateTime LastLoginDate {
             get {
                 return ((global::System.DateTime)(this["LastLoginDate"]));
+            }
+            set {
+                this["LastLoginDate"] = value;
             }
         }
     }

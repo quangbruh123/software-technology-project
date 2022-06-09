@@ -219,7 +219,7 @@ namespace GarageManager.Classes
         /// <param name="month"></param>
         /// <param name="year"></param>
         /// <returns>A list of storage reports according to each parts in the database</returns>
-        public List<Model.BAOCAOTON> GetMonthlyStorageReport(int month, int year)
+        public static List<Model.BAOCAOTON> GetMonthlyStorageReport(int month, int year)
         {
             return DataProvider.Instance.DB.BAOCAOTONs.Where(x => x.Thang == month && x.Nam == year).ToList();
         }
