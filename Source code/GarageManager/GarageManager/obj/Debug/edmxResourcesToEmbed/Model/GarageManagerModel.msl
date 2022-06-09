@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GarageManagementModelStoreContainer" CdmEntityContainer="GarageManagementEntities">
+    <EntitySetMapping Name="BAOCAODOANHSOes">
+      <EntityTypeMapping TypeName="GarageManagementModel.BAOCAODOANHSO">
+        <MappingFragment StoreEntitySet="BAOCAODOANHSO">
+          <ScalarProperty Name="MaBCDS" ColumnName="MaBCDS" />
+          <ScalarProperty Name="Thang" ColumnName="Thang" />
+          <ScalarProperty Name="Nam" ColumnName="Nam" />
+          <ScalarProperty Name="TongDoanhThu" ColumnName="TongDoanhThu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BAOCAOTONs">
+      <EntityTypeMapping TypeName="GarageManagementModel.BAOCAOTON">
+        <MappingFragment StoreEntitySet="BAOCAOTON">
+          <ScalarProperty Name="MaBCT" ColumnName="MaBCT" />
+          <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
+          <ScalarProperty Name="Thang" ColumnName="Thang" />
+          <ScalarProperty Name="Nam" ColumnName="Nam" />
+          <ScalarProperty Name="TonDau" ColumnName="TonDau" />
+          <ScalarProperty Name="PhatSinh" ColumnName="PhatSinh" />
+          <ScalarProperty Name="TonCuoi" ColumnName="TonCuoi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_BCDS">
+      <EntityTypeMapping TypeName="GarageManagementModel.CT_BCDS">
+        <MappingFragment StoreEntitySet="CT_BCDS">
+          <ScalarProperty Name="MaBCDS" ColumnName="MaBCDS" />
+          <ScalarProperty Name="MaHieuXe" ColumnName="MaHieuXe" />
+          <ScalarProperty Name="SoLuotSua" ColumnName="SoLuotSua" />
+          <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_PNVT">
+      <EntityTypeMapping TypeName="GarageManagementModel.CT_PNVT">
+        <MappingFragment StoreEntitySet="CT_PNVT">
+          <ScalarProperty Name="MaPhieuNhap" ColumnName="MaPhieuNhap" />
+          <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="DonGiaNhap" ColumnName="DonGiaNhap" />
+          <ScalarProperty Name="DonGiaBan" ColumnName="DonGiaBan" />
+          <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_PSC">
+      <EntityTypeMapping TypeName="GarageManagementModel.CT_PSC">
+        <MappingFragment StoreEntitySet="CT_PSC">
+          <ScalarProperty Name="MaCTPSC" ColumnName="MaCTPSC" />
+          <ScalarProperty Name="MaPhieuSC" ColumnName="MaPhieuSC" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="SoLan" ColumnName="SoLan" />
+          <ScalarProperty Name="MaTienCong" ColumnName="MaTienCong" />
+          <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_SUDUNGVATTU">
+      <EntityTypeMapping TypeName="GarageManagementModel.CT_SUDUNGVATTU">
+        <MappingFragment StoreEntitySet="CT_SUDUNGVATTU">
+          <ScalarProperty Name="MaCTPSC" ColumnName="MaCTPSC" />
+          <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HIEUXEs">
+      <EntityTypeMapping TypeName="GarageManagementModel.HIEUXE">
+        <MappingFragment StoreEntitySet="HIEUXE">
+          <ScalarProperty Name="MaHieuXe" ColumnName="MaHieuXe" />
+          <ScalarProperty Name="TenHieuXe" ColumnName="TenHieuXe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUNHAPVATTUs">
+      <EntityTypeMapping TypeName="GarageManagementModel.PHIEUNHAPVATTU">
+        <MappingFragment StoreEntitySet="PHIEUNHAPVATTU">
+          <ScalarProperty Name="MaPhieuNhap" ColumnName="MaPhieuNhap" />
+          <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUSUACHUAs">
+      <EntityTypeMapping TypeName="GarageManagementModel.PHIEUSUACHUA">
+        <MappingFragment StoreEntitySet="PHIEUSUACHUA">
+          <ScalarProperty Name="MaPhieuSC" ColumnName="MaPhieuSC" />
+          <ScalarProperty Name="BienSo" ColumnName="BienSo" />
+          <ScalarProperty Name="NgaySuaChua" ColumnName="NgaySuaChua" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUTHUTIENs">
+      <EntityTypeMapping TypeName="GarageManagementModel.PHIEUTHUTIEN">
+        <MappingFragment StoreEntitySet="PHIEUTHUTIEN">
+          <ScalarProperty Name="MaPTT" ColumnName="MaPTT" />
+          <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+          <ScalarProperty Name="BienSo" ColumnName="BienSo" />
+          <ScalarProperty Name="SoTienThu" ColumnName="SoTienThu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAIKHOANs">
+      <EntityTypeMapping TypeName="GarageManagementModel.TAIKHOAN">
+        <MappingFragment StoreEntitySet="TAIKHOAN">
+          <ScalarProperty Name="MaTaiKhoan" ColumnName="MaTaiKhoan" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="QuyenHan" ColumnName="QuyenHan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THAMSOes">
+      <EntityTypeMapping TypeName="GarageManagementModel.THAMSO">
+        <MappingFragment StoreEntitySet="THAMSO">
+          <ScalarProperty Name="TenThamSo" ColumnName="TenThamSo" />
+          <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIENCONGs">
+      <EntityTypeMapping TypeName="GarageManagementModel.TIENCONG">
+        <MappingFragment StoreEntitySet="TIENCONG">
+          <ScalarProperty Name="MaTienCong" ColumnName="MaTienCong" />
+          <ScalarProperty Name="TenTienCong" ColumnName="TenTienCong" />
+          <ScalarProperty Name="GiaTienCong" ColumnName="GiaTienCong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VAITROes">
+      <EntityTypeMapping TypeName="GarageManagementModel.VAITRO">
+        <MappingFragment StoreEntitySet="VAITRO">
+          <ScalarProperty Name="MaVaiTro" ColumnName="MaVaiTro" />
+          <ScalarProperty Name="TenVaiTro" ColumnName="TenVaiTro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VATTUs">
+      <EntityTypeMapping TypeName="GarageManagementModel.VATTU">
+        <MappingFragment StoreEntitySet="VATTU">
+          <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
+          <ScalarProperty Name="TenVatTu" ColumnName="TenVatTu" />
+          <ScalarProperty Name="DonGiaHienTai" ColumnName="DonGiaHienTai" />
+          <ScalarProperty Name="SoLuongTon" ColumnName="SoLuongTon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XEs">
+      <EntityTypeMapping TypeName="GarageManagementModel.XE">
+        <MappingFragment StoreEntitySet="XE">
+          <ScalarProperty Name="BienSo" ColumnName="BienSo" />
+          <ScalarProperty Name="TenChuXe" ColumnName="TenChuXe" />
+          <ScalarProperty Name="MaHieuXe" ColumnName="MaHieuXe" />
+          <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NgayTiepNhan" ColumnName="NgayTiepNhan" />
+          <ScalarProperty Name="TienNo" ColumnName="TienNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

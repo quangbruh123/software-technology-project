@@ -234,3 +234,35 @@ D:\Software Technology\Do an\software-technology-project\Source code\GarageManag
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.CreateNewPassword.resources
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Nhaptiencong.resources
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Quenmk.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.AssemblyReference.cache
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.SuggestedBindingRedirects.cache
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.CreateNewPassword.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.ForgetPassword.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.LoginForm.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.Formtaotaikhoan.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.MainForm.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.Properties.Resources.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaodoanhso.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaothang.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaoton.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Chinhsuaquydinh.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.LAPPHIEU.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.LapphieusuachuaUserControl.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.LapphieuthutienUserControl.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Nhaptiencong.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Nhapvatu.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Quenmk.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.tracuuUserControl1.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Tiepnhanbaotrixe.resources
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.GenerateResource.cache
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.CoreCompileInputs.cache
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.exe
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.pdb
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\GarageManager.exe.config
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\GarageManager.exe
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\GarageManager.pdb
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\EntityFramework.dll
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\EntityFramework.SqlServer.dll
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\EntityFramework.xml
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\EntityFramework.SqlServer.xml
+D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.CopyComplete

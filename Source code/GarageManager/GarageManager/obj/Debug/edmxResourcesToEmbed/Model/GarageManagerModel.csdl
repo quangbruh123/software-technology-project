@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GarageManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BAOCAODOANHSO">
+    <Key>
+      <PropertyRef Name="MaBCDS" />
+    </Key>
+    <Property Name="MaBCDS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Thang" Type="Int32" />
+    <Property Name="Nam" Type="Int32" />
+    <Property Name="TongDoanhThu" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="CT_BCDS" Relationship="Self.FK_MaBCDS" FromRole="BAOCAODOANHSO" ToRole="CT_BCDS" />
+  </EntityType>
+  <EntityType Name="BAOCAOTON">
+    <Key>
+      <PropertyRef Name="MaBCT" />
+    </Key>
+    <Property Name="MaBCT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaVatTu" Type="Int32" />
+    <Property Name="Thang" Type="Int32" />
+    <Property Name="Nam" Type="Int32" />
+    <Property Name="TonDau" Type="Int32" />
+    <Property Name="PhatSinh" Type="Int32" />
+    <Property Name="TonCuoi" Type="Int32" />
+    <NavigationProperty Name="VATTU" Relationship="Self.FK_BCT_MaVatTu" FromRole="BAOCAOTON" ToRole="VATTU" />
+  </EntityType>
+  <EntityType Name="CT_BCDS">
+    <Key>
+      <PropertyRef Name="MaBCDS" />
+      <PropertyRef Name="MaHieuXe" />
+    </Key>
+    <Property Name="MaBCDS" Type="Int32" Nullable="false" />
+    <Property Name="MaHieuXe" Type="Int32" Nullable="false" />
+    <Property Name="SoLuotSua" Type="Int32" />
+    <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="BAOCAODOANHSO" Relationship="Self.FK_MaBCDS" FromRole="CT_BCDS" ToRole="BAOCAODOANHSO" />
+    <NavigationProperty Name="HIEUXE" Relationship="Self.FK_HieuXe" FromRole="CT_BCDS" ToRole="HIEUXE" />
+  </EntityType>
+  <EntityType Name="CT_PNVT">
+    <Key>
+      <PropertyRef Name="MaPhieuNhap" />
+      <PropertyRef Name="MaVatTu" />
+    </Key>
+    <Property Name="MaPhieuNhap" Type="Int32" Nullable="false" />
+    <Property Name="MaVatTu" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGiaNhap" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DonGiaBan" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="PHIEUNHAPVATTU" Relationship="Self.FK_MaPhieuNhap" FromRole="CT_PNVT" ToRole="PHIEUNHAPVATTU" />
+    <NavigationProperty Name="VATTU" Relationship="Self.FK_PNVT_MaVatTu" FromRole="CT_PNVT" ToRole="VATTU" />
+  </EntityType>
+  <EntityType Name="CT_PSC">
+    <Key>
+      <PropertyRef Name="MaCTPSC" />
+    </Key>
+    <Property Name="MaCTPSC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaPhieuSC" Type="Int32" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoLan" Type="Int32" />
+    <Property Name="MaTienCong" Type="Int32" />
+    <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="CT_SUDUNGVATTU" Relationship="Self.FK_MaCTPSC" FromRole="CT_PSC" ToRole="CT_SUDUNGVATTU" />
+    <NavigationProperty Name="PHIEUSUACHUA" Relationship="Self.FK_MaPhieuSC" FromRole="CT_PSC" ToRole="PHIEUSUACHUA" />
+    <NavigationProperty Name="TIENCONG" Relationship="Self.FK_MaTienCong" FromRole="CT_PSC" ToRole="TIENCONG" />
+  </EntityType>
+  <EntityType Name="CT_SUDUNGVATTU">
+    <Key>
+      <PropertyRef Name="MaCTPSC" />
+      <PropertyRef Name="MaVatTu" />
+    </Key>
+    <Property Name="MaCTPSC" Type="Int32" Nullable="false" />
+    <Property Name="MaVatTu" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="CT_PSC" Relationship="Self.FK_MaCTPSC" FromRole="CT_SUDUNGVATTU" ToRole="CT_PSC" />
+    <NavigationProperty Name="VATTU" Relationship="Self.FK_SDVT_MaVatTu" FromRole="CT_SUDUNGVATTU" ToRole="VATTU" />
+  </EntityType>
+  <EntityType Name="HIEUXE">
+    <Key>
+      <PropertyRef Name="MaHieuXe" />
+    </Key>
+    <Property Name="MaHieuXe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenHieuXe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CT_BCDS" Relationship="Self.FK_HieuXe" FromRole="HIEUXE" ToRole="CT_BCDS" />
+    <NavigationProperty Name="XEs" Relationship="Self.FK_XE_MaHieuXe" FromRole="HIEUXE" ToRole="XE" />
+  </EntityType>
+  <EntityType Name="PHIEUNHAPVATTU">
+    <Key>
+      <PropertyRef Name="MaPhieuNhap" />
+    </Key>
+    <Property Name="MaPhieuNhap" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+    <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="CT_PNVT" Relationship="Self.FK_MaPhieuNhap" FromRole="PHIEUNHAPVATTU" ToRole="CT_PNVT" />
+  </EntityType>
+  <EntityType Name="PHIEUSUACHUA">
+    <Key>
+      <PropertyRef Name="MaPhieuSC" />
+    </Key>
+    <Property Name="MaPhieuSC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BienSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySuaChua" Type="DateTime" Precision="0" />
+    <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="CT_PSC" Relationship="Self.FK_MaPhieuSC" FromRole="PHIEUSUACHUA" ToRole="CT_PSC" />
+    <NavigationProperty Name="XE" Relationship="Self.FK_PSC_BienSo" FromRole="PHIEUSUACHUA" ToRole="XE" />
+  </EntityType>
+  <EntityType Name="PHIEUTHUTIEN">
+    <Key>
+      <PropertyRef Name="MaPTT" />
+    </Key>
+    <Property Name="MaPTT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayLap" Type="DateTime" Precision="0" />
+    <Property Name="BienSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoTienThu" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="XE" Relationship="Self.FK_PTT_BienSo" FromRole="PHIEUTHUTIEN" ToRole="XE" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="MaTaiKhoan" />
+    </Key>
+    <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TenTaiKhoan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuyenHan" Type="Int32" />
+    <NavigationProperty Name="VAITRO" Relationship="Self.FK_QuyenHan" FromRole="TAIKHOAN" ToRole="VAITRO" />
+  </EntityType>
+  <EntityType Name="THAMSO">
+    <Key>
+      <PropertyRef Name="TenThamSo" />
+    </Key>
+    <Property Name="TenThamSo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GiaTri" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TIENCONG">
+    <Key>
+      <PropertyRef Name="MaTienCong" />
+    </Key>
+    <Property Name="MaTienCong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTienCong" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GiaTienCong" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="CT_PSC" Relationship="Self.FK_MaTienCong" FromRole="TIENCONG" ToRole="CT_PSC" />
+  </EntityType>
+  <EntityType Name="VAITRO">
+    <Key>
+      <PropertyRef Name="MaVaiTro" />
+    </Key>
+    <Property Name="MaVaiTro" Type="Int32" Nullable="false" />
+    <Property Name="TenVaiTro" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TAIKHOANs" Relationship="Self.FK_QuyenHan" FromRole="VAITRO" ToRole="TAIKHOAN" />
+  </EntityType>
+  <EntityType Name="VATTU">
+    <Key>
+      <PropertyRef Name="MaVatTu" />
+    </Key>
+    <Property Name="MaVatTu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenVatTu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DonGiaHienTai" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SoLuongTon" Type="Int32" />
+    <NavigationProperty Name="BAOCAOTONs" Relationship="Self.FK_BCT_MaVatTu" FromRole="VATTU" ToRole="BAOCAOTON" />
+    <NavigationProperty Name="CT_PNVT" Relationship="Self.FK_PNVT_MaVatTu" FromRole="VATTU" ToRole="CT_PNVT" />
+    <NavigationProperty Name="CT_SUDUNGVATTU" Relationship="Self.FK_SDVT_MaVatTu" FromRole="VATTU" ToRole="CT_SUDUNGVATTU" />
+  </EntityType>
+  <EntityType Name="XE">
+    <Key>
+      <PropertyRef Name="BienSo" />
+    </Key>
+    <Property Name="BienSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenChuXe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaHieuXe" Type="Int32" />
+    <Property Name="DienThoai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgayTiepNhan" Type="DateTime" Precision="3" />
+    <Property Name="TienNo" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="HIEUXE" Relationship="Self.FK_XE_MaHieuXe" FromRole="XE" ToRole="HIEUXE" />
+    <NavigationProperty Name="PHIEUSUACHUAs" Relationship="Self.FK_PSC_BienSo" FromRole="XE" ToRole="PHIEUSUACHUA" />
+    <NavigationProperty Name="PHIEUTHUTIENs" Relationship="Self.FK_PTT_BienSo" FromRole="XE" ToRole="PHIEUTHUTIEN" />
+  </EntityType>
+  <Association Name="FK_MaBCDS">
+    <End Role="BAOCAODOANHSO" Type="Self.BAOCAODOANHSO" Multiplicity="1" />
+    <End Role="CT_BCDS" Type="Self.CT_BCDS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAOCAODOANHSO">
+        <PropertyRef Name="MaBCDS" />
+      </Principal>
+      <Dependent Role="CT_BCDS">
+        <PropertyRef Name="MaBCDS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BCT_MaVatTu">
+    <End Role="VATTU" Type="Self.VATTU" Multiplicity="0..1" />
+    <End Role="BAOCAOTON" Type="Self.BAOCAOTON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VATTU">
+        <PropertyRef Name="MaVatTu" />
+      </Principal>
+      <Dependent Role="BAOCAOTON">
+        <PropertyRef Name="MaVatTu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HieuXe">
+    <End Role="HIEUXE" Type="Self.HIEUXE" Multiplicity="1" />
+    <End Role="CT_BCDS" Type="Self.CT_BCDS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HIEUXE">
+        <PropertyRef Name="MaHieuXe" />
+      </Principal>
+      <Dependent Role="CT_BCDS">
+        <PropertyRef Name="MaHieuXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MaPhieuNhap">
+    <End Role="PHIEUNHAPVATTU" Type="Self.PHIEUNHAPVATTU" Multiplicity="1" />
+    <End Role="CT_PNVT" Type="Self.CT_PNVT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUNHAPVATTU">
+        <PropertyRef Name="MaPhieuNhap" />
+      </Principal>
+      <Dependent Role="CT_PNVT">
+        <PropertyRef Name="MaPhieuNhap" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PNVT_MaVatTu">
+    <End Role="VATTU" Type="Self.VATTU" Multiplicity="1" />
+    <End Role="CT_PNVT" Type="Self.CT_PNVT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VATTU">
+        <PropertyRef Name="MaVatTu" />
+      </Principal>
+      <Dependent Role="CT_PNVT">
+        <PropertyRef Name="MaVatTu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MaCTPSC">
+    <End Role="CT_PSC" Type="Self.CT_PSC" Multiplicity="1" />
+    <End Role="CT_SUDUNGVATTU" Type="Self.CT_SUDUNGVATTU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CT_PSC">
+        <PropertyRef Name="MaCTPSC" />
+      </Principal>
+      <Dependent Role="CT_SUDUNGVATTU">
+        <PropertyRef Name="MaCTPSC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MaPhieuSC">
+    <End Role="PHIEUSUACHUA" Type="Self.PHIEUSUACHUA" Multiplicity="0..1" />
+    <End Role="CT_PSC" Type="Self.CT_PSC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUSUACHUA">
+        <PropertyRef Name="MaPhieuSC" />
+      </Principal>
+      <Dependent Role="CT_PSC">
+        <PropertyRef Name="MaPhieuSC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MaTienCong">
+    <End Role="TIENCONG" Type="Self.TIENCONG" Multiplicity="0..1" />
+    <End Role="CT_PSC" Type="Self.CT_PSC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIENCONG">
+        <PropertyRef Name="MaTienCong" />
+      </Principal>
+      <Dependent Role="CT_PSC">
+        <PropertyRef Name="MaTienCong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SDVT_MaVatTu">
+    <End Role="VATTU" Type="Self.VATTU" Multiplicity="1" />
+    <End Role="CT_SUDUNGVATTU" Type="Self.CT_SUDUNGVATTU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VATTU">
+        <PropertyRef Name="MaVatTu" />
+      </Principal>
+      <Dependent Role="CT_SUDUNGVATTU">
+        <PropertyRef Name="MaVatTu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_XE_MaHieuXe">
+    <End Role="HIEUXE" Type="Self.HIEUXE" Multiplicity="0..1" />
+    <End Role="XE" Type="Self.XE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HIEUXE">
+        <PropertyRef Name="MaHieuXe" />
+      </Principal>
+      <Dependent Role="XE">
+        <PropertyRef Name="MaHieuXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PSC_BienSo">
+    <End Role="XE" Type="Self.XE" Multiplicity="0..1" />
+    <End Role="PHIEUSUACHUA" Type="Self.PHIEUSUACHUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XE">
+        <PropertyRef Name="BienSo" />
+      </Principal>
+      <Dependent Role="PHIEUSUACHUA">
+        <PropertyRef Name="BienSo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PTT_BienSo">
+    <End Role="XE" Type="Self.XE" Multiplicity="0..1" />
+    <End Role="PHIEUTHUTIEN" Type="Self.PHIEUTHUTIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XE">
+        <PropertyRef Name="BienSo" />
+      </Principal>
+      <Dependent Role="PHIEUTHUTIEN">
+        <PropertyRef Name="BienSo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuyenHan">
+    <End Role="VAITRO" Type="Self.VAITRO" Multiplicity="0..1" />
+    <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VAITRO">
+        <PropertyRef Name="MaVaiTro" />
+      </Principal>
+      <Dependent Role="TAIKHOAN">
+        <PropertyRef Name="QuyenHan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GarageManagementEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BAOCAODOANHSOes" EntityType="Self.BAOCAODOANHSO" />
+    <EntitySet Name="BAOCAOTONs" EntityType="Self.BAOCAOTON" />
+    <EntitySet Name="CT_BCDS" EntityType="Self.CT_BCDS" />
+    <EntitySet Name="CT_PNVT" EntityType="Self.CT_PNVT" />
+    <EntitySet Name="CT_PSC" EntityType="Self.CT_PSC" />
+    <EntitySet Name="CT_SUDUNGVATTU" EntityType="Self.CT_SUDUNGVATTU" />
+    <EntitySet Name="HIEUXEs" EntityType="Self.HIEUXE" />
+    <EntitySet Name="PHIEUNHAPVATTUs" EntityType="Self.PHIEUNHAPVATTU" />
+    <EntitySet Name="PHIEUSUACHUAs" EntityType="Self.PHIEUSUACHUA" />
+    <EntitySet Name="PHIEUTHUTIENs" EntityType="Self.PHIEUTHUTIEN" />
+    <EntitySet Name="TAIKHOANs" EntityType="Self.TAIKHOAN" />
+    <EntitySet Name="THAMSOes" EntityType="Self.THAMSO" />
+    <EntitySet Name="TIENCONGs" EntityType="Self.TIENCONG" />
+    <EntitySet Name="VAITROes" EntityType="Self.VAITRO" />
+    <EntitySet Name="VATTUs" EntityType="Self.VATTU" />
+    <EntitySet Name="XEs" EntityType="Self.XE" />
+    <AssociationSet Name="FK_MaBCDS" Association="Self.FK_MaBCDS">
+      <End Role="BAOCAODOANHSO" EntitySet="BAOCAODOANHSOes" />
+      <End Role="CT_BCDS" EntitySet="CT_BCDS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BCT_MaVatTu" Association="Self.FK_BCT_MaVatTu">
+      <End Role="VATTU" EntitySet="VATTUs" />
+      <End Role="BAOCAOTON" EntitySet="BAOCAOTONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HieuXe" Association="Self.FK_HieuXe">
+      <End Role="HIEUXE" EntitySet="HIEUXEs" />
+      <End Role="CT_BCDS" EntitySet="CT_BCDS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MaPhieuNhap" Association="Self.FK_MaPhieuNhap">
+      <End Role="PHIEUNHAPVATTU" EntitySet="PHIEUNHAPVATTUs" />
+      <End Role="CT_PNVT" EntitySet="CT_PNVT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PNVT_MaVatTu" Association="Self.FK_PNVT_MaVatTu">
+      <End Role="VATTU" EntitySet="VATTUs" />
+      <End Role="CT_PNVT" EntitySet="CT_PNVT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MaCTPSC" Association="Self.FK_MaCTPSC">
+      <End Role="CT_PSC" EntitySet="CT_PSC" />
+      <End Role="CT_SUDUNGVATTU" EntitySet="CT_SUDUNGVATTU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MaPhieuSC" Association="Self.FK_MaPhieuSC">
+      <End Role="PHIEUSUACHUA" EntitySet="PHIEUSUACHUAs" />
+      <End Role="CT_PSC" EntitySet="CT_PSC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MaTienCong" Association="Self.FK_MaTienCong">
+      <End Role="TIENCONG" EntitySet="TIENCONGs" />
+      <End Role="CT_PSC" EntitySet="CT_PSC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SDVT_MaVatTu" Association="Self.FK_SDVT_MaVatTu">
+      <End Role="VATTU" EntitySet="VATTUs" />
+      <End Role="CT_SUDUNGVATTU" EntitySet="CT_SUDUNGVATTU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_XE_MaHieuXe" Association="Self.FK_XE_MaHieuXe">
+      <End Role="HIEUXE" EntitySet="HIEUXEs" />
+      <End Role="XE" EntitySet="XEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PSC_BienSo" Association="Self.FK_PSC_BienSo">
+      <End Role="XE" EntitySet="XEs" />
+      <End Role="PHIEUSUACHUA" EntitySet="PHIEUSUACHUAs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PTT_BienSo" Association="Self.FK_PTT_BienSo">
+      <End Role="XE" EntitySet="XEs" />
+      <End Role="PHIEUTHUTIEN" EntitySet="PHIEUTHUTIENs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuyenHan" Association="Self.FK_QuyenHan">
+      <End Role="VAITRO" EntitySet="VAITROes" />
+      <End Role="TAIKHOAN" EntitySet="TAIKHOANs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
