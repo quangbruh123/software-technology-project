@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GarageManager.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="LastLoginDate" Type="System.DateTime" Scope="Application">
+    <Setting Name="LastLoginDate" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)">2022-01-01</Value>
     </Setting>
   </Settings>
