@@ -104,9 +104,9 @@ CREATE TABLE CT_BCDS (
 )
 
 CREATE TABLE THAMSO (
-	TienNo	        BIT PRIMARY KEY,
+	TienNo	        	BIT,
 	SoSuaChua		INT,
-	SoHieuXe		INT,
+	SoHieuXe		INT PRIMARY KEY,
 	SoVatTu			INT,
 	SoTienCong		INT,
 )
