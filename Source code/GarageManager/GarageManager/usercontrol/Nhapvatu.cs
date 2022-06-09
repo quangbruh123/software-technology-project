@@ -64,5 +64,45 @@ namespace GarageManager.usercontrol
 
 
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Classes.Storage.RemovePart(textBox2.Text);
+            dataGridView1.Rows.Clear();
+            int i = 1;
+            var taikhoan = DataProvider.Instance.DB.VATTUs;
+            foreach (var x in taikhoan)
+            {
+                dataGridView1.Rows.Add(i, x.TenVatTu, x.DonGiaHienTai, x.SoLuongTon);
+                i++;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBoxTenVTPTMoi.Text) == true ||
+                String.IsNullOrEmpty(textBox1.Text) == true || String.IsNullOrEmpty(textBoxDongiaNhap.Text) == true )
+            {
+                MessageBox.Show("Thông tin chưa được điền đầy đủ", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (Classes.Finance.AddWageType(textBoxTenVTPTMoi.Text, Decimal.Parse(textBoxSoLuongVTPT.Text)) == true)
+                {
+                    MessageBox.Show("Thông tin đã được thêm thành công", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.Rows.Clear();
+                    int i = 1;
+                    var taikhoan = DataProvider.Instance.DB.TIENCONGs;
+                    foreach (var x in taikhoan)
+                    {
+                        dataGridView1.Rows.Add(i, x.TenTienCong, x.GiaTienCong);
+                        i++;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Thông tin không được thêm thành công, yêu cầu kiểm tra lại thông tin", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
     }
 }

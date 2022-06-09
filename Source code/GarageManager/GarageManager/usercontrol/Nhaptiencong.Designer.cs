@@ -66,7 +66,7 @@
             // 
             this.cancerbtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.cancerbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancerbtn.Location = new System.Drawing.Point(939, 457);
+            this.cancerbtn.Location = new System.Drawing.Point(939, 477);
             this.cancerbtn.Name = "cancerbtn";
             this.cancerbtn.Size = new System.Drawing.Size(142, 32);
             this.cancerbtn.TabIndex = 47;
@@ -170,7 +170,7 @@
             "Chỉnh sửa"});
             this.comboBox1.Location = new System.Drawing.Point(480, 65);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.Size = new System.Drawing.Size(164, 28);
             this.comboBox1.TabIndex = 54;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
