@@ -14,7 +14,6 @@ namespace GarageManager.usercontrol
     public partial class tracuuUserControl1 : UserControl
     {
         private int itemCounter = 0;
-        private TraCuuChiTiet uc1;
 
         public tracuuUserControl1()
         {
@@ -215,8 +214,18 @@ namespace GarageManager.usercontrol
             {
                 if (MessageBox.Show("Xem chi tiết về thông tin xe ?", "Notice", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
+                    string bienso;
+                    if (dataGridView1.SelectedRows.Count != 0)
+                    {
+                        bienso = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+                    }
+                    else
+                    {
+                        bienso = dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[3].Value.ToString();
+                    }
+                    Model.XE xe = DataProvider.Instance.DB.XEs.FirstOrDefault(x => x.BienSo == bienso);
                     TraCuu tracuu = (TraCuu)Parent;
-                    tracuu.LoadTraCuuChiTiet();
+                    tracuu.LoadTraCuuChiTiet(xe);
                 }
 
             }

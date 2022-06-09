@@ -30,10 +30,11 @@ namespace GarageManager.usercontrol
             tcct.Hide();
         }
 
-        public void LoadTraCuuChiTiet()
+        public void LoadTraCuuChiTiet(Model.XE xe)
         {
             tc1.Hide();
             tcct.Show();
+            tcct.LoadChitiet(xe);
         }
     }
 }
