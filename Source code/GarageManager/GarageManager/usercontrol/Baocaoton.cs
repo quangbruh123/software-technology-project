@@ -14,8 +14,6 @@ namespace GarageManager.usercontrol
 {
     public partial class Baocaoton : UserControl
     {
-        private int month;
-        private int year;
         public Baocaoton()
         {
             InitializeComponent();
