@@ -33,6 +33,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.Lapphieusuachuabtn = new System.Windows.Forms.Button();
             this.VTPTbtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -99,7 +100,7 @@
             this.VTPTbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.VTPTbtn.Image = global::GarageManager.Properties.Resources.construction_40px;
             this.VTPTbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.VTPTbtn.Location = new System.Drawing.Point(591, 50);
+            this.VTPTbtn.Location = new System.Drawing.Point(616, 50);
             this.VTPTbtn.Name = "VTPTbtn";
             this.VTPTbtn.Size = new System.Drawing.Size(262, 93);
             this.VTPTbtn.TabIndex = 7;
@@ -108,12 +109,31 @@
             this.VTPTbtn.UseVisualStyleBackColor = false;
             this.VTPTbtn.Click += new System.EventHandler(this.VTPTbtn_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Image = global::GarageManager.Properties.Resources.construction_40px;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(884, 50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(262, 93);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Hiệu chỉnh tiền công";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LAPPHIEU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.lblCapNhatQuyDinh);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.VTPTbtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Lapphieusuachuabtn);
@@ -131,5 +151,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblCapNhatQuyDinh;
         private System.Windows.Forms.Button VTPTbtn;
+        private System.Windows.Forms.Button button1;
     }
 }

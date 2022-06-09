@@ -64,8 +64,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button4 = new System.Windows.Forms.Button();
-            this.addvtptbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addtcbtn)).BeginInit();
@@ -73,8 +71,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.addvtptbtn);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel6);
@@ -235,7 +231,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(3, 179);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(116, 16);
+            this.label8.Size = new System.Drawing.Size(117, 16);
             this.label8.TabIndex = 72;
             this.label8.Text = "Vật tư phụ tùng :";
             // 
@@ -449,36 +445,6 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Image = global::GarageManager.Properties.Resources.add_30px;
-            this.button4.Location = new System.Drawing.Point(223, 307);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(38, 35);
-            this.button4.TabIndex = 90;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // addvtptbtn
-            // 
-            this.addvtptbtn.BackColor = System.Drawing.Color.White;
-            this.addvtptbtn.FlatAppearance.BorderSize = 0;
-            this.addvtptbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addvtptbtn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addvtptbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.addvtptbtn.Image = global::GarageManager.Properties.Resources.add_30px;
-            this.addvtptbtn.Location = new System.Drawing.Point(223, 188);
-            this.addvtptbtn.Name = "addvtptbtn";
-            this.addvtptbtn.Size = new System.Drawing.Size(38, 35);
-            this.addvtptbtn.TabIndex = 89;
-            this.addvtptbtn.UseVisualStyleBackColor = false;
-            this.addvtptbtn.Click += new System.EventHandler(this.addvtptbtn_Click);
-            // 
             // LapphieusuachuaUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,8 +465,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button addvtptbtn;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
