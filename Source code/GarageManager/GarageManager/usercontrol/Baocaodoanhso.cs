@@ -54,7 +54,7 @@ namespace GarageManager.usercontrol
             }
             else
             {
-                month = DateTime.ParseExact((string)monthComboBox.SelectedValue, "MMMM", CultureInfo.InvariantCulture).Month;
+                month = int.Parse(monthComboBox.GetItemText(yearComboBox.SelectedItem));
                 year = int.Parse(yearComboBox.GetItemText(yearComboBox.SelectedItem));
                 LoadData();
             }
@@ -62,18 +62,19 @@ namespace GarageManager.usercontrol
 
         private void Baocaodoanhso_Load(object sender, EventArgs e)
         {
-            monthComboBox.DataSource = CultureInfo.InvariantCulture.DateTimeFormat.MonthNames.Take(12).ToList();
-            monthComboBox.SelectedItem = CultureInfo.InvariantCulture.DateTimeFormat.MonthNames[DateTime.Now.AddMonths(-1).Month];
-            yearComboBox.DataSource = Enumerable.Range(2010, DateTime.Now.Year - 2010 + 1).ToList();
-            yearComboBox.SelectedItem = DateTime.Now.Year;     
+            List<string> months = CultureInfo.InvariantCulture.DateTimeFormat.MonthNames.Take(12).ToList();
+            for (int i = 0; i < months.Count; i++)
+            {
+                monthComboBox.Items.Add(DateTime.ParseExact(months[i], "MMMM", CultureInfo.InvariantCulture).Month);
+            }
+            monthComboBox.SelectedItem = DateTime.Now.Month;
+            yearComboBox.DataSource = Enumerable.Range(DateTime.Now.Year - 10, DateTime.Now.Year - (DateTime.Now.Year - 10) + 1).ToList();
+            yearComboBox.SelectedItem = DateTime.Now.Year;
         }
 
         private void Baocaodoanhso_VisibleChanged(object sender, EventArgs e)
         {
-            monthComboBox.SelectedItem = null;
-            yearComboBox.SelectedItem = null;
-            dataGridViewBaoCaoDoanhSo.Rows.Clear();
-            
+                   
         }
     }
 }

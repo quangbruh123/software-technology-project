@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Diagnostics;
 
 namespace GarageManager
 {
@@ -67,14 +67,12 @@ namespace GarageManager
             uc4.Visible = false;
             uc5.Visible = false;
 
-            if (DateTime.Today != Properties.Settings.Default.LastLoginDate)
+            Debug.WriteLine(Properties.Settings.Default.LastLoginDate.Month + " " + Properties.Settings.Default.LastLoginDate.Year);
+            if (DateTime.Today.Month != Properties.Settings.Default.LastLoginDate.Month || DateTime.Today.Year != Properties.Settings.Default.LastLoginDate.Year)
             {
-                if (DateTime.Today.Month != Properties.Settings.Default.LastLoginDate.Month)
-                {
-                    Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);
-                    Properties.Settings.Default["LastLoginDate"] = DateTime.Today;
-                    Properties.Settings.Default.Save();
-                }
+                Classes.Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);
+                Properties.Settings.Default.LastLoginDate = DateTime.Today;
+                Properties.Settings.Default.Save();
             }
         }
         

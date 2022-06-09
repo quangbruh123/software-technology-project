@@ -28,82 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBaoCaoTonMoi = new System.Windows.Forms.Button();
-            this.lblChonThoiDiemTon = new System.Windows.Forms.Label();
-            this.dateTimePickerChonThoiDiemBaoCaoTon = new System.Windows.Forms.DateTimePicker();
-            this.btnLapBaoCaoTon = new System.Windows.Forms.Button();
-            this.lblThangBaoCaoTon = new System.Windows.Forms.Label();
-            this.dataGridViewBaoCaoTon = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.getStorageReportButton = new System.Windows.Forms.Button();
             this.lblCapNhatQuyDinh = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaoCaoTon)).BeginInit();
+            this.yearLabel = new System.Windows.Forms.Label();
+            this.monthLabel = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.yearComboBox = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.monthComboBox = new System.Windows.Forms.ComboBox();
+            this.dataGridViewStorageReport = new System.Windows.Forms.DataGridView();
+            this.OrderColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PartNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OriginalAmountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SpawnsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FinalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStorageReport)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnBaoCaoTonMoi
+            // getStorageReportButton
             // 
-            this.btnBaoCaoTonMoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBaoCaoTonMoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBaoCaoTonMoi.Location = new System.Drawing.Point(819, 68);
-            this.btnBaoCaoTonMoi.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBaoCaoTonMoi.Name = "btnBaoCaoTonMoi";
-            this.btnBaoCaoTonMoi.Size = new System.Drawing.Size(122, 28);
-            this.btnBaoCaoTonMoi.TabIndex = 12;
-            this.btnBaoCaoTonMoi.Text = "Báo cáo mới";
-            this.btnBaoCaoTonMoi.UseVisualStyleBackColor = true;
-            // 
-            // lblChonThoiDiemTon
-            // 
-            this.lblChonThoiDiemTon.AutoSize = true;
-            this.lblChonThoiDiemTon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChonThoiDiemTon.Location = new System.Drawing.Point(193, 77);
-            this.lblChonThoiDiemTon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblChonThoiDiemTon.Name = "lblChonThoiDiemTon";
-            this.lblChonThoiDiemTon.Size = new System.Drawing.Size(104, 19);
-            this.lblChonThoiDiemTon.TabIndex = 11;
-            this.lblChonThoiDiemTon.Text = "Chọn thời điểm:";
-            // 
-            // dateTimePickerChonThoiDiemBaoCaoTon
-            // 
-            this.dateTimePickerChonThoiDiemBaoCaoTon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerChonThoiDiemBaoCaoTon.Location = new System.Drawing.Point(315, 76);
-            this.dateTimePickerChonThoiDiemBaoCaoTon.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerChonThoiDiemBaoCaoTon.Name = "dateTimePickerChonThoiDiemBaoCaoTon";
-            this.dateTimePickerChonThoiDiemBaoCaoTon.Size = new System.Drawing.Size(228, 20);
-            this.dateTimePickerChonThoiDiemBaoCaoTon.TabIndex = 8;
-            // 
-            // btnLapBaoCaoTon
-            // 
-            this.btnLapBaoCaoTon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLapBaoCaoTon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLapBaoCaoTon.Location = new System.Drawing.Point(662, 68);
-            this.btnLapBaoCaoTon.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLapBaoCaoTon.Name = "btnLapBaoCaoTon";
-            this.btnLapBaoCaoTon.Size = new System.Drawing.Size(122, 28);
-            this.btnLapBaoCaoTon.TabIndex = 10;
-            this.btnLapBaoCaoTon.Text = "Lập báo cáo";
-            this.btnLapBaoCaoTon.UseVisualStyleBackColor = true;
-            // 
-            // lblThangBaoCaoTon
-            // 
-            this.lblThangBaoCaoTon.AutoSize = true;
-            this.lblThangBaoCaoTon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThangBaoCaoTon.Location = new System.Drawing.Point(477, 132);
-            this.lblThangBaoCaoTon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblThangBaoCaoTon.Name = "lblThangBaoCaoTon";
-            this.lblThangBaoCaoTon.Size = new System.Drawing.Size(46, 19);
-            this.lblThangBaoCaoTon.TabIndex = 7;
-            this.lblThangBaoCaoTon.Text = "Tháng";
-            // 
-            // dataGridViewBaoCaoTon
-            // 
-            this.dataGridViewBaoCaoTon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridViewBaoCaoTon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBaoCaoTon.Location = new System.Drawing.Point(70, 162);
-            this.dataGridViewBaoCaoTon.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridViewBaoCaoTon.Name = "dataGridViewBaoCaoTon";
-            this.dataGridViewBaoCaoTon.RowHeadersWidth = 51;
-            this.dataGridViewBaoCaoTon.RowTemplate.Height = 24;
-            this.dataGridViewBaoCaoTon.Size = new System.Drawing.Size(934, 240);
-            this.dataGridViewBaoCaoTon.TabIndex = 9;
+            this.getStorageReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.getStorageReportButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.getStorageReportButton.Location = new System.Drawing.Point(777, 71);
+            this.getStorageReportButton.Margin = new System.Windows.Forms.Padding(2);
+            this.getStorageReportButton.Name = "getStorageReportButton";
+            this.getStorageReportButton.Size = new System.Drawing.Size(122, 28);
+            this.getStorageReportButton.TabIndex = 10;
+            this.getStorageReportButton.Text = "Xem";
+            this.getStorageReportButton.UseVisualStyleBackColor = true;
+            this.getStorageReportButton.Click += new System.EventHandler(this.getStorageReportButton_Click);
             // 
             // lblCapNhatQuyDinh
             // 
@@ -116,34 +72,187 @@
             this.lblCapNhatQuyDinh.TabIndex = 13;
             this.lblCapNhatQuyDinh.Text = "TỒN KHO";
             // 
+            // yearLabel
+            // 
+            this.yearLabel.AutoSize = true;
+            this.yearLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearLabel.Location = new System.Drawing.Point(298, 76);
+            this.yearLabel.Name = "yearLabel";
+            this.yearLabel.Size = new System.Drawing.Size(46, 19);
+            this.yearLabel.TabIndex = 26;
+            this.yearLabel.Text = "Năm :";
+            // 
+            // monthLabel
+            // 
+            this.monthLabel.AutoSize = true;
+            this.monthLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthLabel.Location = new System.Drawing.Point(148, 76);
+            this.monthLabel.Name = "monthLabel";
+            this.monthLabel.Size = new System.Drawing.Size(53, 19);
+            this.monthLabel.TabIndex = 27;
+            this.monthLabel.Text = "Tháng :";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(351, 95);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(76, 2);
+            this.panel2.TabIndex = 57;
+            // 
+            // yearComboBox
+            // 
+            this.yearComboBox.DisplayMember = "BienSo";
+            this.yearComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.yearComboBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearComboBox.FormattingEnabled = true;
+            this.yearComboBox.Location = new System.Drawing.Point(350, 70);
+            this.yearComboBox.Name = "yearComboBox";
+            this.yearComboBox.Size = new System.Drawing.Size(93, 27);
+            this.yearComboBox.TabIndex = 56;
+            this.yearComboBox.ValueMember = "BienSo";
+            this.yearComboBox.SelectionChangeCommitted += new System.EventHandler(this.yearComboBox_SelectionChangeCommitted);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(208, 95);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(49, 2);
+            this.panel1.TabIndex = 59;
+            // 
+            // monthComboBox
+            // 
+            this.monthComboBox.DisplayMember = "BienSo";
+            this.monthComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.monthComboBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthComboBox.FormattingEnabled = true;
+            this.monthComboBox.Location = new System.Drawing.Point(207, 70);
+            this.monthComboBox.Name = "monthComboBox";
+            this.monthComboBox.Size = new System.Drawing.Size(66, 27);
+            this.monthComboBox.TabIndex = 58;
+            this.monthComboBox.ValueMember = "BienSo";
+            this.monthComboBox.SelectionChangeCommitted += new System.EventHandler(this.monthComboBox_SelectionChangeCommitted);
+            // 
+            // dataGridViewStorageReport
+            // 
+            this.dataGridViewStorageReport.AllowUserToAddRows = false;
+            this.dataGridViewStorageReport.AllowUserToDeleteRows = false;
+            this.dataGridViewStorageReport.AllowUserToResizeColumns = false;
+            this.dataGridViewStorageReport.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStorageReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewStorageReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStorageReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OrderColumn,
+            this.PartNameColumn,
+            this.OriginalAmountColumn,
+            this.SpawnsColumn,
+            this.FinalAmount});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewStorageReport.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewStorageReport.Location = new System.Drawing.Point(70, 139);
+            this.dataGridViewStorageReport.MultiSelect = false;
+            this.dataGridViewStorageReport.Name = "dataGridViewStorageReport";
+            this.dataGridViewStorageReport.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStorageReport.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewStorageReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewStorageReport.Size = new System.Drawing.Size(934, 338);
+            this.dataGridViewStorageReport.TabIndex = 60;
+            // 
+            // OrderColumn
+            // 
+            this.OrderColumn.HeaderText = "STT";
+            this.OrderColumn.Name = "OrderColumn";
+            this.OrderColumn.ReadOnly = true;
+            this.OrderColumn.Width = 50;
+            // 
+            // PartNameColumn
+            // 
+            this.PartNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PartNameColumn.HeaderText = "Tên vật tư";
+            this.PartNameColumn.Name = "PartNameColumn";
+            this.PartNameColumn.ReadOnly = true;
+            // 
+            // OriginalAmountColumn
+            // 
+            this.OriginalAmountColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.OriginalAmountColumn.HeaderText = "Tồn đầu";
+            this.OriginalAmountColumn.Name = "OriginalAmountColumn";
+            this.OriginalAmountColumn.ReadOnly = true;
+            // 
+            // SpawnsColumn
+            // 
+            this.SpawnsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SpawnsColumn.HeaderText = "Phát sinh";
+            this.SpawnsColumn.Name = "SpawnsColumn";
+            this.SpawnsColumn.ReadOnly = true;
+            // 
+            // FinalAmount
+            // 
+            this.FinalAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FinalAmount.HeaderText = "Tồn cuối";
+            this.FinalAmount.Name = "FinalAmount";
+            this.FinalAmount.ReadOnly = true;
+            // 
             // Baocaoton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.dataGridViewStorageReport);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.monthComboBox);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.yearComboBox);
+            this.Controls.Add(this.yearLabel);
+            this.Controls.Add(this.monthLabel);
             this.Controls.Add(this.lblCapNhatQuyDinh);
-            this.Controls.Add(this.btnBaoCaoTonMoi);
-            this.Controls.Add(this.lblChonThoiDiemTon);
-            this.Controls.Add(this.dateTimePickerChonThoiDiemBaoCaoTon);
-            this.Controls.Add(this.btnLapBaoCaoTon);
-            this.Controls.Add(this.lblThangBaoCaoTon);
-            this.Controls.Add(this.dataGridViewBaoCaoTon);
+            this.Controls.Add(this.getStorageReportButton);
             this.Name = "Baocaoton";
             this.Size = new System.Drawing.Size(1089, 668);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaoCaoTon)).EndInit();
+            this.Load += new System.EventHandler(this.Baocaoton_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStorageReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnBaoCaoTonMoi;
-        private System.Windows.Forms.Label lblChonThoiDiemTon;
-        private System.Windows.Forms.DateTimePicker dateTimePickerChonThoiDiemBaoCaoTon;
-        private System.Windows.Forms.Button btnLapBaoCaoTon;
-        private System.Windows.Forms.Label lblThangBaoCaoTon;
-        private System.Windows.Forms.DataGridView dataGridViewBaoCaoTon;
+        private System.Windows.Forms.Button getStorageReportButton;
         private System.Windows.Forms.Label lblCapNhatQuyDinh;
+        private System.Windows.Forms.Label yearLabel;
+        private System.Windows.Forms.Label monthLabel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox yearComboBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox monthComboBox;
+        private System.Windows.Forms.DataGridView dataGridViewStorageReport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PartNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OriginalAmountColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SpawnsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FinalAmount;
     }
 }
