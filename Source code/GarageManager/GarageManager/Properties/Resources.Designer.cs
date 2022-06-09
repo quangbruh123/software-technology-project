@@ -63,6 +63,16 @@ namespace GarageManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_30px {
+            get {
+                object obj = ResourceManager.GetObject("add_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap administrator_male_32px {
             get {
                 object obj = ResourceManager.GetObject("administrator_male_32px", resourceCulture);
@@ -266,6 +276,16 @@ namespace GarageManager.Properties {
         internal static System.Drawing.Bitmap maximize_window_24px {
             get {
                 object obj = ResourceManager.GetObject("maximize_window_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minus_40px {
+            get {
+                object obj = ResourceManager.GetObject("minus_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

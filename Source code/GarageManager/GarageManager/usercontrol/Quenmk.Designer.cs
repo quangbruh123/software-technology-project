@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.gradient1 = new GarageManager.Control.gradient();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.dangnhapbtn = new GarageManager.Control.RJButton();
             this.CloseBtn = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -44,7 +43,6 @@
             // 
             this.gradient1.ColorBottom = System.Drawing.Color.Empty;
             this.gradient1.ColorTop = System.Drawing.Color.Empty;
-            this.gradient1.Controls.Add(this.guna2CustomGradientPanel1);
             this.gradient1.Controls.Add(this.dangnhapbtn);
             this.gradient1.Controls.Add(this.CloseBtn);
             this.gradient1.Controls.Add(this.pictureBox3);
@@ -55,18 +53,7 @@
             this.gradient1.Name = "gradient1";
             this.gradient1.Size = new System.Drawing.Size(420, 425);
             this.gradient1.TabIndex = 34;
-            this.gradient1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradient1_Paint);
-            // 
-            // guna2CustomGradientPanel1
-            // 
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(67, 162);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(285, 2);
-            this.guna2CustomGradientPanel1.TabIndex = 34;
+            this.gradient1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradient1_Paint);         
             // 
             // dangnhapbtn
             // 
@@ -162,7 +149,6 @@
         #endregion
 
         private Control.gradient gradient1;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Control.RJButton dangnhapbtn;
         private System.Windows.Forms.Button CloseBtn;
         private System.Windows.Forms.PictureBox pictureBox3;

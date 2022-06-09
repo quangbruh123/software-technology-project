@@ -120,67 +120,67 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\BAOCAODOANHSO.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\BAOCAOTON.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\CT_BCDS.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\CT_PNVT.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\CT_PSC.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\CT_SUDUNGVATTU.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\GarageManagementModel.Context.cs">
+    <Compile Include="Model\GarageManagerModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GarageManagementModel.Context.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\GarageManagementModel.cs">
+    <Compile Include="Model\GarageManagerModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\GarageManagementModel.Designer.cs">
+    <Compile Include="Model\GarageManagerModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
+      <DependentUpon>GarageManagerModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\HIEUXE.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PHIEUNHAPVATTU.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PHIEUSUACHUA.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PHIEUTHUTIEN.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TAIKHOAN.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\THAMSO.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TIENCONG.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\VAITRO.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\VATTU.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\XE.cs">
-      <DependentUpon>GarageManagementModel.tt</DependentUpon>
+      <DependentUpon>GarageManagerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -323,12 +323,12 @@
     <EmbeddedResource Include="usercontrol\Tiepnhanbaotrixe.resx">
       <DependentUpon>Tiepnhanbaotrixe.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\GarageManagementModel.edmx">
+    <EntityDeploy Include="Model\GarageManagerModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GarageManagementModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>GarageManagerModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\GarageManagementModel.edmx.diagram">
-      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
+    <None Include="Model\GarageManagerModel.edmx.diagram">
+      <DependentUpon>GarageManagerModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -403,20 +403,21 @@
     <None Include="Resources\user_30px.png" />
     <None Include="Resources\istockphoto-1152779126-612x612.jpg" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Model\GarageManagementModel.Context.tt">
+    <Content Include="Model\GarageManagerModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
-      <LastGenOutput>GarageManagementModel.Context.cs</LastGenOutput>
+      <DependentUpon>GarageManagerModel.edmx</DependentUpon>
+      <LastGenOutput>GarageManagerModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\GarageManagementModel.tt">
+    <Content Include="Model\GarageManagerModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GarageManagementModel.edmx</DependentUpon>
-      <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
+      <DependentUpon>GarageManagerModel.edmx</DependentUpon>
+      <LastGenOutput>GarageManagerModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Resources\add_30px.png" />
-    <Content Include="Resources\minus_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus_40px.png" />
+    <None Include="Resources\add_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
