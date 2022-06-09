@@ -67,21 +67,21 @@ namespace GarageManager.usercontrol
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Classes.Storage.RemovePart(textBox2.Text);
-            dataGridView1.Rows.Clear();
-            int i = 1;
-            var taikhoan = DataProvider.Instance.DB.VATTUs;
-            foreach (var x in taikhoan)
-            {
-                dataGridView1.Rows.Add(i, x.TenVatTu, x.DonGiaHienTai, x.SoLuongTon);
-                i++;
-            }
+            //Classes.Storage.RemovePart(textBox2.Text);
+            //dataGridView1.Rows.Clear();
+            //int i = 1;
+            //var taikhoan = DataProvider.Instance.DB.VATTUs;
+            //foreach (var x in taikhoan)
+            //{
+            //    dataGridView1.Rows.Add(i, x.TenVatTu, x.DonGiaHienTai, x.SoLuongTon);
+            //    i++;
+            //}
         }
 
         //private void button1_Click(object sender, EventArgs e)
         //{
-        //    Storage.AddPartInputCard(textBoxTenVTPTMoi.Text, Int32.Parse(textBox3.Text), Int32.Parse(textBoxDongiaNhap.Text), Int32.Parse(textBox1.Text),DateTime.Now);
-        //}   
+        //    Storage.AddPartInputCard(textBoxTenVTPTMoi.Text, Int32.Parse(textBox3.Text), Int32.Parse(textBoxDongiaNhap.Text), Int32.Parse(textBox1.Text), DateTime.Now);
+        //}
 
         private void backbtn_Click(object sender, EventArgs e)
         {
