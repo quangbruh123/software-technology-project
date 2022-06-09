@@ -32,7 +32,7 @@ namespace GarageManager.usercontrol
             radioButton1.Checked = true;
             radioButton2.Checked = false;
         }
-      
+
         private void FindBtn_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
@@ -67,7 +67,7 @@ namespace GarageManager.usercontrol
                     {
                         string brand = comboBoxCarBrand.GetItemText(comboBoxCarBrand.SelectedItem);
                         foreach (var x in DataProvider.Instance.DB.XEs
-                            .Where(x => x.HIEUXE.TenHieuXe.Contains(brand) && x.TenChuXe.Contains(OwnerTextbox.Text) ))
+                            .Where(x => x.HIEUXE.TenHieuXe.Contains(brand) && x.TenChuXe.Contains(OwnerTextbox.Text)))
                         {
                             itemCounter++;
                             dataGridView1.Rows.Add(
@@ -103,7 +103,7 @@ namespace GarageManager.usercontrol
                     {
                         string brand = comboBoxCarBrand.GetItemText(comboBoxCarBrand.SelectedItem);
                         foreach (var x in DataProvider.Instance.DB.XEs
-                            .Where(x => x.HIEUXE.TenHieuXe.Contains(brand) && x.TenChuXe.Contains(OwnerTextbox.Text) && x.BienSo.Contains(CarPlateTextbox.Text) ))
+                            .Where(x => x.HIEUXE.TenHieuXe.Contains(brand) && x.TenChuXe.Contains(OwnerTextbox.Text) && x.BienSo.Contains(CarPlateTextbox.Text)))
                         {
                             itemCounter++;
                             dataGridView1.Rows.Add(
@@ -188,7 +188,7 @@ namespace GarageManager.usercontrol
             }
             else
             {
-                label1.Visible = false; 
+                label1.Visible = false;
                 MainWordTextbox.Visible = false;
 
                 label2.Visible = true;
@@ -207,20 +207,16 @@ namespace GarageManager.usercontrol
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if ( dataGridView1.Rows.Count < 2)
+            if (dataGridView1.Rows.Count < 2)
             {
                 MessageBox.Show("Chưa có dữ liệu");
             }
             else
             {
-                if ( MessageBox.Show("Xem chi tiết về thông tin xe ?", "Notice", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show("Xem chi tiết về thông tin xe ?", "Notice", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    
-
-                    uc1 = new TraCuuChiTiet();
-                    Controls.Add(uc1);
-                    uc1.Visible = true;
-                    uc1.Location = new Point(213, 31);
+                    TraCuu tracuu = (TraCuu)Parent;
+                    tracuu.LoadTraCuuChiTiet();
                 }
 
             }

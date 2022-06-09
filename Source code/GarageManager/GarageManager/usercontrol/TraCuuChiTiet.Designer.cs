@@ -34,12 +34,6 @@
             this.NgaySuaChua = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.MaCTPSC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPhieuSuaChua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaTienCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.maSCChitiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaVatTu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +42,12 @@
             this.tt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MaCTPSC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhieuSuaChua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTienCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -111,50 +111,8 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(804, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(835, 150);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // MaCTPSC
-            // 
-            this.MaCTPSC.HeaderText = "Mã SC chi tiết";
-            this.MaCTPSC.MinimumWidth = 6;
-            this.MaCTPSC.Name = "MaCTPSC";
-            this.MaCTPSC.Width = 125;
-            // 
-            // MaPhieuSuaChua
-            // 
-            this.MaPhieuSuaChua.HeaderText = "Mã sữa chữa";
-            this.MaPhieuSuaChua.MinimumWidth = 6;
-            this.MaPhieuSuaChua.Name = "MaPhieuSuaChua";
-            this.MaPhieuSuaChua.Width = 125;
-            // 
-            // NoiDung
-            // 
-            this.NoiDung.HeaderText = "Nội dung";
-            this.NoiDung.MinimumWidth = 6;
-            this.NoiDung.Name = "NoiDung";
-            this.NoiDung.Width = 125;
-            // 
-            // SoLan
-            // 
-            this.SoLan.HeaderText = "Số lần";
-            this.SoLan.MinimumWidth = 6;
-            this.SoLan.Name = "SoLan";
-            this.SoLan.Width = 125;
-            // 
-            // MaTienCong
-            // 
-            this.MaTienCong.HeaderText = "Mã tiền công";
-            this.MaTienCong.MinimumWidth = 6;
-            this.MaTienCong.Name = "MaTienCong";
-            this.MaTienCong.Width = 125;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.MinimumWidth = 6;
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.Width = 125;
             // 
             // dataGridView3
             // 
@@ -229,6 +187,48 @@
             this.panel1.Size = new System.Drawing.Size(1452, 822);
             this.panel1.TabIndex = 0;
             // 
+            // MaCTPSC
+            // 
+            this.MaCTPSC.HeaderText = "Mã SC chi tiết";
+            this.MaCTPSC.MinimumWidth = 6;
+            this.MaCTPSC.Name = "MaCTPSC";
+            this.MaCTPSC.Width = 125;
+            // 
+            // MaPhieuSuaChua
+            // 
+            this.MaPhieuSuaChua.HeaderText = "Mã phiếu sữa chữa";
+            this.MaPhieuSuaChua.MinimumWidth = 6;
+            this.MaPhieuSuaChua.Name = "MaPhieuSuaChua";
+            this.MaPhieuSuaChua.Width = 150;
+            // 
+            // NoiDung
+            // 
+            this.NoiDung.HeaderText = "Nội dung";
+            this.NoiDung.MinimumWidth = 6;
+            this.NoiDung.Name = "NoiDung";
+            this.NoiDung.Width = 125;
+            // 
+            // SoLan
+            // 
+            this.SoLan.HeaderText = "Số lần";
+            this.SoLan.MinimumWidth = 6;
+            this.SoLan.Name = "SoLan";
+            this.SoLan.Width = 125;
+            // 
+            // MaTienCong
+            // 
+            this.MaTienCong.HeaderText = "Mã tiền công";
+            this.MaTienCong.MinimumWidth = 6;
+            this.MaTienCong.Name = "MaTienCong";
+            this.MaTienCong.Width = 125;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.Width = 125;
+            // 
             // TraCuuChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -252,12 +252,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySuaChua;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaCTPSC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieuSuaChua;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoiDung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaTienCong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewTextBoxColumn maSCChitiet;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaVatTu;
@@ -266,5 +260,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tt;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaCTPSC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieuSuaChua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NoiDung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTienCong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
     }
 }
