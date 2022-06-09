@@ -50,11 +50,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxTCXoa = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnChonSua = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxDGMoi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxTCSua = new System.Windows.Forms.TextBox();
-            this.btnChonSua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -234,6 +234,7 @@
             this.textBoxSoLuongVTPT.Name = "textBoxSoLuongVTPT";
             this.textBoxSoLuongVTPT.Size = new System.Drawing.Size(142, 26);
             this.textBoxSoLuongVTPT.TabIndex = 50;
+            this.textBoxSoLuongVTPT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoLuongVTPT_KeyPress);
             // 
             // panel3
             // 
@@ -290,6 +291,17 @@
             this.panel4.Size = new System.Drawing.Size(453, 112);
             this.panel4.TabIndex = 57;
             // 
+            // btnChonSua
+            // 
+            this.btnChonSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChonSua.Location = new System.Drawing.Point(300, 20);
+            this.btnChonSua.Name = "btnChonSua";
+            this.btnChonSua.Size = new System.Drawing.Size(142, 32);
+            this.btnChonSua.TabIndex = 55;
+            this.btnChonSua.Text = "Chọn";
+            this.btnChonSua.UseVisualStyleBackColor = true;
+            this.btnChonSua.Click += new System.EventHandler(this.btnChonSua_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -307,6 +319,7 @@
             this.textBoxDGMoi.Name = "textBoxDGMoi";
             this.textBoxDGMoi.Size = new System.Drawing.Size(142, 26);
             this.textBoxDGMoi.TabIndex = 53;
+            this.textBoxDGMoi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDGMoi_KeyPress);
             // 
             // label2
             // 
@@ -327,17 +340,6 @@
             this.textBoxTCSua.Name = "textBoxTCSua";
             this.textBoxTCSua.Size = new System.Drawing.Size(142, 26);
             this.textBoxTCSua.TabIndex = 51;
-            // 
-            // btnChonSua
-            // 
-            this.btnChonSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChonSua.Location = new System.Drawing.Point(300, 20);
-            this.btnChonSua.Name = "btnChonSua";
-            this.btnChonSua.Size = new System.Drawing.Size(142, 32);
-            this.btnChonSua.TabIndex = 55;
-            this.btnChonSua.Text = "Chọn";
-            this.btnChonSua.UseVisualStyleBackColor = true;
-            this.btnChonSua.Click += new System.EventHandler(this.btnChonSua_Click);
             // 
             // Nhaptiencong
             // 

@@ -73,5 +73,10 @@ namespace GarageManager.usercontrol
                 dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, item.DienThoai, item.DiaChi, item.Email, item.TienNo.ToString());
             }
         }
+
+        private void txtBoxDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

@@ -30,6 +30,12 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnThemThongTinKHVaXe = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtboxEmail = new System.Windows.Forms.TextBox();
             this.lblHieuXe = new System.Windows.Forms.Label();
@@ -47,16 +53,7 @@
             this.buttonThemXe = new System.Windows.Forms.Button();
             this.labelTieuDe = new System.Windows.Forms.Label();
             this.pnDanhSachTiepNhan = new System.Windows.Forms.Panel();
-            this.buttonLamMoi = new System.Windows.Forms.Button();
-            this.lblDanhSachTiepNhan = new System.Windows.Forms.Label();
             this.dataGridViewXeDaTiepNhan = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +62,9 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonLamMoi = new System.Windows.Forms.Button();
+            this.lblDanhSachTiepNhan = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnThemThongTinKHVaXe.SuspendLayout();
             this.pnDanhSachTiepNhan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXeDaTiepNhan)).BeginInit();
@@ -100,6 +100,60 @@
             this.pnThemThongTinKHVaXe.Size = new System.Drawing.Size(475, 524);
             this.pnThemThongTinKHVaXe.TabIndex = 1;
             this.pnThemThongTinKHVaXe.TabStop = true;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Location = new System.Drawing.Point(172, 428);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(284, 2);
+            this.panel6.TabIndex = 56;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Location = new System.Drawing.Point(172, 357);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(284, 2);
+            this.panel4.TabIndex = 56;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Location = new System.Drawing.Point(172, 294);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(284, 2);
+            this.panel3.TabIndex = 56;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(172, 229);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(284, 2);
+            this.panel2.TabIndex = 56;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(172, 168);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(284, 2);
+            this.panel1.TabIndex = 56;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Location = new System.Drawing.Point(172, 103);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(284, 2);
+            this.panel5.TabIndex = 56;
             // 
             // lblEmail
             // 
@@ -229,6 +283,7 @@
             this.txtBoxDienThoai.Name = "txtBoxDienThoai";
             this.txtBoxDienThoai.Size = new System.Drawing.Size(282, 19);
             this.txtBoxDienThoai.TabIndex = 2;
+            this.txtBoxDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxDienThoai_KeyPress);
             // 
             // buttonClear
             // 
@@ -294,30 +349,6 @@
             this.pnDanhSachTiepNhan.TabIndex = 2;
             this.pnDanhSachTiepNhan.TabStop = true;
             // 
-            // buttonLamMoi
-            // 
-            this.buttonLamMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.buttonLamMoi.FlatAppearance.BorderSize = 0;
-            this.buttonLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLamMoi.Location = new System.Drawing.Point(420, 104);
-            this.buttonLamMoi.Name = "buttonLamMoi";
-            this.buttonLamMoi.Size = new System.Drawing.Size(101, 23);
-            this.buttonLamMoi.TabIndex = 8;
-            this.buttonLamMoi.Text = "Làm Mới";
-            this.buttonLamMoi.UseVisualStyleBackColor = false;
-            this.buttonLamMoi.Click += new System.EventHandler(this.buttonLamMoi_Click);
-            // 
-            // lblDanhSachTiepNhan
-            // 
-            this.lblDanhSachTiepNhan.BackColor = System.Drawing.Color.Transparent;
-            this.lblDanhSachTiepNhan.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDanhSachTiepNhan.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblDanhSachTiepNhan.Location = new System.Drawing.Point(585, 104);
-            this.lblDanhSachTiepNhan.Name = "lblDanhSachTiepNhan";
-            this.lblDanhSachTiepNhan.Size = new System.Drawing.Size(315, 27);
-            this.lblDanhSachTiepNhan.TabIndex = 6;
-            this.lblDanhSachTiepNhan.Text = "DANH SÁCH XE ĐÃ TIẾP NHẬN\r\n\r\n";
-            // 
             // dataGridViewXeDaTiepNhan
             // 
             this.dataGridViewXeDaTiepNhan.AllowUserToAddRows = false;
@@ -356,70 +387,6 @@
             this.dataGridViewXeDaTiepNhan.Size = new System.Drawing.Size(665, 446);
             this.dataGridViewXeDaTiepNhan.TabIndex = 9;
             this.dataGridViewXeDaTiepNhan.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(315, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(448, 55);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Tiếp nhận bảo trì xe";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(172, 103);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(284, 2);
-            this.panel5.TabIndex = 56;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(172, 168);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 2);
-            this.panel1.TabIndex = 56;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(172, 229);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(284, 2);
-            this.panel2.TabIndex = 56;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(172, 294);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(284, 2);
-            this.panel3.TabIndex = 56;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Location = new System.Drawing.Point(172, 357);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(284, 2);
-            this.panel4.TabIndex = 56;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Location = new System.Drawing.Point(172, 428);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(284, 2);
-            this.panel6.TabIndex = 56;
             // 
             // Column1
             // 
@@ -476,6 +443,40 @@
             this.Column7.HeaderText = "Số tiền nợ";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            // 
+            // buttonLamMoi
+            // 
+            this.buttonLamMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.buttonLamMoi.FlatAppearance.BorderSize = 0;
+            this.buttonLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLamMoi.Location = new System.Drawing.Point(420, 104);
+            this.buttonLamMoi.Name = "buttonLamMoi";
+            this.buttonLamMoi.Size = new System.Drawing.Size(101, 23);
+            this.buttonLamMoi.TabIndex = 8;
+            this.buttonLamMoi.Text = "Làm Mới";
+            this.buttonLamMoi.UseVisualStyleBackColor = false;
+            this.buttonLamMoi.Click += new System.EventHandler(this.buttonLamMoi_Click);
+            // 
+            // lblDanhSachTiepNhan
+            // 
+            this.lblDanhSachTiepNhan.BackColor = System.Drawing.Color.Transparent;
+            this.lblDanhSachTiepNhan.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDanhSachTiepNhan.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblDanhSachTiepNhan.Location = new System.Drawing.Point(585, 104);
+            this.lblDanhSachTiepNhan.Name = "lblDanhSachTiepNhan";
+            this.lblDanhSachTiepNhan.Size = new System.Drawing.Size(315, 27);
+            this.lblDanhSachTiepNhan.TabIndex = 6;
+            this.lblDanhSachTiepNhan.Text = "DANH SÁCH XE ĐÃ TIẾP NHẬN\r\n\r\n";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(315, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(448, 55);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Tiếp nhận bảo trì xe";
             // 
             // Tiepnhanbaotrixe
             // 
