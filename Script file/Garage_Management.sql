@@ -1,4 +1,4 @@
-﻿CREATE DATABASE GarageManagement
+CREATE DATABASE GarageManagement
 USE GarageManagement
 
 CREATE TABLE HIEUXE (
@@ -104,11 +104,8 @@ CREATE TABLE CT_BCDS (
 )
 
 CREATE TABLE THAMSO (
-	TienNo	        	BIT,
-	SoSuaChua		INT,
-	SoHieuXe		INT PRIMARY KEY,
-	SoVatTu			INT,
-	SoTienCong		INT,
+	TenThamSo	NVARCHAR(50) PRIMARY KEY,
+	GiaTri		INT
 )
 
 CREATE TABLE TAIKHOAN (
@@ -213,4 +210,7 @@ INSERT INTO XE (MaHieuXe,TenChuXe, NgayTiepNhan, TienNo, BienSo) VALUES
 (10,N'Mai Phúc Tâm','26/07/2017',300000,N'20J009'),
 (1,N'Châu Vĩnh Sinh','05/06/2022',100000,N'21A000');
 
-INSERT INTO THAMSO (TienNo, SoSuaChua, SoHieuXe, SoTienCong, SoVatTu) VALUES (1, 30, 20, 100, 200)
+INSERT INTO THAMSO (TenThamSo, GiaTri) VALUES
+(N'Số xe sửa chữa trong ngày tối đa', 30),
+(N'Số lượng hiệu xe', 10),
+(N'Số lượng tiền công', 100);
