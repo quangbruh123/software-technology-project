@@ -104,8 +104,11 @@ CREATE TABLE CT_BCDS (
 )
 
 CREATE TABLE THAMSO (
-	TenThamSo	NVARCHAR(20) PRIMARY KEY,
-	GiaTri		INT
+	TienNo	        BIT PRIMARY KEY,
+	SoSuaChua		INT,
+	SoHieuXe		INT,
+	SoVatTu			INT,
+	SoTienCong		INT,
 )
 
 CREATE TABLE TAIKHOAN (
@@ -144,7 +147,6 @@ INSERT INTO VAITRO VALUES (1, 'admin')
 INSERT INTO TAIKHOAN (TenTaiKhoan, MatKhau, QuyenHan) VALUES ('staff', '1562206543da764123c21bd524674f0a8aaf49c8a89744c97352fe677f7e4006', 0)
 INSERT INTO TAIKHOAN (TenTaiKhoan, MatKhau, QuyenHan) VALUES ('admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 1)
 
-INSERT INTO THAMSO VALUES ('VehicleLimitPerDay', 30)
 
 INSERT INTO HIEUXE (TenHieuXe) VALUES ('Honda')
 INSERT INTO HIEUXE (TenHieuXe) VALUES ('Huyndai')
@@ -210,3 +212,5 @@ INSERT INTO XE (MaHieuXe,TenChuXe, NgayTiepNhan, TienNo, BienSo) VALUES
 (9,N'Nguyễn Minh Duy','26/04/2021',490000,N'20I008'),
 (10,N'Mai Phúc Tâm','26/07/2017',300000,N'20J009'),
 (1,N'Châu Vĩnh Sinh','05/06/2022',100000,N'21A000');
+
+INSERT INTO THAMSO (TienNo, SoSuaChua, SoHieuXe, SoTienCong, SoVatTu) VALUES (1, 30, 20, 100, 200)
