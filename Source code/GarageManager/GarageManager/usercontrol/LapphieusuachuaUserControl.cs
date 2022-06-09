@@ -91,15 +91,15 @@ namespace GarageManager.usercontrol
                     amount.Add(int.Parse(addtcbtn.Rows[i].Cells[3].Value.ToString()));
                     wage.Add(addtcbtn.Rows[i].Cells[5].Value.ToString());
                 }
-                Vehicle.AddMaintenanceInfo(licenseplatetxt.Text, DateTime.Now, detail, wage, parts, amount);
+                Vehicle.AddMaintenanceInfo(licenseplatetxt.Text, dateTimePicker1.Value, detail, wage, parts, amount);
             }
             else if (addtcbtn.Rows == null && addtcbtn.Rows.Count == 0)
             {
-                MessageBox.Show("Chưa có thông tin sửa chữa");
+                MessageBox.Show("Chưa có thông tin sửa chữa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (string.IsNullOrEmpty(licenseplatetxt.Text))
             {
-                MessageBox.Show("Biển số không được trống");
+                MessageBox.Show("Biển số không được trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -114,7 +114,6 @@ namespace GarageManager.usercontrol
             {
                 comboBoxTiencong.Items.Add(wage);
             }
-            textBox4.Text = DateTime.Today.ToString("dd-MM-yyyy");
         }
 
         private void button1_Click_1(object sender, EventArgs e)
