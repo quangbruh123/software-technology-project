@@ -14,6 +14,7 @@ namespace GarageManager.usercontrol
     public partial class tracuuUserControl1 : UserControl
     {
         private int itemCounter = 0;
+        private TraCuuChiTiet uc1;
 
         public tracuuUserControl1()
         {
@@ -202,6 +203,27 @@ namespace GarageManager.usercontrol
         private void tracuuUserControl1_VisibleChanged(object sender, EventArgs e)
         {
             reset();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if ( dataGridView1.Rows.Count < 2)
+            {
+                MessageBox.Show("Chưa có dữ liệu");
+            }
+            else
+            {
+                if ( MessageBox.Show("Xem chi tiết về thông tin xe ?", "Notice", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    
+
+                    uc1 = new TraCuuChiTiet();
+                    Controls.Add(uc1);
+                    uc1.Visible = true;
+                    uc1.Location = new Point(213, 31);
+                }
+
+            }
         }
     }
 }

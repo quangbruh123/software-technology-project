@@ -48,6 +48,7 @@ namespace GarageManager.usercontrol
 
         private void getFinancialReportButton_Click(object sender, EventArgs e)
         {
+            dataGridViewBaoCaoDoanhSo.Rows.Clear();
             if (yearComboBox.SelectedItem == null || monthComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ giá trị");
