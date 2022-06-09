@@ -67,7 +67,6 @@ namespace GarageManager.usercontrol
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Classes.Storage.RemovePart(textBox2.Text);
             dataGridView1.Rows.Clear();
             int i = 1;
             var taikhoan = DataProvider.Instance.DB.VATTUs;

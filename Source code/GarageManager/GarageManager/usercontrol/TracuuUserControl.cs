@@ -48,7 +48,7 @@ namespace GarageManager.usercontrol
                     if (string.IsNullOrEmpty(CarPlateTextbox.Text) && string.IsNullOrEmpty(OwnerTextbox.Text))
                     {
                         string brand = comboBoxCarBrand.GetItemText(comboBoxCarBrand.SelectedItem);
-                        foreach (var x in DataProvider.Instance.DB.XEs.Where(x => brand == x.HIEUXE.TenHieuXe))
+                        foreach (var x in DataProvider.Instance.DB.XEs.Where(x => x.HIEUXE.TenHieuXe.Contains(brand)))
                         {
                             itemCounter++;
                             dataGridView1.Rows.Add(
@@ -62,11 +62,11 @@ namespace GarageManager.usercontrol
                         }
                     }
 
-                    if (string.IsNullOrEmpty(CarPlateTextbox.Text) && OwnerTextbox.Text != null)
+                    else if (string.IsNullOrEmpty(CarPlateTextbox.Text) && OwnerTextbox.Text != null)
                     {
                         string brand = comboBoxCarBrand.GetItemText(comboBoxCarBrand.SelectedItem);
                         foreach (var x in DataProvider.Instance.DB.XEs
-                            .Where(x => brand == x.HIEUXE.TenHieuXe && OwnerTextbox.Text == x.TenChuXe))
+                            .Where(x => x.HIEUXE.TenHieuXe.Contains(brand) && x.TenChuXe.Contains(OwnerTextbox.Text) ))
                         {
                             itemCounter++;
                             dataGridView1.Rows.Add(
@@ -80,11 +80,11 @@ namespace GarageManager.usercontrol
                         }
                     }
 
-                    if (string.IsNullOrEmpty(OwnerTextbox.Text) && CarPlateTextbox.Text != null)
+                    else if (string.IsNullOrEmpty(OwnerTextbox.Text) && CarPlateTextbox.Text != null)
                     {
                         string brand = comboBoxCarBrand.GetItemText(comboBoxCarBrand.SelectedItem);
                         foreach (var x in DataProvider.Instance.DB.XEs
-                            .Where(x => brand == x.HIEUXE.TenHieuXe && CarPlateTextbox.Text == x.BienSo))
+                            .Where(x => x.HIEUXE.TenHieuXe.Contains(brand) && x.BienSo.Contains(CarPlateTextbox.Text)))
                         {
                             itemCounter++;
                             dataGridView1.Rows.Add(
@@ -98,11 +98,11 @@ namespace GarageManager.usercontrol
                         }
                     }
 
-                    if (CarPlateTextbox.Text != null && OwnerTextbox.Text != null)
+                    else if (CarPlateTextbox.Text != null && OwnerTextbox.Text != null)
                     {
                         string brand = comboBoxCarBrand.GetItemText(comboBoxCarBrand.SelectedItem);
                         foreach (var x in DataProvider.Instance.DB.XEs
-                            .Where(x => brand == x.HIEUXE.TenHieuXe && OwnerTextbox.Text == x.TenChuXe && CarPlateTextbox.Text == x.BienSo))
+                            .Where(x => x.HIEUXE.TenHieuXe.Contains(brand) && x.TenChuXe.Contains(OwnerTextbox.Text) && x.BienSo.Contains(CarPlateTextbox.Text) ))
                         {
                             itemCounter++;
                             dataGridView1.Rows.Add(
@@ -122,23 +122,23 @@ namespace GarageManager.usercontrol
                     }
                     else
                     {
-                        
+                        MessageBox.Show("Có kết quả");
                     }
                 }
 
                 if (MainWordTextbox.Text != null && comboBoxCarBrand.SelectedItem == null)
                 {
                     foreach (var x in DataProvider.Instance.DB.XEs
-                        .Where(x => MainWordTextbox.Text == x.HIEUXE.TenHieuXe || MainWordTextbox.Text == x.TenChuXe || MainWordTextbox.Text == x.BienSo))
+                        .Where(x => x.HIEUXE.TenHieuXe.Contains(MainWordTextbox.Text) || x.TenChuXe.Contains(MainWordTextbox.Text) || x.BienSo.Contains(MainWordTextbox.Text)))
                     {
                         itemCounter++;
                         dataGridView1.Rows.Add(
                         itemCounter,
                         x.TenChuXe,
-                            x.HIEUXE.TenHieuXe,
-                            x.BienSo,
-                            x.NgayTiepNhan,
-                            x.TienNo
+                        x.HIEUXE.TenHieuXe,
+                        x.BienSo,
+                        x.NgayTiepNhan,
+                        x.TienNo
                         );
                     }
 
@@ -148,13 +148,13 @@ namespace GarageManager.usercontrol
                     }
                     else
                     {
-                        
+                        MessageBox.Show("Có kết quả");
                     }
                 }
             }
         }
 
-        private void ResetBtn_Click(object sender, EventArgs e)
+        private void reset()
         {
             dataGridView1.Rows.Clear();
             itemCounter = 0;
@@ -164,14 +164,14 @@ namespace GarageManager.usercontrol
             comboBoxCarBrand.SelectedItem = null;
         }
 
+        private void ResetBtn_Click(object sender, EventArgs e)
+        {
+            reset();
+        }
+
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-            itemCounter = 0;
-            MainWordTextbox.Clear();
-            OwnerTextbox.Clear();
-            CarPlateTextbox.Clear();
-            comboBoxCarBrand.SelectedItem = null;
+            reset();
 
             if (radioButton1.Checked == true)
             {
@@ -197,6 +197,11 @@ namespace GarageManager.usercontrol
                 comboBoxCarBrand.Visible = true;
                 OwnerTextbox.Visible = true;
             }
+        }
+
+        private void tracuuUserControl1_VisibleChanged(object sender, EventArgs e)
+        {
+            reset();
         }
     }
 }

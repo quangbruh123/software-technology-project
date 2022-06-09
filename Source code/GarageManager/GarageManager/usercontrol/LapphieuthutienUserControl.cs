@@ -29,27 +29,23 @@ namespace GarageManager.usercontrol
         private void textBoxHoTenChuXePTT_TextChanged(object sender, EventArgs e)
         {
             comboBienSoXe2.Items.Clear();
-            foreach (var plates in DataProvider.Instance.DB.XEs.Where(x => x.TenChuXe == textBoxHoTenChuXePTT.Text).Select(x => x.BienSo))
+            foreach (var plates in DataProvider.Instance.DB.XEs.Where(x => x.TenChuXe.Contains(textBoxHoTenChuXePTT.Text)).Select(x => x.BienSo))
             {
                 comboBienSoXe2.Items.Add(plates);
             }
         }
 
-        private void LapphieuthutienUserControl_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void buttonPhieuThuTienMoiPTT_Click(object sender, EventArgs e)
         {
-            textBoxSoTienThuPTT.Clear();
-            textBoxHoTenChuXePTT.Clear();
-            comboBienSoXe2.Items.Clear();
-            comboBienSoXe2.SelectedIndex = -1;
-            textBoxNgayThuTien.Text = DateTime.Now.ToString();
+            reset();
         }
 
         private void LapphieuthutienUserControl_VisibleChanged(object sender, EventArgs e)
+        {
+            reset();
+        }
+
+        private void reset()
         {
             textBoxNgayThuTien.Text = DateTime.Now.ToShortDateString();
             textBoxHoTenChuXePTT.Text = null;
