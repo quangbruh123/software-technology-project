@@ -12,6 +12,8 @@ namespace GarageManager.usercontrol
 {
     public partial class TraCuuChiTiet : UserControl
     {
+        private int counter = 0;
+
         public TraCuuChiTiet()
         {
             InitializeComponent();
@@ -19,8 +21,7 @@ namespace GarageManager.usercontrol
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TraCuu tracuu = (TraCuu)Parent;
-            tracuu.LoadTraCuuUserControl();
+            refresh();
         }
 
         public void LoadChitiet(Model.XE xe)
@@ -32,6 +33,7 @@ namespace GarageManager.usercontrol
                     dataGridView1.Rows.Add(item.MaPhieuSC, item.BienSo, item.NgaySuaChua, int.Parse(item.TongTien.ToString()) + " VND");
                 }
             }
+            counter++;
 
         }
 
@@ -42,6 +44,8 @@ namespace GarageManager.usercontrol
                 return;
             }
             dataGridView2.Rows.Clear();
+
+            counter++;
 
             int maPSC;
             if (dataGridView1.SelectedRows.Count > 0)
@@ -71,6 +75,8 @@ namespace GarageManager.usercontrol
             }
             dataGridView3.Rows.Clear();
 
+            counter++;
+
             int maCTPSC;
             if (dataGridView2.SelectedRows.Count > 0)
             {
@@ -88,6 +94,25 @@ namespace GarageManager.usercontrol
                     dataGridView3.Rows.Add(item.MaCTPSC, partName, item.SoLuong, item.DonGia, int.Parse(item.ThanhTien.ToString()) + " VND");
                 }
             }
+        }
+
+        private void panel1_VisibleChanged(object sender, EventArgs e)
+        {
+            if ( counter > 0)
+            {
+                refresh();
+            }
+            
+        }
+
+        private void refresh()
+        {
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
+            dataGridView3.Rows.Clear();
+            TraCuu tracuu = (TraCuu)Parent;
+            tracuu.LoadTraCuuUserControl();
+            counter = 0;
         }
     }
 }
