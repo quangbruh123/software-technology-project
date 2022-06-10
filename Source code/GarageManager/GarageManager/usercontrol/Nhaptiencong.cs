@@ -41,14 +41,14 @@ namespace GarageManager.usercontrol
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(textBoxTenVTPTMoi.Text) == true ||
-                String.IsNullOrEmpty(textBoxSoLuongVTPT.Text) == true)
+            if (string.IsNullOrEmpty(textBoxTenVTPTMoi.Text) == true ||
+                string.IsNullOrEmpty(textBoxSoLuongVTPT.Text) == true)
             {
                 MessageBox.Show("Thông tin chưa được điền đầy đủ", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                if (Classes.Finance.AddWageType(textBoxTenVTPTMoi.Text, long.Parse(textBoxSoLuongVTPT.Text)) == true)
+                if (Finance.AddWageType(textBoxTenVTPTMoi.Text, long.Parse(textBoxSoLuongVTPT.Text)) == true)
                 {
                     MessageBox.Show("Thông tin đã được thêm thành công", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dataGridView1.Rows.Clear();
@@ -73,6 +73,7 @@ namespace GarageManager.usercontrol
             textBoxSoLuongVTPT.Clear();
             textBoxTCSua.Clear();
             textBoxDGMoi.Clear();
+            comboBox1.SelectedIndex = -1;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,7 +111,7 @@ namespace GarageManager.usercontrol
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(textBoxDGMoi.Text))
+            if (string.IsNullOrEmpty(textBoxDGMoi.Text))
             {
                 MessageBox.Show("Thông tin chưa được điền đầy đủ", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
