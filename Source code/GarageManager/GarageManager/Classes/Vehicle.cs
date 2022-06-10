@@ -61,6 +61,11 @@ namespace GarageManager.Classes
             if (DataProvider.Instance.DB.XEs.Any(x => x.BienSo == plate))
             {
                 Model.XE vehicle = DataProvider.Instance.DB.XEs.FirstOrDefault(x => x.BienSo == plate);
+                if (date < vehicle.NgayTiepNhan)
+                {
+                    MessageBox.Show("Ngày sửa phải lớn hơn ngày tiếp nhận", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 List<Model.CT_SUDUNGVATTU> partUsageDetailList = new List<Model.CT_SUDUNGVATTU>();
                 for (int i = 0; i < partNames.Count; i++)
                 {

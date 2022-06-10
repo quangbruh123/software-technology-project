@@ -144,7 +144,7 @@ namespace GarageManager.Classes
         /// <param name="wagePrice"></param>
         /// <returns>True if successfully added, false if not</returns>
         public static bool UpdateWagePrice(string wageName, int wagePrice)
-        {
+        {            
             if (DataProvider.Instance.DB.TIENCONGs.Any(x => x.TenTienCong == wageName))
             {
                 Model.TIENCONG wage = DataProvider.Instance.DB.TIENCONGs.FirstOrDefault(x => x.TenTienCong == wageName);
@@ -155,27 +155,9 @@ namespace GarageManager.Classes
                 return false;
         }
 
-        /// <summary>
-        /// Remove a wage type. The wage type must have existed in the database
-        /// </summary>
-        /// <param name="wageName"></param>
-        /// <returns>True if successfully removed, false if not</returns>
-        public static bool RemoveWageType(string wageName)
-        {           
-            if (DataProvider.Instance.DB.TIENCONGs.Any(x => x.TenTienCong == wageName))
-            {
-                Model.TIENCONG unwantedWage = DataProvider.Instance.DB.TIENCONGs.Where(x => x.TenTienCong == wageName).FirstOrDefault();
-                DataProvider.Instance.DB.TIENCONGs.Remove(unwantedWage);
-                DataProvider.Instance.DB.SaveChanges();
-                return true;
-            }
-            else
-                return false;
-        }
-
-        public static int GetWage(string wageName)
+        public static long GetWage(string wageName)
         {
-            return (int)DataProvider.Instance.DB.TIENCONGs.FirstOrDefault(x => x.TenTienCong == wageName).GiaTienCong;
+            return (long)DataProvider.Instance.DB.TIENCONGs.FirstOrDefault(x => x.TenTienCong == wageName).GiaTienCong;
         }
 
         public static Model.BAOCAODOANHSO GetMonthlyFinancialReport(int month, int year)

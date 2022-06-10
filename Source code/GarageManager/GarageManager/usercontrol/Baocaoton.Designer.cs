@@ -234,6 +234,7 @@
             this.Name = "Baocaoton";
             this.Size = new System.Drawing.Size(918, 652);
             this.Load += new System.EventHandler(this.Baocaoton_Load);
+            this.VisibleChanged += new System.EventHandler(this.Baocaoton_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStorageReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

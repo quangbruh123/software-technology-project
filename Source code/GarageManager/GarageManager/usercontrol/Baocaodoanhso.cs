@@ -63,6 +63,11 @@ namespace GarageManager.usercontrol
 
         private void Baocaodoanhso_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void Baocaodoanhso_VisibleChanged(object sender, EventArgs e)
+        {
             List<string> months = CultureInfo.InvariantCulture.DateTimeFormat.MonthNames.Take(12).ToList();
             for (int i = 0; i < months.Count; i++)
             {
@@ -71,11 +76,7 @@ namespace GarageManager.usercontrol
             monthComboBox.SelectedItem = DateTime.Now.Month;
             yearComboBox.DataSource = Enumerable.Range(DateTime.Now.Year - 10, DateTime.Now.Year - (DateTime.Now.Year - 10) + 1).ToList();
             yearComboBox.SelectedItem = DateTime.Now.Year;
-        }
-
-        private void Baocaodoanhso_VisibleChanged(object sender, EventArgs e)
-        {
-                   
+            LoadData();
         }
     }
 }

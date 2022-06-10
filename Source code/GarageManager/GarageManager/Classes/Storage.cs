@@ -51,9 +51,9 @@ namespace GarageManager.Classes
                 return false;
         }
 
-        public static decimal? GetPartPrice(string partName)
+        public static long GetPartPrice(string partName)
         {
-            return DataProvider.Instance.DB.VATTUs.FirstOrDefault(x => x.TenVatTu == partName).DonGiaHienTai;
+            return (long)DataProvider.Instance.DB.VATTUs.FirstOrDefault(x => x.TenVatTu == partName).DonGiaHienTai;
         }
 
         /// <summary>

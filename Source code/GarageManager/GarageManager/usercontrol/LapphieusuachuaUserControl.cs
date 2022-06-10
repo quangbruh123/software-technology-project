@@ -14,7 +14,7 @@ namespace GarageManager.usercontrol
     public partial class LapphieusuachuaUserControl : UserControl
     {
         private int itemCounter = 0;
-        private int total = 0;
+        private long total = 0;
         private Nhapvatu uc2;
         private Nhaptiencong uc1;
         public LapphieusuachuaUserControl()
@@ -34,8 +34,8 @@ namespace GarageManager.usercontrol
             if (isNumber && comboBoxvattuphutung.SelectedIndex > -1 && comboBoxTiencong.SelectedIndex > -1)
             {
                 itemCounter++;
-                int partPrice = (int)Storage.GetPartPrice(comboBoxvattuphutung.Text);
-                int totalForAFix = partPrice * int.Parse(textBoxsoluong.Text) + Finance.GetWage(comboBoxTiencong.GetItemText(comboBoxTiencong.SelectedItem));
+                long partPrice = Storage.GetPartPrice(comboBoxvattuphutung.Text);
+                long totalForAFix = partPrice * int.Parse(textBoxsoluong.Text) + Finance.GetWage(comboBoxTiencong.GetItemText(comboBoxTiencong.SelectedItem));
                 addtcbtn.Rows.Add(
                     itemCounter,
                     textBoxDetails.Text,
@@ -105,15 +105,7 @@ namespace GarageManager.usercontrol
 
         private void LapphieusuachuaUserControl_Load(object sender, EventArgs e)
         {
-            foreach (var part in DataProvider.Instance.DB.VATTUs.Select(x => x.TenVatTu))
-            {
-                comboBoxvattuphutung.Items.Add(part);
-            }
-
-            foreach (var wage in DataProvider.Instance.DB.TIENCONGs.Select(x => x.TenTienCong))
-            {
-                comboBoxTiencong.Items.Add(wage);
-            }
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -163,6 +155,16 @@ namespace GarageManager.usercontrol
             textBoxTongTienPhieuSuaChua.Clear();
             itemCounter = 0;
             total = 0;
+            comboBoxTiencong.Items.Clear();
+            comboBoxvattuphutung.Items.Clear();
+            foreach (var part in DataProvider.Instance.DB.VATTUs.Select(x => x.TenVatTu))
+            {
+                comboBoxvattuphutung.Items.Add(part);
+            }
+            foreach (var wage in DataProvider.Instance.DB.TIENCONGs.Select(x => x.TenTienCong))
+            {
+                comboBoxTiencong.Items.Add(wage);
+            }
         }
     }
 }
