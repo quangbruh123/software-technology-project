@@ -36,7 +36,7 @@ namespace GarageManager.usercontrol
             var taikhoan = DataProvider.Instance.DB.TIENCONGs;
             foreach (var x in taikhoan)
             {
-                dataGridView1.Rows.Add(i, x.TenTienCong,x.GiaTienCong);
+                dataGridView1.Rows.Add(i, x.TenTienCong, (int)x.GiaTienCong + " VND");
                 i++;
             }
         }
@@ -58,7 +58,7 @@ namespace GarageManager.usercontrol
                     var taikhoan = DataProvider.Instance.DB.TIENCONGs;
                     foreach (var x in taikhoan)
                     {
-                        dataGridView1.Rows.Add(i, x.TenTienCong, x.GiaTienCong);
+                        dataGridView1.Rows.Add(i, x.TenTienCong, (int)x.GiaTienCong + " VND");
                         i++;
                     }
                 }
@@ -85,7 +85,7 @@ namespace GarageManager.usercontrol
                 var taikhoan = DataProvider.Instance.DB.TIENCONGs;
                 foreach (var x in taikhoan)
                 {
-                    dataGridView1.Rows.Add(i, x.TenTienCong, x.GiaTienCong);
+                    dataGridView1.Rows.Add(i, x.TenTienCong, (int)x.GiaTienCong + " VND");
                     i++;
                 }
             }
@@ -159,7 +159,7 @@ namespace GarageManager.usercontrol
                     var taikhoan = DataProvider.Instance.DB.TIENCONGs;
                     foreach (var x in taikhoan)
                     {
-                        dataGridView1.Rows.Add(i, x.TenTienCong, x.GiaTienCong);
+                        dataGridView1.Rows.Add(i, x.TenTienCong, (int)x.GiaTienCong + " VND");
                         i++;
                     }
                 }

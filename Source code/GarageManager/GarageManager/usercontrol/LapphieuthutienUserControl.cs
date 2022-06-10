@@ -48,10 +48,16 @@ namespace GarageManager.usercontrol
         private void reset()
         {
             textBoxNgayThuTien.Text = DateTime.Now.ToShortDateString();
-            textBoxHoTenChuXePTT.Text = null;
+            textBoxHoTenChuXePTT.Clear();
+            textBoxSoTienThuPTT.Clear();
             comboBienSoXe2.Items.Clear();
             comboBienSoXe2.SelectedIndex = -1;
             comboBienSoXe2.SelectedItem = null;
+        }
+
+        private void textBoxSoTienThuPTT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

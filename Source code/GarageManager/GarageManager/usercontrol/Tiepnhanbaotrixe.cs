@@ -56,7 +56,7 @@ namespace GarageManager.usercontrol
                 var renewTable = Classes.DataProvider.Instance.DB.XEs.ToList();
                 foreach (var item in renewTable)
                 {
-                    dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan,item.DienThoai, item.DiaChi, item.Email, ((int?)item.TienNo));
+                    dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo + " VND");
                 }
             }
         }
@@ -77,7 +77,7 @@ namespace GarageManager.usercontrol
             var renewTable = Classes.DataProvider.Instance.DB.XEs.ToList();
             foreach (var item in renewTable)
             {
-                dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, item.DienThoai, item.DiaChi, item.Email, ((int?)item.TienNo));
+                dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo + " VND");
             }
         }
 
