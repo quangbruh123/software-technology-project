@@ -37,21 +37,28 @@ namespace GarageManager.usercontrol
 
         private void buttonThemXe_Click(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.TodayVehicleRegistered == Classes.DataProvider.Instance.DB.THAMSOes
+                .FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri)
+            {
+                MessageBox.Show("Đã quá giới hạn số xe sửa chữa trong một ngày", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (
                 String.IsNullOrEmpty(txtBoxTenKH.Text) ||
-                String.IsNullOrEmpty(txtBoxDienThoai.Text) ||
-                String.IsNullOrEmpty(txtBoxDiaChi.Text) ||
                 String.IsNullOrEmpty(txtBoxBienSo.Text) ||
-                String.IsNullOrEmpty(txtboxEmail.Text) ||
                 comboBoxHieuXe.SelectedIndex == -1
                 )
             {
                 MessageBox.Show("Thông tin chưa được điền đầy đủ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (Classes.ValidateEmail.EmailIsValid(txtboxEmail.Text) == false)
+            else if (!String.IsNullOrEmpty(txtboxEmail.Text))
             {
-                MessageBox.Show("Email được nhập không đúng cú pháp", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (Classes.ValidateEmail.EmailIsValid(txtboxEmail.Text) == false)
+                {
+                    MessageBox.Show("Email được nhập không đúng cú pháp", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
+            
             else
             {
                 Classes.Vehicle.AddVehicle(txtBoxBienSo.Text, txtBoxTenKH.Text, comboBoxHieuXe.Text, txtBoxDienThoai.Text, txtBoxDiaChi.Text, txtboxEmail.Text, DateTime.Now);
@@ -59,11 +66,13 @@ namespace GarageManager.usercontrol
                 var renewTable = Classes.DataProvider.Instance.DB.XEs.ToList();
                 foreach (var item in renewTable)
                 {
-                    dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo);
+                    dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo + " VND");
                 }
                 Properties.Settings.Default.TodayVehicleRegistered++;
                 System.Diagnostics.Debug.WriteLine(Properties.Settings.Default.TodayVehicleRegistered.ToString() + " vehicle");
                 Properties.Settings.Default.Save();
+                labelTodayVehicleNum.Text = Properties.Settings.Default.TodayVehicleRegistered.ToString()
+                + " / " + Classes.DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri;
             }
         }
 
@@ -85,6 +94,7 @@ namespace GarageManager.usercontrol
             {
                 dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo + " VND");
             }
+
         }
 
         private void txtBoxDienThoai_KeyPress(object sender, KeyPressEventArgs e)

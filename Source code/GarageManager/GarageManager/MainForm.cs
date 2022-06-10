@@ -74,9 +74,13 @@ namespace GarageManager
             }
             Debug.WriteLine(Properties.Settings.Default.LastLoginDate.Month + " " + Properties.Settings.Default.LastLoginDate.Year);
             Debug.WriteLine(Properties.Settings.Default.TodayVehicleRegistered + " vehicle");
+            if (DataProvider.Instance.DB.BAOCAOTONs.Count() == 0)
+            {
+                Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);
+            }
             if (DateTime.Today.Month != Properties.Settings.Default.LastLoginDate.Month || DateTime.Today.Year != Properties.Settings.Default.LastLoginDate.Year)
             {
-                Classes.Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);
+                Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);
                 Properties.Settings.Default.Save();
             }
             if (DateTime.Today.Day != Properties.Settings.Default.LastLoginDate.Day
