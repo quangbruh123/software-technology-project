@@ -39,10 +39,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.panel1.Location = new System.Drawing.Point(1, 58);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(1, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1563, 4);
+            this.panel1.Size = new System.Drawing.Size(1172, 3);
             this.panel1.TabIndex = 4;
             // 
             // lblCapNhatQuyDinh
@@ -50,10 +49,9 @@
             this.lblCapNhatQuyDinh.BackColor = System.Drawing.Color.Transparent;
             this.lblCapNhatQuyDinh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblCapNhatQuyDinh.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblCapNhatQuyDinh.Location = new System.Drawing.Point(4, 15);
-            this.lblCapNhatQuyDinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCapNhatQuyDinh.Location = new System.Drawing.Point(3, 12);
             this.lblCapNhatQuyDinh.Name = "lblCapNhatQuyDinh";
-            this.lblCapNhatQuyDinh.Size = new System.Drawing.Size(291, 33);
+            this.lblCapNhatQuyDinh.Size = new System.Drawing.Size(218, 27);
             this.lblCapNhatQuyDinh.TabIndex = 23;
             this.lblCapNhatQuyDinh.Text = "LẬP CÁC LOẠI PHIẾU";
             // 
@@ -66,10 +64,9 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Image = global::GarageManager.Properties.Resources.construction_40px;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(367, 62);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(275, 50);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(349, 114);
+            this.button2.Size = new System.Drawing.Size(262, 93);
             this.button2.TabIndex = 7;
             this.button2.Text = "Lập phiếu thu tiền";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -85,10 +82,9 @@
             this.Lapphieusuachuabtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lapphieusuachuabtn.Image = global::GarageManager.Properties.Resources.wrench_40px;
             this.Lapphieusuachuabtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Lapphieusuachuabtn.Location = new System.Drawing.Point(4, 62);
-            this.Lapphieusuachuabtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Lapphieusuachuabtn.Location = new System.Drawing.Point(3, 50);
             this.Lapphieusuachuabtn.Name = "Lapphieusuachuabtn";
-            this.Lapphieusuachuabtn.Size = new System.Drawing.Size(356, 114);
+            this.Lapphieusuachuabtn.Size = new System.Drawing.Size(267, 93);
             this.Lapphieusuachuabtn.TabIndex = 8;
             this.Lapphieusuachuabtn.Text = "Lập phiếu sữa chữa";
             this.Lapphieusuachuabtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -104,10 +100,9 @@
             this.VTPTbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.VTPTbtn.Image = global::GarageManager.Properties.Resources.construction_40px;
             this.VTPTbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.VTPTbtn.Location = new System.Drawing.Point(821, 62);
-            this.VTPTbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VTPTbtn.Location = new System.Drawing.Point(543, 50);
             this.VTPTbtn.Name = "VTPTbtn";
-            this.VTPTbtn.Size = new System.Drawing.Size(349, 114);
+            this.VTPTbtn.Size = new System.Drawing.Size(262, 93);
             this.VTPTbtn.TabIndex = 7;
             this.VTPTbtn.Text = "Nhập vật tư phụ tùng";
             this.VTPTbtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -123,10 +118,9 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Image = global::GarageManager.Properties.Resources.construction_40px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1179, 62);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(811, 50);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(349, 114);
+            this.button1.Size = new System.Drawing.Size(262, 93);
             this.button1.TabIndex = 7;
             this.button1.Text = "Hiệu chỉnh tiền công";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -135,7 +129,7 @@
             // 
             // LAPPHIEU
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.lblCapNhatQuyDinh);
@@ -144,9 +138,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Lapphieusuachuabtn);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LAPPHIEU";
-            this.Size = new System.Drawing.Size(1567, 1078);
+            this.Size = new System.Drawing.Size(1175, 876);
             this.Load += new System.EventHandler(this.LAPPHIEU_Load);
             this.VisibleChanged += new System.EventHandler(this.LAPPHIEU_VisibleChanged);
             this.ResumeLayout(false);

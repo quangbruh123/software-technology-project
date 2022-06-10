@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelTenVTPTMoi = new System.Windows.Forms.Label();
             this.textBoxTenVTPTMoi = new System.Windows.Forms.TextBox();
@@ -118,6 +118,7 @@
             this.button1.TabIndex = 33;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox3
             // 
@@ -126,6 +127,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(121, 26);
             this.textBox3.TabIndex = 30;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBoxDongiaNhap
             // 
@@ -134,6 +136,7 @@
             this.textBoxDongiaNhap.Name = "textBoxDongiaNhap";
             this.textBoxDongiaNhap.Size = new System.Drawing.Size(121, 26);
             this.textBoxDongiaNhap.TabIndex = 30;
+            this.textBoxDongiaNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDongiaNhap_KeyPress);
             // 
             // textBox1
             // 
@@ -143,6 +146,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(136, 26);
             this.textBox1.TabIndex = 25;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // labelSoLuongVTPT
             // 
@@ -158,12 +162,13 @@
             // 
             this.cancerbtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.cancerbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancerbtn.Location = new System.Drawing.Point(995, 480);
+            this.cancerbtn.Location = new System.Drawing.Point(992, 477);
             this.cancerbtn.Name = "cancerbtn";
             this.cancerbtn.Size = new System.Drawing.Size(94, 32);
             this.cancerbtn.TabIndex = 40;
             this.cancerbtn.Text = "Hủy";
             this.cancerbtn.UseVisualStyleBackColor = false;
+            this.cancerbtn.Click += new System.EventHandler(this.cancerbtn_Click);
             // 
             // labelPhieuNhapVTPT
             // 
@@ -180,7 +185,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(3, 34);
+            this.panel1.Location = new System.Drawing.Point(3, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(512, 329);
             this.panel1.TabIndex = 52;
@@ -189,14 +194,14 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -204,7 +209,7 @@
             this.Column3,
             this.Column4});
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 6);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
@@ -258,6 +263,7 @@
             this.Name = "Nhapvatu";
             this.Size = new System.Drawing.Size(1089, 512);
             this.Load += new System.EventHandler(this.Nhapvatu_Load);
+            this.VisibleChanged += new System.EventHandler(this.Nhapvatu_VisibleChanged);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
