@@ -168,7 +168,7 @@ namespace GarageManager.Classes
                     partInputInfo.PHIEUNHAPVATTU = partInputCard;
 
                     Model.BAOCAOTON storageReport = DataProvider.Instance.DB.BAOCAOTONs
-                        .FirstOrDefault(x => x.Thang == inputDate.Month && x.Nam == inputDate.Year && x.VATTU == part);
+                        .FirstOrDefault(x => x.Thang == inputDate.Month && x.Nam == inputDate.Year && x.MaVatTu == part.MaVatTu);
                     storageReport.PhatSinh += amountList[i];
                     storageReport.TonCuoi += amountList[i];
                     DataProvider.Instance.DB.SaveChanges();

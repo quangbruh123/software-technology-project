@@ -43,9 +43,9 @@ namespace GarageManager.Classes
                         if (financialReport.CT_BCDS.Any(x => x.HIEUXE == vehicle.HIEUXE))
                         {
                             Model.CT_BCDS financialReportDetail = DataProvider.Instance.DB.CT_BCDS
-                                .FirstOrDefault(x => x.BAOCAODOANHSO == financialReport && x.HIEUXE == vehicle.HIEUXE);
-                            financialReport.CT_BCDS.Where(x => x.HIEUXE == vehicle.HIEUXE).FirstOrDefault().SoLuotSua++;
-                            financialReport.CT_BCDS.Where(x => x.HIEUXE == vehicle.HIEUXE).FirstOrDefault().ThanhTien += receipt.SoTienThu;                            
+                                .FirstOrDefault(x => x.MaBCDS == financialReport.MaBCDS && x.MaHieuXe == vehicle.MaHieuXe);
+                            financialReport.CT_BCDS.Where(x => x.MaHieuXe == vehicle.MaHieuXe).FirstOrDefault().SoLuotSua++;
+                            financialReport.CT_BCDS.Where(x => x.MaHieuXe == vehicle.MaHieuXe).FirstOrDefault().ThanhTien += receipt.SoTienThu;                            
                             financialReport.TongDoanhThu += receipt.SoTienThu;
                             financialReportDetail.SoLuotSua++;
                             financialReportDetail.ThanhTien += receipt.SoTienThu;
