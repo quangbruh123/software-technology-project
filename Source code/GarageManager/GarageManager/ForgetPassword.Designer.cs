@@ -69,10 +69,9 @@
             this.gradient1.Controls.Add(this.pictureBox3);
             this.gradient1.Controls.Add(this.minbtn);
             this.gradient1.Controls.Add(this.usertxt);
-            this.gradient1.Location = new System.Drawing.Point(5, 2);
-            this.gradient1.Margin = new System.Windows.Forms.Padding(4);
+            this.gradient1.Location = new System.Drawing.Point(4, 2);
             this.gradient1.Name = "gradient1";
-            this.gradient1.Size = new System.Drawing.Size(491, 462);
+            this.gradient1.Size = new System.Drawing.Size(368, 375);
             this.gradient1.TabIndex = 35;
             // 
             // rjButton1
@@ -86,10 +85,9 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(172, 218);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjButton1.Location = new System.Drawing.Point(129, 177);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(199, 49);
+            this.rjButton1.Size = new System.Drawing.Size(149, 40);
             this.rjButton1.TabIndex = 3;
             this.rjButton1.Text = "Gửi mã xác nhận";
             this.rjButton1.TextColor = System.Drawing.Color.White;
@@ -99,10 +97,9 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            this.panel4.Location = new System.Drawing.Point(84, 312);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(63, 254);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(377, 4);
+            this.panel4.Size = new System.Drawing.Size(283, 3);
             this.panel4.TabIndex = 42;
             // 
             // codetxt
@@ -110,42 +107,39 @@
             this.codetxt.BackColor = System.Drawing.SystemColors.Control;
             this.codetxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.codetxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codetxt.Location = new System.Drawing.Point(84, 272);
-            this.codetxt.Margin = new System.Windows.Forms.Padding(4);
+            this.codetxt.Location = new System.Drawing.Point(63, 221);
             this.codetxt.Multiline = true;
             this.codetxt.Name = "codetxt";
             this.codetxt.PasswordChar = '*';
-            this.codetxt.Size = new System.Drawing.Size(381, 43);
+            this.codetxt.Size = new System.Drawing.Size(286, 35);
             this.codetxt.TabIndex = 4;
             this.codetxt.Text = "Mã xác nhận";
             this.codetxt.UseSystemPasswordChar = true;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GarageManager.Properties.Resources.Password_Key_26px;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 272);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Image = global::GarageManager.Properties.Resources.lock_24px;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 221);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox2.Size = new System.Drawing.Size(32, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 40;
             this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            this.panel2.Location = new System.Drawing.Point(84, 206);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(63, 167);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(377, 4);
+            this.panel2.Size = new System.Drawing.Size(283, 3);
             this.panel2.TabIndex = 36;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            this.panel1.Location = new System.Drawing.Point(82, 154);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(62, 125);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(377, 4);
+            this.panel1.Size = new System.Drawing.Size(283, 3);
             this.panel1.TabIndex = 36;
             // 
             // gmailtxt
@@ -153,12 +147,11 @@
             this.gmailtxt.BackColor = System.Drawing.SystemColors.Control;
             this.gmailtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gmailtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gmailtxt.Location = new System.Drawing.Point(84, 166);
-            this.gmailtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.gmailtxt.Location = new System.Drawing.Point(63, 135);
             this.gmailtxt.Multiline = true;
             this.gmailtxt.Name = "gmailtxt";
             this.gmailtxt.PasswordChar = '*';
-            this.gmailtxt.Size = new System.Drawing.Size(381, 43);
+            this.gmailtxt.Size = new System.Drawing.Size(286, 35);
             this.gmailtxt.TabIndex = 2;
             this.gmailtxt.Text = "Gmail";
             this.gmailtxt.UseSystemPasswordChar = true;
@@ -174,10 +167,9 @@
             this.dangnhapbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dangnhapbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dangnhapbtn.ForeColor = System.Drawing.Color.White;
-            this.dangnhapbtn.Location = new System.Drawing.Point(65, 341);
-            this.dangnhapbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.dangnhapbtn.Location = new System.Drawing.Point(49, 277);
             this.dangnhapbtn.Name = "dangnhapbtn";
-            this.dangnhapbtn.Size = new System.Drawing.Size(377, 49);
+            this.dangnhapbtn.Size = new System.Drawing.Size(283, 40);
             this.dangnhapbtn.TabIndex = 5;
             this.dangnhapbtn.Text = "Xác nhận";
             this.dangnhapbtn.TextColor = System.Drawing.Color.White;
@@ -191,10 +183,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(172, 398);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(129, 323);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 53);
+            this.button2.Size = new System.Drawing.Size(130, 43);
             this.button2.TabIndex = 6;
             this.button2.Text = "Quay lại";
             this.button2.UseVisualStyleBackColor = false;
@@ -206,20 +197,19 @@
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            this.label3.Location = new System.Drawing.Point(75, 36);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(56, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(310, 51);
+            this.label3.Size = new System.Drawing.Size(249, 40);
             this.label3.TabIndex = 26;
             this.label3.Text = "Quên mật khẩu";
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::GarageManager.Properties.Resources.Password_Key_26px;
-            this.pictureBox4.Location = new System.Drawing.Point(16, 166);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Image = global::GarageManager.Properties.Resources.gmail_40px;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 135);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox4.Size = new System.Drawing.Size(32, 35);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 31;
             this.pictureBox4.TabStop = false;
             // 
@@ -229,10 +219,9 @@
             this.CloseBtn.FlatAppearance.BorderSize = 0;
             this.CloseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseBtn.Image = global::GarageManager.Properties.Resources.Close_30px;
-            this.CloseBtn.Location = new System.Drawing.Point(445, 0);
-            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.CloseBtn.Location = new System.Drawing.Point(334, 0);
             this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(37, 32);
+            this.CloseBtn.Size = new System.Drawing.Size(28, 26);
             this.CloseBtn.TabIndex = 30;
             this.CloseBtn.UseVisualStyleBackColor = false;
             this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
@@ -240,10 +229,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GarageManager.Properties.Resources.user_30px;
-            this.pictureBox3.Location = new System.Drawing.Point(15, 112);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(11, 91);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(49, 43);
+            this.pictureBox3.Size = new System.Drawing.Size(37, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 32;
             this.pictureBox3.TabStop = false;
             // 
@@ -253,10 +242,9 @@
             this.minbtn.FlatAppearance.BorderSize = 0;
             this.minbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minbtn.Image = global::GarageManager.Properties.Resources.subtract_30px;
-            this.minbtn.Location = new System.Drawing.Point(407, 0);
-            this.minbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.minbtn.Location = new System.Drawing.Point(305, 0);
             this.minbtn.Name = "minbtn";
-            this.minbtn.Size = new System.Drawing.Size(37, 32);
+            this.minbtn.Size = new System.Drawing.Size(28, 26);
             this.minbtn.TabIndex = 29;
             this.minbtn.UseVisualStyleBackColor = false;
             this.minbtn.Click += new System.EventHandler(this.minbtn_Click);
@@ -266,20 +254,20 @@
             this.usertxt.BackColor = System.Drawing.SystemColors.Control;
             this.usertxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usertxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usertxt.Location = new System.Drawing.Point(82, 112);
-            this.usertxt.Margin = new System.Windows.Forms.Padding(4);
+            this.usertxt.Location = new System.Drawing.Point(62, 91);
             this.usertxt.Name = "usertxt";
-            this.usertxt.Size = new System.Drawing.Size(377, 34);
+            this.usertxt.Size = new System.Drawing.Size(283, 28);
             this.usertxt.TabIndex = 1;
             this.usertxt.Text = "Tên đăng nhập";
             // 
             // ForgetPassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 466);
+            this.ClientSize = new System.Drawing.Size(375, 379);
             this.Controls.Add(this.gradient1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ForgetPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ForgetPassword";

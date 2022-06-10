@@ -26,7 +26,7 @@ namespace GarageManager
         /// Stores the current role of the user. 0 is staff, 1 is admin
         /// </summary>
         public static int currentRole;
-
+        public bool logout;
         public MainForm()
         {
             InitializeComponent();
@@ -49,6 +49,8 @@ namespace GarageManager
         {
             LoadDataGridView();
             if (currentRole == 0) mainpanel.Visible = false;
+            logout = false;
+
             uc1 = new Chinhsuaquydinh();
             Controls.Add(uc1);
             uc2 = new TraCuu();
@@ -166,7 +168,7 @@ namespace GarageManager
         {
             if (MessageBox.Show("Thoát ứng dụng?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                Application.Exit();
+                this.Close();
             }
         }
 
@@ -255,6 +257,12 @@ namespace GarageManager
             }
             Classes.Account.DeleteAccount(tentaikhoan);
             LoadDataGridView();
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            logout = true;
+            this.Close();
         }
     }
 }

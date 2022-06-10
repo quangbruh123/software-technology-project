@@ -70,5 +70,15 @@ namespace GarageManager
                 repasswordtxt.UseSystemPasswordChar = false;
             }
         }
+
+        private void minbtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
