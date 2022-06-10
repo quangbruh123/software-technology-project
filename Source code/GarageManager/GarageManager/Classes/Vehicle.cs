@@ -119,7 +119,7 @@ namespace GarageManager.Classes
                 }
                 DataProvider.Instance.DB.PHIEUSUACHUAs.Add(maintenanceCard);
                 vehicle.PHIEUSUACHUAs.Add(maintenanceCard);
-                vehicle.TienNo = maintenanceCard.TongTien;
+                vehicle.TienNo += maintenanceCard.TongTien;
                 DataProvider.Instance.DB.CT_PSC.AddRange(maintenanceDetailList);
                 for (int i = 0; i < partUsageDetailList.Count; i++)
                 {
