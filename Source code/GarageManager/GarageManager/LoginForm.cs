@@ -43,7 +43,7 @@ namespace GarageManager
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to close this Application?", "Notice", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show("Thoát ứng dụng?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -97,21 +97,12 @@ namespace GarageManager
 
         public static string GetHash(HashAlgorithm hashAlgorithm, string input)
         {
-            // Convert the input string to a byte array and compute the hash.
             byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
-
-            // Create a new Stringbuilder to collect the bytes
-            // and create a string.
             var sBuilder = new StringBuilder();
-
-            // Loop through each byte of the hashed data
-            // and format each one as a hexadecimal string.
             for (int i = 0; i < data.Length; i++)
             {
                 sBuilder.Append(data[i].ToString("x2"));
             }
-
-            // Return the hexadecimal string.
             return sBuilder.ToString();
         }
 
@@ -127,6 +118,11 @@ namespace GarageManager
         private void ForgetPassword_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine(Classes.DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == "admin").ToString());
         }
     }
 }
