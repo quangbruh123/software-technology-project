@@ -64,7 +64,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Image = global::GarageManager.Properties.Resources.construction_40px;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(275, 50);
+            this.button2.Location = new System.Drawing.Point(275, 56);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(262, 93);
             this.button2.TabIndex = 7;
@@ -82,7 +82,7 @@
             this.Lapphieusuachuabtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Lapphieusuachuabtn.Image = global::GarageManager.Properties.Resources.wrench_40px;
             this.Lapphieusuachuabtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Lapphieusuachuabtn.Location = new System.Drawing.Point(3, 50);
+            this.Lapphieusuachuabtn.Location = new System.Drawing.Point(3, 56);
             this.Lapphieusuachuabtn.Name = "Lapphieusuachuabtn";
             this.Lapphieusuachuabtn.Size = new System.Drawing.Size(267, 93);
             this.Lapphieusuachuabtn.TabIndex = 8;
@@ -100,7 +100,7 @@
             this.VTPTbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.VTPTbtn.Image = global::GarageManager.Properties.Resources.construction_40px;
             this.VTPTbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.VTPTbtn.Location = new System.Drawing.Point(543, 50);
+            this.VTPTbtn.Location = new System.Drawing.Point(543, 56);
             this.VTPTbtn.Name = "VTPTbtn";
             this.VTPTbtn.Size = new System.Drawing.Size(262, 93);
             this.VTPTbtn.TabIndex = 7;
@@ -118,7 +118,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Image = global::GarageManager.Properties.Resources.construction_40px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(811, 50);
+            this.button1.Location = new System.Drawing.Point(811, 56);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(262, 93);
             this.button1.TabIndex = 7;

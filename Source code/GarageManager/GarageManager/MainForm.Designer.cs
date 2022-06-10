@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainpanel = new System.Windows.Forms.Panel();
+            this.delAccountBtn = new GarageManager.Control.RJButton();
+            this.addAccountBtn = new GarageManager.Control.RJButton();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewNhanvien = new System.Windows.Forms.DataGridView();
@@ -39,6 +41,8 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addAccountPnl = new System.Windows.Forms.Panel();
+            this.cancelBtn = new GarageManager.Control.RJButton();
+            this.confirmBtn = new GarageManager.Control.RJButton();
             this.adminCbx = new System.Windows.Forms.CheckBox();
             this.genderTbx = new System.Windows.Forms.TextBox();
             this.genderLb = new System.Windows.Forms.Label();
@@ -64,10 +68,7 @@
             this.Tiepnhanbaotrixebtn = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.Trangchubtn = new System.Windows.Forms.Button();
-            this.delAccountBtn = new GarageManager.Control.RJButton();
-            this.addAccountBtn = new GarageManager.Control.RJButton();
-            this.cancelBtn = new GarageManager.Control.RJButton();
-            this.confirmBtn = new GarageManager.Control.RJButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.mainpanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanvien)).BeginInit();
@@ -82,6 +83,7 @@
             this.mainpanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainpanel.Controls.Add(this.panel2);
             this.mainpanel.Controls.Add(this.delAccountBtn);
             this.mainpanel.Controls.Add(this.addAccountBtn);
             this.mainpanel.Controls.Add(this.label7);
@@ -94,16 +96,54 @@
             this.mainpanel.TabIndex = 6;
             this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
             // 
+            // delAccountBtn
+            // 
+            this.delAccountBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.delAccountBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.delAccountBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.delAccountBtn.BorderRadius = 20;
+            this.delAccountBtn.BorderSize = 0;
+            this.delAccountBtn.FlatAppearance.BorderSize = 0;
+            this.delAccountBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delAccountBtn.ForeColor = System.Drawing.Color.White;
+            this.delAccountBtn.Location = new System.Drawing.Point(561, 398);
+            this.delAccountBtn.Name = "delAccountBtn";
+            this.delAccountBtn.Size = new System.Drawing.Size(204, 40);
+            this.delAccountBtn.TabIndex = 14;
+            this.delAccountBtn.Text = "Xóa tài khoản";
+            this.delAccountBtn.TextColor = System.Drawing.Color.White;
+            this.delAccountBtn.UseVisualStyleBackColor = false;
+            this.delAccountBtn.Click += new System.EventHandler(this.delAccountBtn_Click);
+            // 
+            // addAccountBtn
+            // 
+            this.addAccountBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.addAccountBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.addAccountBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.addAccountBtn.BorderRadius = 20;
+            this.addAccountBtn.BorderSize = 0;
+            this.addAccountBtn.FlatAppearance.BorderSize = 0;
+            this.addAccountBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addAccountBtn.ForeColor = System.Drawing.Color.White;
+            this.addAccountBtn.Location = new System.Drawing.Point(195, 398);
+            this.addAccountBtn.Name = "addAccountBtn";
+            this.addAccountBtn.Size = new System.Drawing.Size(204, 40);
+            this.addAccountBtn.TabIndex = 13;
+            this.addAccountBtn.Text = "Thêm tài khoản mới";
+            this.addAccountBtn.TextColor = System.Drawing.Color.White;
+            this.addAccountBtn.UseVisualStyleBackColor = false;
+            this.addAccountBtn.Click += new System.EventHandler(this.addAccountBtn_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 15.75F);
             this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(377, 13);
+            this.label7.Location = new System.Drawing.Point(3, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(272, 36);
+            this.label7.Size = new System.Drawing.Size(246, 23);
             this.label7.TabIndex = 11;
-            this.label7.Text = "Danh sách nhân viên";
+            this.label7.Text = "DANH SÁCH NHÂN VIÊN";
             // 
             // panel1
             // 
@@ -120,14 +160,14 @@
             this.dataGridViewNhanvien.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewNhanvien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewNhanvien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewNhanvien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewNhanvien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewNhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewNhanvien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
@@ -197,6 +237,44 @@
             this.addAccountPnl.Name = "addAccountPnl";
             this.addAccountPnl.Size = new System.Drawing.Size(958, 261);
             this.addAccountPnl.TabIndex = 23;
+            // 
+            // cancelBtn
+            // 
+            this.cancelBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cancelBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cancelBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cancelBtn.BorderRadius = 20;
+            this.cancelBtn.BorderSize = 0;
+            this.cancelBtn.FlatAppearance.BorderSize = 0;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBtn.ForeColor = System.Drawing.Color.White;
+            this.cancelBtn.Location = new System.Drawing.Point(540, 207);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(204, 40);
+            this.cancelBtn.TabIndex = 28;
+            this.cancelBtn.Text = "Hủy bỏ";
+            this.cancelBtn.TextColor = System.Drawing.Color.White;
+            this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
+            // confirmBtn
+            // 
+            this.confirmBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.confirmBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.confirmBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.confirmBtn.BorderRadius = 20;
+            this.confirmBtn.BorderSize = 0;
+            this.confirmBtn.FlatAppearance.BorderSize = 0;
+            this.confirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmBtn.ForeColor = System.Drawing.Color.White;
+            this.confirmBtn.Location = new System.Drawing.Point(174, 207);
+            this.confirmBtn.Name = "confirmBtn";
+            this.confirmBtn.Size = new System.Drawing.Size(204, 40);
+            this.confirmBtn.TabIndex = 27;
+            this.confirmBtn.Text = "Thêm tài khoản";
+            this.confirmBtn.TextColor = System.Drawing.Color.White;
+            this.confirmBtn.UseVisualStyleBackColor = false;
+            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             // 
             // adminCbx
             // 
@@ -414,10 +492,10 @@
             this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button7.Image = global::GarageManager.Properties.Resources.home_40px;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(2, 424);
+            this.button7.Location = new System.Drawing.Point(2, 436);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(205, 41);
+            this.button7.Size = new System.Drawing.Size(205, 46);
             this.button7.TabIndex = 22;
             this.button7.Text = "Chỉnh sửa quy định";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -433,10 +511,10 @@
             this.Tracuubtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Tracuubtn.Image = global::GarageManager.Properties.Resources.search_50px;
             this.Tracuubtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Tracuubtn.Location = new System.Drawing.Point(3, 378);
+            this.Tracuubtn.Location = new System.Drawing.Point(2, 384);
             this.Tracuubtn.Margin = new System.Windows.Forms.Padding(2);
             this.Tracuubtn.Name = "Tracuubtn";
-            this.Tracuubtn.Size = new System.Drawing.Size(192, 41);
+            this.Tracuubtn.Size = new System.Drawing.Size(205, 48);
             this.Tracuubtn.TabIndex = 23;
             this.Tracuubtn.Text = "Tra cứu";
             this.Tracuubtn.UseVisualStyleBackColor = false;
@@ -454,7 +532,7 @@
             this.Baocaothangbtn.Location = new System.Drawing.Point(3, 339);
             this.Baocaothangbtn.Margin = new System.Windows.Forms.Padding(2);
             this.Baocaothangbtn.Name = "Baocaothangbtn";
-            this.Baocaothangbtn.Size = new System.Drawing.Size(228, 41);
+            this.Baocaothangbtn.Size = new System.Drawing.Size(204, 41);
             this.Baocaothangbtn.TabIndex = 24;
             this.Baocaothangbtn.Text = "Lập báo cáo ";
             this.Baocaothangbtn.UseVisualStyleBackColor = false;
@@ -472,7 +550,7 @@
             this.Lapphieubtn.Location = new System.Drawing.Point(3, 293);
             this.Lapphieubtn.Margin = new System.Windows.Forms.Padding(2);
             this.Lapphieubtn.Name = "Lapphieubtn";
-            this.Lapphieubtn.Size = new System.Drawing.Size(207, 41);
+            this.Lapphieubtn.Size = new System.Drawing.Size(204, 41);
             this.Lapphieubtn.TabIndex = 25;
             this.Lapphieubtn.Text = "Lập phiếu";
             this.Lapphieubtn.UseVisualStyleBackColor = false;
@@ -487,10 +565,10 @@
             this.Tiepnhanbaotrixebtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Tiepnhanbaotrixebtn.Image = global::GarageManager.Properties.Resources.drill_40px;
             this.Tiepnhanbaotrixebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Tiepnhanbaotrixebtn.Location = new System.Drawing.Point(1, 248);
+            this.Tiepnhanbaotrixebtn.Location = new System.Drawing.Point(5, 248);
             this.Tiepnhanbaotrixebtn.Margin = new System.Windows.Forms.Padding(2);
             this.Tiepnhanbaotrixebtn.Name = "Tiepnhanbaotrixebtn";
-            this.Tiepnhanbaotrixebtn.Size = new System.Drawing.Size(208, 41);
+            this.Tiepnhanbaotrixebtn.Size = new System.Drawing.Size(202, 41);
             this.Tiepnhanbaotrixebtn.TabIndex = 26;
             this.Tiepnhanbaotrixebtn.Text = "Tiếp nhận bảo trì xe";
             this.Tiepnhanbaotrixebtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -523,90 +601,22 @@
             this.Trangchubtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Trangchubtn.Image = global::GarageManager.Properties.Resources.home_40px;
             this.Trangchubtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Trangchubtn.Location = new System.Drawing.Point(1, 202);
+            this.Trangchubtn.Location = new System.Drawing.Point(0, 202);
             this.Trangchubtn.Margin = new System.Windows.Forms.Padding(2);
             this.Trangchubtn.Name = "Trangchubtn";
-            this.Trangchubtn.Size = new System.Drawing.Size(209, 41);
+            this.Trangchubtn.Size = new System.Drawing.Size(207, 41);
             this.Trangchubtn.TabIndex = 28;
             this.Trangchubtn.Text = "Trang chủ";
             this.Trangchubtn.UseVisualStyleBackColor = false;
             this.Trangchubtn.Click += new System.EventHandler(this.Trangchubtn_Click);
             // 
-            // delAccountBtn
+            // panel2
             // 
-            this.delAccountBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.delAccountBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.delAccountBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.delAccountBtn.BorderRadius = 20;
-            this.delAccountBtn.BorderSize = 0;
-            this.delAccountBtn.FlatAppearance.BorderSize = 0;
-            this.delAccountBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delAccountBtn.ForeColor = System.Drawing.Color.White;
-            this.delAccountBtn.Location = new System.Drawing.Point(561, 398);
-            this.delAccountBtn.Name = "delAccountBtn";
-            this.delAccountBtn.Size = new System.Drawing.Size(204, 40);
-            this.delAccountBtn.TabIndex = 14;
-            this.delAccountBtn.Text = "Xóa tài khoản";
-            this.delAccountBtn.TextColor = System.Drawing.Color.White;
-            this.delAccountBtn.UseVisualStyleBackColor = false;
-            this.delAccountBtn.Click += new System.EventHandler(this.delAccountBtn_Click);
-            // 
-            // addAccountBtn
-            // 
-            this.addAccountBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.addAccountBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.addAccountBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.addAccountBtn.BorderRadius = 20;
-            this.addAccountBtn.BorderSize = 0;
-            this.addAccountBtn.FlatAppearance.BorderSize = 0;
-            this.addAccountBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addAccountBtn.ForeColor = System.Drawing.Color.White;
-            this.addAccountBtn.Location = new System.Drawing.Point(195, 398);
-            this.addAccountBtn.Name = "addAccountBtn";
-            this.addAccountBtn.Size = new System.Drawing.Size(204, 40);
-            this.addAccountBtn.TabIndex = 13;
-            this.addAccountBtn.Text = "Thêm tài khoản mới";
-            this.addAccountBtn.TextColor = System.Drawing.Color.White;
-            this.addAccountBtn.UseVisualStyleBackColor = false;
-            this.addAccountBtn.Click += new System.EventHandler(this.addAccountBtn_Click);
-            // 
-            // cancelBtn
-            // 
-            this.cancelBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cancelBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cancelBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cancelBtn.BorderRadius = 20;
-            this.cancelBtn.BorderSize = 0;
-            this.cancelBtn.FlatAppearance.BorderSize = 0;
-            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(540, 207);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(204, 40);
-            this.cancelBtn.TabIndex = 28;
-            this.cancelBtn.Text = "Hủy bỏ";
-            this.cancelBtn.TextColor = System.Drawing.Color.White;
-            this.cancelBtn.UseVisualStyleBackColor = false;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
-            // 
-            // confirmBtn
-            // 
-            this.confirmBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.confirmBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.confirmBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.confirmBtn.BorderRadius = 20;
-            this.confirmBtn.BorderSize = 0;
-            this.confirmBtn.FlatAppearance.BorderSize = 0;
-            this.confirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmBtn.ForeColor = System.Drawing.Color.White;
-            this.confirmBtn.Location = new System.Drawing.Point(174, 207);
-            this.confirmBtn.Name = "confirmBtn";
-            this.confirmBtn.Size = new System.Drawing.Size(204, 40);
-            this.confirmBtn.TabIndex = 27;
-            this.confirmBtn.Text = "Thêm tài khoản";
-            this.confirmBtn.TextColor = System.Drawing.Color.White;
-            this.confirmBtn.UseVisualStyleBackColor = false;
-            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.panel2.Location = new System.Drawing.Point(1, 47);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1172, 3);
+            this.panel2.TabIndex = 24;
             // 
             // MainForm
             // 
@@ -675,6 +685,7 @@
         private Control.RJButton confirmBtn;
         private System.Windows.Forms.CheckBox adminCbx;
         private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 
