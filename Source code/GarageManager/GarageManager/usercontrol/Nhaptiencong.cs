@@ -71,26 +71,8 @@ namespace GarageManager.usercontrol
         {
             textBoxTenVTPTMoi.Clear();
             textBoxSoLuongVTPT.Clear();
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            if (Classes.Finance.RemoveWageType(dataGridView1.SelectedRows[0].Cells[1].Value.ToString()) == true)
-            {
-                MessageBox.Show("Thông tin đã được xóa thành công", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dataGridView1.Rows.Clear();
-                int i = 1;
-                var taikhoan = DataProvider.Instance.DB.TIENCONGs;
-                foreach (var x in taikhoan)
-                {
-                    dataGridView1.Rows.Add(i, x.TenTienCong, (int)x.GiaTienCong + " VND");
-                    i++;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Thông tin không được xóa thành công", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            textBoxTCSua.Clear();
+            textBoxDGMoi.Clear();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -112,6 +94,11 @@ namespace GarageManager.usercontrol
                 cancerbtn.Visible = true;
                 textBoxTCSua.Clear();
                 textBoxDGMoi.Clear();
+            }
+            if (comboBox1.SelectedIndex == -1)
+            {
+                panel2.Visible = false;
+                panel4.Visible = false;
             }
         }
 

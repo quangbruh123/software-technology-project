@@ -28,25 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LapphieuthutienUserControl));
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxNgayThuTien = new System.Windows.Forms.TextBox();
             this.labelNgayThuTienPTT = new System.Windows.Forms.Label();
             this.labelSoTienThuPTT = new System.Windows.Forms.Label();
             this.textBoxSoTienThuPTT = new System.Windows.Forms.TextBox();
             this.panel23 = new System.Windows.Forms.Panel();
             this.buttonPhieuThuTienMoiPTT = new System.Windows.Forms.Button();
             this.buttonLapPhieuThuTienPTT = new System.Windows.Forms.Button();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.textBoxHoTenChuXePTT = new System.Windows.Forms.TextBox();
             this.labelHoTenChuXePTT = new System.Windows.Forms.Label();
             this.comboBienSoXe2 = new System.Windows.Forms.ComboBox();
             this.labelBienSoPTT = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel23.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,18 +56,6 @@
             this.label2.Size = new System.Drawing.Size(303, 39);
             this.label2.TabIndex = 1;
             this.label2.Text = "PHIẾU THU TIỀN";
-            // 
-            // textBoxNgayThuTien
-            // 
-            this.textBoxNgayThuTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxNgayThuTien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNgayThuTien.Location = new System.Drawing.Point(260, 191);
-            this.textBoxNgayThuTien.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxNgayThuTien.MaxLength = 10;
-            this.textBoxNgayThuTien.Name = "textBoxNgayThuTien";
-            this.textBoxNgayThuTien.Size = new System.Drawing.Size(283, 19);
-            this.textBoxNgayThuTien.TabIndex = 0;
-            this.textBoxNgayThuTien.TabStop = false;
             // 
             // labelNgayThuTienPTT
             // 
@@ -142,16 +126,6 @@
             this.buttonLapPhieuThuTienPTT.UseVisualStyleBackColor = true;
             this.buttonLapPhieuThuTienPTT.Click += new System.EventHandler(this.buttonLapPhieuThuTienPTT_Click);
             // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
             // textBoxHoTenChuXePTT
             // 
             this.textBoxHoTenChuXePTT.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -199,15 +173,6 @@
             this.labelBienSoPTT.TabIndex = 16;
             this.labelBienSoPTT.Text = "Biển số :";
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(259, 212);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(284, 2);
-            this.panel5.TabIndex = 55;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
@@ -235,20 +200,30 @@
             this.panel3.Size = new System.Drawing.Size(284, 2);
             this.panel3.TabIndex = 55;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(302, 191);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(185, 26);
+            this.dateTimePicker1.TabIndex = 56;
+            // 
             // LapphieuthutienUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.comboBienSoXe2);
             this.Controls.Add(this.labelBienSoPTT);
             this.Controls.Add(this.textBoxHoTenChuXePTT);
             this.Controls.Add(this.labelHoTenChuXePTT);
-            this.Controls.Add(this.textBoxNgayThuTien);
             this.Controls.Add(this.labelNgayThuTienPTT);
             this.Controls.Add(this.labelSoTienThuPTT);
             this.Controls.Add(this.textBoxSoTienThuPTT);
@@ -265,22 +240,19 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxNgayThuTien;
         private System.Windows.Forms.Label labelNgayThuTienPTT;
         private System.Windows.Forms.Label labelSoTienThuPTT;
         private System.Windows.Forms.TextBox textBoxSoTienThuPTT;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Button buttonPhieuThuTienMoiPTT;
         private System.Windows.Forms.Button buttonLapPhieuThuTienPTT;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.TextBox textBoxHoTenChuXePTT;
         private System.Windows.Forms.Label labelHoTenChuXePTT;
         private System.Windows.Forms.ComboBox comboBienSoXe2;
         private System.Windows.Forms.Label labelBienSoPTT;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

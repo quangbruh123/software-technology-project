@@ -93,7 +93,7 @@ namespace GarageManager.Classes
                 }
                 else
                 {
-                    MessageBox.Show("Lập phiếu thu tiền thất bại.\nSố tiền thu không được vượt quá số tiền nợ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Lập phiếu thu tiền thất bại.\nSố tiền thu không được vượt quá số tiền nợ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }

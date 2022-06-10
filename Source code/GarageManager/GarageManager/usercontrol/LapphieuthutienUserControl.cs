@@ -20,10 +20,30 @@ namespace GarageManager.usercontrol
 
         private void buttonLapPhieuThuTienPTT_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBoxHoTenChuXePTT.Text))
+            {
+                MessageBox.Show("Tên chủ xe không được trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (comboBienSoXe2.SelectedIndex == -1)
+            {
+                MessageBox.Show("Biển số xe không được trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string plate = comboBienSoXe2.SelectedItem.ToString();
-            int pay = int.Parse(textBoxSoTienThuPTT.Text);
-            DateTime a = DateTime.Now;
-            Finance.AddReceipt(plate, pay, a);
+            bool isNumber = int.TryParse(textBoxSoTienThuPTT.Text, out int pay);
+            if (isNumber && pay > 0)
+            {
+                Finance.AddReceipt(plate, pay, dateTimePicker1.Value);
+            }
+            else if (!isNumber)
+            {
+                MessageBox.Show("Có giá trị không hợp lệ trong số tiền thu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (pay <= 0)
+            {
+                MessageBox.Show("Số tiền thu phải lớn hơn 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void textBoxHoTenChuXePTT_TextChanged(object sender, EventArgs e)
@@ -47,7 +67,7 @@ namespace GarageManager.usercontrol
 
         private void reset()
         {
-            textBoxNgayThuTien.Text = DateTime.Now.ToShortDateString();
+            dateTimePicker1.Value = DateTime.Now;
             textBoxHoTenChuXePTT.Clear();
             textBoxSoTienThuPTT.Clear();
             comboBienSoXe2.Items.Clear();
