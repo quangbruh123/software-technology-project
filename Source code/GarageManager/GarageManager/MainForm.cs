@@ -232,5 +232,24 @@ namespace GarageManager
             delAccountBtn.Visible = true;
             addAccountPnl.Visible = false;
         }
+
+        private void delAccountBtn_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewNhanvien.Rows.Count < 1)
+            {
+                return;
+            }
+
+            string tentaikhoan;
+            if (dataGridViewNhanvien.SelectedRows.Count > 0)
+            {
+                tentaikhoan = dataGridViewNhanvien.SelectedRows[0].Cells[2].Value.ToString();
+            }
+            else
+            {
+                tentaikhoan = dataGridViewNhanvien.Rows[dataGridViewNhanvien.SelectedCells[0].RowIndex].Cells[2].Value.ToString();
+            }
+            Classes.Account.DeleteAccount(tentaikhoan);
+        }
     }
 }
