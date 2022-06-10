@@ -113,7 +113,7 @@ namespace GarageManager.Classes
                     XE = vehicle,
                     TongTien = 0
                 };
-                for (int i = 0; i < partNames.Count; i++)
+                for (int i = 0; i < maintenanceDetailList.Count; i++)
                 {
                     maintenanceCard.TongTien += maintenanceDetailList[i].ThanhTien;
                 }
