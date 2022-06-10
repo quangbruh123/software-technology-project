@@ -211,6 +211,10 @@ namespace GarageManager
         {
             SHA256 sha256hash = SHA256.Create();
             string passwordhash = LoginForm.GetHash(sha256hash, passTbx.Text);
+            if (!Classes.ValidateEmail.EmailIsValid(emailTbx.Text))
+            {
+                MessageBox.Show("Email không hợp lệ", "Không thể tạo tài khoản");
+            }    
             if (adminCbx.Checked)
             {
                 if (Classes.Account.AddAdminAccount(nameTbx.Text, accTbx.Text, emailTbx.Text, genderTbx.Text, passwordhash))
