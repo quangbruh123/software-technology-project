@@ -33,11 +33,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ownerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inputDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.owedMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCapNhatQuyDinh = new System.Windows.Forms.Label();
             this.MainWordTextbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.DaiBang = new System.Windows.Forms.Panel();
             this.CarPlateTextbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.OwnerTextbox = new System.Windows.Forms.TextBox();
@@ -48,12 +55,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ownerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inputDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.owedMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -109,12 +111,60 @@
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // Stt
+            // 
+            this.Stt.HeaderText = "Stt";
+            this.Stt.MinimumWidth = 6;
+            this.Stt.Name = "Stt";
+            this.Stt.ReadOnly = true;
+            this.Stt.Width = 50;
+            // 
+            // ownerName
+            // 
+            this.ownerName.HeaderText = "Chủ Xe";
+            this.ownerName.MinimumWidth = 6;
+            this.ownerName.Name = "ownerName";
+            this.ownerName.ReadOnly = true;
+            this.ownerName.Width = 183;
+            // 
+            // brand
+            // 
+            this.brand.HeaderText = "Hiệu Xe";
+            this.brand.MinimumWidth = 6;
+            this.brand.Name = "brand";
+            this.brand.ReadOnly = true;
+            this.brand.Width = 120;
+            // 
+            // plate
+            // 
+            this.plate.HeaderText = "Biển Số";
+            this.plate.MinimumWidth = 6;
+            this.plate.Name = "plate";
+            this.plate.ReadOnly = true;
+            this.plate.Width = 125;
+            // 
+            // inputDate
+            // 
+            this.inputDate.HeaderText = "Ngày tiếp nhận";
+            this.inputDate.MinimumWidth = 6;
+            this.inputDate.Name = "inputDate";
+            this.inputDate.ReadOnly = true;
+            this.inputDate.Width = 140;
+            // 
+            // owedMoney
+            // 
+            this.owedMoney.HeaderText = "Tiền nợ";
+            this.owedMoney.MinimumWidth = 6;
+            this.owedMoney.Name = "owedMoney";
+            this.owedMoney.ReadOnly = true;
+            this.owedMoney.Width = 130;
+            // 
             // lblCapNhatQuyDinh
             // 
             this.lblCapNhatQuyDinh.BackColor = System.Drawing.Color.Transparent;
             this.lblCapNhatQuyDinh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblCapNhatQuyDinh.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblCapNhatQuyDinh.Location = new System.Drawing.Point(377, 44);
+            this.lblCapNhatQuyDinh.Location = new System.Drawing.Point(3, 12);
             this.lblCapNhatQuyDinh.Name = "lblCapNhatQuyDinh";
             this.lblCapNhatQuyDinh.Size = new System.Drawing.Size(131, 27);
             this.lblCapNhatQuyDinh.TabIndex = 20;
@@ -154,6 +204,14 @@
             this.label2.Size = new System.Drawing.Size(85, 25);
             this.label2.TabIndex = 12;
             this.label2.Text = "Hiệu xe";
+            // 
+            // DaiBang
+            // 
+            this.DaiBang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.DaiBang.Location = new System.Drawing.Point(1, 47);
+            this.DaiBang.Name = "DaiBang";
+            this.DaiBang.Size = new System.Drawing.Size(1172, 3);
+            this.DaiBang.TabIndex = 11;
             // 
             // CarPlateTextbox
             // 
@@ -275,59 +333,20 @@
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // Stt
+            // panel2
             // 
-            this.Stt.HeaderText = "Stt";
-            this.Stt.MinimumWidth = 6;
-            this.Stt.Name = "Stt";
-            this.Stt.ReadOnly = true;
-            this.Stt.Width = 50;
-            // 
-            // ownerName
-            // 
-            this.ownerName.HeaderText = "Chủ Xe";
-            this.ownerName.MinimumWidth = 6;
-            this.ownerName.Name = "ownerName";
-            this.ownerName.ReadOnly = true;
-            this.ownerName.Width = 183;
-            // 
-            // brand
-            // 
-            this.brand.HeaderText = "Hiệu Xe";
-            this.brand.MinimumWidth = 6;
-            this.brand.Name = "brand";
-            this.brand.ReadOnly = true;
-            this.brand.Width = 120;
-            // 
-            // plate
-            // 
-            this.plate.HeaderText = "Biển Số";
-            this.plate.MinimumWidth = 6;
-            this.plate.Name = "plate";
-            this.plate.ReadOnly = true;
-            this.plate.Width = 125;
-            // 
-            // inputDate
-            // 
-            this.inputDate.HeaderText = "Ngày tiếp nhận";
-            this.inputDate.MinimumWidth = 6;
-            this.inputDate.Name = "inputDate";
-            this.inputDate.ReadOnly = true;
-            this.inputDate.Width = 140;
-            // 
-            // owedMoney
-            // 
-            this.owedMoney.HeaderText = "Tiền nợ";
-            this.owedMoney.MinimumWidth = 6;
-            this.owedMoney.Name = "owedMoney";
-            this.owedMoney.ReadOnly = true;
-            this.owedMoney.Width = 130;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.panel2.Location = new System.Drawing.Point(1, 47);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1172, 3);
+            this.panel2.TabIndex = 21;
             // 
             // tracuuUserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblCapNhatQuyDinh);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
@@ -349,6 +368,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel DaiBang;
         private System.Windows.Forms.TextBox CarPlateTextbox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox OwnerTextbox;
@@ -365,5 +385,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn plate;
         private System.Windows.Forms.DataGridViewTextBoxColumn inputDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn owedMoney;
+        private System.Windows.Forms.Panel panel2;
     }
 }

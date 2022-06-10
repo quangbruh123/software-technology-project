@@ -52,6 +52,8 @@
             this.dataGridViewHieuXe = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panelQuyDinhHienHanh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuyDinhHienHanh)).BeginInit();
             this.pnCapNhatQuyDinh.SuspendLayout();
@@ -311,11 +313,32 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(3, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(233, 27);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "CHỈNH SỬA QUY ĐỊNH";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.panel4.Location = new System.Drawing.Point(1, 47);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1172, 3);
+            this.panel4.TabIndex = 13;
+            // 
             // Chinhsuaquydinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelQuyDinhHienHanh);
@@ -365,5 +388,7 @@
         private System.Windows.Forms.DataGridView dataGridViewHieuXe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel4;
     }
 }
