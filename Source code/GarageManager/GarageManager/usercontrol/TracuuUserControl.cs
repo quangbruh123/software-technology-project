@@ -116,7 +116,7 @@ namespace GarageManager.usercontrol
                         }
                     }
 
-                    if (dataGridView1.Rows.Count < 2)
+                    if (dataGridView1.Rows.Count < 1)
                     {
                         MessageBox.Show("Không có kết quả");
                     }
@@ -142,7 +142,7 @@ namespace GarageManager.usercontrol
                         );
                     }
 
-                    if (dataGridView1.Rows.Count < 2)
+                    if (dataGridView1.Rows.Count < 1)
                     {
                         MessageBox.Show("Không có kết quả");
                     }
@@ -206,7 +206,7 @@ namespace GarageManager.usercontrol
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Rows.Count < 2)
+            if (dataGridView1.Rows.Count < 1 )
             {
                 //MessageBox.Show("Chưa có dữ liệu");
             }

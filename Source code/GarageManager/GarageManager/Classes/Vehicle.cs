@@ -98,7 +98,7 @@ namespace GarageManager.Classes
                         NoiDung = details[i],
                         SoLan = DataProvider.Instance.DB.PHIEUSUACHUAs.Where(x => x.BienSo == plate).Count() + 1,
                         MaTienCong = wage.MaTienCong,
-                        ThanhTien = partUsageDetailList[i].SoLuong * partUsageDetailList[i].DonGia + wage.MaTienCong,
+                        ThanhTien = partUsageDetailList[i].SoLuong * partUsageDetailList[i].DonGia + wage.GiaTienCong,
                         TIENCONG = wage
                     };
                     maintenanceDetail.CT_SUDUNGVATTU.Add(partUsageDetailList[i]);                    
@@ -116,6 +116,7 @@ namespace GarageManager.Classes
                 for (int i = 0; i < maintenanceDetailList.Count; i++)
                 {
                     maintenanceCard.TongTien += maintenanceDetailList[i].ThanhTien;
+                    Debug.WriteLine(maintenanceCard.TongTien + " + " + maintenanceDetailList[i].ThanhTien);
                 }
                 DataProvider.Instance.DB.PHIEUSUACHUAs.Add(maintenanceCard);
                 vehicle.PHIEUSUACHUAs.Add(maintenanceCard);

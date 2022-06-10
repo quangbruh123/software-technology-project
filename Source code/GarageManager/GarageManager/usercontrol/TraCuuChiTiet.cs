@@ -29,7 +29,7 @@ namespace GarageManager.usercontrol
             {
                 if (item.BienSo == xe.BienSo)
                 {
-                    dataGridView1.Rows.Add(item.MaPhieuSC, item.BienSo, item.NgaySuaChua, (int)item.TongTien + " VND");
+                    dataGridView1.Rows.Add(item.MaPhieuSC, item.BienSo, item.NgaySuaChua, int.Parse(item.TongTien.ToString()) + " VND");
                 }
             }
 
@@ -57,7 +57,7 @@ namespace GarageManager.usercontrol
                 if (item.MaPhieuSC == maPSC)
                 {
                     string wageName = Classes.DataProvider.Instance.DB.TIENCONGs.FirstOrDefault(x => x.MaTienCong == item.MaTienCong).TenTienCong;
-                    dataGridView2.Rows.Add(item.MaCTPSC, item.MaPhieuSC, item.NoiDung, item.SoLan, wageName, (int)item.ThanhTien + " VND");
+                    dataGridView2.Rows.Add(item.MaCTPSC, item.MaPhieuSC, item.NoiDung, item.SoLan, wageName, int.Parse(item.ThanhTien.ToString()) + " VND");
                 }
             }
         }
@@ -85,7 +85,7 @@ namespace GarageManager.usercontrol
                 if (item.MaCTPSC == maCTPSC)
                 {
                     string partName = Classes.DataProvider.Instance.DB.VATTUs.FirstOrDefault(x => x.MaVatTu == item.MaVatTu).TenVatTu;
-                    dataGridView3.Rows.Add(item.MaCTPSC, partName, item.SoLuong, item.DonGia, (int)item.ThanhTien + " VND");
+                    dataGridView3.Rows.Add(item.MaCTPSC, partName, item.SoLuong, item.DonGia, int.Parse(item.ThanhTien.ToString()) + " VND");
                 }
             }
         }
