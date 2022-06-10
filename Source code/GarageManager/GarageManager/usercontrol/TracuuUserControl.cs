@@ -57,7 +57,7 @@ namespace GarageManager.usercontrol
                             x.HIEUXE.TenHieuXe,
                             x.BienSo,
                             x.NgayTiepNhan,
-                            ((int?)x.TienNo)
+                            (int)x.TienNo
                             );
                         }
                     }
@@ -75,7 +75,7 @@ namespace GarageManager.usercontrol
                             x.HIEUXE.TenHieuXe,
                             x.BienSo,
                             x.NgayTiepNhan,
-                            ((int?)x.TienNo)
+                            (int)x.TienNo
                             );
                         }
                     }
@@ -93,7 +93,7 @@ namespace GarageManager.usercontrol
                             x.HIEUXE.TenHieuXe,
                             x.BienSo,
                             x.NgayTiepNhan,
-                            ((int?)x.TienNo)
+                            (int)x.TienNo
                             );
                         }
                     }
@@ -111,7 +111,7 @@ namespace GarageManager.usercontrol
                             x.HIEUXE.TenHieuXe,
                             x.BienSo,
                             x.NgayTiepNhan,
-                            ((int?)x.TienNo)
+                            (int)x.TienNo
                             );
                         }
                     }
@@ -122,7 +122,7 @@ namespace GarageManager.usercontrol
                     }
                     else
                     {
-                        MessageBox.Show("Có kết quả");
+                        MessageBox.Show("Có " + dataGridView1.Rows.Count + " kết quả", "", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
                     }
                 }
 
@@ -138,7 +138,7 @@ namespace GarageManager.usercontrol
                         x.HIEUXE.TenHieuXe,
                         x.BienSo,
                         x.NgayTiepNhan,
-                        ((int?)x.TienNo)
+                        (int)x.TienNo
                         );
                     }
 
@@ -148,7 +148,7 @@ namespace GarageManager.usercontrol
                     }
                     else
                     {
-                        MessageBox.Show("Có kết quả");
+                        MessageBox.Show("Có " + dataGridView1.Rows.Count + " kết quả", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -208,11 +208,11 @@ namespace GarageManager.usercontrol
         {
             if (dataGridView1.Rows.Count < 2)
             {
-                MessageBox.Show("Chưa có dữ liệu");
+                //MessageBox.Show("Chưa có dữ liệu");
             }
             else
             {
-                if (MessageBox.Show("Xem chi tiết về thông tin xe ?", "Notice", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show("Xem chi tiết về thông tin xe?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string bienso;
                     if (dataGridView1.SelectedRows.Count != 0)
