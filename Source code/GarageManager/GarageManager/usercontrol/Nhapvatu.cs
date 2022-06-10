@@ -35,7 +35,7 @@ namespace GarageManager.usercontrol
             var taikhoan = DataProvider.Instance.DB.VATTUs;
             foreach (var x in taikhoan)
             {
-                dataGridView1.Rows.Add(i, x.TenVatTu, x.DonGiaHienTai, x.SoLuongTon);
+                dataGridView1.Rows.Add(i, x.TenVatTu, (int)x.DonGiaHienTai + " VND", x.SoLuongTon);
                 i++;
             }
         }
@@ -65,7 +65,7 @@ namespace GarageManager.usercontrol
                 var vattu = DataProvider.Instance.DB.VATTUs;
                 foreach (var x in vattu)
                 {
-                    dataGridView1.Rows.Add(i, x.TenVatTu, x.DonGiaHienTai, x.SoLuongTon);
+                    dataGridView1.Rows.Add(i, x.TenVatTu, (int)x.DonGiaHienTai + " VND", x.SoLuongTon);
                     i++;
                 }
             }

@@ -41,9 +41,9 @@ namespace GarageManager.usercontrol
                     textBoxDetails.Text,
                     comboBoxvattuphutung.GetItemText(comboBoxvattuphutung.SelectedItem),
                     textBoxsoluong.Text,
-                    partPrice,
+                    partPrice + " VND",
                     comboBoxTiencong.GetItemText(comboBoxTiencong.SelectedItem),
-                    totalForAFix);
+                    totalForAFix + " VND");
                 total += totalForAFix;
                 textBoxTongTienPhieuSuaChua.Text = total.ToString() + " VND";
             }
