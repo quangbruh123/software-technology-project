@@ -55,14 +55,16 @@
             this.labelTieuDe = new System.Windows.Forms.Label();
             this.pnDanhSachTiepNhan = new System.Windows.Forms.Panel();
             this.dataGridViewXeDaTiepNhan = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonLamMoi = new System.Windows.Forms.Button();
             this.lblDanhSachTiepNhan = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelTodayVehicel = new System.Windows.Forms.Label();
+            this.labelTodayVehicleNum = new System.Windows.Forms.Label();
             this.pnThemThongTinKHVaXe.SuspendLayout();
             this.pnDanhSachTiepNhan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXeDaTiepNhan)).BeginInit();
@@ -93,7 +95,7 @@
             this.pnThemThongTinKHVaXe.Controls.Add(this.buttonThemXe);
             this.pnThemThongTinKHVaXe.Controls.Add(this.labelTieuDe);
             this.pnThemThongTinKHVaXe.Location = new System.Drawing.Point(-62, 133);
-            this.pnThemThongTinKHVaXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnThemThongTinKHVaXe.Margin = new System.Windows.Forms.Padding(2);
             this.pnThemThongTinKHVaXe.Name = "pnThemThongTinKHVaXe";
             this.pnThemThongTinKHVaXe.Size = new System.Drawing.Size(475, 524);
             this.pnThemThongTinKHVaXe.TabIndex = 1;
@@ -168,7 +170,7 @@
             this.txtboxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtboxEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtboxEmail.Location = new System.Drawing.Point(173, 337);
-            this.txtboxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtboxEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtboxEmail.MaxLength = 30;
             this.txtboxEmail.Name = "txtboxEmail";
             this.txtboxEmail.Size = new System.Drawing.Size(282, 19);
@@ -193,7 +195,7 @@
             this.comboBoxHieuXe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxHieuXe.FormattingEnabled = true;
             this.comboBoxHieuXe.Location = new System.Drawing.Point(169, 403);
-            this.comboBoxHieuXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxHieuXe.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxHieuXe.Name = "comboBoxHieuXe";
             this.comboBoxHieuXe.Size = new System.Drawing.Size(282, 27);
             this.comboBoxHieuXe.TabIndex = 5;
@@ -234,7 +236,7 @@
             this.txtBoxBienSo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxBienSo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxBienSo.Location = new System.Drawing.Point(173, 274);
-            this.txtBoxBienSo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxBienSo.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxBienSo.MaxLength = 20;
             this.txtBoxBienSo.Name = "txtBoxBienSo";
             this.txtBoxBienSo.Size = new System.Drawing.Size(282, 19);
@@ -255,7 +257,7 @@
             this.txtBoxDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxDiaChi.Location = new System.Drawing.Point(173, 209);
-            this.txtBoxDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxDiaChi.MaxLength = 100;
             this.txtBoxDiaChi.Name = "txtBoxDiaChi";
             this.txtBoxDiaChi.Size = new System.Drawing.Size(282, 19);
@@ -276,7 +278,7 @@
             this.txtBoxDienThoai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxDienThoai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxDienThoai.Location = new System.Drawing.Point(173, 148);
-            this.txtBoxDienThoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxDienThoai.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxDienThoai.MaxLength = 12;
             this.txtBoxDienThoai.Name = "txtBoxDienThoai";
             this.txtBoxDienThoai.Size = new System.Drawing.Size(282, 19);
@@ -303,7 +305,7 @@
             this.txtBoxTenKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxTenKH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxTenKH.Location = new System.Drawing.Point(170, 83);
-            this.txtBoxTenKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxTenKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxTenKH.MaxLength = 30;
             this.txtBoxTenKH.Name = "txtBoxTenKH";
             this.txtBoxTenKH.Size = new System.Drawing.Size(282, 19);
@@ -341,7 +343,7 @@
             this.pnDanhSachTiepNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
             this.pnDanhSachTiepNhan.Controls.Add(this.dataGridViewXeDaTiepNhan);
             this.pnDanhSachTiepNhan.Location = new System.Drawing.Point(417, 133);
-            this.pnDanhSachTiepNhan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnDanhSachTiepNhan.Margin = new System.Windows.Forms.Padding(2);
             this.pnDanhSachTiepNhan.Name = "pnDanhSachTiepNhan";
             this.pnDanhSachTiepNhan.Size = new System.Drawing.Size(670, 457);
             this.pnDanhSachTiepNhan.TabIndex = 2;
@@ -379,7 +381,7 @@
             this.dataGridViewXeDaTiepNhan.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewXeDaTiepNhan.EnableHeadersVisualStyles = false;
             this.dataGridViewXeDaTiepNhan.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewXeDaTiepNhan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewXeDaTiepNhan.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewXeDaTiepNhan.MultiSelect = false;
             this.dataGridViewXeDaTiepNhan.Name = "dataGridViewXeDaTiepNhan";
             this.dataGridViewXeDaTiepNhan.ReadOnly = true;
@@ -390,6 +392,46 @@
             this.dataGridViewXeDaTiepNhan.Size = new System.Drawing.Size(665, 446);
             this.dataGridViewXeDaTiepNhan.TabIndex = 9;
             this.dataGridViewXeDaTiepNhan.TabStop = false;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Biển số xe";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "Hiệu xe";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Tên chủ xe";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.HeaderText = "Ngày tiếp nhận";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.HeaderText = "Số tiền nợ";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // buttonLamMoi
             // 
@@ -425,51 +467,33 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Tiếp nhận bảo trì xe";
             // 
-            // Column7
+            // labelTodayVehicel
             // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.HeaderText = "Số tiền nợ";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
+            this.labelTodayVehicel.AutoSize = true;
+            this.labelTodayVehicel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelTodayVehicel.Location = new System.Drawing.Point(555, 621);
+            this.labelTodayVehicel.Name = "labelTodayVehicel";
+            this.labelTodayVehicel.Size = new System.Drawing.Size(250, 19);
+            this.labelTodayVehicel.TabIndex = 9;
+            this.labelTodayVehicel.Text = "Số xe đã tiếp nhận trong ngày hôm nay: ";
             // 
-            // Column8
+            // labelTodayVehicleNum
             // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column8.HeaderText = "Ngày tiếp nhận";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Tên chủ xe";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Hiệu xe";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Biển số xe";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.labelTodayVehicleNum.AutoSize = true;
+            this.labelTodayVehicleNum.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelTodayVehicleNum.Location = new System.Drawing.Point(811, 621);
+            this.labelTodayVehicleNum.Name = "labelTodayVehicleNum";
+            this.labelTodayVehicleNum.Size = new System.Drawing.Size(17, 19);
+            this.labelTodayVehicleNum.TabIndex = 10;
+            this.labelTodayVehicleNum.Text = "0";
             // 
             // Tiepnhanbaotrixe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.labelTodayVehicel);
+            this.Controls.Add(this.labelTodayVehicleNum);
             this.Controls.Add(this.buttonLamMoi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblDanhSachTiepNhan);
@@ -523,5 +547,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Label labelTodayVehicel;
+        private System.Windows.Forms.Label labelTodayVehicleNum;
     }
 }

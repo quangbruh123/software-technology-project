@@ -66,7 +66,7 @@
             this.textBoxNgayThuTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNgayThuTien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNgayThuTien.Location = new System.Drawing.Point(260, 191);
-            this.textBoxNgayThuTien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNgayThuTien.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNgayThuTien.MaxLength = 10;
             this.textBoxNgayThuTien.Name = "textBoxNgayThuTien";
             this.textBoxNgayThuTien.Size = new System.Drawing.Size(283, 19);
@@ -100,7 +100,7 @@
             this.textBoxSoTienThuPTT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSoTienThuPTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSoTienThuPTT.Location = new System.Drawing.Point(649, 191);
-            this.textBoxSoTienThuPTT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSoTienThuPTT.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSoTienThuPTT.Name = "textBoxSoTienThuPTT";
             this.textBoxSoTienThuPTT.Size = new System.Drawing.Size(285, 19);
             this.textBoxSoTienThuPTT.TabIndex = 2;
@@ -111,7 +111,7 @@
             this.panel23.Controls.Add(this.buttonPhieuThuTienMoiPTT);
             this.panel23.Controls.Add(this.buttonLapPhieuThuTienPTT);
             this.panel23.Location = new System.Drawing.Point(260, 269);
-            this.panel23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel23.Margin = new System.Windows.Forms.Padding(2);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(639, 130);
             this.panel23.TabIndex = 11;
@@ -120,12 +120,12 @@
             // 
             this.buttonPhieuThuTienMoiPTT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPhieuThuTienMoiPTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPhieuThuTienMoiPTT.Location = new System.Drawing.Point(406, 10);
-            this.buttonPhieuThuTienMoiPTT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPhieuThuTienMoiPTT.Location = new System.Drawing.Point(85, 20);
+            this.buttonPhieuThuTienMoiPTT.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPhieuThuTienMoiPTT.Name = "buttonPhieuThuTienMoiPTT";
-            this.buttonPhieuThuTienMoiPTT.Size = new System.Drawing.Size(198, 85);
+            this.buttonPhieuThuTienMoiPTT.Size = new System.Drawing.Size(198, 78);
             this.buttonPhieuThuTienMoiPTT.TabIndex = 4;
-            this.buttonPhieuThuTienMoiPTT.Text = "Phiếu thu tiền mới";
+            this.buttonPhieuThuTienMoiPTT.Text = "Đặt lại";
             this.buttonPhieuThuTienMoiPTT.UseVisualStyleBackColor = true;
             this.buttonPhieuThuTienMoiPTT.Click += new System.EventHandler(this.buttonPhieuThuTienMoiPTT_Click);
             // 
@@ -133,8 +133,8 @@
             // 
             this.buttonLapPhieuThuTienPTT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLapPhieuThuTienPTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLapPhieuThuTienPTT.Location = new System.Drawing.Point(52, 17);
-            this.buttonLapPhieuThuTienPTT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLapPhieuThuTienPTT.Location = new System.Drawing.Point(390, 20);
+            this.buttonLapPhieuThuTienPTT.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLapPhieuThuTienPTT.Name = "buttonLapPhieuThuTienPTT";
             this.buttonLapPhieuThuTienPTT.Size = new System.Drawing.Size(198, 78);
             this.buttonLapPhieuThuTienPTT.TabIndex = 3;
@@ -157,7 +157,7 @@
             this.textBoxHoTenChuXePTT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxHoTenChuXePTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxHoTenChuXePTT.Location = new System.Drawing.Point(259, 120);
-            this.textBoxHoTenChuXePTT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxHoTenChuXePTT.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHoTenChuXePTT.MaxLength = 30;
             this.textBoxHoTenChuXePTT.Name = "textBoxHoTenChuXePTT";
             this.textBoxHoTenChuXePTT.Size = new System.Drawing.Size(283, 19);
