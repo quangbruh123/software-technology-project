@@ -48,6 +48,7 @@ namespace GarageManager
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadDataGridView();
+            if (currentRole == 0) mainpanel.Visible = false;
             uc1 = new Chinhsuaquydinh();
             Controls.Add(uc1);
             uc2 = new TraCuu();
@@ -176,6 +177,7 @@ namespace GarageManager
 
         private void Trangchubtn_Click(object sender, EventArgs e)
         {
+            if (currentRole == 0) return;
             mainpanel.Visible = true;
             uc1.Visible = false;
             uc2.Visible = false;
@@ -186,6 +188,11 @@ namespace GarageManager
 
         private void addAccountBtn_Click(object sender, EventArgs e)
         {
+            accTbx.Clear();
+            emailTbx.Clear();
+            nameTbx.Clear();
+            genderTbx.Clear();
+            passTbx.Clear();
             addAccountBtn.Visible = false;
             delAccountBtn.Visible = false;
             addAccountPnl.Visible = true;
