@@ -33,14 +33,18 @@ namespace GarageManager.usercontrol
                 }
             }
 
-            if (dataGridView1.Rows.Count < 2)
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows.Count < 1)
             {
                 return;
             }
-            dataGridView1.Rows[0].Selected = true;
+            dataGridView2.Rows.Clear();
 
             int maPSC;
-            if (dataGridView1.SelectedRows.Count != 0)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
                 maPSC = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
             }
@@ -56,15 +60,19 @@ namespace GarageManager.usercontrol
                     dataGridView2.Rows.Add(item.MaCTPSC, item.MaPhieuSC, item.NoiDung, item.SoLan, wageName, (int)item.ThanhTien + " VND");
                 }
             }
+        }
 
-            if (dataGridView2.Rows.Count < 2)
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (dataGridView2.Rows.Count < 1)
             {
                 return;
             }
-            dataGridView1.Rows[2].Selected = true;
+            dataGridView3.Rows.Clear();
 
             int maCTPSC;
-            if (dataGridView2.SelectedRows.Count != 0)
+            if (dataGridView2.SelectedRows.Count > 0)
             {
                 maCTPSC = int.Parse(dataGridView2.SelectedRows[0].Cells[0].Value.ToString());
             }
@@ -80,7 +88,6 @@ namespace GarageManager.usercontrol
                     dataGridView3.Rows.Add(item.MaCTPSC, partName, item.SoLuong, item.DonGia, (int)item.ThanhTien + " VND");
                 }
             }
-
         }
     }
 }
