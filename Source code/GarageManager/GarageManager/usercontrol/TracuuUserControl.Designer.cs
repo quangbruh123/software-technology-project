@@ -33,12 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ownerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inputDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.owedMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCapNhatQuyDinh = new System.Windows.Forms.Label();
             this.MainWordTextbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,6 +48,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ownerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inputDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.owedMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -107,54 +107,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(802, 301);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // Stt
-            // 
-            this.Stt.HeaderText = "Stt";
-            this.Stt.MinimumWidth = 6;
-            this.Stt.Name = "Stt";
-            this.Stt.ReadOnly = true;
-            this.Stt.Width = 50;
-            // 
-            // ownerName
-            // 
-            this.ownerName.HeaderText = "Chủ Xe";
-            this.ownerName.MinimumWidth = 6;
-            this.ownerName.Name = "ownerName";
-            this.ownerName.ReadOnly = true;
-            this.ownerName.Width = 200;
-            // 
-            // brand
-            // 
-            this.brand.HeaderText = "Hiệu Xe";
-            this.brand.MinimumWidth = 6;
-            this.brand.Name = "brand";
-            this.brand.ReadOnly = true;
-            this.brand.Width = 125;
-            // 
-            // plate
-            // 
-            this.plate.HeaderText = "Biển Số";
-            this.plate.MinimumWidth = 6;
-            this.plate.Name = "plate";
-            this.plate.ReadOnly = true;
-            this.plate.Width = 125;
-            // 
-            // inputDate
-            // 
-            this.inputDate.HeaderText = "Ngày tiếp nhận";
-            this.inputDate.MinimumWidth = 6;
-            this.inputDate.Name = "inputDate";
-            this.inputDate.ReadOnly = true;
-            this.inputDate.Width = 140;
-            // 
-            // owedMoney
-            // 
-            this.owedMoney.HeaderText = "Tiền nợ";
-            this.owedMoney.MinimumWidth = 6;
-            this.owedMoney.Name = "owedMoney";
-            this.owedMoney.ReadOnly = true;
-            this.owedMoney.Width = 130;
             // 
             // lblCapNhatQuyDinh
             // 
@@ -321,6 +273,54 @@
             this.radioButton1.Text = "Từ khóa";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // Stt
+            // 
+            this.Stt.HeaderText = "Stt";
+            this.Stt.MinimumWidth = 6;
+            this.Stt.Name = "Stt";
+            this.Stt.ReadOnly = true;
+            this.Stt.Width = 50;
+            // 
+            // ownerName
+            // 
+            this.ownerName.HeaderText = "Chủ Xe";
+            this.ownerName.MinimumWidth = 6;
+            this.ownerName.Name = "ownerName";
+            this.ownerName.ReadOnly = true;
+            this.ownerName.Width = 183;
+            // 
+            // brand
+            // 
+            this.brand.HeaderText = "Hiệu Xe";
+            this.brand.MinimumWidth = 6;
+            this.brand.Name = "brand";
+            this.brand.ReadOnly = true;
+            this.brand.Width = 120;
+            // 
+            // plate
+            // 
+            this.plate.HeaderText = "Biển Số";
+            this.plate.MinimumWidth = 6;
+            this.plate.Name = "plate";
+            this.plate.ReadOnly = true;
+            this.plate.Width = 125;
+            // 
+            // inputDate
+            // 
+            this.inputDate.HeaderText = "Ngày tiếp nhận";
+            this.inputDate.MinimumWidth = 6;
+            this.inputDate.Name = "inputDate";
+            this.inputDate.ReadOnly = true;
+            this.inputDate.Width = 140;
+            // 
+            // owedMoney
+            // 
+            this.owedMoney.HeaderText = "Tiền nợ";
+            this.owedMoney.MinimumWidth = 6;
+            this.owedMoney.Name = "owedMoney";
+            this.owedMoney.ReadOnly = true;
+            this.owedMoney.Width = 130;
             // 
             // tracuuUserControl1
             // 
