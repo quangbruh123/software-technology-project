@@ -166,6 +166,7 @@ namespace GarageManager.Classes
                     partInputCard.CT_PNVT.Add(partInputInfo);
                     partInputCard.TongTien += partInputInfo.ThanhTien;
                     partInputInfo.PHIEUNHAPVATTU = partInputCard;
+
                     Model.BAOCAOTON storageReport = DataProvider.Instance.DB.BAOCAOTONs
                         .FirstOrDefault(x => x.Thang == inputDate.Month && x.Nam == inputDate.Year && x.VATTU == part);
                     storageReport.PhatSinh += amountList[i];
@@ -182,6 +183,7 @@ namespace GarageManager.Classes
                     };
                     DataProvider.Instance.DB.VATTUs.Add(part);
                     DataProvider.Instance.DB.SaveChanges();
+
                     Model.CT_PNVT partInputInfo = new Model.CT_PNVT()
                     {
                         MaVatTu = part.MaVatTu,
@@ -194,6 +196,7 @@ namespace GarageManager.Classes
                     partInputCard.CT_PNVT.Add(partInputInfo);
                     partInputCard.TongTien += partInputInfo.ThanhTien;
                     partInputInfo.PHIEUNHAPVATTU = partInputCard;
+
                     Model.BAOCAOTON storageReport = new Model.BAOCAOTON()
                     {
                         Thang = inputDate.Month,
@@ -204,6 +207,7 @@ namespace GarageManager.Classes
                         VATTU = part
                     };
                     part.BAOCAOTONs.Add(storageReport);
+
                     DataProvider.Instance.DB.BAOCAOTONs.Add(storageReport);
                     DataProvider.Instance.DB.SaveChanges();
                 }
@@ -239,23 +243,26 @@ namespace GarageManager.Classes
         /// <param name="year"></param>
         public static void NewStorageReports(int month, int year)
         {
-            List<Model.BAOCAOTON> storageReportList = new List<Model.BAOCAOTON>();
-            foreach (var part in DataProvider.Instance.DB.VATTUs)
+            if (!DataProvider.Instance.DB.BAOCAOTONs.Any(x => x.Thang == month && x.Nam == year))
             {
-                Model.BAOCAOTON storageReport = new Model.BAOCAOTON()
+                List<Model.BAOCAOTON> storageReportList = new List<Model.BAOCAOTON>();
+                foreach (var part in DataProvider.Instance.DB.VATTUs)
                 {
-                    MaVatTu = part.MaVatTu,
-                    Thang = month,
-                    Nam = year,
-                    TonDau = part.SoLuongTon,
-                    PhatSinh = 0,
-                    TonCuoi = part.SoLuongTon,
-                    VATTU = part
-                };
-                storageReportList.Add(storageReport);
+                    Model.BAOCAOTON storageReport = new Model.BAOCAOTON()
+                    {
+                        MaVatTu = part.MaVatTu,
+                        Thang = month,
+                        Nam = year,
+                        TonDau = part.SoLuongTon,
+                        PhatSinh = 0,
+                        TonCuoi = part.SoLuongTon,
+                        VATTU = part
+                    };
+                    storageReportList.Add(storageReport);
+                }
+                DataProvider.Instance.DB.BAOCAOTONs.AddRange(storageReportList);
+                DataProvider.Instance.DB.SaveChanges();
             }
-            DataProvider.Instance.DB.BAOCAOTONs.AddRange(storageReportList);
-            DataProvider.Instance.DB.SaveChanges();
         }
     }
 }

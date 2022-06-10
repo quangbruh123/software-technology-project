@@ -76,12 +76,15 @@ namespace GarageManager.Classes
                     {
                         MaVatTu = part.MaVatTu,
                         SoLuong = amount[i],
-                        DonGia = part.DonGiaHienTai
+                        DonGia = part.DonGiaHienTai,
+                        ThanhTien = part.DonGiaHienTai * amount[i],
+                        VATTU = part
                     };
                     partUsageDetailList.Add(partUsageDetail);
                     part.SoLuongTon -= amount[i];
                     Model.BAOCAOTON storageReport = DataProvider.Instance.DB.BAOCAOTONs.FirstOrDefault(x => x.Thang == date.Month && x.Nam == date.Year && x.MaVatTu == part.MaVatTu);
                     storageReport.TonCuoi -= amount[i];
+                    DataProvider.Instance.DB.SaveChanges();
                 }
 
                 List<Model.CT_PSC> maintenanceDetailList = new List<Model.CT_PSC>();
