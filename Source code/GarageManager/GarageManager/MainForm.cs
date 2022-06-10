@@ -214,7 +214,13 @@ namespace GarageManager
             if (!Classes.ValidateEmail.EmailIsValid(emailTbx.Text))
             {
                 MessageBox.Show("Email không hợp lệ", "Không thể tạo tài khoản");
+                return;
             }    
+            if (string.IsNullOrEmpty(accTbx.Text) || string.IsNullOrEmpty(passTbx.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Không thể tạo tài khoản");
+                return;
+            }
             if (adminCbx.Checked)
             {
                 if (Classes.Account.AddAdminAccount(nameTbx.Text, accTbx.Text, emailTbx.Text, genderTbx.Text, passwordhash))
