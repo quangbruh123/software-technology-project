@@ -135,7 +135,7 @@
             // btnSua
             // 
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Location = new System.Drawing.Point(402, 64);
+            this.btnSua.Location = new System.Drawing.Point(402, 71);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(142, 32);
             this.btnSua.TabIndex = 52;
