@@ -18,7 +18,7 @@ namespace GarageManager.Classes
         /// <param name="partName"></param>
         /// <param name="partNewPrice"></param>
         /// <returns>True if successfully updated, false if not</returns>
-        public static bool UpdatePartPrice(string partName, decimal partNewPrice)
+        public static bool UpdatePartPrice(string partName, long partNewPrice)
         {
             if (DataProvider.Instance.DB.VATTUs.Any(x => x.TenVatTu == partName))
             {
