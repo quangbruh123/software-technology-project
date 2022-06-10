@@ -46,13 +46,9 @@ namespace GarageManager
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {            
-            int stt = 1;
-            foreach (Model.TAIKHOAN item in DataProvider.Instance.DB.TAIKHOANs)
-            {
-                dataGridViewNhanvien.Rows.Add(stt, item.HoTen, item.TenTaiKhoan, item.Email, item.QuyenHan);
-                stt++;
-            }
+        {
+            LoadDataGridView();
+            if (currentRole == 0) mainpanel.Visible = false;
             uc1 = new Chinhsuaquydinh();
             Controls.Add(uc1);
             uc2 = new TraCuu();
@@ -150,6 +146,17 @@ namespace GarageManager
             uc1.Location = new Point(213, 31);
         }
 
+        private void LoadDataGridView()
+        {
+            dataGridViewNhanvien.Rows.Clear();
+            int stt = 1;
+            foreach (Model.TAIKHOAN item in DataProvider.Instance.DB.TAIKHOANs)
+            {
+                dataGridViewNhanvien.Rows.Add(stt, item.HoTen, item.TenTaiKhoan, item.Email, item.QuyenHan);
+                stt++;
+            }
+        }
+
         private void mainpanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -168,18 +175,9 @@ namespace GarageManager
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void Addaccount_Click(object sender, EventArgs e)
-        {
-            //Account.AddStaffAccount(tktxt.Text, Mktxt.Text);
-        }
-
-        private void deletebnt_Click(object sender, EventArgs e)
-        {
-            //Account.DeleteAccount(deletetktxt.Text);
-        }
-
         private void Trangchubtn_Click(object sender, EventArgs e)
         {
+            if (currentRole == 0) return;
             mainpanel.Visible = true;
             uc1.Visible = false;
             uc2.Visible = false;
@@ -190,6 +188,11 @@ namespace GarageManager
 
         private void addAccountBtn_Click(object sender, EventArgs e)
         {
+            accTbx.Clear();
+            emailTbx.Clear();
+            nameTbx.Clear();
+            genderTbx.Clear();
+            passTbx.Clear();
             addAccountBtn.Visible = false;
             delAccountBtn.Visible = false;
             addAccountPnl.Visible = true;
@@ -231,6 +234,7 @@ namespace GarageManager
             addAccountBtn.Visible = true;
             delAccountBtn.Visible = true;
             addAccountPnl.Visible = false;
+            LoadDataGridView();
         }
 
         private void delAccountBtn_Click(object sender, EventArgs e)
@@ -250,6 +254,7 @@ namespace GarageManager
                 tentaikhoan = dataGridViewNhanvien.Rows[dataGridViewNhanvien.SelectedCells[0].RowIndex].Cells[2].Value.ToString();
             }
             Classes.Account.DeleteAccount(tentaikhoan);
+            LoadDataGridView();
         }
     }
 }
