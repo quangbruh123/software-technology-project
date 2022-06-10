@@ -13,6 +13,7 @@ namespace GarageManager
 {
     public partial class LoginForm : Form
     {
+        MainForm mainForm;
         public LoginForm()
         {
             InitializeComponent();
@@ -34,11 +35,26 @@ namespace GarageManager
                 Model.TAIKHOAN currentAccount = Classes.DataProvider.Instance.DB.TAIKHOANs.FirstOrDefault(x => x.TenTaiKhoan == usertxt.Text && x.MatKhau == passwordhash);
                 MainForm.currentRole = (int)currentAccount.QuyenHan;
                 this.Hide();
-                MainForm mainForm = new MainForm();
-                mainForm.ShowDialog();
+                mainForm = new MainForm();
+                mainForm.FormClosing += MainForm_FormClosed;
+                mainForm.Show();
             }
             else
                 MessageBox.Show("Sai mật khẩu hoặc tên tài khoản");
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosingEventArgs e)
+        {
+            if (mainForm.logout == true)
+            {
+                usertxt.Clear();
+                passwordtxt.Clear();
+                this.Show();
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

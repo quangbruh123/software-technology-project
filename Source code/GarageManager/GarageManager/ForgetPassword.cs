@@ -71,7 +71,7 @@ namespace GarageManager
 
         private void minbtn_Click(object sender, EventArgs e)
         {
-            
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void button2_Click(object sender, EventArgs e)
