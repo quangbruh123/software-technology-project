@@ -30,6 +30,9 @@ namespace GarageManager.usercontrol
             {
                 dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo + " VND");
             }
+
+            labelTodayVehicleNum.Text = Properties.Settings.Default.TodayVehicleRegistered.ToString()
+                + " / " + Classes.DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri;
         }
 
         private void buttonThemXe_Click(object sender, EventArgs e)
@@ -56,8 +59,11 @@ namespace GarageManager.usercontrol
                 var renewTable = Classes.DataProvider.Instance.DB.XEs.ToList();
                 foreach (var item in renewTable)
                 {
-                    dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo + " VND");
+                    dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo);
                 }
+                Properties.Settings.Default.TodayVehicleRegistered++;
+                System.Diagnostics.Debug.WriteLine(Properties.Settings.Default.TodayVehicleRegistered.ToString() + " vehicle");
+                Properties.Settings.Default.Save();
             }
         }
 
