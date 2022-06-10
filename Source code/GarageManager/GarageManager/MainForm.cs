@@ -67,7 +67,10 @@ namespace GarageManager
             uc3.Visible = false;
             uc4.Visible = false;
             uc5.Visible = false;
-
+            if (currentRole == 0)
+            {
+                button7.Visible = false;
+            }
             Debug.WriteLine(Properties.Settings.Default.LastLoginDate.Month + " " + Properties.Settings.Default.LastLoginDate.Year);
             Debug.WriteLine(Properties.Settings.Default.TodayVehicleRegistered + " vehicle");
             if (DateTime.Today.Month != Properties.Settings.Default.LastLoginDate.Month || DateTime.Today.Year != Properties.Settings.Default.LastLoginDate.Year)
@@ -147,7 +150,7 @@ namespace GarageManager
 
         private void CloseBtn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to close this Application?", "Notice", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show("Thoát ứng dụng?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 Application.Exit();
             }
