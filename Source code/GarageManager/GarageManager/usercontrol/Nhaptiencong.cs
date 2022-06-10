@@ -18,7 +18,6 @@ namespace GarageManager.usercontrol
         {
             InitializeComponent();
             panel2.Visible = false;
-            panel3.Visible = false;
             panel4.Visible = false;
             cancerbtn.Visible = false;
         }
@@ -30,7 +29,6 @@ namespace GarageManager.usercontrol
 
         private void Nhaptiencong_Load(object sender, EventArgs e)
         {
-            panel3.Location = new Point(480, 124);
             panel4.Location = new Point(480, 124);
             int i = 1;
             var taikhoan = DataProvider.Instance.DB.TIENCONGs;
@@ -100,41 +98,21 @@ namespace GarageManager.usercontrol
             if (comboBox1.Text == "Thêm")
             {
                 panel2.Visible = true;
-                panel3.Visible = false;
                 panel4.Visible = false;
-                btnXoa.Enabled = false;
                 btnSua.Enabled = false;
                 cancerbtn.Visible = true;
                 textBoxTenVTPTMoi.Clear();
                 textBoxSoLuongVTPT.Clear();
             }
-            if (comboBox1.Text == "Xóa")
-            {
-                panel2.Visible = false;
-                panel3.Visible = true;
-                panel4.Visible = false;
-                btnXoa.Enabled = false;
-                btnSua.Enabled = false;
-                cancerbtn.Visible = true;
-                textBoxTCXoa.Clear();
-            }
             if (comboBox1.Text == "Chỉnh sửa")
             {
                 panel2.Visible = false;
-                panel3.Visible = false;
                 panel4.Visible = true;
-                btnXoa.Enabled = false;
                 btnSua.Enabled = false;
                 cancerbtn.Visible = true;
                 textBoxTCSua.Clear();
                 textBoxDGMoi.Clear();
             }
-        }
-
-        private void btnChon_Click(object sender, EventArgs e)
-        {
-            btnXoa.Enabled = true;
-            textBoxTCXoa.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
         }
 
         private void btnChonSua_Click(object sender, EventArgs e)
@@ -178,6 +156,11 @@ namespace GarageManager.usercontrol
         private void textBoxDGMoi_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
