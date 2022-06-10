@@ -46,13 +46,8 @@ namespace GarageManager
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {            
-            int stt = 1;
-            foreach (Model.TAIKHOAN item in DataProvider.Instance.DB.TAIKHOANs)
-            {
-                dataGridViewNhanvien.Rows.Add(stt, item.HoTen, item.TenTaiKhoan, item.Email, item.QuyenHan);
-                stt++;
-            }
+        {
+            LoadDataGridView();
             uc1 = new Chinhsuaquydinh();
             Controls.Add(uc1);
             uc2 = new TraCuu();
@@ -150,6 +145,17 @@ namespace GarageManager
             uc1.Location = new Point(213, 31);
         }
 
+        private void LoadDataGridView()
+        {
+            dataGridViewNhanvien.Rows.Clear();
+            int stt = 1;
+            foreach (Model.TAIKHOAN item in DataProvider.Instance.DB.TAIKHOANs)
+            {
+                dataGridViewNhanvien.Rows.Add(stt, item.HoTen, item.TenTaiKhoan, item.Email, item.QuyenHan);
+                stt++;
+            }
+        }
+
         private void mainpanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -166,16 +172,6 @@ namespace GarageManager
         private void MinimizeBtn_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void Addaccount_Click(object sender, EventArgs e)
-        {
-            //Account.AddStaffAccount(tktxt.Text, Mktxt.Text);
-        }
-
-        private void deletebnt_Click(object sender, EventArgs e)
-        {
-            //Account.DeleteAccount(deletetktxt.Text);
         }
 
         private void Trangchubtn_Click(object sender, EventArgs e)
@@ -231,6 +227,7 @@ namespace GarageManager
             addAccountBtn.Visible = true;
             delAccountBtn.Visible = true;
             addAccountPnl.Visible = false;
+            LoadDataGridView();
         }
 
         private void delAccountBtn_Click(object sender, EventArgs e)
@@ -250,6 +247,7 @@ namespace GarageManager
                 tentaikhoan = dataGridViewNhanvien.Rows[dataGridViewNhanvien.SelectedCells[0].RowIndex].Cells[2].Value.ToString();
             }
             Classes.Account.DeleteAccount(tentaikhoan);
+            LoadDataGridView();
         }
     }
 }
