@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Security.Cryptography;
 
 namespace GarageManager
 {
@@ -90,6 +91,8 @@ namespace GarageManager
                 Properties.Settings.Default.LastLoginDate = DateTime.Today;
                 Properties.Settings.Default.Save();
             }
+
+            addAccountPnl.Visible = false;
         }
         
         private void Lapphieubtn_Click(object sender, EventArgs e)
@@ -183,6 +186,51 @@ namespace GarageManager
             uc3.Visible = false;
             uc4.Visible = false;
             uc5.Visible = false;
+        }
+
+        private void addAccountBtn_Click(object sender, EventArgs e)
+        {
+            addAccountBtn.Visible = false;
+            delAccountBtn.Visible = false;
+            addAccountPnl.Visible = true;
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            addAccountBtn.Visible = true;
+            delAccountBtn.Visible = true;
+            addAccountPnl.Visible = false;
+        }
+
+        private void confirmBtn_Click(object sender, EventArgs e)
+        {
+            SHA256 sha256hash = SHA256.Create();
+            string passwordhash = LoginForm.GetHash(sha256hash, passTbx.Text);
+            if (adminCbx.Checked)
+            {
+                if (Classes.Account.AddAdminAccount(nameTbx.Text, accTbx.Text, emailTbx.Text, genderTbx.Text, passwordhash))
+                {
+                    MessageBox.Show("Đã tạo tài khoản", "Tạo tài khoản thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Tên tài khoản đã tồn tại", "Không thể tạo tài khoản");
+                }
+            }
+            else
+            {
+                if (Classes.Account.AddStaffAccount(nameTbx.Text, accTbx.Text, emailTbx.Text, genderTbx.Text, passwordhash))
+                {
+                    MessageBox.Show("Đã tạo tài khoản", "Tạo tài khoản thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Tên tài khoản đã tồn tại", "Không thể tạo tài khoản");
+                }
+            }
+            addAccountBtn.Visible = true;
+            delAccountBtn.Visible = true;
+            addAccountPnl.Visible = false;
         }
     }
 }

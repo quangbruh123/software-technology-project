@@ -22,7 +22,7 @@ namespace GarageManager.Classes
         /// <returns>
         /// True if successfully added, otherwise false
         /// </returns>
-        public static bool AddStaffAccount(string fullName, string userName, string gender, string password)
+        public static bool AddStaffAccount(string fullName, string userName, string email, string gender, string password)
         {
             if (!DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == userName && x.MatKhau == password))
             {
@@ -30,6 +30,7 @@ namespace GarageManager.Classes
                 {
                     HoTen = fullName,
                     TenTaiKhoan = userName,
+                    Email = email,
                     MatKhau = password,
                     GioiTinh = gender,
                     QuyenHan = 0
@@ -49,7 +50,7 @@ namespace GarageManager.Classes
         /// <returns>
         /// True if successfully added, otherwise false
         /// </returns>
-        public static bool AddAdminAccount(string fullName, string userName, string gender, string password)
+        public static bool AddAdminAccount(string fullName, string userName, string email, string gender, string password)
         {
             if (!DataProvider.Instance.DB.TAIKHOANs.Any(x => x.TenTaiKhoan == userName && x.MatKhau == password))
             {
@@ -57,6 +58,7 @@ namespace GarageManager.Classes
                 {
                     HoTen = fullName,
                     TenTaiKhoan = userName,
+                    Email = email,
                     MatKhau = password,
                     GioiTinh = gender,
                     QuyenHan = 1
