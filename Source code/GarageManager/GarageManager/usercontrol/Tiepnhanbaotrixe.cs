@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GarageManager.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,14 +32,14 @@ namespace GarageManager.usercontrol
                 dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo + " VND");
             }
 
-            labelTodayVehicleNum.Text = Properties.Settings.Default.TodayVehicleRegistered.ToString()
+            labelTodayVehicleNum.Text = DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri.ToString()
                 + " / " + Classes.DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri;
         }
 
         private void buttonThemXe_Click(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.TodayVehicleRegistered == Classes.DataProvider.Instance.DB.THAMSOes
-                .FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri)
+            if (DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri
+                == DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri)
             {
                 MessageBox.Show("Đã quá giới hạn số xe sửa chữa trong một ngày", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -68,10 +69,9 @@ namespace GarageManager.usercontrol
                 {
                     dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo + " VND");
                 }
-                Properties.Settings.Default.TodayVehicleRegistered++;
-                System.Diagnostics.Debug.WriteLine(Properties.Settings.Default.TodayVehicleRegistered.ToString() + " vehicle");
-                Properties.Settings.Default.Save();
-                labelTodayVehicleNum.Text = Properties.Settings.Default.TodayVehicleRegistered.ToString()
+                DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri++;
+                System.Diagnostics.Debug.WriteLine(DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri + " vehicle");
+                labelTodayVehicleNum.Text = DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri
                 + " / " + Classes.DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri;
             }
         }

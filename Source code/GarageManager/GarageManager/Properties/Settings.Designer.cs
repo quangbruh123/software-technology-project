@@ -34,17 +34,5 @@ namespace GarageManager.Properties {
                 this["LastLoginDate"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int TodayVehicleRegistered {
-            get {
-                return ((int)(this["TodayVehicleRegistered"]));
-            }
-            set {
-                this["TodayVehicleRegistered"] = value;
-            }
-        }
     }
 }

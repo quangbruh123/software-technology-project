@@ -5,8 +5,5 @@
     <Setting Name="LastLoginDate" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)">2022-01-01</Value>
     </Setting>
-    <Setting Name="TodayVehicleRegistered" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
-    </Setting>
   </Settings>
 </SettingsFile>
