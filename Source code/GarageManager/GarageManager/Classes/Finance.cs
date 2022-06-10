@@ -18,7 +18,7 @@ namespace GarageManager.Classes
         /// </summary>
         /// <param name="plate"></param>
         /// <returns>True if the pay satisfy the condition, false if not</returns>
-        public static void AddReceipt(string plate, decimal pay, DateTime createDate)
+        public static void AddReceipt(string plate, long pay, DateTime createDate)
         {
             if (DataProvider.Instance.DB.XEs.Any(x => x.BienSo == plate))
             {
@@ -120,7 +120,7 @@ namespace GarageManager.Classes
         /// <param name="newWageName"></param>
         /// <param name="newWageAmount"></param>
         /// <returns>True if successfully added, false if not</returns>
-        public static bool AddWageType(string newWageName, decimal newWageAmount)
+        public static bool AddWageType(string newWageName, long newWageAmount)
         {
             if (!DataProvider.Instance.DB.TIENCONGs.Any(x => x.TenTienCong == newWageName))
             {

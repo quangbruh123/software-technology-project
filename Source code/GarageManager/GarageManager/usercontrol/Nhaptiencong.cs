@@ -48,7 +48,7 @@ namespace GarageManager.usercontrol
             }
             else
             {
-                if (Classes.Finance.AddWageType(textBoxTenVTPTMoi.Text, Decimal.Parse(textBoxSoLuongVTPT.Text)) == true)
+                if (Classes.Finance.AddWageType(textBoxTenVTPTMoi.Text, long.Parse(textBoxSoLuongVTPT.Text)) == true)
                 {
                     MessageBox.Show("Thông tin đã được thêm thành công", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dataGridView1.Rows.Clear();
