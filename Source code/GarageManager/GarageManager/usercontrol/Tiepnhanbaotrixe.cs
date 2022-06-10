@@ -37,6 +37,12 @@ namespace GarageManager.usercontrol
 
         private void buttonThemXe_Click(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.TodayVehicleRegistered == Classes.DataProvider.Instance.DB.THAMSOes
+                .FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri)
+            {
+                MessageBox.Show("Đã quá giới hạn số xe sửa chữa trong một ngày", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (
                 String.IsNullOrEmpty(txtBoxTenKH.Text) ||
                 String.IsNullOrEmpty(txtBoxDienThoai.Text) ||
