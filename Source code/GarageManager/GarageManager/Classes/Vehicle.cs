@@ -40,7 +40,6 @@ namespace GarageManager.Classes
                 };
                 DataProvider.Instance.DB.XEs.Add(car);
                 DataProvider.Instance.DB.SaveChanges();
-                Debug.WriteLine(car.BienSo + " " + car.TenChuXe + " " + car.MaHieuXe + " " + car.DienThoai + " " + car.DiaChi + " " + car.Email + " " + car.NgayTiepNhan.ToString() + " " + car.TienNo);
                 return true;
             }
             else

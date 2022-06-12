@@ -27,6 +27,7 @@ namespace GarageManager
         /// </summary>
         public static int currentRole;
         public bool logout;
+
         public MainForm()
         {
             InitializeComponent();
@@ -75,11 +76,16 @@ namespace GarageManager
             if (DateTime.Today.Month != Properties.Settings.Default.LastLoginDate.Month || DateTime.Today.Year != Properties.Settings.Default.LastLoginDate.Year)
             {
                 Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);
+                Finance.NewMonthlyFinancialReport(DateTime.Today.Month, DateTime.Today.Year);
                 Properties.Settings.Default.Save();
             }
             if (DataProvider.Instance.DB.BAOCAOTONs.Count() == 0)
             {
-                Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);
+                Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);                
+            }
+            if (DataProvider.Instance.DB.BAOCAODOANHSOes.Count() == 0)
+            {
+                Finance.NewMonthlyFinancialReport(DateTime.Today.Month, DateTime.Today.Year);
             }
             if (DateTime.Today.Date != Properties.Settings.Default.LastLoginDate.Date)
             {
@@ -165,7 +171,7 @@ namespace GarageManager
 
         private void CloseBtn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Thoát ứng dụng?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show("Thoát ứng dụng?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -210,7 +216,7 @@ namespace GarageManager
         {
             SHA256 sha256hash = SHA256.Create();
             string passwordhash = LoginForm.GetHash(sha256hash, passTbx.Text);
-            if (!Classes.ValidateEmail.EmailIsValid(emailTbx.Text))
+            if (!ValidateEmail.EmailIsValid(emailTbx.Text))
             {
                 MessageBox.Show("Email không hợp lệ", "Không thể tạo tài khoản");
                 return;
@@ -222,7 +228,7 @@ namespace GarageManager
             }
             if (adminCbx.Checked)
             {
-                if (Classes.Account.AddAdminAccount(nameTbx.Text, accTbx.Text, emailTbx.Text, genderTbx.Text, passwordhash))
+                if (Account.AddAdminAccount(nameTbx.Text, accTbx.Text, emailTbx.Text, genderTbx.Text, passwordhash))
                 {
                     MessageBox.Show("Đã tạo tài khoản", "Tạo tài khoản thành công");
                 }
@@ -233,7 +239,7 @@ namespace GarageManager
             }
             else
             {
-                if (Classes.Account.AddStaffAccount(nameTbx.Text, accTbx.Text, emailTbx.Text, genderTbx.Text, passwordhash))
+                if (Account.AddStaffAccount(nameTbx.Text, accTbx.Text, emailTbx.Text, genderTbx.Text, passwordhash))
                 {
                     MessageBox.Show("Đã tạo tài khoản", "Tạo tài khoản thành công");
                 }

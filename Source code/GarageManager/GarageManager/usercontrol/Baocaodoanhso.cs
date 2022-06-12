@@ -29,21 +29,28 @@ namespace GarageManager.usercontrol
         {
             TongTien = 0;
             Model.BAOCAODOANHSO financialReport = Classes.Finance.GetMonthlyFinancialReport(month, year);
-            int stt = 1;
-            foreach (var item in financialReport.CT_BCDS)
+            if (financialReport != null)
             {
-                Model.HIEUXE xe = Classes.DataProvider.Instance.DB.HIEUXEs.FirstOrDefault(x => x.MaHieuXe == item.MaHieuXe);
-                string brand = xe.TenHieuXe.ToString();
-                dataGridViewBaoCaoDoanhSo.Rows.Add(
-                    stt.ToString(),
-                    brand,
-                    item.SoLuotSua.ToString(),
-                    ((int)item.ThanhTien).ToString(),
-                    financialReport.TongDoanhThu != 0 ? (double)(item.ThanhTien * item.SoLuotSua / financialReport.TongDoanhThu * 100) : 0);
-                stt++;
-                TongTien += double.Parse(item.ThanhTien.ToString());
+                int stt = 1;
+                foreach (var item in financialReport.CT_BCDS)
+                {
+                    Model.HIEUXE xe = Classes.DataProvider.Instance.DB.HIEUXEs.FirstOrDefault(x => x.MaHieuXe == item.MaHieuXe);
+                    string brand = xe.TenHieuXe.ToString();
+                    dataGridViewBaoCaoDoanhSo.Rows.Add(
+                        stt.ToString(),
+                        brand,
+                        item.SoLuotSua.ToString(),
+                        ((int)item.ThanhTien).ToString(),
+                        financialReport.TongDoanhThu != 0 ? (double)(item.ThanhTien * item.SoLuotSua / financialReport.TongDoanhThu * 100) : 0);
+                    stt++;
+                    TongTien += double.Parse(item.ThanhTien.ToString());
+                }
+                textBoxTongDoanhThu.Text = TongTien.ToString() + " VND";
             }
-            textBoxTongDoanhThu.Text = TongTien.ToString() + " VND";
+            else
+            {
+                MessageBox.Show("Không có báo cáo doanh số cho tháng này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void getFinancialReportButton_Click(object sender, EventArgs e)

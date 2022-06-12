@@ -47,9 +47,7 @@ namespace GarageManager.Classes
                         if (financialReport.CT_BCDS.Any(x => x.HIEUXE == vehicle.HIEUXE))
                         {
                             Model.CT_BCDS financialReportDetail = DataProvider.Instance.DB.CT_BCDS
-                                .FirstOrDefault(x => x.MaBCDS == financialReport.MaBCDS && x.MaHieuXe == vehicle.MaHieuXe);
-                            financialReport.CT_BCDS.Where(x => x.MaHieuXe == vehicle.MaHieuXe).FirstOrDefault().SoLuotSua++;
-                            financialReport.CT_BCDS.Where(x => x.MaHieuXe == vehicle.MaHieuXe).FirstOrDefault().ThanhTien += receipt.SoTienThu;                            
+                                .FirstOrDefault(x => x.MaBCDS == financialReport.MaBCDS && x.MaHieuXe == vehicle.MaHieuXe);                          
                             financialReport.TongDoanhThu += receipt.SoTienThu;
                             financialReportDetail.SoLuotSua++;
                             financialReportDetail.ThanhTien += receipt.SoTienThu;
@@ -159,18 +157,20 @@ namespace GarageManager.Classes
                 return false;
         }
 
+        /// <summary>
+        /// Get the price of a wage from its name
+        /// </summary>
+        /// <param name="wageName"></param>
+        /// <returns>The price of the wage</returns>
         public static long GetWage(string wageName)
         {
             return (long)DataProvider.Instance.DB.TIENCONGs.FirstOrDefault(x => x.TenTienCong == wageName).GiaTienCong;
         }
 
-        public static Model.BAOCAODOANHSO GetMonthlyFinancialReport(int month, int year)
-        {           
-            if (DataProvider.Instance.DB.BAOCAODOANHSOes.Any(x => x.Thang == month && x.Nam == year))
-            {
-                return DataProvider.Instance.DB.BAOCAODOANHSOes.FirstOrDefault(x => x.Thang == month && x.Nam == year);
-            }
-            else
+
+        public static void NewMonthlyFinancialReport(int month, int year)
+        {
+            if (!DataProvider.Instance.DB.BAOCAODOANHSOes.Any(x => x.Thang == month && x.Nam == year))
             {
                 Model.BAOCAODOANHSO financialReport = new Model.BAOCAODOANHSO()
                 {
@@ -195,80 +195,19 @@ namespace GarageManager.Classes
                 DataProvider.Instance.DB.BAOCAODOANHSOes.Add(financialReport);
                 DataProvider.Instance.DB.CT_BCDS.AddRange(reportDetailsList);
                 DataProvider.Instance.DB.SaveChanges();
-                return financialReport;
             }
-            //else
-            //{
-            //    financialReport = new Model.BAOCAODOANHSO();
-            //    List<Model.PHIEUTHUTIEN> receipts = DataProvider.Instance.DB.PHIEUTHUTIENs.Where(x => SqlFunctions.DatePart("month", x.NgayLap) == month
-            //                                                                             && SqlFunctions.DatePart("year", x.NgayLap) == year).ToList();
-            //    if (receipts.Count > 0)
-            //    {
-            //        List<Model.HIEUXE> vehicleBrands = DataProvider.Instance.DB.HIEUXEs.ToList();
-            //        List<Model.CT_BCDS> reportDetailsList = new List<Model.CT_BCDS>();
-            //        foreach (var vehicleBrand in DataProvider.Instance.DB.HIEUXEs)
-            //        {
-            //            Model.CT_BCDS reportDetail = new Model.CT_BCDS
-            //            {
-            //                MaHieuXe = vehicleBrand.MaHieuXe,
-            //                HIEUXE = vehicleBrand
-            //            };
-            //            reportDetailsList.Add(reportDetail);
-            //        }
-            //        for (int i = 0; i < receipts.Count(); i++)
-            //        {
-            //            for (int j = 0; j < reportDetailsList.Count; j++)
-            //            {
-            //                if (receipts[i].XE.HIEUXE == reportDetailsList[j].HIEUXE)
-            //                {
-            //                    foreach (var receipt in receipts[i].XE.PHIEUTHUTIENs)
-            //                    {
-            //                        reportDetailsList[j].ThanhTien += receipt.SoTienThu;
-            //                        reportDetailsList[j].SoLuotSua += 1;
-            //                    }
-            //                }
-            //            }
-            //        }
-            //        //for (int i = 0; i < reportDetailsList.Count; i++)
-            //        //{
-            //        //    reportDetailsList[i].TiLe = (double)reportDetailsList[i].ThanhTien * 1.0 / vehicleBrands.Count * 100 * 1.0;
-            //        //}
+        }
 
-            //        financialReport.CT_BCDS = reportDetailsList;
-            //        financialReport.Thang = month;
-            //        financialReport.Nam = year;
-            //        for (int i = 0; i < reportDetailsList.Count; i++)
-            //        {
-            //            financialReport.TongDoanhThu += reportDetailsList[i].ThanhTien;
-            //        }
-
-            //        DataProvider.Instance.DB.BAOCAODOANHSOes.Add(financialReport);
-            //        DataProvider.Instance.DB.CT_BCDS.AddRange(reportDetailsList);
-            //        DataProvider.Instance.DB.SaveChanges();
-
-            //        return financialReport;
-            //    }
-            //    else
-            //    {
-            //        financialReport.Thang = month;
-            //        financialReport.Nam = year;
-            //        financialReport.TongDoanhThu = 0;
-            //        List<Model.CT_BCDS> reportDetailsList = new List<Model.CT_BCDS>();
-            //        foreach (var vehicleBrand in DataProvider.Instance.DB.HIEUXEs)
-            //        {
-            //            Model.CT_BCDS reportDetail = new Model.CT_BCDS
-            //            {
-            //                MaHieuXe = vehicleBrand.MaHieuXe,
-            //                HIEUXE = vehicleBrand,
-            //                SoLuotSua = 0,
-            //                ThanhTien = 0,
-            //                //TiLe = 0
-            //            };
-            //            reportDetailsList.Add(reportDetail);
-            //        }
-            //        return financialReport;
-            //    }
-            //}
+        public static Model.BAOCAODOANHSO GetMonthlyFinancialReport(int month, int year)
+        {           
+            if (DataProvider.Instance.DB.BAOCAODOANHSOes.Any(x => x.Thang == month && x.Nam == year))
+            {
+                return DataProvider.Instance.DB.BAOCAODOANHSOes.FirstOrDefault(x => x.Thang == month && x.Nam == year);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
