@@ -49,6 +49,7 @@ namespace GarageManager.usercontrol
 
         private void Baocaoton_VisibleChanged(object sender, EventArgs e)
         {
+            monthComboBox.Items.Clear();
             List<string> months = CultureInfo.InvariantCulture.DateTimeFormat.MonthNames.Take(12).ToList();
             for (int i = 0; i < months.Count; i++)
             {
