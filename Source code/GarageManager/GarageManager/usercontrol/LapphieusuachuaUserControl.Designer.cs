@@ -244,7 +244,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(3, 179);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 16);
+            this.label8.Size = new System.Drawing.Size(116, 16);
             this.label8.TabIndex = 72;
             this.label8.Text = "Vật tư phụ tùng :";
             // 
@@ -265,6 +265,7 @@
             this.textBoxsoluong.Name = "textBoxsoluong";
             this.textBoxsoluong.Size = new System.Drawing.Size(215, 15);
             this.textBoxsoluong.TabIndex = 76;
+            this.textBoxsoluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxsoluong_KeyPress);
             // 
             // label9
             // 

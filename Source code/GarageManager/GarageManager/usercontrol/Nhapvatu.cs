@@ -68,6 +68,7 @@ namespace GarageManager.usercontrol
                     dataGridView1.Rows.Add(i, x.TenVatTu, (int)x.DonGiaHienTai + " VND", x.SoLuongTon);
                     i++;
                 }
+                MessageBox.Show("Thông tin vật tư đã được thêm thành công", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

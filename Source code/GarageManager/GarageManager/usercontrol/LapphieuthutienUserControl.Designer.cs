@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.labelNgayThuTienPTT = new System.Windows.Forms.Label();
             this.labelSoTienThuPTT = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(429, 27);
+            this.label2.Location = new System.Drawing.Point(383, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(303, 39);
             this.label2.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             this.labelNgayThuTienPTT.AutoSize = true;
             this.labelNgayThuTienPTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNgayThuTienPTT.Location = new System.Drawing.Point(259, 167);
+            this.labelNgayThuTienPTT.Location = new System.Drawing.Point(208, 156);
             this.labelNgayThuTienPTT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNgayThuTienPTT.Name = "labelNgayThuTienPTT";
             this.labelNgayThuTienPTT.Size = new System.Drawing.Size(96, 19);
@@ -79,7 +79,7 @@
             // 
             this.labelSoTienThuPTT.AutoSize = true;
             this.labelSoTienThuPTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSoTienThuPTT.Location = new System.Drawing.Point(645, 167);
+            this.labelSoTienThuPTT.Location = new System.Drawing.Point(594, 156);
             this.labelSoTienThuPTT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSoTienThuPTT.Name = "labelSoTienThuPTT";
             this.labelSoTienThuPTT.Size = new System.Drawing.Size(80, 19);
@@ -90,7 +90,7 @@
             // 
             this.textBoxSoTienThuPTT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSoTienThuPTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSoTienThuPTT.Location = new System.Drawing.Point(649, 191);
+            this.textBoxSoTienThuPTT.Location = new System.Drawing.Point(598, 180);
             this.textBoxSoTienThuPTT.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSoTienThuPTT.Name = "textBoxSoTienThuPTT";
             this.textBoxSoTienThuPTT.Size = new System.Drawing.Size(285, 19);
@@ -102,7 +102,7 @@
             this.buttonPhieuThuTienMoiPTT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPhieuThuTienMoiPTT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPhieuThuTienMoiPTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPhieuThuTienMoiPTT.Location = new System.Drawing.Point(623, 233);
+            this.buttonPhieuThuTienMoiPTT.Location = new System.Drawing.Point(572, 222);
             this.buttonPhieuThuTienMoiPTT.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPhieuThuTienMoiPTT.Name = "buttonPhieuThuTienMoiPTT";
             this.buttonPhieuThuTienMoiPTT.Size = new System.Drawing.Size(137, 29);
@@ -116,7 +116,7 @@
             this.buttonLapPhieuThuTienPTT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLapPhieuThuTienPTT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLapPhieuThuTienPTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLapPhieuThuTienPTT.Location = new System.Drawing.Point(774, 233);
+            this.buttonLapPhieuThuTienPTT.Location = new System.Drawing.Point(723, 222);
             this.buttonLapPhieuThuTienPTT.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLapPhieuThuTienPTT.Name = "buttonLapPhieuThuTienPTT";
             this.buttonLapPhieuThuTienPTT.Size = new System.Drawing.Size(176, 29);
@@ -129,7 +129,7 @@
             // 
             this.textBoxHoTenChuXePTT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxHoTenChuXePTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHoTenChuXePTT.Location = new System.Drawing.Point(259, 120);
+            this.textBoxHoTenChuXePTT.Location = new System.Drawing.Point(208, 109);
             this.textBoxHoTenChuXePTT.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHoTenChuXePTT.MaxLength = 30;
             this.textBoxHoTenChuXePTT.Name = "textBoxHoTenChuXePTT";
@@ -142,7 +142,7 @@
             // 
             this.labelHoTenChuXePTT.AutoSize = true;
             this.labelHoTenChuXePTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHoTenChuXePTT.Location = new System.Drawing.Point(255, 94);
+            this.labelHoTenChuXePTT.Location = new System.Drawing.Point(204, 83);
             this.labelHoTenChuXePTT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHoTenChuXePTT.Name = "labelHoTenChuXePTT";
             this.labelHoTenChuXePTT.Size = new System.Drawing.Size(100, 19);
@@ -152,10 +152,11 @@
             // comboBienSoXe2
             // 
             this.comboBienSoXe2.DisplayMember = "BienSo";
+            this.comboBienSoXe2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBienSoXe2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBienSoXe2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBienSoXe2.FormattingEnabled = true;
-            this.comboBienSoXe2.Location = new System.Drawing.Point(649, 116);
+            this.comboBienSoXe2.Location = new System.Drawing.Point(598, 105);
             this.comboBienSoXe2.Name = "comboBienSoXe2";
             this.comboBienSoXe2.Size = new System.Drawing.Size(301, 27);
             this.comboBienSoXe2.TabIndex = 17;
@@ -165,7 +166,7 @@
             // 
             this.labelBienSoPTT.AutoSize = true;
             this.labelBienSoPTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBienSoPTT.Location = new System.Drawing.Point(646, 94);
+            this.labelBienSoPTT.Location = new System.Drawing.Point(595, 83);
             this.labelBienSoPTT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBienSoPTT.Name = "labelBienSoPTT";
             this.labelBienSoPTT.Size = new System.Drawing.Size(61, 19);
@@ -176,7 +177,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(259, 141);
+            this.panel1.Location = new System.Drawing.Point(208, 130);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(284, 2);
             this.panel1.TabIndex = 55;
@@ -185,7 +186,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(650, 141);
+            this.panel2.Location = new System.Drawing.Point(599, 130);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(284, 2);
             this.panel2.TabIndex = 55;
@@ -194,7 +195,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(650, 212);
+            this.panel3.Location = new System.Drawing.Point(599, 201);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(284, 2);
             this.panel3.TabIndex = 55;
@@ -205,7 +206,7 @@
             this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(302, 191);
+            this.dateTimePicker1.Location = new System.Drawing.Point(251, 180);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(185, 26);
             this.dateTimePicker1.TabIndex = 56;
@@ -214,14 +215,14 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.orderColumn,
@@ -229,15 +230,15 @@
             this.ownerColumn,
             this.inputDateColumn,
             this.owedColumn});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.Location = new System.Drawing.Point(259, 283);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView1.Location = new System.Drawing.Point(208, 273);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;

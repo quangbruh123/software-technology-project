@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cancerbtn = new System.Windows.Forms.Button();
             this.labelPhieuNhapVTPT = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -47,9 +47,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnChonSua = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBoxTCSua = new System.Windows.Forms.TextBox();
             this.textBoxDGMoi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxTCSua = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -92,14 +92,14 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(173)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -252,6 +252,17 @@
             this.label4.TabIndex = 54;
             this.label4.Text = "Đơn giá mới:";
             // 
+            // textBoxTCSua
+            // 
+            this.textBoxTCSua.Enabled = false;
+            this.textBoxTCSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTCSua.Location = new System.Drawing.Point(129, 26);
+            this.textBoxTCSua.Name = "textBoxTCSua";
+            this.textBoxTCSua.ReadOnly = true;
+            this.textBoxTCSua.Size = new System.Drawing.Size(249, 26);
+            this.textBoxTCSua.TabIndex = 53;
+            this.textBoxTCSua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDGMoi_KeyPress);
+            // 
             // textBoxDGMoi
             // 
             this.textBoxDGMoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -270,16 +281,6 @@
             this.label2.Size = new System.Drawing.Size(94, 38);
             this.label2.TabIndex = 49;
             this.label2.Text = "Tên tiền công \r\nđược sửa:";
-            // 
-            // textBoxTCSua
-            // 
-            this.textBoxTCSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTCSua.Location = new System.Drawing.Point(129, 26);
-            this.textBoxTCSua.Name = "textBoxTCSua";
-            this.textBoxTCSua.ReadOnly = true;
-            this.textBoxTCSua.Size = new System.Drawing.Size(249, 26);
-            this.textBoxTCSua.TabIndex = 53;
-            this.textBoxTCSua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDGMoi_KeyPress);
             // 
             // Nhaptiencong
             // 
