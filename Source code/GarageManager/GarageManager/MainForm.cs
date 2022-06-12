@@ -73,20 +73,20 @@ namespace GarageManager
             }
             Debug.WriteLine(Properties.Settings.Default.LastLoginDate.Month + " " + Properties.Settings.Default.LastLoginDate.Year);
             Debug.WriteLine(DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri + " vehicle");
-            if (DateTime.Today.Month != Properties.Settings.Default.LastLoginDate.Month || DateTime.Today.Year != Properties.Settings.Default.LastLoginDate.Year)
-            {
-                Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);
-                Finance.NewMonthlyFinancialReport(DateTime.Today.Month, DateTime.Today.Year);
-                Properties.Settings.Default.Save();
-            }
             if (DataProvider.Instance.DB.BAOCAOTONs.Count() == 0)
             {
-                Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);                
+                Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);
             }
             if (DataProvider.Instance.DB.BAOCAODOANHSOes.Count() == 0)
             {
                 Finance.NewMonthlyFinancialReport(DateTime.Today.Month, DateTime.Today.Year);
             }
+            if (DateTime.Today.Month != Properties.Settings.Default.LastLoginDate.Month || DateTime.Today.Year != Properties.Settings.Default.LastLoginDate.Year)
+            {
+                Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);
+                Finance.NewMonthlyFinancialReport(DateTime.Today.Month, DateTime.Today.Year);
+                Properties.Settings.Default.Save();
+            }           
             if (DateTime.Today.Date != Properties.Settings.Default.LastLoginDate.Date)
             {
                 DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri = 0;

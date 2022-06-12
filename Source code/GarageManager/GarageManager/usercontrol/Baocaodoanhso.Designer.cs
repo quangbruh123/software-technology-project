@@ -33,6 +33,11 @@
             this.monthLabel = new System.Windows.Forms.Label();
             this.textBoxTongDoanhThu = new System.Windows.Forms.TextBox();
             this.dataGridViewBaoCaoDoanhSo = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCapNhatQuyDinh = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,11 +45,6 @@
             this.yearLabel = new System.Windows.Forms.Label();
             this.monthComboBox = new System.Windows.Forms.ComboBox();
             this.yearComboBox = new System.Windows.Forms.ComboBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaoCaoDoanhSo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,21 +52,19 @@
             // 
             this.monthLabel.AutoSize = true;
             this.monthLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthLabel.Location = new System.Drawing.Point(153, 126);
-            this.monthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.monthLabel.Location = new System.Drawing.Point(135, 103);
             this.monthLabel.Name = "monthLabel";
-            this.monthLabel.Size = new System.Drawing.Size(69, 22);
+            this.monthLabel.Size = new System.Drawing.Size(53, 19);
             this.monthLabel.TabIndex = 17;
             this.monthLabel.Text = "Tháng :";
             // 
             // textBoxTongDoanhThu
             // 
             this.textBoxTongDoanhThu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTongDoanhThu.Location = new System.Drawing.Point(336, 191);
-            this.textBoxTongDoanhThu.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxTongDoanhThu.Location = new System.Drawing.Point(245, 155);
             this.textBoxTongDoanhThu.Name = "textBoxTongDoanhThu";
             this.textBoxTongDoanhThu.ReadOnly = true;
-            this.textBoxTongDoanhThu.Size = new System.Drawing.Size(245, 30);
+            this.textBoxTongDoanhThu.Size = new System.Drawing.Size(185, 26);
             this.textBoxTongDoanhThu.TabIndex = 13;
             // 
             // dataGridViewBaoCaoDoanhSo
@@ -94,8 +92,8 @@
             this.Column4,
             this.Column5});
             this.dataGridViewBaoCaoDoanhSo.EnableHeadersVisualStyles = false;
-            this.dataGridViewBaoCaoDoanhSo.Location = new System.Drawing.Point(125, 250);
-            this.dataGridViewBaoCaoDoanhSo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewBaoCaoDoanhSo.Location = new System.Drawing.Point(94, 203);
+            this.dataGridViewBaoCaoDoanhSo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewBaoCaoDoanhSo.MultiSelect = false;
             this.dataGridViewBaoCaoDoanhSo.Name = "dataGridViewBaoCaoDoanhSo";
             this.dataGridViewBaoCaoDoanhSo.ReadOnly = true;
@@ -105,81 +103,8 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewBaoCaoDoanhSo.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewBaoCaoDoanhSo.RowTemplate.Height = 24;
-            this.dataGridViewBaoCaoDoanhSo.Size = new System.Drawing.Size(1285, 332);
+            this.dataGridViewBaoCaoDoanhSo.Size = new System.Drawing.Size(964, 270);
             this.dataGridViewBaoCaoDoanhSo.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(153, 199);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 22);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Tổng doanh thu :";
-            // 
-            // lblCapNhatQuyDinh
-            // 
-            this.lblCapNhatQuyDinh.BackColor = System.Drawing.Color.Transparent;
-            this.lblCapNhatQuyDinh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblCapNhatQuyDinh.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblCapNhatQuyDinh.Location = new System.Drawing.Point(636, 69);
-            this.lblCapNhatQuyDinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCapNhatQuyDinh.Name = "lblCapNhatQuyDinh";
-            this.lblCapNhatQuyDinh.Size = new System.Drawing.Size(291, 33);
-            this.lblCapNhatQuyDinh.TabIndex = 22;
-            this.lblCapNhatQuyDinh.Text = "DOANH SỐ";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
-            this.panel1.Location = new System.Drawing.Point(123, 247);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1291, 337);
-            this.panel1.TabIndex = 23;
-            // 
-            // getFinancialReportButton
-            // 
-            this.getFinancialReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.getFinancialReportButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.getFinancialReportButton.Location = new System.Drawing.Point(973, 119);
-            this.getFinancialReportButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.getFinancialReportButton.Name = "getFinancialReportButton";
-            this.getFinancialReportButton.Size = new System.Drawing.Size(163, 34);
-            this.getFinancialReportButton.TabIndex = 24;
-            this.getFinancialReportButton.Text = "Xem";
-            this.getFinancialReportButton.UseVisualStyleBackColor = true;
-            this.getFinancialReportButton.Click += new System.EventHandler(this.getFinancialReportButton_Click);
-            // 
-            // yearLabel
-            // 
-            this.yearLabel.AutoSize = true;
-            this.yearLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearLabel.Location = new System.Drawing.Point(353, 126);
-            this.yearLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.yearLabel.Name = "yearLabel";
-            this.yearLabel.Size = new System.Drawing.Size(58, 22);
-            this.yearLabel.TabIndex = 17;
-            this.yearLabel.Text = "Năm :";
-            // 
-            // monthComboBox
-            // 
-            this.monthComboBox.FormattingEnabled = true;
-            this.monthComboBox.Location = new System.Drawing.Point(232, 123);
-            this.monthComboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.monthComboBox.Name = "monthComboBox";
-            this.monthComboBox.Size = new System.Drawing.Size(87, 24);
-            this.monthComboBox.TabIndex = 25;
-            // 
-            // yearComboBox
-            // 
-            this.yearComboBox.FormattingEnabled = true;
-            this.yearComboBox.Location = new System.Drawing.Point(423, 123);
-            this.yearComboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.yearComboBox.Name = "yearComboBox";
-            this.yearComboBox.Size = new System.Drawing.Size(123, 24);
-            this.yearComboBox.TabIndex = 25;
             // 
             // Column1
             // 
@@ -221,9 +146,80 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(130, 158);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 19);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Tổng doanh thu :";
+            // 
+            // lblCapNhatQuyDinh
+            // 
+            this.lblCapNhatQuyDinh.BackColor = System.Drawing.Color.Transparent;
+            this.lblCapNhatQuyDinh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCapNhatQuyDinh.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblCapNhatQuyDinh.Location = new System.Drawing.Point(477, 56);
+            this.lblCapNhatQuyDinh.Name = "lblCapNhatQuyDinh";
+            this.lblCapNhatQuyDinh.Size = new System.Drawing.Size(218, 27);
+            this.lblCapNhatQuyDinh.TabIndex = 22;
+            this.lblCapNhatQuyDinh.Text = "DOANH SỐ";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(166)))), ((int)(((byte)(235)))));
+            this.panel1.Location = new System.Drawing.Point(92, 201);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(968, 274);
+            this.panel1.TabIndex = 23;
+            // 
+            // getFinancialReportButton
+            // 
+            this.getFinancialReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.getFinancialReportButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.getFinancialReportButton.Location = new System.Drawing.Point(730, 97);
+            this.getFinancialReportButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.getFinancialReportButton.Name = "getFinancialReportButton";
+            this.getFinancialReportButton.Size = new System.Drawing.Size(122, 28);
+            this.getFinancialReportButton.TabIndex = 24;
+            this.getFinancialReportButton.Text = "Xem";
+            this.getFinancialReportButton.UseVisualStyleBackColor = true;
+            this.getFinancialReportButton.Click += new System.EventHandler(this.getFinancialReportButton_Click);
+            // 
+            // yearLabel
+            // 
+            this.yearLabel.AutoSize = true;
+            this.yearLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearLabel.Location = new System.Drawing.Point(285, 103);
+            this.yearLabel.Name = "yearLabel";
+            this.yearLabel.Size = new System.Drawing.Size(46, 19);
+            this.yearLabel.TabIndex = 17;
+            this.yearLabel.Text = "Năm :";
+            // 
+            // monthComboBox
+            // 
+            this.monthComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthComboBox.FormattingEnabled = true;
+            this.monthComboBox.Location = new System.Drawing.Point(194, 101);
+            this.monthComboBox.Name = "monthComboBox";
+            this.monthComboBox.Size = new System.Drawing.Size(66, 24);
+            this.monthComboBox.TabIndex = 25;
+            // 
+            // yearComboBox
+            // 
+            this.yearComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearComboBox.FormattingEnabled = true;
+            this.yearComboBox.Location = new System.Drawing.Point(337, 101);
+            this.yearComboBox.Name = "yearComboBox";
+            this.yearComboBox.Size = new System.Drawing.Size(93, 24);
+            this.yearComboBox.TabIndex = 25;
+            // 
             // Baocaodoanhso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.yearComboBox);
@@ -236,9 +232,8 @@
             this.Controls.Add(this.textBoxTongDoanhThu);
             this.Controls.Add(this.dataGridViewBaoCaoDoanhSo);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Baocaodoanhso";
-            this.Size = new System.Drawing.Size(1452, 822);
+            this.Size = new System.Drawing.Size(1089, 668);
             this.Load += new System.EventHandler(this.Baocaodoanhso_Load);
             this.VisibleChanged += new System.EventHandler(this.Baocaodoanhso_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaoCaoDoanhSo)).EndInit();

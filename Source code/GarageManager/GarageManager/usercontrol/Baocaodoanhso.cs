@@ -22,35 +22,6 @@ namespace GarageManager.usercontrol
             InitializeComponent();
             month = DateTime.Now.Month;
             year = DateTime.Now.Year;
-            LoadData();
-        }
-        
-        private void LoadData()
-        {
-            TongTien = 0;
-            Model.BAOCAODOANHSO financialReport = Classes.Finance.GetMonthlyFinancialReport(month, year);
-            if (financialReport != null)
-            {
-                int stt = 1;
-                foreach (var item in financialReport.CT_BCDS)
-                {
-                    Model.HIEUXE xe = Classes.DataProvider.Instance.DB.HIEUXEs.FirstOrDefault(x => x.MaHieuXe == item.MaHieuXe);
-                    string brand = xe.TenHieuXe.ToString();
-                    dataGridViewBaoCaoDoanhSo.Rows.Add(
-                        stt.ToString(),
-                        brand,
-                        item.SoLuotSua.ToString(),
-                        ((int)item.ThanhTien).ToString(),
-                        financialReport.TongDoanhThu != 0 ? (double)(item.ThanhTien * item.SoLuotSua / financialReport.TongDoanhThu * 100) : 0);
-                    stt++;
-                    TongTien += double.Parse(item.ThanhTien.ToString());
-                }
-                textBoxTongDoanhThu.Text = TongTien.ToString() + " VND";
-            }
-            else
-            {
-                MessageBox.Show("Không có báo cáo doanh số cho tháng này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
 
         private void getFinancialReportButton_Click(object sender, EventArgs e)
@@ -60,11 +31,35 @@ namespace GarageManager.usercontrol
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ giá trị");
             }
-            else
+            else if (month != int.Parse(monthComboBox.GetItemText(yearComboBox.SelectedItem)) || year != int.Parse(yearComboBox.GetItemText(yearComboBox.SelectedItem)))
             {
                 month = int.Parse(monthComboBox.GetItemText(yearComboBox.SelectedItem));
                 year = int.Parse(yearComboBox.GetItemText(yearComboBox.SelectedItem));
-                LoadData();
+
+                TongTien = 0;
+                Model.BAOCAODOANHSO financialReport = Classes.Finance.GetMonthlyFinancialReport(month, year);
+                if (financialReport != null)
+                {
+                    int stt = 1;
+                    foreach (var item in financialReport.CT_BCDS)
+                    {
+                        Model.HIEUXE xe = Classes.DataProvider.Instance.DB.HIEUXEs.FirstOrDefault(x => x.MaHieuXe == item.MaHieuXe);
+                        string brand = xe.TenHieuXe.ToString();
+                        dataGridViewBaoCaoDoanhSo.Rows.Add(
+                            stt.ToString(),
+                            brand,
+                            item.SoLuotSua.ToString(),
+                            ((int)item.ThanhTien).ToString(),
+                            financialReport.TongDoanhThu != 0 ? (double)(item.ThanhTien * item.SoLuotSua / financialReport.TongDoanhThu * 100) : 0);
+                        stt++;
+                        TongTien += double.Parse(item.ThanhTien.ToString());
+                    }
+                    textBoxTongDoanhThu.Text = TongTien.ToString() + " VND";
+                }
+                else
+                {
+                    MessageBox.Show("Không có báo cáo doanh số cho tháng này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -84,7 +79,27 @@ namespace GarageManager.usercontrol
             monthComboBox.SelectedItem = DateTime.Now.Month;
             yearComboBox.DataSource = Enumerable.Range(DateTime.Now.Year - 10, DateTime.Now.Year - (DateTime.Now.Year - 10) + 1).ToList();
             yearComboBox.SelectedItem = DateTime.Now.Year;
-            LoadData();
+            TongTien = 0;
+            Model.BAOCAODOANHSO financialReport = Classes.Finance.GetMonthlyFinancialReport(month, year);
+
+            if (financialReport != null)
+            {
+                int stt = 1;
+                foreach (var item in financialReport.CT_BCDS)
+                {
+                    Model.HIEUXE xe = Classes.DataProvider.Instance.DB.HIEUXEs.FirstOrDefault(x => x.MaHieuXe == item.MaHieuXe);
+                    string brand = xe.TenHieuXe.ToString();
+                    dataGridViewBaoCaoDoanhSo.Rows.Add(
+                        stt.ToString(),
+                        brand,
+                        item.SoLuotSua.ToString(),
+                        ((int)item.ThanhTien).ToString(),
+                        financialReport.TongDoanhThu != 0 ? (double)(item.ThanhTien * item.SoLuotSua / financialReport.TongDoanhThu * 100) : 0);
+                    stt++;
+                    TongTien += double.Parse(item.ThanhTien.ToString());
+                }
+                textBoxTongDoanhThu.Text = TongTien.ToString() + " VND";
+            }
         }
     }
 }
