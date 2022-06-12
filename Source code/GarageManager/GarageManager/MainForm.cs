@@ -81,9 +81,7 @@ namespace GarageManager
             {
                 Storage.NewStorageReports(DateTime.Today.Month, DateTime.Today.Year);
             }
-            if (DateTime.Today.Day != Properties.Settings.Default.LastLoginDate.Day
-                || DateTime.Today.Month != Properties.Settings.Default.LastLoginDate.Month
-                || DateTime.Today.Year != Properties.Settings.Default.LastLoginDate.Year)
+            if (DateTime.Today.Date != Properties.Settings.Default.LastLoginDate.Date)
             {
                 DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri = 0;
                 DataProvider.Instance.DB.SaveChanges();

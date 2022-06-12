@@ -26,7 +26,10 @@ namespace GarageManager.usercontrol
             }
 
             dataGridViewXeDaTiepNhan.Rows.Clear();
-            var renewTable = Classes.DataProvider.Instance.DB.XEs.ToList();
+            var renewTable = DataProvider.Instance.DB.XEs
+                .Select(x => new { x.BienSo, x.TenChuXe, x.NgayTiepNhan, x.TienNo, x.HIEUXE })
+                .OrderByDescending(x => x.NgayTiepNhan)
+                .Take(40);
             foreach (var item in renewTable)
             {
                 dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo + " VND");
@@ -45,34 +48,41 @@ namespace GarageManager.usercontrol
                 return;
             }
             if (
-                String.IsNullOrEmpty(txtBoxTenKH.Text) ||
-                String.IsNullOrEmpty(txtBoxBienSo.Text) ||
+                string.IsNullOrEmpty(txtBoxTenKH.Text) ||
+                string.IsNullOrEmpty(txtBoxBienSo.Text) ||
                 comboBoxHieuXe.SelectedIndex == -1
                 )
             {
                 MessageBox.Show("Thông tin chưa được điền đầy đủ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else if (!String.IsNullOrEmpty(txtboxEmail.Text))
+            if (!string.IsNullOrEmpty(txtboxEmail.Text) && ValidateEmail.EmailIsValid(txtboxEmail.Text) == false)
             {
-                if (Classes.ValidateEmail.EmailIsValid(txtboxEmail.Text) == false)
-                {
-                    MessageBox.Show("Email được nhập không đúng cú pháp", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                MessageBox.Show("Email được nhập không đúng cú pháp", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             
-            else
+            if (Vehicle.AddVehicle(txtBoxBienSo.Text, txtBoxTenKH.Text, comboBoxHieuXe.Text, txtBoxDienThoai.Text, txtBoxDiaChi.Text, txtboxEmail.Text, DateTime.Now))
             {
-                Classes.Vehicle.AddVehicle(txtBoxBienSo.Text, txtBoxTenKH.Text, comboBoxHieuXe.Text, txtBoxDienThoai.Text, txtBoxDiaChi.Text, txtboxEmail.Text, DateTime.Now);
+                MessageBox.Show("Tiếp nhận xe thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dataGridViewXeDaTiepNhan.Rows.Clear();
-                var renewTable = Classes.DataProvider.Instance.DB.XEs.ToList();
+                var renewTable = DataProvider.Instance.DB.XEs
+                    .Select(x => new { x.BienSo, x.TenChuXe, x.NgayTiepNhan, x.TienNo, x.HIEUXE })
+                    .OrderByDescending(x => x.NgayTiepNhan)
+                    .Take(40);
                 foreach (var item in renewTable)
                 {
                     dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo + " VND");
                 }
                 DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri++;
+                DataProvider.Instance.DB.SaveChanges();
                 System.Diagnostics.Debug.WriteLine(DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri + " vehicle");
                 labelTodayVehicleNum.Text = DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri
-                + " / " + Classes.DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri;
+                + " / " + DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri;
+            }
+            else
+            {
+                MessageBox.Show("Tiếp nhận xe thất bại\nĐã có biển số xe vừa nhập trong hệ thống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -89,12 +99,13 @@ namespace GarageManager.usercontrol
         private void buttonLamMoi_Click(object sender, EventArgs e)
         {
             dataGridViewXeDaTiepNhan.Rows.Clear();
-            var renewTable = Classes.DataProvider.Instance.DB.XEs.ToList();
+            var renewTable = DataProvider.Instance.DB.XEs.Where(x => x.NgayTiepNhan.Value.Date == DateTime.Today.Date)
+                .OrderByDescending(x => x.NgayTiepNhan.Value.Date)
+                .Select(x => new { x.BienSo, x.TenChuXe, x.NgayTiepNhan, x.TienNo, x.HIEUXE});
             foreach (var item in renewTable)
             {
                 dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo + " VND");
             }
-
         }
 
         private void txtBoxDienThoai_KeyPress(object sender, KeyPressEventArgs e)
@@ -115,6 +126,11 @@ namespace GarageManager.usercontrol
             {
                 comboBoxHieuXe.Items.Add(brand);
             }
+        }
+
+        private void pnThemThongTinKHVaXe_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

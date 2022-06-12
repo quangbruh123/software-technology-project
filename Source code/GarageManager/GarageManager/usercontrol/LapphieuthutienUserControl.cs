@@ -35,6 +35,7 @@ namespace GarageManager.usercontrol
             if (isNumber && pay > 0)
             {
                 Finance.AddReceipt(plate, pay, dateTimePicker1.Value);
+                reset();
             }
             else if (!isNumber)
             {
@@ -48,10 +49,13 @@ namespace GarageManager.usercontrol
 
         private void textBoxHoTenChuXePTT_TextChanged(object sender, EventArgs e)
         {
-            comboBienSoXe2.Items.Clear();
-            foreach (var plates in DataProvider.Instance.DB.XEs.Where(x => x.TenChuXe.Contains(textBoxHoTenChuXePTT.Text)).Select(x => x.BienSo))
+            if (dataGridView1.SelectedRows.Count == 0)
             {
-                comboBienSoXe2.Items.Add(plates);
+                comboBienSoXe2.Items.Clear();
+                foreach (var plates in DataProvider.Instance.DB.XEs.Where(x => x.TenChuXe.Contains(textBoxHoTenChuXePTT.Text)).Select(x => x.BienSo))
+                {
+                    comboBienSoXe2.Items.Add(plates);
+                }
             }
         }
 
@@ -73,11 +77,34 @@ namespace GarageManager.usercontrol
             comboBienSoXe2.Items.Clear();
             comboBienSoXe2.SelectedIndex = -1;
             comboBienSoXe2.SelectedItem = null;
+
+            int itemCounter = 1;
+            dataGridView1.Rows.Clear();
+            foreach (var vehicle in DataProvider.Instance.DB.XEs
+                .Where(x => x.TienNo > 0)
+                .OrderByDescending(x => x.NgayTiepNhan)
+                .Select(x => new { x.BienSo, x.TenChuXe, x.NgayTiepNhan, x.TienNo })
+                .Take(40))
+            {
+                dataGridView1.Rows.Add(itemCounter, vehicle.BienSo, vehicle.TenChuXe, vehicle.NgayTiepNhan.ToString(), vehicle.TienNo);
+                itemCounter++;
+            }
         }
 
         private void textBoxSoTienThuPTT_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                textBoxHoTenChuXePTT.Text = row.Cells[2].Value.ToString();
+                comboBienSoXe2.Items.Clear();
+                comboBienSoXe2.Items.Add(row.Cells[1].Value.ToString());
+                comboBienSoXe2.SelectedItem = row.Cells[1].Value.ToString();
+            }
         }
     }
 }

@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.labelNgayThuTienPTT = new System.Windows.Forms.Label();
             this.labelSoTienThuPTT = new System.Windows.Forms.Label();
             this.textBoxSoTienThuPTT = new System.Windows.Forms.TextBox();
-            this.panel23 = new System.Windows.Forms.Panel();
             this.buttonPhieuThuTienMoiPTT = new System.Windows.Forms.Button();
             this.buttonLapPhieuThuTienPTT = new System.Windows.Forms.Button();
             this.textBoxHoTenChuXePTT = new System.Windows.Forms.TextBox();
@@ -43,7 +44,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.panel23.SuspendLayout();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.orderColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ownerColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inputDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.owedColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -90,24 +97,15 @@
             this.textBoxSoTienThuPTT.TabIndex = 2;
             this.textBoxSoTienThuPTT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoTienThuPTT_KeyPress);
             // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.buttonPhieuThuTienMoiPTT);
-            this.panel23.Controls.Add(this.buttonLapPhieuThuTienPTT);
-            this.panel23.Location = new System.Drawing.Point(260, 269);
-            this.panel23.Margin = new System.Windows.Forms.Padding(2);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(639, 130);
-            this.panel23.TabIndex = 11;
-            // 
             // buttonPhieuThuTienMoiPTT
             // 
+            this.buttonPhieuThuTienMoiPTT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPhieuThuTienMoiPTT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPhieuThuTienMoiPTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPhieuThuTienMoiPTT.Location = new System.Drawing.Point(85, 20);
+            this.buttonPhieuThuTienMoiPTT.Location = new System.Drawing.Point(623, 233);
             this.buttonPhieuThuTienMoiPTT.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPhieuThuTienMoiPTT.Name = "buttonPhieuThuTienMoiPTT";
-            this.buttonPhieuThuTienMoiPTT.Size = new System.Drawing.Size(198, 78);
+            this.buttonPhieuThuTienMoiPTT.Size = new System.Drawing.Size(137, 29);
             this.buttonPhieuThuTienMoiPTT.TabIndex = 4;
             this.buttonPhieuThuTienMoiPTT.Text = "Đặt lại";
             this.buttonPhieuThuTienMoiPTT.UseVisualStyleBackColor = true;
@@ -115,12 +113,13 @@
             // 
             // buttonLapPhieuThuTienPTT
             // 
+            this.buttonLapPhieuThuTienPTT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLapPhieuThuTienPTT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLapPhieuThuTienPTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLapPhieuThuTienPTT.Location = new System.Drawing.Point(390, 20);
+            this.buttonLapPhieuThuTienPTT.Location = new System.Drawing.Point(774, 233);
             this.buttonLapPhieuThuTienPTT.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLapPhieuThuTienPTT.Name = "buttonLapPhieuThuTienPTT";
-            this.buttonLapPhieuThuTienPTT.Size = new System.Drawing.Size(198, 78);
+            this.buttonLapPhieuThuTienPTT.Size = new System.Drawing.Size(176, 29);
             this.buttonLapPhieuThuTienPTT.TabIndex = 3;
             this.buttonLapPhieuThuTienPTT.Text = "Lập phiếu thu tiền";
             this.buttonLapPhieuThuTienPTT.UseVisualStyleBackColor = true;
@@ -211,11 +210,84 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(185, 26);
             this.dateTimePicker1.TabIndex = 56;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.orderColumn,
+            this.plateColumn,
+            this.ownerColumn,
+            this.inputDateColumn,
+            this.owedColumn});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.Location = new System.Drawing.Point(259, 283);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(691, 212);
+            this.dataGridView1.TabIndex = 57;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // orderColumn
+            // 
+            this.orderColumn.HeaderText = "STT";
+            this.orderColumn.Name = "orderColumn";
+            this.orderColumn.ReadOnly = true;
+            this.orderColumn.Width = 50;
+            // 
+            // plateColumn
+            // 
+            this.plateColumn.HeaderText = "Biển số";
+            this.plateColumn.Name = "plateColumn";
+            this.plateColumn.ReadOnly = true;
+            this.plateColumn.Width = 147;
+            // 
+            // ownerColumn
+            // 
+            this.ownerColumn.HeaderText = "Tên chủ xe";
+            this.ownerColumn.Name = "ownerColumn";
+            this.ownerColumn.ReadOnly = true;
+            this.ownerColumn.Width = 150;
+            // 
+            // inputDateColumn
+            // 
+            this.inputDateColumn.HeaderText = "Ngày tiếp nhận";
+            this.inputDateColumn.Name = "inputDateColumn";
+            this.inputDateColumn.ReadOnly = true;
+            this.inputDateColumn.Width = 150;
+            // 
+            // owedColumn
+            // 
+            this.owedColumn.HeaderText = "Tiền nợ";
+            this.owedColumn.Name = "owedColumn";
+            this.owedColumn.ReadOnly = true;
+            this.owedColumn.Width = 150;
+            // 
             // LapphieuthutienUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.buttonLapPhieuThuTienPTT);
+            this.Controls.Add(this.buttonPhieuThuTienMoiPTT);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -227,12 +299,11 @@
             this.Controls.Add(this.labelNgayThuTienPTT);
             this.Controls.Add(this.labelSoTienThuPTT);
             this.Controls.Add(this.textBoxSoTienThuPTT);
-            this.Controls.Add(this.panel23);
             this.Controls.Add(this.label2);
             this.Name = "LapphieuthutienUserControl";
             this.Size = new System.Drawing.Size(1089, 668);
             this.VisibleChanged += new System.EventHandler(this.LapphieuthutienUserControl_VisibleChanged);
-            this.panel23.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,7 +314,6 @@
         private System.Windows.Forms.Label labelNgayThuTienPTT;
         private System.Windows.Forms.Label labelSoTienThuPTT;
         private System.Windows.Forms.TextBox textBoxSoTienThuPTT;
-        private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Button buttonPhieuThuTienMoiPTT;
         private System.Windows.Forms.Button buttonLapPhieuThuTienPTT;
         private System.Windows.Forms.TextBox textBoxHoTenChuXePTT;
@@ -254,5 +324,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn plateColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ownerColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inputDateColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn owedColumn;
     }
 }

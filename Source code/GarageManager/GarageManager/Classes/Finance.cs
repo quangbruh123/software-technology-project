@@ -23,6 +23,10 @@ namespace GarageManager.Classes
             if (DataProvider.Instance.DB.XEs.Any(x => x.BienSo == plate))
             {
                 Model.XE vehicle = DataProvider.Instance.DB.XEs.FirstOrDefault(x => x.BienSo == plate);
+                if (createDate.Date.CompareTo(vehicle.NgayTiepNhan.Value.Date) < 0)
+                {
+                    MessageBox.Show("Ngày lập phiếu không thể bé hơn ngày tiếp nhận", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 if (vehicle.TienNo >= pay)
                 {
                     Model.PHIEUTHUTIEN receipt = new Model.PHIEUTHUTIEN()

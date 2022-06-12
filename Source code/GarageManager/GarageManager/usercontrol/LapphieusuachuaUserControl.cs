@@ -31,7 +31,7 @@ namespace GarageManager.usercontrol
         private void buttonplus_Click(object sender, EventArgs e)
         {
             bool isNumber = int.TryParse(textBoxsoluong.Text, out int res);
-            if (isNumber && comboBoxvattuphutung.SelectedIndex > -1 && comboBoxTiencong.SelectedIndex > -1)
+            if (comboBoxTiencong.SelectedIndex > -1 && isNumber)
             {
                 itemCounter++;
                 long partPrice = Storage.GetPartPrice(comboBoxvattuphutung.Text);
@@ -39,8 +39,8 @@ namespace GarageManager.usercontrol
                 addtcbtn.Rows.Add(
                     itemCounter,
                     textBoxDetails.Text,
-                    comboBoxvattuphutung.GetItemText(comboBoxvattuphutung.SelectedItem),
-                    textBoxsoluong.Text,
+                    comboBoxvattuphutung.SelectedIndex == -1 ? comboBoxvattuphutung.GetItemText(comboBoxvattuphutung.SelectedItem) : "",
+                    res,
                     partPrice + " VND",
                     comboBoxTiencong.GetItemText(comboBoxTiencong.SelectedItem),
                     totalForAFix + " VND");
@@ -157,11 +157,11 @@ namespace GarageManager.usercontrol
             total = 0;
             comboBoxTiencong.Items.Clear();
             comboBoxvattuphutung.Items.Clear();
-            foreach (var part in DataProvider.Instance.DB.VATTUs.Select(x => x.TenVatTu))
+            foreach (var part in DataProvider.Instance.DB.VATTUs.OrderBy(x => x.TenVatTu).Select(x => x.TenVatTu))
             {
                 comboBoxvattuphutung.Items.Add(part);
             }
-            foreach (var wage in DataProvider.Instance.DB.TIENCONGs.Select(x => x.TenTienCong))
+            foreach (var wage in DataProvider.Instance.DB.TIENCONGs.OrderBy(x => x.TenTienCong).Select(x => x.TenTienCong))
             {
                 comboBoxTiencong.Items.Add(wage);
             }
