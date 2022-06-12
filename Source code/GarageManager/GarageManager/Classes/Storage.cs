@@ -157,8 +157,7 @@ namespace GarageManager.Classes
             }
             else
             {
-                NewStorageReports(month, year);
-                return DataProvider.Instance.DB.BAOCAOTONs.Where(x => x.Thang == month && x.Nam == year).ToList();
+                return null;
             }
         }
 

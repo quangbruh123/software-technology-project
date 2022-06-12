@@ -64,7 +64,6 @@ namespace GarageManager.usercontrol
             
             if (Vehicle.AddVehicle(txtBoxBienSo.Text, txtBoxTenKH.Text, comboBoxHieuXe.Text, txtBoxDienThoai.Text, txtBoxDiaChi.Text, txtboxEmail.Text, DateTime.Now))
             {
-                MessageBox.Show("Tiếp nhận xe thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dataGridViewXeDaTiepNhan.Rows.Clear();
                 var renewTable = DataProvider.Instance.DB.XEs
                     .Select(x => new { x.BienSo, x.TenChuXe, x.NgayTiepNhan, x.TienNo, x.HIEUXE })
@@ -79,6 +78,7 @@ namespace GarageManager.usercontrol
                 System.Diagnostics.Debug.WriteLine(DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri + " vehicle");
                 labelTodayVehicleNum.Text = DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri
                 + " / " + DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri;
+                MessageBox.Show("Tiếp nhận xe thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

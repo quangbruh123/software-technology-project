@@ -40,10 +40,17 @@ namespace GarageManager.usercontrol
             dataGridViewStorageReport.Rows.Clear();
             List<Model.BAOCAOTON> storageReportList = Classes.Storage
                 .GetMonthlyStorageReport(int.Parse(monthComboBox.GetItemText(monthComboBox.SelectedItem)), int.Parse(yearComboBox.GetItemText(yearComboBox.SelectedItem)));
-            foreach (var report in storageReportList)
+            if (storageReportList != null)
             {
-                dataGridViewStorageReport.Rows.Add(itemCounter, report.VATTU.TenVatTu, report.TonDau, report.PhatSinh, report.TonCuoi);
-                itemCounter++;
+                foreach (var report in storageReportList)
+                {
+                    dataGridViewStorageReport.Rows.Add(itemCounter, report.VATTU.TenVatTu, report.TonDau, report.PhatSinh, report.TonCuoi);
+                    itemCounter++;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không có báo cáo tồn cho tháng này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
