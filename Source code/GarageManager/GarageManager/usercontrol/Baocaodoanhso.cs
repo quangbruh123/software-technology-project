@@ -31,9 +31,9 @@ namespace GarageManager.usercontrol
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ giá trị");
             }
-            else if (month != int.Parse(monthComboBox.GetItemText(yearComboBox.SelectedItem)) || year != int.Parse(yearComboBox.GetItemText(yearComboBox.SelectedItem)))
+            else
             {
-                month = int.Parse(monthComboBox.GetItemText(yearComboBox.SelectedItem));
+                month = int.Parse(monthComboBox.GetItemText(monthComboBox.SelectedItem));
                 year = int.Parse(yearComboBox.GetItemText(yearComboBox.SelectedItem));
 
                 TongTien = 0;
