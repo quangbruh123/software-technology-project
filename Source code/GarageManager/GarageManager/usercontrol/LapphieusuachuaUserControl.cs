@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,7 @@ namespace GarageManager.usercontrol
         private void buttonplus_Click(object sender, EventArgs e)
         {
             bool isNumber = int.TryParse(textBoxsoluong.Text, out int res);
-            if (comboBoxTiencong.SelectedIndex > -1 && isNumber)
+            if (comboBoxTiencong.SelectedIndex > -1 && isNumber && comboBoxvattuphutung.SelectedIndex > -1 && isNumber)
             {
                 itemCounter++;
                 long partPrice = Storage.GetPartPrice(comboBoxvattuphutung.Text);
@@ -39,7 +40,7 @@ namespace GarageManager.usercontrol
                 addtcbtn.Rows.Add(
                     itemCounter,
                     textBoxDetails.Text,
-                    comboBoxvattuphutung.SelectedIndex == -1 ? comboBoxvattuphutung.GetItemText(comboBoxvattuphutung.SelectedItem) : "",
+                    comboBoxvattuphutung.GetItemText(comboBoxvattuphutung.SelectedItem),
                     res,
                     partPrice + " VND",
                     comboBoxTiencong.GetItemText(comboBoxTiencong.SelectedItem),
