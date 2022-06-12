@@ -99,13 +99,17 @@ namespace GarageManager.usercontrol
         private void buttonLamMoi_Click(object sender, EventArgs e)
         {
             dataGridViewXeDaTiepNhan.Rows.Clear();
-            var renewTable = DataProvider.Instance.DB.XEs.Where(x => x.NgayTiepNhan.Value.Date == DateTime.Today.Date)
-                .OrderByDescending(x => x.NgayTiepNhan.Value.Date)
-                .Select(x => new { x.BienSo, x.TenChuXe, x.NgayTiepNhan, x.TienNo, x.HIEUXE});
+            var renewTable = DataProvider.Instance.DB.XEs
+                .Select(x => new { x.BienSo, x.TenChuXe, x.NgayTiepNhan, x.TienNo, x.HIEUXE })
+                .OrderByDescending(x => x.NgayTiepNhan)
+                .Take(40);
             foreach (var item in renewTable)
             {
                 dataGridViewXeDaTiepNhan.Rows.Add(item.BienSo, item.HIEUXE.TenHieuXe, item.TenChuXe, item.NgayTiepNhan, (int)item.TienNo + " VND");
             }
+
+            labelTodayVehicleNum.Text = DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri.ToString()
+                + " / " + Classes.DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri;
         }
 
         private void txtBoxDienThoai_KeyPress(object sender, KeyPressEventArgs e)
