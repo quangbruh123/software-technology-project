@@ -113,6 +113,7 @@
           <ScalarProperty Name="HoTen" ColumnName="HoTen" />
           <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
           <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
           <ScalarProperty Name="QuyenHan" ColumnName="QuyenHan" />
         </MappingFragment>

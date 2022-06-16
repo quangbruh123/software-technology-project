@@ -7,7 +7,7 @@
     <Property Name="MaBCDS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Thang" Type="int" />
     <Property Name="Nam" Type="int" />
-    <Property Name="TongDoanhThu" Type="money" />
+    <Property Name="TongDoanhThu" Type="bigint" />
   </EntityType>
   <EntityType Name="BAOCAOTON">
     <Key>
@@ -29,7 +29,7 @@
     <Property Name="MaBCDS" Type="int" Nullable="false" />
     <Property Name="MaHieuXe" Type="int" Nullable="false" />
     <Property Name="SoLuotSua" Type="int" />
-    <Property Name="ThanhTien" Type="money" />
+    <Property Name="ThanhTien" Type="bigint" />
   </EntityType>
   <EntityType Name="CT_PNVT">
     <Key>
@@ -39,9 +39,9 @@
     <Property Name="MaPhieuNhap" Type="int" Nullable="false" />
     <Property Name="MaVatTu" Type="int" Nullable="false" />
     <Property Name="SoLuong" Type="int" />
-    <Property Name="DonGiaNhap" Type="money" />
-    <Property Name="DonGiaBan" Type="money" />
-    <Property Name="ThanhTien" Type="money" />
+    <Property Name="DonGiaNhap" Type="bigint" />
+    <Property Name="DonGiaBan" Type="bigint" />
+    <Property Name="ThanhTien" Type="bigint" />
   </EntityType>
   <EntityType Name="CT_PSC">
     <Key>
@@ -52,7 +52,7 @@
     <Property Name="NoiDung" Type="nvarchar(max)" />
     <Property Name="SoLan" Type="int" />
     <Property Name="MaTienCong" Type="int" />
-    <Property Name="ThanhTien" Type="money" />
+    <Property Name="ThanhTien" Type="bigint" />
   </EntityType>
   <EntityType Name="CT_SUDUNGVATTU">
     <Key>
@@ -62,8 +62,8 @@
     <Property Name="MaCTPSC" Type="int" Nullable="false" />
     <Property Name="MaVatTu" Type="int" Nullable="false" />
     <Property Name="SoLuong" Type="int" />
-    <Property Name="DonGia" Type="money" />
-    <Property Name="ThanhTien" Type="money" />
+    <Property Name="DonGia" Type="bigint" />
+    <Property Name="ThanhTien" Type="bigint" />
   </EntityType>
   <EntityType Name="HIEUXE">
     <Key>
@@ -78,7 +78,7 @@
     </Key>
     <Property Name="MaPhieuNhap" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NgayNhap" Type="smalldatetime" />
-    <Property Name="TongTien" Type="money" />
+    <Property Name="TongTien" Type="bigint" />
   </EntityType>
   <EntityType Name="PHIEUSUACHUA">
     <Key>
@@ -87,7 +87,7 @@
     <Property Name="MaPhieuSC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="BienSo" Type="nvarchar" MaxLength="50" />
     <Property Name="NgaySuaChua" Type="smalldatetime" />
-    <Property Name="TongTien" Type="money" />
+    <Property Name="TongTien" Type="bigint" />
   </EntityType>
   <EntityType Name="PHIEUTHUTIEN">
     <Key>
@@ -96,7 +96,7 @@
     <Property Name="MaPTT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NgayLap" Type="smalldatetime" />
     <Property Name="BienSo" Type="nvarchar" MaxLength="50" />
-    <Property Name="SoTienThu" Type="money" />
+    <Property Name="SoTienThu" Type="bigint" />
   </EntityType>
   <EntityType Name="TAIKHOAN">
     <Key>
@@ -106,6 +106,7 @@
     <Property Name="HoTen" Type="nvarchar(max)" />
     <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" />
     <Property Name="TenTaiKhoan" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
     <Property Name="MatKhau" Type="nvarchar(max)" />
     <Property Name="QuyenHan" Type="int" />
   </EntityType>
@@ -115,13 +116,13 @@
     </Key>
     <Property Name="MaTienCong" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenTienCong" Type="nvarchar(max)" />
-    <Property Name="GiaTienCong" Type="money" />
+    <Property Name="GiaTienCong" Type="bigint" />
   </EntityType>
   <EntityType Name="THAMSO">
     <Key>
       <PropertyRef Name="TenThamSo" />
     </Key>
-    <Property Name="TenThamSo" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="TenThamSo" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="GiaTri" Type="int" />
   </EntityType>
   <EntityType Name="VAITRO">
@@ -137,7 +138,7 @@
     </Key>
     <Property Name="MaVatTu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenVatTu" Type="nvarchar(max)" />
-    <Property Name="DonGiaHienTai" Type="money" />
+    <Property Name="DonGiaHienTai" Type="bigint" />
     <Property Name="SoLuongTon" Type="int" />
   </EntityType>
   <EntityType Name="XE">
@@ -151,7 +152,7 @@
     <Property Name="DiaChi" Type="nvarchar(max)" />
     <Property Name="Email" Type="nvarchar(max)" />
     <Property Name="NgayTiepNhan" Type="datetime" />
-    <Property Name="TienNo" Type="money" />
+    <Property Name="TienNo" Type="bigint" />
   </EntityType>
   <Association Name="FK_BCT_MaVatTu">
     <End Role="VATTU" Type="Self.VATTU" Multiplicity="0..1" />

@@ -36,8 +36,8 @@ namespace GarageManager.Model
         public virtual DbSet<PHIEUSUACHUA> PHIEUSUACHUAs { get; set; }
         public virtual DbSet<PHIEUTHUTIEN> PHIEUTHUTIENs { get; set; }
         public virtual DbSet<TAIKHOAN> TAIKHOANs { get; set; }
-        public virtual DbSet<THAMSO> THAMSOes { get; set; }
         public virtual DbSet<TIENCONG> TIENCONGs { get; set; }
+        public virtual DbSet<THAMSO> THAMSOes { get; set; }
         public virtual DbSet<VAITRO> VAITROes { get; set; }
         public virtual DbSet<VATTU> VATTUs { get; set; }
         public virtual DbSet<XE> XEs { get; set; }

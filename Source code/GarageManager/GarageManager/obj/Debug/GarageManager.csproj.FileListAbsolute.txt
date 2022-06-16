@@ -212,7 +212,6 @@ D:\Software Technology\Do an\software-technology-project\Source code\GarageManag
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.AssemblyReference.cache
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.SuggestedBindingRedirects.cache
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.LoginForm.resources
-D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.Formtaotaikhoan.resources
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.MainForm.resources
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.Properties.Resources.resources
 D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.Baocaodoanhso.resources
@@ -266,3 +265,7 @@ D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManag
 D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\EntityFramework.xml
 D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\EntityFramework.SqlServer.xml
 D:\School\CNPM\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.csproj.CopyComplete
+D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.TraCuu.resources
+D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\obj\Debug\GarageManager.usercontrol.TraCuuChiTiet.resources
+D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\GarageManagement.mdf
+D:\Software Technology\Do an\software-technology-project\Source code\GarageManager\GarageManager\bin\Debug\GarageManagement_log.ldf
