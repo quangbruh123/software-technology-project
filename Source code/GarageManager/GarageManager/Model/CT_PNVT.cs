@@ -17,9 +17,9 @@ namespace GarageManager.Model
         public int MaPhieuNhap { get; set; }
         public int MaVatTu { get; set; }
         public Nullable<int> SoLuong { get; set; }
-        public Nullable<decimal> DonGiaNhap { get; set; }
-        public Nullable<decimal> DonGiaBan { get; set; }
-        public Nullable<decimal> ThanhTien { get; set; }
+        public Nullable<long> DonGiaNhap { get; set; }
+        public Nullable<long> DonGiaBan { get; set; }
+        public Nullable<long> ThanhTien { get; set; }
     
         public virtual PHIEUNHAPVATTU PHIEUNHAPVATTU { get; set; }
         public virtual VATTU VATTU { get; set; }

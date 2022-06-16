@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GarageManager.Classes
@@ -69,7 +66,6 @@ namespace GarageManager.Classes
                 for (int i = 0; i < partNames.Count; i++)
                 {
                     string requiredPart = partNames[i];
-                    Debug.WriteLine(requiredPart);
                     var part = DataProvider.Instance.DB.VATTUs.FirstOrDefault(x => x.TenVatTu == requiredPart);
                     if (part.SoLuongTon < amount[i])
                     {
@@ -105,7 +101,7 @@ namespace GarageManager.Classes
                         ThanhTien = partUsageDetailList[i].SoLuong * partUsageDetailList[i].DonGia + wage.GiaTienCong,
                         TIENCONG = wage
                     };
-                    maintenanceDetail.CT_SUDUNGVATTU.Add(partUsageDetailList[i]);                    
+                    maintenanceDetail.CT_SUDUNGVATTU.Add(partUsageDetailList[i]);                  
                     maintenanceDetailList.Add(maintenanceDetail);
                 }
 
@@ -120,7 +116,6 @@ namespace GarageManager.Classes
                 for (int i = 0; i < maintenanceDetailList.Count; i++)
                 {
                     maintenanceCard.TongTien += maintenanceDetailList[i].ThanhTien;
-                    Debug.WriteLine(maintenanceCard.TongTien + " + " + maintenanceDetailList[i].ThanhTien);
                 }
                 DataProvider.Instance.DB.PHIEUSUACHUAs.Add(maintenanceCard);
                 vehicle.PHIEUSUACHUAs.Add(maintenanceCard);
@@ -141,26 +136,6 @@ namespace GarageManager.Classes
                 MessageBox.Show("Không tìm thấy xe với biển số đã cho.\nHãy chắc chắn xe đã được tiếp nhận rồi.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-        }
-
-        /// <summary>
-        /// Find all vehicles that has their plates containing the given key word
-        /// </summary>
-        /// <param name="plate"></param>
-        /// <returns>A list of vehicle satisfies the condition</returns>
-        public static List<Model.XE> FindVehicleFromPlate(string plate)
-        {
-            return DataProvider.Instance.DB.XEs.Where(x => x.BienSo.Contains(plate)).ToList();
-        }
-
-        /// <summary>
-        /// Find all vehicles that has their owner's names containing the given key word
-        /// </summary>
-        /// <param name="name"></param>
-        /// <returns>A list of vehicle satisfies the condition</returns>
-        public static List<Model.XE> FindVehicleFromNameOfOwner(string name)
-        {
-            return DataProvider.Instance.DB.XEs.Where(x => x.TenChuXe.Contains(name)).ToList();
         }
     }
 }

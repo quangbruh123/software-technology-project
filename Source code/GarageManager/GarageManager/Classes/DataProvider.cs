@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GarageManager.Classes
+﻿namespace GarageManager.Classes
 {
     /// <summary>
     /// Handles the data. This is the pivotal class

@@ -24,7 +24,7 @@ namespace GarageManager.Model
     
         public int MaVatTu { get; set; }
         public string TenVatTu { get; set; }
-        public Nullable<decimal> DonGiaHienTai { get; set; }
+        public Nullable<long> DonGiaHienTai { get; set; }
         public Nullable<int> SoLuongTon { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

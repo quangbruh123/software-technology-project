@@ -17,7 +17,7 @@ namespace GarageManager.Model
         public int MaBCDS { get; set; }
         public int MaHieuXe { get; set; }
         public Nullable<int> SoLuotSua { get; set; }
-        public Nullable<decimal> ThanhTien { get; set; }
+        public Nullable<long> ThanhTien { get; set; }
     
         public virtual BAOCAODOANHSO BAOCAODOANHSO { get; set; }
         public virtual HIEUXE HIEUXE { get; set; }

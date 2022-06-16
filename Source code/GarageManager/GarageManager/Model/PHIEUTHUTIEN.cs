@@ -17,7 +17,7 @@ namespace GarageManager.Model
         public int MaPTT { get; set; }
         public Nullable<System.DateTime> NgayLap { get; set; }
         public string BienSo { get; set; }
-        public Nullable<decimal> SoTienThu { get; set; }
+        public Nullable<long> SoTienThu { get; set; }
     
         public virtual XE XE { get; set; }
     }

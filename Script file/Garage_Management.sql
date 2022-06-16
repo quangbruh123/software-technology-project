@@ -27,7 +27,7 @@ CREATE TABLE PHIEUSUACHUA (
 CREATE TABLE CT_PSC (
 	MaCTPSC		INT IDENTITY (1, 1)  PRIMARY KEY,
 	MaPhieuSC	INT,
-	NoiDung		NVARCHAR(MAX),
+	NoiDung		NVARCHAR(MAX) DEFAULT '',
 	SoLan		INT DEFAULT 1,
 	MaTienCong	INT,
 	ThanhTien	BIGINT DEFAULT 0
@@ -158,6 +158,7 @@ INSERT INTO HIEUXE (TenHieuXe) VALUES ('Lexus')
 INSERT INTO HIEUXE (TenHieuXe) VALUES ('BMW')
 
 INSERT INTO VATTU (TenVatTu, DonGiaHienTai, SoLuongTon) VALUES
+	(N'Không', 0, 0),
 	(N'Phuộc trước', 10000000, 10),
 	(N'Phuộc sau', 600000, 10),
 	(N'Mâm ép', 2000000, 10),

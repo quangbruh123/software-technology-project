@@ -23,7 +23,7 @@ namespace GarageManager.Model
         public int MaPhieuSC { get; set; }
         public string BienSo { get; set; }
         public Nullable<System.DateTime> NgaySuaChua { get; set; }
-        public Nullable<decimal> TongTien { get; set; }
+        public Nullable<long> TongTien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_PSC> CT_PSC { get; set; }

@@ -23,7 +23,7 @@ namespace GarageManager.Model
         public int MaBCDS { get; set; }
         public Nullable<int> Thang { get; set; }
         public Nullable<int> Nam { get; set; }
-        public Nullable<decimal> TongDoanhThu { get; set; }
+        public Nullable<long> TongDoanhThu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_BCDS> CT_BCDS { get; set; }

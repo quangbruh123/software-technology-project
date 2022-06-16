@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace GarageManager.Classes
 {
@@ -25,15 +21,6 @@ namespace GarageManager.Classes
                 return true;
             }
             return false;
-        }
-
-        /// <summary>
-        /// Get the number of vehicle brands in the database
-        /// </summary>
-        /// <returns>The number of vehicle brands</returns>
-        public static int GetBrandAmount()
-        {
-            return DataProvider.Instance.DB.HIEUXEs.Count();
         }
 
         /// <summary>

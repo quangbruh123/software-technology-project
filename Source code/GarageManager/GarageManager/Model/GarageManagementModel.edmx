@@ -12,7 +12,7 @@
           <Property Name="MaBCDS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Thang" Type="int" />
           <Property Name="Nam" Type="int" />
-          <Property Name="TongDoanhThu" Type="money" />
+          <Property Name="TongDoanhThu" Type="bigint" />
         </EntityType>
         <EntityType Name="BAOCAOTON">
           <Key>
@@ -34,7 +34,7 @@
           <Property Name="MaBCDS" Type="int" Nullable="false" />
           <Property Name="MaHieuXe" Type="int" Nullable="false" />
           <Property Name="SoLuotSua" Type="int" />
-          <Property Name="ThanhTien" Type="money" />
+          <Property Name="ThanhTien" Type="bigint" />
         </EntityType>
         <EntityType Name="CT_PNVT">
           <Key>
@@ -44,9 +44,9 @@
           <Property Name="MaPhieuNhap" Type="int" Nullable="false" />
           <Property Name="MaVatTu" Type="int" Nullable="false" />
           <Property Name="SoLuong" Type="int" />
-          <Property Name="DonGiaNhap" Type="money" />
-          <Property Name="DonGiaBan" Type="money" />
-          <Property Name="ThanhTien" Type="money" />
+          <Property Name="DonGiaNhap" Type="bigint" />
+          <Property Name="DonGiaBan" Type="bigint" />
+          <Property Name="ThanhTien" Type="bigint" />
         </EntityType>
         <EntityType Name="CT_PSC">
           <Key>
@@ -57,7 +57,7 @@
           <Property Name="NoiDung" Type="nvarchar(max)" />
           <Property Name="SoLan" Type="int" />
           <Property Name="MaTienCong" Type="int" />
-          <Property Name="ThanhTien" Type="money" />
+          <Property Name="ThanhTien" Type="bigint" />
         </EntityType>
         <EntityType Name="CT_SUDUNGVATTU">
           <Key>
@@ -67,8 +67,8 @@
           <Property Name="MaCTPSC" Type="int" Nullable="false" />
           <Property Name="MaVatTu" Type="int" Nullable="false" />
           <Property Name="SoLuong" Type="int" />
-          <Property Name="DonGia" Type="money" />
-          <Property Name="ThanhTien" Type="money" />
+          <Property Name="DonGia" Type="bigint" />
+          <Property Name="ThanhTien" Type="bigint" />
         </EntityType>
         <EntityType Name="HIEUXE">
           <Key>
@@ -83,7 +83,7 @@
           </Key>
           <Property Name="MaPhieuNhap" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NgayNhap" Type="smalldatetime" />
-          <Property Name="TongTien" Type="money" />
+          <Property Name="TongTien" Type="bigint" />
         </EntityType>
         <EntityType Name="PHIEUSUACHUA">
           <Key>
@@ -92,7 +92,7 @@
           <Property Name="MaPhieuSC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BienSo" Type="nvarchar" MaxLength="50" />
           <Property Name="NgaySuaChua" Type="smalldatetime" />
-          <Property Name="TongTien" Type="money" />
+          <Property Name="TongTien" Type="bigint" />
         </EntityType>
         <EntityType Name="PHIEUTHUTIEN">
           <Key>
@@ -101,7 +101,7 @@
           <Property Name="MaPTT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NgayLap" Type="smalldatetime" />
           <Property Name="BienSo" Type="nvarchar" MaxLength="50" />
-          <Property Name="SoTienThu" Type="money" />
+          <Property Name="SoTienThu" Type="bigint" />
         </EntityType>
         <EntityType Name="TAIKHOAN">
           <Key>
@@ -128,7 +128,7 @@
           </Key>
           <Property Name="MaTienCong" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenTienCong" Type="nvarchar(max)" />
-          <Property Name="GiaTienCong" Type="money" />
+          <Property Name="GiaTienCong" Type="bigint" />
         </EntityType>
         <EntityType Name="VAITRO">
           <Key>
@@ -143,7 +143,7 @@
           </Key>
           <Property Name="MaVatTu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenVatTu" Type="nvarchar(max)" />
-          <Property Name="DonGiaHienTai" Type="money" />
+          <Property Name="DonGiaHienTai" Type="bigint" />
           <Property Name="SoLuongTon" Type="int" />
         </EntityType>
         <EntityType Name="XE">
@@ -157,7 +157,7 @@
           <Property Name="DiaChi" Type="nvarchar(max)" />
           <Property Name="Email" Type="nvarchar(max)" />
           <Property Name="NgayTiepNhan" Type="datetime" />
-          <Property Name="TienNo" Type="money" />
+          <Property Name="TienNo" Type="bigint" />
         </EntityType>
         <Association Name="FK_BCT_MaVatTu">
           <End Role="VATTU" Type="Self.VATTU" Multiplicity="0..1" />
@@ -397,7 +397,7 @@
           <Property Name="MaBCDS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Thang" Type="Int32" />
           <Property Name="Nam" Type="Int32" />
-          <Property Name="TongDoanhThu" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TongDoanhThu" Type="Int64" />
           <NavigationProperty Name="CT_BCDS" Relationship="Self.FK_MaBCDS" FromRole="BAOCAODOANHSO" ToRole="CT_BCDS" />
         </EntityType>
         <EntityType Name="BAOCAOTON">
@@ -421,7 +421,7 @@
           <Property Name="MaBCDS" Type="Int32" Nullable="false" />
           <Property Name="MaHieuXe" Type="Int32" Nullable="false" />
           <Property Name="SoLuotSua" Type="Int32" />
-          <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ThanhTien" Type="Int64" />
           <NavigationProperty Name="BAOCAODOANHSO" Relationship="Self.FK_MaBCDS" FromRole="CT_BCDS" ToRole="BAOCAODOANHSO" />
           <NavigationProperty Name="HIEUXE" Relationship="Self.FK_HieuXe" FromRole="CT_BCDS" ToRole="HIEUXE" />
         </EntityType>
@@ -433,9 +433,9 @@
           <Property Name="MaPhieuNhap" Type="Int32" Nullable="false" />
           <Property Name="MaVatTu" Type="Int32" Nullable="false" />
           <Property Name="SoLuong" Type="Int32" />
-          <Property Name="DonGiaNhap" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="DonGiaBan" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DonGiaNhap" Type="Int64" />
+          <Property Name="DonGiaBan" Type="Int64" />
+          <Property Name="ThanhTien" Type="Int64" />
           <NavigationProperty Name="PHIEUNHAPVATTU" Relationship="Self.FK_MaPhieuNhap" FromRole="CT_PNVT" ToRole="PHIEUNHAPVATTU" />
           <NavigationProperty Name="VATTU" Relationship="Self.FK_PNVT_MaVatTu" FromRole="CT_PNVT" ToRole="VATTU" />
         </EntityType>
@@ -448,7 +448,7 @@
           <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SoLan" Type="Int32" />
           <Property Name="MaTienCong" Type="Int32" />
-          <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ThanhTien" Type="Int64" />
           <NavigationProperty Name="CT_SUDUNGVATTU" Relationship="Self.FK_MaCTPSC" FromRole="CT_PSC" ToRole="CT_SUDUNGVATTU" />
           <NavigationProperty Name="PHIEUSUACHUA" Relationship="Self.FK_MaPhieuSC" FromRole="CT_PSC" ToRole="PHIEUSUACHUA" />
           <NavigationProperty Name="TIENCONG" Relationship="Self.FK_MaTienCong" FromRole="CT_PSC" ToRole="TIENCONG" />
@@ -461,8 +461,8 @@
           <Property Name="MaCTPSC" Type="Int32" Nullable="false" />
           <Property Name="MaVatTu" Type="Int32" Nullable="false" />
           <Property Name="SoLuong" Type="Int32" />
-          <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DonGia" Type="Int64" />
+          <Property Name="ThanhTien" Type="Int64" />
           <NavigationProperty Name="CT_PSC" Relationship="Self.FK_MaCTPSC" FromRole="CT_SUDUNGVATTU" ToRole="CT_PSC" />
           <NavigationProperty Name="VATTU" Relationship="Self.FK_SDVT_MaVatTu" FromRole="CT_SUDUNGVATTU" ToRole="VATTU" />
         </EntityType>
@@ -481,7 +481,7 @@
           </Key>
           <Property Name="MaPhieuNhap" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NgayNhap" Type="DateTime" Precision="0" />
-          <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TongTien" Type="Int64" />
           <NavigationProperty Name="CT_PNVT" Relationship="Self.FK_MaPhieuNhap" FromRole="PHIEUNHAPVATTU" ToRole="CT_PNVT" />
         </EntityType>
         <EntityType Name="PHIEUSUACHUA">
@@ -491,7 +491,7 @@
           <Property Name="MaPhieuSC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BienSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NgaySuaChua" Type="DateTime" Precision="0" />
-          <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TongTien" Type="Int64" />
           <NavigationProperty Name="CT_PSC" Relationship="Self.FK_MaPhieuSC" FromRole="PHIEUSUACHUA" ToRole="CT_PSC" />
           <NavigationProperty Name="XE" Relationship="Self.FK_PSC_BienSo" FromRole="PHIEUSUACHUA" ToRole="XE" />
         </EntityType>
@@ -502,7 +502,7 @@
           <Property Name="MaPTT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NgayLap" Type="DateTime" Precision="0" />
           <Property Name="BienSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="SoTienThu" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SoTienThu" Type="Int64" />
           <NavigationProperty Name="XE" Relationship="Self.FK_PTT_BienSo" FromRole="PHIEUTHUTIEN" ToRole="XE" />
         </EntityType>
         <EntityType Name="TAIKHOAN">
@@ -531,7 +531,7 @@
           </Key>
           <Property Name="MaTienCong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenTienCong" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="GiaTienCong" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="GiaTienCong" Type="Int64" />
           <NavigationProperty Name="CT_PSC" Relationship="Self.FK_MaTienCong" FromRole="TIENCONG" ToRole="CT_PSC" />
         </EntityType>
         <EntityType Name="VAITRO">
@@ -548,7 +548,7 @@
           </Key>
           <Property Name="MaVatTu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenVatTu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="DonGiaHienTai" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DonGiaHienTai" Type="Int64" />
           <Property Name="SoLuongTon" Type="Int32" />
           <NavigationProperty Name="BAOCAOTONs" Relationship="Self.FK_BCT_MaVatTu" FromRole="VATTU" ToRole="BAOCAOTON" />
           <NavigationProperty Name="CT_PNVT" Relationship="Self.FK_PNVT_MaVatTu" FromRole="VATTU" ToRole="CT_PNVT" />
@@ -565,7 +565,7 @@
           <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="NgayTiepNhan" Type="DateTime" Precision="3" />
-          <Property Name="TienNo" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TienNo" Type="Int64" />
           <NavigationProperty Name="HIEUXE" Relationship="Self.FK_XE_MaHieuXe" FromRole="XE" ToRole="HIEUXE" />
           <NavigationProperty Name="PHIEUSUACHUAs" Relationship="Self.FK_PSC_BienSo" FromRole="XE" ToRole="PHIEUSUACHUA" />
           <NavigationProperty Name="PHIEUTHUTIENs" Relationship="Self.FK_PTT_BienSo" FromRole="XE" ToRole="PHIEUTHUTIEN" />

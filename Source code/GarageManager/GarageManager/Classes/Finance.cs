@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity.SqlServer;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GarageManager.Classes
@@ -107,16 +104,6 @@ namespace GarageManager.Classes
         }
 
         /// <summary>
-        /// Get full information of a receipt from a plate
-        /// </summary>
-        /// <param name="plate"></param>
-        /// <returns>The vehicle's information and a list of its receipts, or null if the vehicle doesn't exist in the database</returns>
-        public static List<Model.PHIEUTHUTIEN> GetReceiptInfo(string plate)
-        {
-            return (List<Model.PHIEUTHUTIEN>)DataProvider.Instance.DB.XEs.FirstOrDefault(x => x.BienSo == plate).PHIEUTHUTIENs;
-        }
-
-        /// <summary>
         /// Add a new type of wage. The name of it must not have existed in the database
         /// </summary>
         /// <param name="newWageName"></param>
@@ -166,7 +153,6 @@ namespace GarageManager.Classes
         {
             return (long)DataProvider.Instance.DB.TIENCONGs.FirstOrDefault(x => x.TenTienCong == wageName).GiaTienCong;
         }
-
 
         public static void NewMonthlyFinancialReport(int month, int year)
         {

@@ -28,7 +28,7 @@ namespace GarageManager.Model
         public string DiaChi { get; set; }
         public string Email { get; set; }
         public Nullable<System.DateTime> NgayTiepNhan { get; set; }
-        public Nullable<decimal> TienNo { get; set; }
+        public Nullable<long> TienNo { get; set; }
     
         public virtual HIEUXE HIEUXE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

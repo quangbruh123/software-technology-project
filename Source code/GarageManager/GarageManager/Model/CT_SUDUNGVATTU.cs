@@ -17,8 +17,8 @@ namespace GarageManager.Model
         public int MaCTPSC { get; set; }
         public int MaVatTu { get; set; }
         public Nullable<int> SoLuong { get; set; }
-        public Nullable<decimal> DonGia { get; set; }
-        public Nullable<decimal> ThanhTien { get; set; }
+        public Nullable<long> DonGia { get; set; }
+        public Nullable<long> ThanhTien { get; set; }
     
         public virtual CT_PSC CT_PSC { get; set; }
         public virtual VATTU VATTU { get; set; }

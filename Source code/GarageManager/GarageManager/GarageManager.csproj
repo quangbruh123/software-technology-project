@@ -417,6 +417,9 @@
     <None Include="Resources\add_30px.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Logout_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Model\GarageManagementModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
@@ -427,7 +430,6 @@
       <DependentUpon>GarageManagementModel.edmx</DependentUpon>
       <LastGenOutput>GarageManagementModel.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\Logout_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -36,7 +36,7 @@ namespace GarageManager.usercontrol
             }
 
             labelTodayVehicleNum.Text = DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "TodayVehicle").GiaTri.ToString()
-                + " / " + Classes.DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri;
+                + " / " + DataProvider.Instance.DB.THAMSOes.FirstOrDefault(x => x.TenThamSo == "Số xe sửa chữa trong ngày tối đa").GiaTri;
         }
 
         private void buttonThemXe_Click(object sender, EventArgs e)
