@@ -86,6 +86,7 @@ namespace GarageManager.Classes
                     };
                     partInputInfoesList.Add(partInputInfo);
                     part.DonGiaHienTai = priceTagsList[i];
+                    part.SoLuongTon += amountList[i];
                     partInputCard.CT_PNVT.Add(partInputInfo);
                     partInputCard.TongTien += partInputInfo.ThanhTien;
                     partInputInfo.PHIEUNHAPVATTU = partInputCard;
