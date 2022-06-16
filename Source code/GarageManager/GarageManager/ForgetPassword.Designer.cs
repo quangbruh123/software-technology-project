@@ -115,6 +115,8 @@
             this.codetxt.TabIndex = 4;
             this.codetxt.Text = "Mã xác nhận";
             this.codetxt.UseSystemPasswordChar = true;
+            this.codetxt.Enter += new System.EventHandler(this.codetxt_Enter);
+            this.codetxt.Leave += new System.EventHandler(this.codetxt_Leave);
             // 
             // pictureBox2
             // 
@@ -155,6 +157,8 @@
             this.gmailtxt.TabIndex = 2;
             this.gmailtxt.Text = "Gmail";
             this.gmailtxt.UseSystemPasswordChar = true;
+            this.gmailtxt.Enter += new System.EventHandler(this.gmailtxt_Enter);
+            this.gmailtxt.Leave += new System.EventHandler(this.gmailtxt_Leave);
             // 
             // dangnhapbtn
             // 
@@ -259,6 +263,8 @@
             this.usertxt.Size = new System.Drawing.Size(283, 28);
             this.usertxt.TabIndex = 1;
             this.usertxt.Text = "Tên đăng nhập";
+            this.usertxt.Enter += new System.EventHandler(this.usertxt_Enter);
+            this.usertxt.Leave += new System.EventHandler(this.usertxt_Leave);
             // 
             // ForgetPassword
             // 
@@ -267,7 +273,7 @@
             this.ClientSize = new System.Drawing.Size(375, 379);
             this.Controls.Add(this.gradient1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ForgetPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ForgetPassword";

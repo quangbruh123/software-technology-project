@@ -103,7 +103,7 @@
             this.passwordtxt.Location = new System.Drawing.Point(63, 197);
             this.passwordtxt.Name = "passwordtxt";
             this.passwordtxt.Size = new System.Drawing.Size(286, 28);
-            this.passwordtxt.TabIndex = 2;
+            this.passwordtxt.TabIndex = 3;
             this.passwordtxt.Text = "Mật khẩu";
             this.passwordtxt.Enter += new System.EventHandler(this.passwordtxt_Enter);
             this.passwordtxt.Leave += new System.EventHandler(this.passwordtxt_Leave);
@@ -122,7 +122,7 @@
             this.dangnhapbtn.Location = new System.Drawing.Point(52, 238);
             this.dangnhapbtn.Name = "dangnhapbtn";
             this.dangnhapbtn.Size = new System.Drawing.Size(283, 40);
-            this.dangnhapbtn.TabIndex = 3;
+            this.dangnhapbtn.TabIndex = 4;
             this.dangnhapbtn.Text = "Đăng nhập";
             this.dangnhapbtn.TextColor = System.Drawing.Color.White;
             this.dangnhapbtn.UseVisualStyleBackColor = false;
@@ -138,7 +138,7 @@
             this.button2.Location = new System.Drawing.Point(122, 284);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 43);
-            this.button2.TabIndex = 4;
+            this.button2.TabIndex = 5;
             this.button2.Text = "Quên mật khẩu";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -152,7 +152,7 @@
             this.label3.Location = new System.Drawing.Point(99, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 40);
-            this.label3.TabIndex = 26;
+            this.label3.TabIndex = 1;
             this.label3.Text = "Đăng nhập";
             // 
             // pictureBox4
@@ -207,7 +207,7 @@
             this.usertxt.Location = new System.Drawing.Point(62, 148);
             this.usertxt.Name = "usertxt";
             this.usertxt.Size = new System.Drawing.Size(283, 28);
-            this.usertxt.TabIndex = 1;
+            this.usertxt.TabIndex = 2;
             this.usertxt.Text = "Tên đăng nhập";
             this.usertxt.Enter += new System.EventHandler(this.usertxt_Enter);
             this.usertxt.Leave += new System.EventHandler(this.usertxt_Leave);

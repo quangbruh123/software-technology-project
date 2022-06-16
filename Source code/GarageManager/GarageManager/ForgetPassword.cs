@@ -19,6 +19,7 @@ namespace GarageManager
         public ForgetPassword()
         {
             InitializeComponent();
+            
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
@@ -77,6 +78,60 @@ namespace GarageManager
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void usertxt_Enter(object sender, EventArgs e)
+        {
+            if (usertxt.Text == "Tên đăng nhập")
+            {
+                usertxt.Text = "";
+                usertxt.ForeColor = Color.Black;
+            }
+        }
+
+        private void usertxt_Leave(object sender, EventArgs e)
+        {
+            if (usertxt.Text == "")
+            {
+                usertxt.Text = "Tên đăng nhập";
+                usertxt.ForeColor = Color.Silver;
+            }
+        }
+
+        private void gmailtxt_Enter(object sender, EventArgs e)
+        {
+            if (gmailtxt.Text == "Gmail")
+            {
+                gmailtxt.Text = "";
+                gmailtxt.ForeColor = Color.Black;
+            }
+        }
+
+        private void gmailtxt_Leave(object sender, EventArgs e)
+        {
+            if (gmailtxt.Text == "")
+            {
+                gmailtxt.Text = "Gmail";
+                gmailtxt.ForeColor = Color.Silver;
+            }
+        }
+
+        private void codetxt_Enter(object sender, EventArgs e)
+        {
+            if (codetxt.Text == "Mã xác nhận")
+            {
+                codetxt.Text = "";
+                codetxt.ForeColor = Color.Black;
+            }
+        }
+
+        private void codetxt_Leave(object sender, EventArgs e)
+        {
+            if (codetxt.Text == "")
+            {
+                codetxt.Text = "Mã xác nhận";
+                codetxt.ForeColor = Color.Silver;
+            }
         }
     }
 }
